@@ -1,0 +1,40 @@
+name: PHP Tic-Tac-Toe
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  play:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, 'PHP: Tic-Tac-Toe:')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.3'
+
+      - name: Play Game
+        run: python3 dispatcher.py run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+          LANGUAGE_OVERRIDE: php
+
+      - name: Keep workspace warm
+        if: always()
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add game_state.json README.md
+          git commit -m "game(php): update state" || echo "No changes"
+          git push origin main || echo "Push failed"

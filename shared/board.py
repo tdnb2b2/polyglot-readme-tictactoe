@@ -1,46 +1,38 @@
-import json, os, sys, re
+import random
 
-# Shared utilities for cell conversion and winner detection
-CELL_TO_IDX = {
-    'A1': (0, 0), 'A2': (0, 1), 'A3': (0, 2),
-    'B1': (1, 0), 'B2': (1, 1), 'B3': (1, 2),
-    'C1': (2, 0), 'C2': (2, 1), 'C3': (2, 2)
-}
+# Minimalist board rendering matching readme-games style
+# Replaced decorative emojis with clean links and text
 
-def check_winner(board):
-    # Rows, Cols, Diagonals
-    lines = [
-        [(0,0), (0,1), (0,2)], [(1,0), (1,1), (1,2)], [(2,0), (2,1), (2,2)],
-        [(0,0), (1,0), (2,0)], [(0,1), (1,1), (2,1)], [(0,2), (1,2), (2,2)],
-        [(0,0), (1,1), (2,2)], [(0,2), (1,1), (2,0)]
-    ]
-    for line in lines:
-        values = [board[r][c] for r, c in line]
-        if values[0] != '' and all(v == values[0] for v in values):
-            return values[0]
-    return None
+CELLS = ["A1", "B1", "C1", "A2", "B2", "C2", "A3", "B3", "C3"]
+LANG_POOL = [
+    "Python", "JavaScript", "Go", "Rust", "Ruby", 
+    "PHP", "Java", "CPP", "C", "CSharp", 
+    "Swift", "Kotlin", "TypeScript", "Scala"
+]
 
-def is_draw(board):
-    return all(all(cell != '' for cell in row) for row in board)
-
-def render_board_table(board, lang_name):
-    # Generate the Markdown table for the given board
-    lines = []
-    lines.append("|   | 1 | 2 | 3 |")
-    lines.append("|---|---|---|---|")
+def render_board_md(board_state):
+    \"\"\"
+    board_state: dict mapping "A1" etc to "X", "O", or None
+    \"\"\"
+    rows = []
+    rows.append("| | A | B | C |")
+    rows.append("|---|---|---|---|")
     
-    rows = ['A', 'B', 'C']
-    for i, row_label in enumerate(rows):
-        cells = []
-        for j in range(3):
-            val = board[i][j]
-            if val == 'X':
-                cells.append("❌")
-            elif val == 'O':
-                cells.append("⭕")
+    for r in ["1", "2", "3"]:
+        line = f"| {r} "
+        for c in ["A", "B", "C"]:
+            key = f"{c}{r}"
+            val = board_state.get(key)
+            if val == "X":
+                line += "| X "
+            elif val == "O":
+                line += "| O "
             else:
-                cell_id = f"{row_label}{j+1}"
-                issue_url = f"https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title={lang_name.replace('+', '%2B').replace('#', '%23')}%3A+Tic-Tac-Toe%3A+Put+{cell_id}&body=Play+{lang_name}+board"
-                cells.append(f"[➕]({issue_url})")
-        lines.append(f"| **{row_label}** | {' | '.join(cells)} |")
-    return "\n".join(lines)
+                # Use a random language for the link to demonstrate polyglot nature
+                lang = random.choice(LANG_POOL)
+                url = f"https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title={lang}:+Tic-Tac-Toe:+Put+{key}"
+                line += f"| [___]({url}) "
+        line += "|"
+        rows.append(line)
+        
+    return "\n".join(rows)

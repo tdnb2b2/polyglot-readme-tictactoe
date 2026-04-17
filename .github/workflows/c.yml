@@ -1,0 +1,38 @@
+name: C Tic-Tac-Toe
+on:
+  issues:
+    types: [opened]
+
+jobs:
+  play:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, 'C: Tic-Tac-Toe:')
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+
+      - name: Build C
+        run: gcc implementations/c/game.c -o implementations/c/game
+
+      - name: Play Game
+        run: python3 dispatcher.py run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+          LANGUAGE_OVERRIDE: c
+
+      - name: Keep workspace warm
+        if: always()
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add game_state.json README.md
+          git commit -m "game(c): update state" || echo "No changes"
+          git push origin main || echo "Push failed"
