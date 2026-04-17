@@ -1,103 +1,197 @@
+#!/usr/bin/env python3
+"""dispatcher.py — detects language from issue title and routes to implementation."""
 import os
+import re
 import sys
 import json
 import subprocess
-import requests
 
-GITHUB_TOKEN = os.getenv("GITHUB_TOKEN")
-ISSUE_TITLE = os.getenv("ISSUE_TITLE", "")
-ISSUE_NUMBER = os.getenv("ISSUE_NUMBER")
-REPO = os.getenv("REPO")
-
-LANGUAGES = {
-    "python": {"cmd": ["python3", "implementations/python/game.py"]},
-    "javascript": {"cmd": ["node", "implementations/javascript/game.js"]},
-    "typescript": {"cmd": ["ts-node", "implementations/typescript/game.ts"]},
-    "go": {"cmd": ["go", "run", "implementations/go/game.go"]},
-    "rust": {"cmd": ["./implementations/rust/target/release/game"]},
-    "ruby": {"cmd": ["ruby", "implementations/ruby/game.rb"]},
-    "php": {"cmd": ["php", "implementations/php/game.php"]},
-    "java": {"cmd": ["java", "implementations/java/Game"]},
-    "cpp": {"cmd": ["./implementations/cpp/game"]},
-    "c": {"cmd": ["./implementations/c/game"]},
-    "csharp": {"cmd": ["dotnet", "run", "--project", "implementations/csharp/game.csproj"]},
-    "swift": {"cmd": ["swift", "implementations/swift/game.swift"]},
-    "kotlin": {"cmd": ["kotlin", "implementations/kotlin/game.jar"]},
-    "scala": {"cmd": ["scala", "implementations/scala/game.scala"]}
+LANGUAGE_MAP = {
+    "python":     "python",
+    "javascript": "javascript",
+    "typescript": "typescript",
+    "go":         "go",
+    "rust":       "rust",
+    "java":       "java",
+    "kotlin":     "kotlin",
+    "php":        "php",
+    "ruby":       "ruby",
+    "c#":         "csharp",
+    "csharp":     "csharp",
+    "c++":        "cpp",
+    "cpp":        "cpp",
+    "scala":      "scala",
+    "swift":      "swift",
+    "c":          "c",
 }
 
-def detect_language():
-    # Allow override from env (set by specific workflow)
-    override = os.getenv("LANGUAGE_OVERRIDE")
-    if override and override in LANGUAGES:
-        return override
+# Pattern: "<Language>: Tic-Tac-Toe: Put <Cell>"
+TITLE_PAT = re.compile(
+    r'^(?P<lang>[\w#+]+):\s*Tic-Tac-Toe:\s*Put\s+(?P<cell>[A-Ca-c][1-3])\s*$',
+    re.IGNORECASE
+)
+RESET_PAT = re.compile(
+    r'^(?P<lang>[\w#+]+):\s*Tic-Tac-Toe:\s*Reset\s*$',
+    re.IGNORECASE
+)
 
-    title = ISSUE_TITLE.lower()
-    for lang in LANGUAGES:
-        if lang in title:
-            return lang
-    return None
 
-def parse_move(title):
-    import re
-    match = re.search(r"put\s+([a-c][1-3])", title.lower())
-    if match:
-        return match.group(1).upper()
-    return None
+def detect_language(title: str):
+    # Allow explicit override from CI
+    override = os.environ.get('LANGUAGE_OVERRIDE')
+    if override and override.lower() in LANGUAGE_MAP.values():
+        lang = override.lower()
+        # Still need cell if it's a put action
+        m = TITLE_PAT.match(title)
+        cell = m.groupdict().get('cell', '').upper() if m and 'cell' in m.groupdict() else None
+        action = 'reset' if RESET_PAT.match(title) else 'put'
+        return lang, cell, action
 
-def update_readme(board_md):
-    with open("README.md", "r") as f:
-        content = f.read()
-    
-    import re
-    # Look for the board section
-    new_content = re.sub(
-        r"<!-- BOARD_START -->.*?<!-- BOARD_END -->",
-        f"<!-- BOARD_START -->\n{board_md}\n<!-- BOARD_END -->",
-        content,
-        flags=re.DOTALL
-    )
-    
-    with open("README.md", "w") as f:
-        f.write(new_content)
+    m = TITLE_PAT.match(title) or RESET_PAT.match(title)
+    if not m:
+        return None, None, None
+    raw_lang = m.group('lang').lower()
+    lang = LANGUAGE_MAP.get(raw_lang)
+    if not lang:
+        return None, None, None
+    cell = m.groupdict().get('cell', '').upper() if 'cell' in m.groupdict() else None
+    action = 'reset' if RESET_PAT.match(title) else 'put'
+    return lang, cell, action
 
-def run():
-    lang_key = detect_language()
-    if not lang_key:
-        print(f"Language not detected from title: {ISSUE_TITLE}")
+
+def main():
+    mode = sys.argv[1] if len(sys.argv) > 1 else 'run'
+    title = os.environ.get('ISSUE_TITLE', '').strip()
+
+    if mode == 'detect':
+        lang, _, _ = detect_language(title)
+        print(lang or 'unknown')
         return
 
-    move = parse_move(ISSUE_TITLE)
-    if not move:
-        print(f"Move not detected from title: {ISSUE_TITLE}")
-        return
+    lang, cell, action = detect_language(title)
 
-    # Call language implementation
-    cmd = LANGUAGES[lang_key]["cmd"] + [move]
-    result = subprocess.run(cmd, capture_output=True, text=True)
-    
-    if result.returncode != 0:
-        print(f"Error running {lang_key}: {result.stderr}")
-        return
+    if lang is None:
+        token   = os.environ['GITHUB_TOKEN']
+        repo    = os.environ['REPO']
+        issue_n = os.environ['ISSUE_NUMBER']
+        _close_issue(token, repo, issue_n,
+            f'Unknown command: {title}\n\n'
+            'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\n\n'
+            'Supported languages: Python, JavaScript, TypeScript, Go, Rust, '
+            'Java, Kotlin, PHP, Ruby, C#, C++, Scala, Swift, C')
+        sys.exit(0)
 
-    # Implementation should update game_state.json
-    # Now we re-render the board using shared/board.py logic (via python)
-    from shared.board import render_board_md
-    with open("game_state.json", "r") as f:
-        state = json.load(f)
+    # Prepare sandbox state
+    with open('game_state.json', 'r') as f:
+        all_states = json.load(f)
     
-    board_md = render_board_md(state["board"])
-    update_readme(board_md)
+    current_state = all_states.get(lang, {
+        'board': [['','',''],['','',''],['','','']],
+        'turn': 'X',
+        'winner': None,
+        'log': []
+    })
     
-    # Close issue
-    if GITHUB_TOKEN and REPO and ISSUE_NUMBER:
-        url = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}/comments"
-        headers = {"Authorization": f"token {GITHUB_TOKEN}"}
-        requests.post(url, json={"body": f"Move {move} processed by {lang_key.capitalize()} workflow."}, headers=headers)
+    with open('current_state.json', 'w') as f:
+        json.dump(current_state, f, indent=2)
+
+    env = dict(os.environ)
+    env['LANG_KEY'] = lang
+    env['CELL']     = cell or ''
+    env['ACTION']   = action
+
+    # Determine implementation directory and simplified command
+    impl_runners = {
+        'python':     (['python3', 'game.py'], 'implementations/python'),
+        'javascript': (['node',    'game.js'], 'implementations/javascript'),
+        'typescript': (['npx', 'ts-node', 'game.ts'], 'implementations/typescript'),
+        'go':         (['go', 'run', 'game.go'], 'implementations/go'),
+        'rust':       (['./target/release/game'], 'implementations/rust'),
+        'java':       (['java', 'Game'], 'implementations/java'),
+        'kotlin':     (['java', '-jar', 'Game.jar'], 'implementations/kotlin'),
+        'php':        (['php',     'game.php'], 'implementations/php'),
+        'ruby':       (['ruby',    'game.rb'], 'implementations/ruby'),
+        'csharp':     (['dotnet', 'run', '--no-build'], 'implementations/csharp'),
+        'c':          (['./game'], 'implementations/c'),
+        'cpp':        (['./game'], 'implementations/cpp'),
+        'scala':      (['scala',   'Game.scala'], 'implementations/scala'),
+        'swift':      (['swift',   'game.swift'], 'implementations/swift'),
+    }
+
+    if lang not in impl_runners:
+        print(f"Error: No runner defined for {lang}", file=sys.stderr)
+        sys.exit(1)
+
+    cmd, impl_dir = impl_runners[lang]
+    state_path = os.path.join(impl_dir, 'current_state.json')
+
+    # Prepare sandbox state in the implementation directory
+    with open(state_path, 'w') as f:
+        json.dump(current_state, f, indent=2)
+
+    env = dict(os.environ)
+    env['LANG_KEY'] = lang
+    env['CELL']     = cell or ''
+    env['ACTION']   = action
+
+    print(f"Running {lang} implementation in {impl_dir}...")
+    result = subprocess.run(cmd, env=env, cwd=impl_dir, capture_output=False)
+    
+    if result.returncode == 0:
+        # Read back sandbox state from implementation directory
+        with open(state_path, 'r') as f:
+            updated_state = json.load(f)
         
-        url_close = f"https://api.github.com/repos/{REPO}/issues/{ISSUE_NUMBER}"
-        requests.patch(url_close, json={"state": "closed"}, headers=headers)
+        all_states[lang] = updated_state
+        with open('game_state.json', 'w') as f:
+            json.dump(all_states, f, indent=2)
 
-if __name__ == "__main__":
-    if len(sys.argv) > 1 and sys.argv[1] == "run":
-        run()
+        # Update README.md
+        try:
+            from shared.board import get_readme, update_readme, replace_section, render_board_md
+            token      = os.environ['GITHUB_TOKEN']
+            repo_name  = os.environ['REPO']
+            issue_n    = os.environ['ISSUE_NUMBER']
+            actor      = os.environ.get('GITHUB_ACTOR', 'player')
+
+            new_board_md = render_board_md(
+                updated_state['board'], lang, repo_name.split('/')[0], repo_name.split('/')[1],
+                updated_state['turn'], updated_state['winner'], updated_state['log']
+            )
+
+            current_content, sha = get_readme(token, repo_name)
+            new_content = replace_section(current_content, lang.upper(), new_board_md)
+
+            if new_content != current_content:
+                update_readme(token, repo_name, new_content, sha, actor, lang)
+            
+            _close_issue(token, repo_name, issue_n, f"Move accepted for {lang}. README updated.")
+
+        except Exception as e:
+            print(f"Error updating README: {e}", file=sys.stderr)
+
+    if os.path.exists(state_path):
+        os.remove(state_path)
+
+    sys.exit(result.returncode)
+
+
+def _close_issue(token, repo, issue_number, comment_body):
+    import urllib.request
+    headers = {
+        'Authorization': f'token {token}',
+        'Content-Type': 'application/json',
+        'Accept': 'application/vnd.github.v3+json',
+    }
+    base = f'https://api.github.com/repos/{repo}/issues/{issue_number}'
+    data = json.dumps({'body': comment_body}).encode()
+    req = urllib.request.Request(f'{base}/comments', data=data, headers=headers)
+    urllib.request.urlopen(req)
+    data2 = json.dumps({'state': 'closed'}).encode()
+    req2 = urllib.request.Request(base, data=data2, headers=headers,
+                                   method='PATCH')
+    urllib.request.urlopen(req2)
+
+
+if __name__ == '__main__':
+    main()
