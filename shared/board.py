@@ -26,8 +26,12 @@ def get_readme(token: str, repo: str) -> tuple:
         'Authorization': f'token {token}',
         'Accept': 'application/vnd.github.v3+json',
     })
-    with urllib.request.urlopen(req) as resp:
-        data = json.loads(resp.read())
+    try:
+        with urllib.request.urlopen(req) as resp:
+            data = json.loads(resp.read())
+    except Exception as e:
+        print(f"Error fetching README: {e}")
+        raise
     import base64
     content = base64.b64decode(data['content']).decode('utf-8')
     return content, data['sha']
@@ -46,7 +50,8 @@ def update_readme(token: str, repo: str, content: str, sha: str, actor: str, lan
         'Authorization': f'token {token}',
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github.v3+json',
-    }, method='PUT')
+    })
+    req.get_method = lambda: 'PUT'
     urllib.request.urlopen(req)
 
 
@@ -74,7 +79,8 @@ def close_issue(token: str, repo: str, issue_number: str):
         'Authorization': f'token {token}',
         'Content-Type': 'application/json',
         'Accept': 'application/vnd.github.v3+json',
-    }, method='PATCH')
+    })
+    req.get_method = lambda: 'PATCH'
     urllib.request.urlopen(req)
 
 
@@ -121,9 +127,11 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     lang_display = LANG_DISPLAY.get(lang_key, lang_key)
     
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
-    for ri, row_label in enumerate(['1', '2', '3']):
+    for ri in range(3):
+        row_label = str(ri + 1)
         cells = [f'**{row_label}**']
         for ci in range(3):
+            # map row-indexed board back to correct visual column
             val = board[ci][ri]
             cell_name = f"{['A','B','C'][ci]}{ri+1}"
             
@@ -134,6 +142,7 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
             else:
                 title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Put+{cell_name}"
                 link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body=Play+{lang_display}+board'
+                # Minimalist link text
                 cells.append(f'[___]({link})')
         cells.append(f'**{row_label}**')
         rows.append(f'| {" | ".join(cells)} |')
