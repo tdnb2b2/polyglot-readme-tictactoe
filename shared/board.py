@@ -127,12 +127,10 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     lang_display = LANG_DISPLAY.get(lang_key, lang_key)
     
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
-    for ri in range(3):
-        row_label = str(ri + 1)
+    for ri, row_label in enumerate(['1', '2', '3']):
         cells = [f'**{row_label}**']
         for ci in range(3):
-            # map row-indexed board back to correct visual column
-            val = board[ci][ri]
+            val = board[ri][ci]
             cell_name = f"{['A','B','C'][ci]}{ri+1}"
             
             if val:

@@ -191,7 +191,3 @@ def _close_issue(token, repo, issue_number, comment_body):
     req2 = urllib.request.Request(base, data=data2, headers=headers,
                                    method='PATCH')
     urllib.request.urlopen(req2)
-
-
-if __name__ == '__main__':
-    main()
