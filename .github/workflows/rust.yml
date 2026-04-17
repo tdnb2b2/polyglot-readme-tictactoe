@@ -6,24 +6,24 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'Rust:')
+    if: contains(github.event.issue.title, 'Rust: Tic-Tac-Toe:')
+    permissions:
+      contents: write
+      issues: write
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
-      - name: Setup Python
-        uses: actions/setup-python@v5
-        with:
-          python-version: '3.12'
+      - name: Install dependencies
+        run: pip install requests
 
       - name: Setup Rust
-        uses: dtolnay/rust-toolchain@stable
-
-      - name: Build Rust
-        run: cd implementations/rust && cargo build --release
+        uses: actions-rs/toolchain@v1
+        with:
+          toolchain: 'stable'
 
       - name: Play Game
-        run: pip install requests && python3 dispatcher.py run
+        run: python3 dispatcher.py run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
@@ -36,6 +36,6 @@ jobs:
         run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
-          git add game_state.json README.md
+          git add game_state.json
           git commit -m "game(rust): update state" || echo "No changes"
           git push origin main || echo "Push failed"
