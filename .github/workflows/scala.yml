@@ -6,7 +6,7 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'Scala: Tic-Tac-Toe:')
+    if: ${{ contains(github.event.issue.title, 'Scala: Tic-Tac-Toe:') }}
     permissions:
       contents: write
       issues: write
