@@ -22,7 +22,7 @@ jobs:
           go-version: '1.22'
 
       - name: Play Game
-        run: python3 dispatcher.py run
+        run: pip install requests && python3 dispatcher.py run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
