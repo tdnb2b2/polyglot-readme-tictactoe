@@ -1,8 +1,20 @@
 # 🎮 Polyglot README Tic-Tac-Toe
 
-Welcome to the **14-language Tic-Tac-Toe** technical demonstration. This repository showcases how **GitHub Actions** can be used across multiple programming languages to maintain a unified game state directly in a README.
+> **Tic-Tac-Toe playable directly on this README — in 14 programming languages.**  
+> Each language runs its own independent board, powered by GitHub Actions.  
+> Click **[___]** to make a move. The corresponding language implementation processes your move and updates this README.
 
-Each section below represents an independent implementation. Clicking a move link **[___]** will open a GitHub Issue — simply submit it to trigger the corresponding workflow and update the board!
+---
+
+## How to Play
+
+1. Pick a language board below
+2. Click any **[___]** cell — it opens a pre-filled GitHub Issue
+3. Submit the issue — GitHub Actions runs that language's implementation
+4. The board updates automatically within ~30 seconds
+5. Players alternate: ❌ goes first, then ⭕
+
+**Move format:** `<Language>: Tic-Tac-Toe: Put <Cell>` (e.g. `Python: Tic-Tac-Toe: Put B2`)
 
 ---
 
@@ -24,14 +36,26 @@ Turn: ❌ **X** is next
 <summary>📄 Python implementation snippet</summary>
 
 ```python
-import os
-import json
+import json, os
 
-def main():
-    lang = os.getenv("LANG_KEY") # "python"
-    cell = os.getenv("CELL")      # e.g. "A1"
-    # parse game_state.json, apply move, write back
-    # full impl in implementations/python/game.py
+# Read the simplified state
+with open('game_state.json', 'r') as f:
+    all_states = json.load(f)
+    s = all_states["python"]
+
+cell   = os.environ.get('CELL', '').upper()
+action = os.environ.get('ACTION', 'put')
+
+if action == 'reset':
+    s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
+elif cell and not s["winner"]:
+    # Apply Tic-Tac-Toe logic...
+    pass
+
+# Write it back
+all_states["python"] = s
+with open('game_state.json', 'w') as f:
+    json.dump(all_states, f, indent=2)
 ```
 
 </details>
@@ -57,11 +81,20 @@ Turn: ❌ **X** is next
 
 ```javascript
 const fs = require('fs');
+const all = JSON.parse(fs.readFileSync('game_state.json'));
+const lang = process.env.LANG_KEY;
+const cell = process.env.CELL;
+const action = process.env.ACTION;
+const s = all[lang];
 
-const lang = process.env.LANG_KEY; // "javascript"
-const cell = process.env.CELL;     // e.g. "A1"
-// parse game_state.json, apply move, write back
-// full impl in implementations/javascript/game.js
+if (action === 'reset') {
+  s.board = [['','',''],['','',''],['','','']];
+  s.turn = 'X'; s.winner = null; s.log = [];
+} else {
+  // Apply coordinate mapping and win check...
+}
+all[lang] = s;
+fs.writeFileSync('game_state.json', JSON.stringify(all, null, 2));
 ```
 
 </details>
@@ -87,11 +120,11 @@ Turn: ❌ **X** is next
 
 ```typescript
 import * as fs from 'fs';
-
-const lang = process.env.LANG_KEY; // "typescript"
-const cell = process.env.CELL;
-// parse game_state.json, apply move, write back
-// full impl in implementations/typescript/game.ts
+const all = JSON.parse(fs.readFileSync('game_state.json','utf8'));
+const lang = process.env.LANG_KEY!;
+const s = all[lang];
+// ... Tic-Tac-Toe logic ...
+fs.writeFileSync('game_state.json', JSON.stringify(all,null,2));
 ```
 
 </details>
@@ -117,13 +150,12 @@ Turn: ❌ **X** is next
 
 ```go
 package main
-import "os"
-
+import (
+    "encoding/json"; "os"; "strings"
+)
 func main() {
     lang := os.Getenv("LANG_KEY") // "go"
-    cell := os.Getenv("CELL")
     // parse game_state.json, apply move, write back
-    // full impl in implementations/go/game.go
 }
 ```
 
@@ -149,13 +181,12 @@ Turn: ❌ **X** is next
 <summary>📄 Rust implementation snippet</summary>
 
 ```rust
-use std::env;
+use std::{env, fs};
+use serde_json::{Value, json};
 
 fn main() {
     let lang = env::var("LANG_KEY").unwrap(); // "rust"
-    let cell = env::var("CELL").unwrap();
     // parse game_state.json, apply move, write back
-    // full impl in implementations/rust/src/main.rs
 }
 ```
 
@@ -181,12 +212,13 @@ Turn: ❌ **X** is next
 <summary>📄 Java implementation snippet</summary>
 
 ```java
+import org.json.*;
+import java.nio.file.*;
+
 public class Game {
-    public static void main(String[] args) {
+    public static void main(String[] args) throws Exception {
         String lang = System.getenv("LANG_KEY"); // "java"
-        String cell = System.getenv("CELL");
         // parse game_state.json, apply move, write back
-        // full impl in implementations/java/Game.java
     }
 }
 ```
@@ -213,11 +245,12 @@ Turn: ❌ **X** is next
 <summary>📄 Kotlin implementation snippet</summary>
 
 ```kotlin
+import org.json.JSONObject
+import java.io.File
+
 fun main() {
     val lang = System.getenv("LANG_KEY") // "kotlin"
-    val cell = System.getenv("CELL")
     // parse game_state.json, apply move, write back
-    // full impl in implementations/kotlin/Game.kt
 }
 ```
 
@@ -245,9 +278,9 @@ Turn: ❌ **X** is next
 ```php
 <?php
 $lang = getenv("LANG_KEY"); // "php"
-$cell = getenv("CELL");
-// parse game_state.json, apply move, write back
-// full impl in implementations/php/game.php
+$all  = json_decode(file_get_contents('game_state.json'), true);
+// apply move logic...
+file_put_contents('game_state.json', json_encode($all, JSON_PRETTY_PRINT));
 ```
 
 </details>
@@ -272,10 +305,11 @@ Turn: ❌ **X** is next
 <summary>📄 Ruby implementation snippet</summary>
 
 ```ruby
+require 'json'
 lang = ENV['LANG_KEY'] # "ruby"
-cell = ENV['CELL']
-# parse game_state.json, apply move, write back
-# full impl in implementations/ruby/game.rb
+all  = JSON.parse(File.read('game_state.json'))
+# apply move logic...
+File.write('game_state.json', JSON.pretty_generate(all))
 ```
 
 </details>
@@ -300,17 +334,9 @@ Turn: ❌ **X** is next
 <summary>📄 C# implementation snippet</summary>
 
 ```csharp
-using System;
-using System.IO;
-
-class Game {
-    static void Main() {
-        string lang = Environment.GetEnvironmentVariable("LANG_KEY"); // "csharp"
-        string cell = Environment.GetEnvironmentVariable("CELL");
-        // parse game_state.json, apply move, write back
-        // full impl in implementations/csharp/Program.cs
-    }
-}
+using System.Text.Json;
+var lang = Environment.GetEnvironmentVariable("LANG_KEY"); // "csharp"
+// parse game_state.json, apply move, write back
 ```
 
 </details>
@@ -337,12 +363,11 @@ Turn: ❌ **X** is next
 ```c
 #include <stdio.h>
 #include <stdlib.h>
+// Uses cJSON for JSON parsing
 
 int main() {
     const char* lang = getenv("LANG_KEY"); // "c"
-    const char* cell = getenv("CELL");
     // parse game_state.json, apply move, write back
-    // full impl in implementations/c/game.c
     return 0;
 }
 ```
@@ -370,12 +395,12 @@ Turn: ❌ **X** is next
 
 ```cpp
 #include <iostream>
+#include <fstream>
+#include <nlohmann/json.hpp>
 
 int main() {
     std::string lang = std::getenv("LANG_KEY"); // "cpp"
-    std::string cell = std::getenv("CELL");
-    // parse game_state.json, apply move, write back
-    // full impl in implementations/cpp/game.cpp
+    // parse game_state.json...
     return 0;
 }
 ```
@@ -402,11 +427,12 @@ Turn: ❌ **X** is next
 <summary>📄 Scala implementation snippet</summary>
 
 ```scala
+import scala.io.Source
+import play.api.libs.json._
+
 object Game extends App {
     val lang = sys.env("LANG_KEY") // "scala"
-    val cell = sys.env("CELL")
-    // parse game_state.json, apply move, write back
-    // full impl in implementations/scala/Game.scala
+    // parse game_state.json...
 }
 ```
 
@@ -434,10 +460,8 @@ Turn: ❌ **X** is next
 ```swift
 import Foundation
 
-let lang = ProcessInfo.processInfo.environment["LANG_KEY"] // "swift"
-let cell = ProcessInfo.processInfo.environment["CELL"]
-// parse game_state.json, apply move, write back
-// full impl in implementations/swift/game.swift
+let lang = ProcessInfo.processInfo.environment["LANG_KEY"]! // "swift"
+// parse game_state.json...
 ```
 
 </details>
@@ -460,9 +484,9 @@ let cell = ProcessInfo.processInfo.environment["CELL"]
 | C# | .NET 8 | `setup-dotnet@v4` |
 | C | gcc (pre-installed) | — |
 | C++ | g++ (pre-installed) | — |
-| Scala | 3.x | `setup-java@v4` |
+| Scala | 3.x via Coursier | `setup-java@v4` |
 | Swift | 5.10 | `swift-actions/setup-swift@v2` |
 
 ---
 
-*Built with GitHub Actions. Each **___** opens a pre-filled issue — submitting it triggers the workflow.*
+*Built with GitHub Actions. Each **[___]** opens a pre-filled issue — submitting it triggers the workflow.*

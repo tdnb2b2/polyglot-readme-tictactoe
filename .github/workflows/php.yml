@@ -1,4 +1,4 @@
-name: PHP Tic-Tac-Toe
+name: Php Tic-Tac-Toe
 on:
   issues:
     types: [opened]
@@ -6,7 +6,7 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: "${{ contains(github.event.issue.title, 'PHP: Tic-Tac-Toe:') }}"
+    if: "${{ contains(github.event.issue.title, 'Php: Tic-Tac-Toe:') }}"
     permissions:
       contents: write
       issues: write
@@ -17,7 +17,7 @@ jobs:
       - name: Install dependencies
         run: pip install requests
 
-      - name: Setup PHP
+      - name: Setup Php
         uses: shivammathur/setup-php@v2
         with:
           php-version: '8.2'
