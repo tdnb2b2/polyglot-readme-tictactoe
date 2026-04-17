@@ -28,34 +28,32 @@
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Python+board)
 <!-- PYTHON_END -->
 
 <details>
 <summary>📄 Python implementation snippet</summary>
 
 ```python
-import json, os, sys
-sys.path.insert(0, '.')
-from shared.board import load_state, save_state, check_winner, is_draw, CELL_TO_IDX
+import json, os
 
-lang   = os.environ['LANG_KEY']   # 'python'
-cell   = os.environ['CELL']       # e.g. 'B2'
-action = os.environ['ACTION']     # 'put' | 'reset'
-state  = load_state(lang)
+# Read the simplified state
+with open('current_state.json', 'r') as f:
+    s = json.load(f)
+
+cell   = os.environ.get('CELL', '').upper()
+action = os.environ.get('ACTION', 'put')
 
 if action == 'reset':
-    state = {'board': [['','',''],['','',''],['','','']], 'turn':'X', 'winner':None, 'log':[]}
-else:
-    r, c = CELL_TO_IDX[cell]
-    if not state['board'][r][c] and not state['winner']:
-        state['board'][r][c] = state['turn']
-        w = check_winner(state['board'])
-        state['winner'] = w
-        if not w and not is_draw(state['board']):
-            state['turn'] = 'O' if state['turn'] == 'X' else 'X'
-        state['log'].append({'player': state['turn'], 'cell': cell})
+    s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
+elif cell and not s["winner"]:
+    # Apply Tic-Tac-Toe logic...
+    pass
 
-save_state(lang, state)
+# Write it back
+with open('current_state.json', 'w') as f:
+    json.dump(s, f, indent=2)
 ```
 
 </details>
@@ -72,6 +70,8 @@ save_state(lang, state)
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+JavaScript+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+JavaScript+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Reset&body=Reset+JavaScript+board)
 <!-- JAVASCRIPT_END -->
 
 <details>
@@ -79,37 +79,17 @@ Turn: ❌ **X** is next
 
 ```javascript
 const fs = require('fs');
-const CELL_TO_IDX = {
-  A1:[0,0],A2:[0,1],A3:[0,2],
-  B1:[1,0],B2:[1,1],B3:[1,2],
-  C1:[2,0],C2:[2,1],C3:[2,2],
-};
-const WIN_LINES = [
-  [[0,0],[0,1],[0,2]],[[1,0],[1,1],[1,2]],[[2,0],[2,1],[2,2]],
-  [[0,0],[1,0],[2,0]],[[0,1],[1,1],[2,1]],[[0,2],[1,2],[2,2]],
-  [[0,0],[1,1],[2,2]],[[0,2],[1,1],[2,0]],
-];
-const all = JSON.parse(fs.readFileSync('game_state.json'));
-const lang = process.env.LANG_KEY;
-const cell = process.env.CELL;
-const action = process.env.ACTION;
-const s = all[lang];
+const s = JSON.parse(fs.readFileSync('current_state.json'));
+const cell = (process.env.CELL || "").toUpperCase();
+const action = process.env.ACTION || "put";
+
 if (action === 'reset') {
-  s.board = [['','',''],['','',''],['','','']];
-  s.turn = 'X'; s.winner = null; s.log = [];
-} else {
-  const [r,c] = CELL_TO_IDX[cell];
-  if (!s.board[r][c] && !s.winner) {
-    s.board[r][c] = s.turn;
-    const win = WIN_LINES.find(l => l.every(([r2,c2]) => s.board[r2][c2] === s.turn));
-    if (win) { s.winner = s.turn; }
-    else if (s.board.flat().every(Boolean)) { /* draw */ }
-    else { s.turn = s.turn === 'X' ? 'O' : 'X'; }
-    s.log.push({player: s.turn, cell});
-  }
+    s.board = [["","",""],["","",""],["","",""]];
+    s.turn = "X"; s.winner = null; s.log = [];
+} else if (cell && !s.winner) {
+    // Apply logic...
 }
-all[lang] = s;
-fs.writeFileSync('game_state.json', JSON.stringify(all, null, 2));
+fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
 ```
 
 </details>
@@ -126,6 +106,8 @@ fs.writeFileSync('game_state.json', JSON.stringify(all, null, 2));
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+TypeScript+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+TypeScript+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+TypeScript+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Reset&body=Reset+TypeScript+board)
 <!-- TYPESCRIPT_END -->
 
 <details>
@@ -133,38 +115,9 @@ Turn: ❌ **X** is next
 
 ```typescript
 import * as fs from 'fs';
-type Board = string[][];
-const CELL_TO_IDX: Record<string,[number,number]> = {
-  A1:[0,0],A2:[0,1],A3:[0,2],
-  B1:[1,0],B2:[1,1],B3:[1,2],
-  C1:[2,0],C2:[2,1],C3:[2,2],
-};
-const all = JSON.parse(fs.readFileSync('game_state.json','utf8'));
-const lang = process.env.LANG_KEY!;
-const s = all[lang];
-const action = process.env.ACTION!;
-const cell = process.env.CELL!;
-const checkWinner = (b: Board): string|null => {
-  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-  for (const [a,b2,c] of lines) {
-    const flat = b.flat();
-    if (flat[a] && flat[a]===flat[b2] && flat[a]===flat[c]) return flat[a];
-  }
-  return null;
-};
-if (action === 'reset') {
-  s.board=[['','',''],['','',''],['','','']]; s.turn='X'; s.winner=null; s.log=[];
-} else {
-  const [r,c2] = CELL_TO_IDX[cell];
-  if (!s.board[r][c2] && !s.winner) {
-    s.board[r][c2] = s.turn;
-    s.winner = checkWinner(s.board);
-    if (!s.winner && s.board.flat().some((v:string)=>!v)) s.turn = s.turn==='X'?'O':'X';
-    s.log.push({player:s.turn, cell});
-  }
-}
-all[lang]=s;
-fs.writeFileSync('game_state.json', JSON.stringify(all,null,2));
+const s = JSON.parse(fs.readFileSync('current_state.json', 'utf8'));
+// Apply logic...
+fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
 ```
 
 </details>
@@ -181,41 +134,9 @@ fs.writeFileSync('game_state.json', JSON.stringify(all,null,2));
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Go+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Go+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Go+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Go+board)
 <!-- GO_END -->
-
-<details>
-<summary>📄 Go implementation snippet</summary>
-
-```go
-package main
-import (
-    "encoding/json"; "os"; "strings"
-)
-func checkWinner(b [3][3]string) string {
-    lines := [][3][2]int{
-        {{0,0},{0,1},{0,2}},{{1,0},{1,1},{1,2}},{{2,0},{2,1},{2,2}},
-        {{0,0},{1,0},{2,0}},{{0,1},{1,1},{2,1}},{{0,2},{1,2},{2,2}},
-        {{0,0},{1,1},{2,2}},{{0,2},{1,1},{2,0}},
-    }
-    for _, l := range lines {
-        if b[l[0][0]][l[0][1]] != "" &&
-           b[l[0][0]][l[0][1]] == b[l[1][0]][l[1][1]] &&
-           b[l[1][0]][l[1][1]] == b[l[2][0]][l[2][1]] {
-            return b[l[0][0]][l[0][1]]
-        }
-    }
-    return ""
-}
-func main() {
-    // reads game_state.json, applies move, saves back
-    lang := os.Getenv("LANG_KEY") // "go"
-    cell := strings.ToUpper(os.Getenv("CELL"))
-    _ = lang; _ = cell
-    // full impl in implementations/go/game.go
-}
-```
-
-</details>
 
 ---
 
@@ -229,37 +150,9 @@ func main() {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Rust+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Rust+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Rust+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Rust+board)
 <!-- RUST_END -->
-
-<details>
-<summary>📄 Rust implementation snippet</summary>
-
-```rust
-use std::{env, fs};
-use serde_json::{Value, json};
-fn check_winner(board: &Vec<Vec<String>>) -> Option<String> {
-    let lines = vec![
-        [(0,0),(0,1),(0,2)],[(1,0),(1,1),(1,2)],[(2,0),(2,1),(2,2)],
-        [(0,0),(1,0),(2,0)],[(0,1),(1,1),(2,1)],[(0,2),(1,2),(2,2)],
-        [(0,0),(1,1),(2,2)],[(0,2),(1,1),(2,0)],
-    ];
-    for line in &lines {
-        let vals: Vec<&str> = line.iter().map(|&(r,c)| board[r][c].as_str()).collect();
-        if !vals[0].is_empty() && vals[0]==vals[1] && vals[1]==vals[2] {
-            return Some(vals[0].to_string());
-        }
-    }
-    None
-}
-fn main() {
-    let lang = env::var("LANG_KEY").unwrap(); // "rust"
-    let cell = env::var("CELL").unwrap();
-    // reads game_state.json, applies move, saves back
-    // full impl in implementations/rust/src/main.rs
-}
-```
-
-</details>
 
 ---
 
@@ -273,32 +166,9 @@ fn main() {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Java+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Java+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Java+board)
 <!-- JAVA_END -->
-
-<details>
-<summary>📄 Java implementation snippet</summary>
-
-```java
-import org.json.*;
-import java.nio.file.*;
-import java.util.Map;
-public class Game {
-    static int[][] CELL_TO_IDX = {{0,0},{0,1},{0,2},{1,0},{1,1},{1,2},{2,0},{2,1},{2,2}};
-    static String[] CELL_NAMES = {"A1","A2","A3","B1","B2","B3","C1","C2","C3"};
-    public static void main(String[] args) throws Exception {
-        String lang = System.getenv("LANG_KEY"); // "java"
-        String cell = System.getenv("CELL");
-        String action = System.getenv("ACTION");
-        String raw = Files.readString(Path.of("game_state.json"));
-        JSONObject all = new JSONObject(raw);
-        JSONObject s = all.getJSONObject(lang);
-        // apply move logic, save back to game_state.json
-        // full impl in implementations/java/Game.java
-    }
-}
-```
-
-</details>
 
 ---
 
@@ -312,31 +182,9 @@ public class Game {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Kotlin+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Kotlin+board)
 <!-- KOTLIN_END -->
-
-<details>
-<summary>📄 Kotlin implementation snippet</summary>
-
-```kotlin
-import org.json.JSONObject
-import java.io.File
-val WIN_LINES = listOf(
-    listOf(Pair(0,0),Pair(0,1),Pair(0,2)), listOf(Pair(1,0),Pair(1,1),Pair(1,2)),
-    listOf(Pair(2,0),Pair(2,1),Pair(2,2)), listOf(Pair(0,0),Pair(1,0),Pair(2,0)),
-    listOf(Pair(0,1),Pair(1,1),Pair(2,1)), listOf(Pair(0,2),Pair(1,2),Pair(2,2)),
-    listOf(Pair(0,0),Pair(1,1),Pair(2,2)), listOf(Pair(0,2),Pair(1,1),Pair(2,0)),
-)
-fun checkWinner(board: List<List<String>>): String? {
-    for (line in WIN_LINES) {
-        val vals = line.map { (r,c) -> board[r][c] }
-        if (vals[0].isNotEmpty() && vals[0]==vals[1] && vals[1]==vals[2]) return vals[0]
-    }
-    return null
-}
-// full impl in implementations/kotlin/Game.kt
-```
-
-</details>
 
 ---
 
@@ -350,37 +198,9 @@ fun checkWinner(board: List<List<String>>): String? {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+PHP+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+PHP+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+PHP+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Reset&body=Reset+PHP+board)
 <!-- PHP_END -->
-
-<details>
-<summary>📄 PHP implementation snippet</summary>
-
-```php
-<?php
-$cellMap = [
-    'A1'=>[0,0],'A2'=>[0,1],'A3'=>[0,2],
-    'B1'=>[1,0],'B2'=>[1,1],'B3'=>[1,2],
-    'C1'=>[2,0],'C2'=>[2,1],'C3'=>[2,2],
-];
-$lang   = getenv('LANG_KEY');  // 'php'
-$cell   = strtoupper(getenv('CELL'));
-$action = getenv('ACTION');
-$all    = json_decode(file_get_contents('game_state.json'), true);
-$s      = &$all[$lang];
-if ($action === 'reset') {
-    $s = ['board'=>[['','',''],['','',''],['','','']],'turn'=>'X','winner'=>null,'log'=>[]];
-} else {
-    [$r,$c] = $cellMap[$cell];
-    if (!$s['board'][$r][$c] && !$s['winner']) {
-        $s['board'][$r][$c] = $s['turn'];
-        // check winner, update turn...
-    }
-}
-file_put_contents('game_state.json', json_encode($all, JSON_PRETTY_PRINT));
-// full impl in implementations/php/game.php
-```
-
-</details>
 
 ---
 
@@ -394,46 +214,13 @@ file_put_contents('game_state.json', json_encode($all, JSON_PRETTY_PRINT));
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Ruby+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Ruby+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Ruby+board)
 <!-- RUBY_END -->
-
-<details>
-<summary>📄 Ruby implementation snippet</summary>
-
-```ruby
-require 'json'
-CELL_TO_IDX = {
-  'A1'=>[0,0],'A2'=>[0,1],'A3'=>[0,2],
-  'B1'=>[1,0],'B2'=>[1,1],'B3'=>[1,2],
-  'C1'=>[2,0],'C2'=>[2,1],'C3'=>[2,2],
-}
-WIN_LINES = [
-  [[0,0],[0,1],[0,2]],[[1,0],[1,1],[1,2]],[[2,0],[2,1],[2,2]],
-  [[0,0],[1,0],[2,0]],[[0,1],[1,1],[2,1]],[[0,2],[1,2],[2,2]],
-  [[0,0],[1,1],[2,2]],[[0,2],[1,1],[2,0]]
-]
-lang   = ENV['LANG_KEY']  # 'ruby'
-cell   = ENV['CELL'].upcase
-action = ENV['ACTION']
-all    = JSON.parse(File.read('game_state.json'))
-s      = all[lang]
-if action == 'reset'
-  s.merge!('board'=>[['','',''],['','',''],['','','']],'turn'=>'X','winner'=>nil,'log'=>[])
-else
-  r, c = CELL_TO_IDX[cell]
-  unless s['board'][r][c] || s['winner']
-    s['board'][r][c] = s['turn']
-    # check winner, update turn...
-  end
-end
-File.write('game_state.json', JSON.pretty_generate(all))
-# full impl in implementations/ruby/game.rb
-```
-
-</details>
 
 ---
 
-## 🔵 C\#
+## 🔵 C#
 
 <!-- CSHARP_START -->
 |   | 1 | 2 | 3 |
@@ -443,33 +230,9 @@ File.write('game_state.json', JSON.pretty_generate(all))
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%23+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%23+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C%23+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Reset&body=Reset+C%23+board)
 <!-- CSHARP_END -->
-
-<details>
-<summary>📄 C# implementation snippet</summary>
-
-```csharp
-using System.Text.Json;
-var lang   = Environment.GetEnvironmentVariable("LANG_KEY")!; // "csharp"
-var cell   = Environment.GetEnvironmentVariable("CELL")!;
-var action = Environment.GetEnvironmentVariable("ACTION")!;
-var raw    = File.ReadAllText("game_state.json");
-var all    = JsonSerializer.Deserialize<Dictionary<string,GameState>>(raw)!;
-var s      = all[lang];
-if (action == "reset") {
-    s.Board = new string[3,3]; s.Turn = "X"; s.Winner = null; s.Log.Clear();
-} else {
-    var (r,c) = CellToIdx(cell);
-    if (s.Board[r,c] == "" && s.Winner == null) {
-        s.Board[r,c] = s.Turn;
-        s.Winner = CheckWinner(s.Board);
-        if (s.Winner == null) s.Turn = s.Turn == "X" ? "O" : "X";
-    }
-}
-// full impl in implementations/csharp/Game.cs
-```
-
-</details>
 
 ---
 
@@ -483,37 +246,15 @@ if (action == "reset") {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Reset&body=Reset+C+board)
 <!-- C_END -->
-
-<details>
-<summary>📄 C implementation snippet</summary>
-
-```c
-#include <stdio.h>
-#include <stdlib.h>
-#include <string.h>
-// Uses cJSON for JSON parsing
-const int WIN_LINES[8][3][2] = {
-    {{0,0},{0,1},{0,2}},{{1,0},{1,1},{1,2}},{{2,0},{2,1},{2,2}},
-    {{0,0},{1,0},{2,0}},{{0,1},{1,1},{2,1}},{{0,2},{1,2},{2,2}},
-    {{0,0},{1,1},{2,2}},{{0,2},{1,1},{2,0}},
-};
-int main() {
-    const char* lang = getenv("LANG_KEY");  // "c"
-    const char* cell = getenv("CELL");
-    // parse game_state.json, apply move, write back
-    // full impl in implementations/c/game.c
-    return 0;
-}
-```
-
-</details>
 
 ---
 
 ## 🔩 C++
 
-<!-- CPP_START -->
+<!-- CPPLUS_START -->
 |   | 1 | 2 | 3 |
 |---|---|---|---|
 | **A** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+C%2B%2B+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+C%2B%2B+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C%2B%2B+board) |
@@ -521,32 +262,9 @@ int main() {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%2B%2B+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C%2B%2B+board) |
 
 Turn: ❌ **X** is next
-<!-- CPP_END -->
 
-<details>
-<summary>📄 C++ implementation snippet</summary>
-
-```cpp
-#include <iostream>
-#include <fstream>
-#include <map>
-#include <nlohmann/json.hpp>
-using json = nlohmann::json;
-const std::map<std::string,std::pair<int,int>> CELL_TO_IDX = {
-    {"A1",{0,0}},{"A2",{0,1}},{"A3",{0,2}},
-    {"B1",{1,0}},{"B2",{1,1}},{"B3",{1,2}},
-    {"C1",{2,0}},{"C2",{2,1}},{"C3",{2,2}},
-};
-int main() {
-    std::string lang = std::getenv("LANG_KEY"); // "cpp"
-    std::string cell = std::getenv("CELL");
-    // parse game_state.json, apply move, write back
-    // full impl in implementations/cpp/game.cpp
-    return 0;
-}
-```
-
-</details>
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Reset&body=Reset+C%2B%2B+board)
+<!-- CPPLUS_END -->
 
 ---
 
@@ -560,27 +278,9 @@ int main() {
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Scala+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Scala+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Scala+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Scala+board)
 <!-- SCALA_END -->
-
-<details>
-<summary>📄 Scala implementation snippet</summary>
-
-```scala
-import scala.io.Source
-import play.api.libs.json._
-val cellToIdx = Map(
-  "A1"->(0,0),"A2"->(0,1),"A3"->(0,2),
-  "B1"->(1,0),"B2"->(1,1),"B3"->(1,2),
-  "C1"->(2,0),"C2"->(2,1),"C3"->(2,2)
-)
-val lang   = sys.env("LANG_KEY")  // "scala"
-val cell   = sys.env("CELL").toUpperCase
-val action = sys.env("ACTION")
-// parse game_state.json, apply move, write back
-// full impl in implementations/scala/Game.scala
-```
-
-</details>
 
 ---
 
@@ -594,26 +294,9 @@ val action = sys.env("ACTION")
 | **C** | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Swift+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Swift+board) | [➕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Swift+board) |
 
 Turn: ❌ **X** is next
+
+[🔄 Reset Board](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Reset&body=Reset+Swift+board)
 <!-- SWIFT_END -->
-
-<details>
-<summary>📄 Swift implementation snippet</summary>
-
-```swift
-import Foundation
-let cellToIdx: [String: (Int, Int)] = [
-    "A1":(0,0),"A2":(0,1),"A3":(0,2),
-    "B1":(1,0),"B2":(1,1),"B3":(1,2),
-    "C1":(2,0),"C2":(2,1),"C3":(2,2),
-]
-let lang   = ProcessInfo.processInfo.environment["LANG_KEY"]!  // "swift"
-let cell   = ProcessInfo.processInfo.environment["CELL"]!.uppercased()
-let action = ProcessInfo.processInfo.environment["ACTION"]!
-// parse game_state.json, apply move, write back
-// full impl in implementations/swift/game.swift
-```
-
-</details>
 
 ---
 
@@ -633,7 +316,7 @@ let action = ProcessInfo.processInfo.environment["ACTION"]!
 | C# | .NET 8 | `setup-dotnet@v4` |
 | C | gcc (pre-installed) | — |
 | C++ | g++ (pre-installed) | — |
-| Scala | 3.x via Coursier | `setup-java@v4` |
+| Scala | 3.x via java | `setup-java@v4` |
 | Swift | 5.10 | `swift-actions/setup-swift@v2` |
 
 ---
