@@ -40,7 +40,10 @@ int main() {
         if(line.find("\"turn\": \"O\"") != string::npos) turn = "O";
     }
 
-    if(action == "reset") write_state((char[3][3]){0}, "X", "");
+    if(action == "reset") {
+        char empty_b[3][3] = {0};
+        write_state(empty_b, "X", "");
+    }
     else if(cell != "") {
         int row = cell[1]-'1', col = cell[0]-'A';
         if(row>=0 && row<3 && col>=0 && col<3 && b[row][col]==0) {
