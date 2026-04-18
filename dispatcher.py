@@ -148,24 +148,25 @@ def main():
 
         # Update README.md
         try:
-            from shared.board import get_readme, update_readme, replace_section, render_board_md
+            from shared.board import update_readme_local, replace_section, render_board_md
             token      = os.environ['GITHUB_TOKEN']
             repo_name  = os.environ['REPO']
             issue_n    = os.environ['ISSUE_NUMBER']
-            actor      = os.environ.get('GITHUB_ACTOR', 'player')
 
             new_board_md = render_board_md(
                 updated_state['board'], lang, repo_name.split('/')[0], repo_name.split('/')[1],
                 updated_state['turn'], updated_state['winner'], updated_state['log']
             )
 
-            current_content, sha = get_readme(token, repo_name)
-            new_content = replace_section(current_content, lang.upper(), new_board_md)
+            with open('README.md', 'r') as f:
+                current_content = f.read()
+
+            new_content = replace_section(current_content, f"BOARD_{lang.upper()}", new_board_md)
 
             if new_content != current_content:
-                update_readme(token, repo_name, new_content, sha, actor, lang)
+                update_readme_local(new_content)
             
-            _close_issue(token, repo_name, issue_n, f"Move accepted for {lang}. README updated.")
+            _close_issue(token, repo_name, issue_n, f"Move accepted for {lang}. README updated locally.")
 
         except Exception as e:
             print(f"Error updating README: {e}", file=sys.stderr)

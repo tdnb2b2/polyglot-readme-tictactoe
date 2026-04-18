@@ -37,6 +37,11 @@ def get_readme(token: str, repo: str) -> tuple:
     return content, data['sha']
 
 
+def update_readme_local(content: str):
+    with open('README.md', 'w') as f:
+        f.write(content)
+
+
 def update_readme(token: str, repo: str, content: str, sha: str, actor: str, lang: str):
     import base64
     url = f'https://api.github.com/repos/{repo}/contents/README.md'

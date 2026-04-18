@@ -1,9 +1,0 @@
-name: Disabled
-on:
-  push:
-    branches: [ignore]
-jobs:
-  dummy:
-    runs-on: ubuntu-latest
-    steps:
-      - run: echo disabled
