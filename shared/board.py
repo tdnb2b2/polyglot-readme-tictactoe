@@ -11,23 +11,36 @@ CELL_TO_IDX = {
 
 def get_source_code(lang_key: str) -> str:
     """Retrieves source code for the specific language implementation."""
-    ext_map = {
-        'python': 'py', 'javascript': 'js', 'typescript': 'ts',
-        'go': 'go', 'rust': 'rs', 'java': 'java', 'kotlin': 'kt',
-        'php': 'php', 'ruby': 'rb', 'csharp': 'cs', 'c': 'c',
-        'cpp': 'cpp', 'scala': 'scala', 'swift': 'swift'
+    # Mapping to actual entry files found in implementations/
+    lang_file_map = {
+        'python': 'game.py',
+        'javascript': 'game.js',
+        'typescript': 'game.ts',
+        'go': 'game.go',
+        'rust': 'src/main.rs',
+        'java': 'Game.java',
+        'kotlin': 'Game.kt',
+        'php': 'game.php',
+        'ruby': 'game.rb',
+        'csharp': 'Program.cs',
+        'c': 'game.c',
+        'cpp': 'game.cpp',
+        'scala': 'Game.scala',
+        'swift': 'game.swift'
     }
-    ext = ext_map.get(lang_key, 'txt')
     
-    # Path inside implementatons/LANGUAGE/tictactoe.EXT
-    path = os.path.join('implementations', lang_key, f'tictactoe.{ext}')
+    filename = lang_file_map.get(lang_key)
+    if not filename:
+        return f"// Source code mapping for {lang_key} not defined."
+
+    path = os.path.join('implementations', lang_key, filename)
     try:
         if os.path.exists(path):
             with open(path, 'r') as f:
                 return f.read()
         return f"// Source code for {lang_key} not found at {path}"
-    except Exception:
-        return f"// Error reading source for {lang_key}"
+    except Exception as e:
+        return f"// Error reading source for {lang_key}: {str(e)}"
 
 def update_readme_local(new_content: str):
     """Writes updated content to README.md in current directory."""
