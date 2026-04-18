@@ -367,11 +367,52 @@ Turn: ❌ X is next
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+PHP+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+PHP+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+PHP+board) | **1** |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+PHP+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+PHP+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+PHP+board) | **2** |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+PHP+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+PHP+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+PHP+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+PHP+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+PHP+board) | **3** |
 |   | A | B | C |   |
 
-Turn: ❌ X is next
+🎮 **Next Move: O (Php)**
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `PHP: Tic-Tac-Toe: Put B2`
+- **Output (Information given)**: 
+```text
+Success
+```
+
+### 💻 Implementation Code (PHP)
+```php
+<?php
+$s = json_decode(file_get_contents('current_state.json'), true);
+$cell = strtoupper(getenv('CELL') ?: "");
+$action = getenv('ACTION') ?: "put";
+
+if ($action === 'reset') {
+    $s = ['board'=>[['','',''],['','',''],['','','']], 'turn'=>'X', 'winner'=>null, 'log'=>[]];
+} elseif ($cell && !$s['winner']) {
+    $r = (int)$cell[1] - 1; $c = ord($cell[0]) - 65;
+    if ($r>=0 && $r<3 && $c>=0 && $c<3 && $s['board'][$r][$c] === "") {
+        $s['board'][$r][$c] = $s['turn'];
+        $win = false;
+        $lns = [[0,0,0,1,0,2],[1,0,1,1,1,2],[2,0,2,1,2,2],[0,0,1,0,2,0],[0,1,1,1,2,1],[0,2,1,2,2,2],[0,0,1,1,2,2],[0,2,1,1,2,0]];
+        foreach($lns as $l) {
+            if ($s['board'][$l[0]][$l[1]] && $s['board'][$l[0]][$l[1]] === $s['board'][$l[2]][$l[3]] && $s['board'][$l[2]][$l[3]] === $s['board'][$l[4]][$l[5]]) $win = true;
+        }
+        if ($win) $s['winner'] = $s['turn'];
+        else {
+            $full = true; foreach($s['board'] as $row) foreach($row as $v) if($v === "") $full = false;
+            if ($full) $s['winner'] = 'draw';
+            else $s['turn'] = $s['turn'] === "X" ? "O" : "X";
+        }
+    }
+}
+file_put_contents('current_state.json', json_encode($s, JSON_PRETTY_PRINT));
+
+```
+</details>
 
 <!-- BOARD_PHP_END -->
 
