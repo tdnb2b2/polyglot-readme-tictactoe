@@ -23,6 +23,13 @@ jobs:
           java-version: '17'
           distribution: 'temurin'
 
+      - name: Build
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y kotlin
+          kotlinc Game.kt -include-runtime -d Game.jar
+        working-directory: implementations/kotlin
+
       - name: Play Game
         run: python3 dispatcher.py run
         env:

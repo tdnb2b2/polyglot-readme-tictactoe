@@ -18,6 +18,10 @@ jobs:
         run: pip install requests
 
 
+      - name: Build
+        run: gcc game.c -o game
+        working-directory: implementations/c
+
       - name: Play Game
         run: python3 dispatcher.py run
         env:

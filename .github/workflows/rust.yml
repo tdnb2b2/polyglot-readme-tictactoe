@@ -22,6 +22,10 @@ jobs:
         with:
           toolchain: 'stable'
 
+      - name: Build
+        run: cargo build --release
+        working-directory: implementations/rust
+
       - name: Play Game
         run: python3 dispatcher.py run
         env:

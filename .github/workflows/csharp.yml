@@ -22,6 +22,10 @@ jobs:
         with:
           dotnet-version: '8.0'
 
+      - name: Build
+        run: dotnet build
+        working-directory: implementations/csharp
+
       - name: Play Game
         run: python3 dispatcher.py run
         env:
