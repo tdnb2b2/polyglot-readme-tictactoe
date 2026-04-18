@@ -26,7 +26,7 @@ class Program {
             s.board = new List<List<string>>{ new(){"","",""}, new(){"","",""}, new(){"","",""} };
             s.turn = "X"; s.winner = null; s.log = new();
         } else if (!string.IsNullOrEmpty(cell) && s.winner == null) {
-            int r = cell[0] - 'A', c = cell[1] - '1';
+            int r = cell[1] - '1', c = cell[0] - 'A';
             if (r>=0 && r<3 && c>=0 && c<3 && string.IsNullOrEmpty(s.board[r][c])) {
                 s.board[r][c] = s.turn;
                 s.log.Add(new Move { player = s.turn, cell = cell });

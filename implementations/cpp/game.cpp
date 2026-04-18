@@ -42,7 +42,7 @@ int main() {
 
     if(action == "reset") write_state((char[3][3]){0}, "X", "");
     else if(cell != "") {
-        int row = cell[0]-'A', col = cell[1]-'1';
+        int row = cell[1]-'1', col = cell[0]-'A';
         if(row>=0 && row<3 && col>=0 && col<3 && b[row][col]==0) {
             b[row][col] = turn[0];
             int lns[8][6] = {{0,0,0,1,0,2},{1,0,1,1,1,2},{2,0,2,1,2,2}, {0,0,1,0,2,0},{0,1,1,1,2,1},{0,2,1,2,2,2}, {0,0,1,1,2,2},{0,2,1,1,2,0}};

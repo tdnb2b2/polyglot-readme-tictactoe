@@ -15,8 +15,8 @@ fun main() {
     } else if (cell.isNotEmpty() && s.isNull("winner")) {
         val board = s.getJSONArray("board")
         val turn = s.getString("turn")
-        val r = cell[0] - 'A'
-        val c = cell[1] - '1'
+        val r = cell[1] - '1'
+        val c = cell[0] - 'A'
         if (r in 0..2 && c in 0..2 && board.getJSONArray(r).getString(c).isEmpty()) {
             board.getJSONArray(r).put(c, turn)
             // check win

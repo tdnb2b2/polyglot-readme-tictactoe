@@ -15,8 +15,8 @@ if let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
     } else if !cell.isEmpty && (s["winner"] as? NSNull) != nil {
         var board = s["board"] as! [[String]]
         let turn = s["turn"] as! String
-        let r = Int(cell.first!.asciiValue! - Character("A").asciiValue!)
-        let c = Int(cell.dropFirst().first!.asciiValue! - Character("1").asciiValue!)
+        let r = Int(cell.dropFirst().first!.asciiValue! - Character("1").asciiValue!)
+        let c = Int(cell.first!.asciiValue! - Character("A").asciiValue!)
         
         if r >= 0 && r < 3 && c >= 0 && c < 3 && board[r][c].isEmpty {
             board[r][c] = turn

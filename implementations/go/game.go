@@ -18,7 +18,7 @@ func main() {
         s.Board = [][]string{{"","",""},{"","",""},{"","",""}}
         s.Turn = "X"; s.Winner = nil; s.Log = []interface{}{}
     } else if cell != "" && s.Winner == nil {
-        r, c := int(cell[0]-'A'), int(cell[1]-'1')
+        r, c := int(cell[1]-'1'), int(cell[0]-'A')
         if r>=0 && r<3 && c>=0 && c<3 && s.Board[r][c] == "" {
             s.Board[r][c] = s.Turn
             win := false

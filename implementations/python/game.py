@@ -16,7 +16,7 @@ def check_winner(b):
 if action == 'reset':
     s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
 elif cell and not s['winner']:
-    r, c = ord(cell[0]) - ord('A'), int(cell[1]) - 1
+    r, c = int(cell[1]) - 1, ord(cell[0]) - ord('A')
     if 0 <= r < 3 and 0 <= c < 3 and s['board'][r][c] == '':
         s['board'][r][c] = s['turn']
         s['log'].append({"player": s['turn'], "cell": cell})

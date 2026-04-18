@@ -19,8 +19,8 @@ fn main() {
         s.board = vec![vec!["".to_string(); 3]; 3];
         s.turn = "X".to_string(); s.winner = None; s.log = vec![];
     } else if !cell.is_empty() && s.winner.is_none() {
-        let r = (cell.chars().next().unwrap() as u8 - b'A') as usize;
-        let c = (cell.chars().nth(1).unwrap() as u8 - b'1') as usize;
+        let r = (cell.chars().nth(1).unwrap() as u8 - b'1') as usize;
+        let c = (cell.chars().next().unwrap() as u8 - b'A') as usize;
         if r < 3 && c < 3 && s.board[r][c].is_empty() {
             s.board[r][c] = s.turn.clone();
             let lns = vec![

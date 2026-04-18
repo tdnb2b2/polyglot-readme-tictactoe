@@ -6,7 +6,7 @@ $action = getenv('ACTION') ?: "put";
 if ($action === 'reset') {
     $s = ['board'=>[['','',''],['','',''],['','','']], 'turn'=>'X', 'winner'=>null, 'log'=>[]];
 } elseif ($cell && !$s['winner']) {
-    $r = ord($cell[0]) - 65; $c = (int)$cell[1] - 1;
+    $r = (int)$cell[1] - 1; $c = ord($cell[0]) - 65;
     if ($r>=0 && $r<3 && $c>=0 && $c<3 && $s['board'][$r][$c] === "") {
         $s['board'][$r][$c] = $s['turn'];
         $win = false;

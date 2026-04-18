@@ -7,7 +7,7 @@ if (action === 'reset') {
     s.board = [["","",""],["","",""],["","",""]];
     s.turn = "X"; s.winner = null; s.log = [];
 } else if (cell && !s.winner) {
-    const r = cell.charCodeAt(0) - 65, c = parseInt(cell[1]) - 1;
+    const r = parseInt(cell[1]) - 1, c = cell.charCodeAt(0) - 65;
     if (r >= 0 && r < 3 && c >= 0 && c < 3 && s.board[r][c] === "") {
         s.board[r][c] = s.turn;
         s.log.push({player: s.turn, cell});
