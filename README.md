@@ -314,7 +314,7 @@ Recent moves: X B2 -> O A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `JavaScript: Tic-Tac-Toe: Put A1`
+- **Input (Information received)**: `JavaScript: Tic-Tac-Toe: Put B2`
 - **Output (Information given)**: 
 ```text
 Success
