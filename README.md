@@ -149,7 +149,23 @@ func main() {
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Java+board) | **3** |
 |   | A | B | C |   |
 
-Turn: ❌ X is next
+🎮 **Next Move: X (Java)**
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `Java: Tic-Tac-Toe: Reset`
+- **Output (Information given)**: 
+```text
+Success
+```
+
+### 💻 Implementation Code (Java)
+```java
+// Source code for java not found at implementations/java/tictactoe.java
+```
+</details>
 
 <!-- BOARD_JAVA_END -->
 
