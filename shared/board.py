@@ -1,152 +1,65 @@
-#!/usr/bin/env python3
-"""shared/board.py — shared README update utilities used by all implementations."""
 import os
-import re
 import json
-import urllib.request
+import re
 
-
-def load_state(lang_key: str) -> dict:
-    with open('game_state.json', 'r') as f:
-        all_states = json.load(f)
-    return all_states[lang_key]
-
-
-def save_state(lang_key: str, state: dict):
-    with open('game_state.json', 'r') as f:
-        all_states = json.load(f)
-    all_states[lang_key] = state
-    with open('game_state.json', 'w') as f:
-        json.dump(all_states, f, indent=2)
-
-
-def get_readme(token: str, repo: str) -> tuple:
-    url = f'https://api.github.com/repos/{repo}/contents/README.md'
-    req = urllib.request.Request(url, headers={
-        'Authorization': f'token {token}',
-        'Accept': 'application/vnd.github.v3+json',
-    })
-    try:
-        with urllib.request.urlopen(req) as resp:
-            data = json.loads(resp.read())
-    except Exception as e:
-        print(f"Error fetching README: {e}")
-        raise
-    import base64
-    content = base64.b64decode(data['content']).decode('utf-8')
-    return content, data['sha']
-
-
-def update_readme_local(content: str):
-    with open('README.md', 'w') as f:
-        f.write(content)
-
-
-def update_readme(token: str, repo: str, content: str, sha: str, actor: str, lang: str):
-    import base64
-    url = f'https://api.github.com/repos/{repo}/contents/README.md'
-    payload = json.dumps({
-        'message': f'game({lang}): move by @{actor}',
-        'content': base64.b64encode(content.encode()).decode(),
-        'sha': sha,
-        'branch': 'main',
-    }).encode()
-    req = urllib.request.Request(url, data=payload, headers={
-        'Authorization': f'token {token}',
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v3+json',
-    })
-    req.get_method = lambda: 'PUT'
-    urllib.request.urlopen(req)
-
-
-def replace_section(content: str, tag: str, new_body: str) -> str:
-    pattern = rf'<!-- {re.escape(tag)}_START -->.*?<!-- {re.escape(tag)}_END -->'
-    replacement = f'<!-- {tag}_START -->\n{new_body}\n<!-- {tag}_END -->'
-    return re.sub(pattern, replacement, content, flags=re.DOTALL)
-
-
-def post_comment(token: str, repo: str, issue_number: str, body: str):
-    url = f'https://api.github.com/repos/{repo}/issues/{issue_number}/comments'
-    payload = json.dumps({'body': body}).encode()
-    req = urllib.request.Request(url, data=payload, headers={
-        'Authorization': f'token {token}',
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v3+json',
-    })
-    urllib.request.urlopen(req)
-
-
-def close_issue(token: str, repo: str, issue_number: str):
-    url = f'https://api.github.com/repos/{repo}/issues/{issue_number}'
-    payload = json.dumps({'state': 'closed'}).encode()
-    req = urllib.request.Request(url, data=payload, headers={
-        'Authorization': f'token {token}',
-        'Content-Type': 'application/json',
-        'Accept': 'application/vnd.github.v3+json',
-    })
-    req.get_method = lambda: 'PATCH'
-    urllib.request.urlopen(req)
-
-
+# Simple 3x3 Tic-Tac-Toe board state mapping
 CELL_TO_IDX = {
-    'A1': (0,0), 'B1': (0,1), 'C1': (0,2),
-    'A2': (1,0), 'B2': (1,1), 'C2': (1,2),
-    'A3': (2,0), 'B3': (2,1), 'C3': (2,2),
+    'A1': (0, 0), 'B1': (0, 1), 'C1': (0, 2),
+    'A2': (1, 0), 'B2': (1, 1), 'C2': (1, 2),
+    'A3': (2, 0), 'B3': (2, 1), 'C3': (2, 2)
 }
 
-WIN_LINES = [
-    [(0,0),(0,1),(0,2)],
-    [(1,0),(1,1),(1,2)],
-    [(2,0),(2,1),(2,2)],
-    [(0,0),(1,0),(2,0)],
-    [(0,1),(1,1),(2,1)],
-    [(0,2),(1,2),(2,2)],
-    [(0,0),(1,1),(2,2)],
-    [(0,2),(1,1),(2,0)],
-]
-
-
-def check_winner(board: list) -> str:
-    for line in WIN_LINES:
-        vals = [board[r][c] for r, c in line]
-        if vals[0] and vals[0] == vals[1] == vals[2]:
-            return vals[0]
-    return None
-
-
-def is_draw(board: list) -> bool:
-    return all(board[r][c] for r in range(3) for c in range(3))
-
-
 def get_source_code(lang_key: str) -> str:
-    """Read the source code of the implementation for the given language."""
-    paths = {
-        'python':     'implementations/python/game.py',
-        'javascript': 'implementations/javascript/game.js',
-        'typescript': 'implementations/typescript/game.ts',
-        'go':         'implementations/go/game.go',
-        'rust':       'implementations/rust/src/main.rs',
-        'java':       'implementations/java/Game.java',
-        'kotlin':     'implementations/kotlin/Game.kt',
-        'php':        'implementations/php/game.php',
-        'ruby':       'implementations/ruby/game.rb',
-        'csharp':     'implementations/csharp/Program.cs',
-        'c':          'implementations/c/game.c',
-        'cpp':        'implementations/cpp/game.cpp',
-        'scala':      'implementations/scala/Game.scala',
-        'swift':      'implementations/swift/game.swift',
+    """Retrieves source code for the specific language implementation."""
+    ext_map = {
+        'python': 'py', 'javascript': 'js', 'typescript': 'ts',
+        'go': 'go', 'rust': 'rs', 'java': 'java', 'kotlin': 'kt',
+        'php': 'php', 'ruby': 'rb', 'csharp': 'cs', 'c': 'c',
+        'cpp': 'cpp', 'scala': 'scala', 'swift': 'swift'
     }
-    path = paths.get(lang_key)
-    if path and os.path.exists(path):
-        with open(path, 'r') as f:
-            return f.read()
-    return "Source code not found."
+    ext = ext_map.get(lang_key, 'txt')
+    
+    # Path inside implementatons/LANGUAGE/tictactoe.EXT
+    path = os.path.join('implementations', lang_key, f'tictactoe.{ext}')
+    try:
+        if os.path.exists(path):
+            with open(path, 'r') as f:
+                return f.read()
+        return f"// Source code for {lang_key} not found at {path}"
+    except Exception:
+        return f"// Error reading source for {lang_key}"
 
+def update_readme_local(new_content: str):
+    """Writes updated content to README.md in current directory."""
+    with open('README.md', 'w') as f:
+        f.write(new_content)
+
+def replace_section(content: str, tag: str, replacement: str) -> str:
+    """Replaces a section marked by <!-- BOARD_TAG_START --> and <!-- BOARD_TAG_END -->."""
+    start_tag = f"<!-- {tag}_START -->"
+    end_tag = f"<!-- {tag}_END -->"
+    
+    pattern = re.compile(rf"{re.escape(start_tag)}.*?{re.escape(end_tag)}", re.DOTALL)
+    if not pattern.search(content):
+        return content
+        
+    return pattern.sub(f"{start_tag}\n{replacement}\n{end_tag}", content)
 
 def render_board_md(board: list, lang_key: str, owner: str, repo: str,
                     turn: str, winner: str, log: list, 
                     input_info: str = "", output_info: str = "") -> str:
+    """
+    Renders the Tic-Tac-Toe board as a Markdown table with interactive links.
+    Includes technical details (source code and execution context).
+    """
+    status = ""
+    if winner:
+        status = f"🏆 **Winner: {winner} ({lang_key.capitalize()})**"
+    elif all(all(row) for row in board):
+        status = "🤝 **It's a Draw!**"
+    else:
+        status = f"🎮 **Next Move: {turn} ({lang_key.capitalize()})**"
+
     # Minimalist status symbols
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
     LANG_DISPLAY = {
@@ -179,15 +92,6 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     rows.append('|   | A | B | C |   |')
     board_md = '\n'.join(rows)
 
-    if winner:
-        reset_title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Reset"
-        status = f'{winner} wins! — [Reset](https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Reset+the+board)'
-    elif is_draw(board):
-        reset_title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Reset"
-        status = f"It's a draw! — [Reset](https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Reset+the+board)"
-    else:
-        status = f'Turn: {SYMBOLS[turn]} {turn} is next'
-
     log_md = ''
     if log:
         recent = log[-5:]
@@ -197,7 +101,7 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
 
     # Technical Details (Collapsible)
     code_content = get_source_code(lang_key)
-    code_ext = lang_key if lang_key != 'csharp' else 'csharp'
+    code_ext = lang_key if lang_key != 'csharp' else 'cs'
 
     tech_details = f"""
 <details>
@@ -211,7 +115,7 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
 ```
 
 ### 💻 Implementation Code ({lang_display})
-```({code_ext})
+```{code_ext}
 {code_content}
 ```
 </details>

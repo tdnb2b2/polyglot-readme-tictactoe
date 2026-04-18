@@ -18,10 +18,10 @@ jobs:
         run: pip install requests
 
       - name: Setup Scala
-        uses: actions/setup-java@v4
+        uses: coursier/setup-action@v1
         with:
-          java-version: '17'
-          distribution: 'temurin'
+          jvm: 'temurin:1.17'
+          apps: scala
 
       - name: Play Game
         run: python3 dispatcher.py run
