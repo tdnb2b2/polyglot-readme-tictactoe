@@ -135,7 +135,7 @@ def main():
     env['ACTION']   = action
 
     print(f"Running {lang} implementation in {impl_dir}...")
-    result = subprocess.run(cmd, env=env, cwd=impl_dir, capture_output=False)
+    result = subprocess.run(cmd, env=env, cwd=impl_dir, capture_output=True, text=True)
     
     if result.returncode == 0:
         # Read back sandbox state from implementation directory
@@ -153,9 +153,13 @@ def main():
             repo_name  = os.environ['REPO']
             issue_n    = os.environ['ISSUE_NUMBER']
 
+            # Capture output for Technical Details
+            output_info = (result.stdout + "\n" + result.stderr).strip() or "Success"
+
             new_board_md = render_board_md(
                 updated_state['board'], lang, repo_name.split('/')[0], repo_name.split('/')[1],
-                updated_state['turn'], updated_state['winner'], updated_state['log']
+                updated_state['turn'], updated_state['winner'], updated_state['log'],
+                input_info=title, output_info=output_info
             )
 
             with open('README.md', 'r') as f:

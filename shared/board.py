@@ -119,8 +119,34 @@ def is_draw(board: list) -> bool:
     return all(board[r][c] for r in range(3) for c in range(3))
 
 
+def get_source_code(lang_key: str) -> str:
+    """Read the source code of the implementation for the given language."""
+    paths = {
+        'python':     'implementations/python/game.py',
+        'javascript': 'implementations/javascript/game.js',
+        'typescript': 'implementations/typescript/game.ts',
+        'go':         'implementations/go/game.go',
+        'rust':       'implementations/rust/src/main.rs',
+        'java':       'implementations/java/Game.java',
+        'kotlin':     'implementations/kotlin/Game.kt',
+        'php':        'implementations/php/game.php',
+        'ruby':       'implementations/ruby/game.rb',
+        'csharp':     'implementations/csharp/Program.cs',
+        'c':          'implementations/c/game.c',
+        'cpp':        'implementations/cpp/game.cpp',
+        'scala':      'implementations/scala/Game.scala',
+        'swift':      'implementations/swift/game.swift',
+    }
+    path = paths.get(lang_key)
+    if path and os.path.exists(path):
+        with open(path, 'r') as f:
+            return f.read()
+    return "Source code not found."
+
+
 def render_board_md(board: list, lang_key: str, owner: str, repo: str,
-                    turn: str, winner: str, log: list) -> str:
+                    turn: str, winner: str, log: list, 
+                    input_info: str = "", output_info: str = "") -> str:
     # Minimalist status symbols
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
     LANG_DISPLAY = {
@@ -169,4 +195,26 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
             f'{e["player"]} {e["cell"]}' for e in recent
         )
 
-    return f'{board_md}\n\n{status}{log_md}\n'
+    # Technical Details (Collapsible)
+    code_content = get_source_code(lang_key)
+    code_ext = lang_key if lang_key != 'csharp' else 'csharp'
+
+    tech_details = f"""
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `{input_info or "Initial Page Load / Manual Sync"}`
+- **Output (Information given)**: 
+```text
+{output_info or "Move processed successfully."}
+```
+
+### 💻 Implementation Code ({lang_display})
+```({code_ext})
+{code_content}
+```
+</details>
+"""
+
+    return f'{board_md}\n\n{status}{log_md}\n{tech_details}'
