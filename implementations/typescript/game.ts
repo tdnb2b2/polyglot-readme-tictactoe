@@ -14,7 +14,7 @@ if (action === 'reset') {
         const lines = [[[0,0],[0,1],[0,2]],[[1,0],[1,1],[1,2]],[[2,0],[2,1],[2,2]], [[0,0],[1,0],[2,0]],[[0,1],[1,1],[2,1]],[[0,2],[1,2],[2,2]], [[0,0],[1,1],[2,2]],[[0,2],[1,1],[2,0]]];
         let win = lines.find(l => l.every(([r2,c2]) => s.board[r2][c2] === s.turn));
         if (win) s.winner = s.turn;
-        else if (s.board.flat().every(v => v !== "")) s.winner = "draw";
+        else if (s.board.flat().every((v: string) => v !== "")) s.winner = "draw";
         else s.turn = s.turn === "X" ? "O" : "X";
     }
 }
