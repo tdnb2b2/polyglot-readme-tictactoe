@@ -274,9 +274,10 @@
     "log": []
   },
   "swift": {
+    "turn": "O",
     "board": [
       [
-        "",
+        "X",
         "",
         ""
       ],
@@ -291,9 +292,13 @@
         ""
       ]
     ],
-    "turn": "X",
     "winner": null,
-    "log": []
+    "log": [
+      {
+        "player": "X",
+        "cell": "A1"
+      }
+    ]
   },
   "typescript": {
     "board": [
