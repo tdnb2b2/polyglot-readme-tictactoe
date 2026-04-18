@@ -173,20 +173,18 @@ Success
 <!-- BOARD_JAVASCRIPT_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board) | **1** |
+| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board) | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+JavaScript+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+JavaScript+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Javascript)**
-
-Recent moves: X A1
+🎮 **Next Move: X (Javascript)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `JavaScript: Tic-Tac-Toe: Put A1`
+- **Input (Information received)**: `JavaScript: Tic-Tac-Toe: Reset`
 - **Output (Information given)**: 
 ```text
 Success
@@ -194,7 +192,28 @@ Success
 
 ### 💻 Implementation Code (JavaScript)
 ```javascript
-// Source code for javascript not found at implementations/javascript/tictactoe.js
+const fs = require('fs');
+const s = JSON.parse(fs.readFileSync('current_state.json'));
+const cell = (process.env.CELL || "").toUpperCase();
+const action = process.env.ACTION || "put";
+
+if (action === 'reset') {
+    s.board = [["","",""],["","",""],["","",""]];
+    s.turn = "X"; s.winner = null; s.log = [];
+} else if (cell && !s.winner) {
+    const r = parseInt(cell[1]) - 1, c = cell.charCodeAt(0) - 65;
+    if (r >= 0 && r < 3 && c >= 0 && c < 3 && s.board[r][c] === "") {
+        s.board[r][c] = s.turn;
+        s.log.push({player: s.turn, cell});
+        const lines = [[[0,0],[0,1],[0,2]],[[1,0],[1,1],[1,2]],[[2,0],[2,1],[2,2]], [[0,0],[1,0],[2,0]],[[0,1],[1,1],[2,1]],[[0,2],[1,2],[2,2]], [[0,0],[1,1],[2,2]],[[0,2],[1,1],[2,0]]];
+        let win = lines.find(l => l.every(([r2,c2]) => s.board[r2][c2] === s.turn));
+        if (win) s.winner = s.turn;
+        else if (s.board.flat().every(v => v !== "")) s.winner = "draw";
+        else s.turn = s.turn === "X" ? "O" : "X";
+    }
+}
+fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
+
 ```
 </details>
 

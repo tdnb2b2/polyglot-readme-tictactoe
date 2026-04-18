@@ -112,7 +112,7 @@
   "javascript": {
     "board": [
       [
-        "X",
+        "",
         "",
         ""
       ],
@@ -127,14 +127,9 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
-    "log": [
-      {
-        "player": "X",
-        "cell": "A1"
-      }
-    ]
+    "log": []
   },
   "kotlin": {
     "board": [
