@@ -93,7 +93,7 @@ def main():
     })
     
     with open('current_state.json', 'w') as f:
-        json.dump(current_state, f, indent=2)
+        json.dump(current_state, f)
 
     env = dict(os.environ)
     env['LANG_KEY'] = lang
@@ -127,7 +127,7 @@ def main():
 
     # Prepare sandbox state in the implementation directory
     with open(state_path, 'w') as f:
-        json.dump(current_state, f, indent=2)
+        json.dump(current_state, f)
 
     env = dict(os.environ)
     env['LANG_KEY'] = lang
