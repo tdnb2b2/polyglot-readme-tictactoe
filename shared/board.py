@@ -155,12 +155,12 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
 
     if winner:
         reset_title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Reset"
-        status = f'**{winner} wins!** — [Reset](https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Reset+the+board)'
+        status = f'{winner} wins! — [Reset](https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Reset+the+board)'
     elif is_draw(board):
         reset_title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Reset"
-        status = f"**It's a draw!** — [Reset](https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Reset+the+board)"
+        status = f"It's a draw! — [Reset](https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Reset+the+board)"
     else:
-        status = f'Turn: {SYMBOLS[turn]} **{turn}** is next'
+        status = f'Turn: {SYMBOLS[turn]} {turn} is next'
 
     log_md = ''
     if log:
