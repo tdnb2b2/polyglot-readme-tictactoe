@@ -6,7 +6,7 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: "contains(github.event.issue.title, 'Java: Tic-Tac-Toe:')"
+    if: startsWith(github.event.issue.title, 'Java:')
     permissions:
       contents: write
       issues: write
