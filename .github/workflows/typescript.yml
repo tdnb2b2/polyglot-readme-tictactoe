@@ -6,7 +6,6 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'TypeScript')
     permissions:
       contents: write
       issues: write
@@ -16,13 +15,6 @@ jobs:
         with:
           node-version: '20'
       - run: pip install requests
-      - run: |
-          cd implementations/typescript
-          npm install
-          npx ts-node game.ts
-        env:
-          CELL: ${{ github.event.issue.title }}
-          ACTION: put
       - run: python3 dispatcher.py run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

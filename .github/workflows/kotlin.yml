@@ -6,7 +6,6 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'Kotlin')
     permissions:
       contents: write
       issues: write
@@ -20,12 +19,6 @@ jobs:
       - run: |
           sudo apt-get update
           sudo apt-get install -y kotlin
-          cd implementations/kotlin
-          kotlinc Game.kt -include-runtime -d Game.jar
-          java -jar Game.jar
-        env:
-          CELL: ${{ github.event.issue.title }}
-          ACTION: put
       - run: python3 dispatcher.py run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
