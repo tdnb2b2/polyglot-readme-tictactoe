@@ -6,7 +6,7 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: contains(github.event.issue.title, 'TypeScript')
+    if: "${{ contains(github.event.issue.title, 'TypeScript: Tic-Tac-Toe:') }}"
     permissions:
       contents: write
       issues: write
