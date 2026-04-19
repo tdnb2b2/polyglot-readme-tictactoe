@@ -107,14 +107,14 @@ def main():
         'typescript': (['npx', 'ts-node', 'game.ts'], 'implementations/typescript'),
         'go':         (['go', 'run', 'game.go'], 'implementations/go'),
         'rust':       (['./target/release/game'], 'implementations/rust'),
-        'java':       (['java', 'Game'], 'implementations/java'),
-        'kotlin':     (['java', '-jar', 'Game.jar'], 'implementations/kotlin'),
+        'java':       (['bash', '-c', 'javac Game.java && java -cp . Game'], 'implementations/java'),
+        'kotlin':     (['bash', '-c', 'kotlinc Game.kt -include-runtime -d Game.jar 2>/dev/null || true && java -jar Game.jar'], 'implementations/kotlin'),
         'php':        (['php',     'game.php'], 'implementations/php'),
         'ruby':       (['ruby',    'game.rb'], 'implementations/ruby'),
         'csharp':     (['dotnet', 'run', '--no-build'], 'implementations/csharp'),
         'c':          (['./game'], 'implementations/c'),
         'cpp':        (['./game'], 'implementations/cpp'),
-        'scala':      (['scala',   'Game.scala'], 'implementations/scala'),
+        'scala':      (['scala', '-nc', 'Game.scala'], 'implementations/scala'),
         'swift':      (['swift',   'game.swift'], 'implementations/swift'),
     }
 
