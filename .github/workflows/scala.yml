@@ -1,12 +1,12 @@
 name: Scala Tic-Tac-Toe
 on:
   issues:
-    types: [opened]
+    types: [opened, edited]
 
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: "${{ contains(github.event.issue.title, 'Scala: Tic-Tac-Toe:') }}"
+    if: github.event.issue.title =~ '^Scala:'
     permissions:
       contents: write
       issues: write
