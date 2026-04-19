@@ -71,14 +71,17 @@ def main():
     lang, cell, action = detect_language(title)
 
     if lang is None:
-        token   = os.environ['GITHUB_TOKEN']
-        repo    = os.environ['REPO']
-        issue_n = os.environ['ISSUE_NUMBER']
-        _close_issue(token, repo, issue_n,
-            f'Unknown command: {title}\n\n'
-            'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\n\n'
-            'Supported languages: Python, JavaScript, TypeScript, Go, Rust, '
-            'Java, Kotlin, PHP, Ruby, C#, C++, Scala, Swift, C')
+        token   = os.environ.get('GITHUB_TOKEN')
+        repo    = os.environ.get('REPO')
+        issue_n = os.environ.get('ISSUE_NUMBER')
+        if token and repo and issue_n:
+            _close_issue(token, repo, issue_n,
+                f'Unknown command: {title}\n\n'
+                'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\n\n'
+                'Supported languages: Python, JavaScript, TypeScript, Go, Rust, '
+                'Java, Kotlin, PHP, Ruby, C#, C++, Scala, Swift, C')
+        else:
+            print(f"Unknown command: {title}")
         sys.exit(0)
 
     # Prepare sandbox state
@@ -106,7 +109,7 @@ def main():
         'javascript': (['node',    'game.js'], 'implementations/javascript'),
         'typescript': (['npm', 'run', 'play'], 'implementations/typescript'),
         'go':         (['go', 'run', 'game.go'], 'implementations/go'),
-        'rust':       (['./target/release/game'], 'implementations/rust'),
+        'rust':       (['cargo', 'run', '--release'], 'implementations/rust'),
         'java':       (['java', 'Game'], 'implementations/java'),
         'kotlin':     (['java', '-jar', 'Game.jar'], 'implementations/kotlin'),
         'php':        (['php',     'game.php'], 'implementations/php'),
@@ -149,18 +152,25 @@ def main():
         # Update README.md
         try:
             from shared.board import update_readme_local, replace_section, render_board_md
-            token      = os.environ['GITHUB_TOKEN']
-            repo_name  = os.environ['REPO']
-            issue_n    = os.environ['ISSUE_NUMBER']
+            token      = os.environ.get('GITHUB_TOKEN')
+            repo_name  = os.environ.get('REPO')
+            issue_n    = os.environ.get('ISSUE_NUMBER')
 
             # Capture output for Technical Details
             output_info = (result.stdout + "\n" + result.stderr).strip() or "Success"
 
-            new_board_md = render_board_md(
-                updated_state['board'], lang, repo_name.split('/')[0], repo_name.split('/')[1],
-                updated_state['turn'], updated_state['winner'], updated_state['log'],
-                input_info=title, output_info=output_info
-            )
+            if repo_name:
+                new_board_md = render_board_md(
+                    updated_state['board'], lang, repo_name.split('/')[0], repo_name.split('/')[1],
+                    updated_state['turn'], updated_state['winner'], updated_state['log'],
+                    input_info=title, output_info=output_info
+                )
+            else:
+                new_board_md = render_board_md(
+                    updated_state['board'], lang, "owner", "repo",
+                    updated_state['turn'], updated_state['winner'], updated_state['log'],
+                    input_info=title, output_info=output_info
+                )
 
             with open('README.md', 'r') as f:
                 current_content = f.read()
@@ -170,7 +180,10 @@ def main():
             if new_content != current_content:
                 update_readme_local(new_content)
             
-            _close_issue(token, repo_name, issue_n, f"Move accepted for {lang}. README updated locally.")
+            if token and repo_name and issue_n:
+                _close_issue(token, repo_name, issue_n, f"Move accepted for {lang}. README updated locally.")
+            else:
+                print(f"Move accepted for {lang}. README updated locally (skipped GitHub comment).")
 
         except Exception as e:
             print(f"Error updating README: {e}", file=sys.stderr)
