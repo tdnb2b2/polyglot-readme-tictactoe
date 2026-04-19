@@ -1,38 +1,82 @@
 import java.io.File
-import org.json.JSONObject
+import java.util.regex.Pattern
 
-fun main() {
-    val file = File("current_state.json")
-    val s = JSONObject(file.readText())
-    val cell = System.getenv("CELL")?.uppercase() ?: ""
+fun main(args: Array<String>) {
+    val path = "current_state.json"
+    val file = File(path)
+    if (!file.exists()) return
+    val content = file.readText()
+    val cellEnv = System.getenv("CELL")
     val action = System.getenv("ACTION") ?: "put"
 
     if (action == "reset") {
-        s.put("board", listOf(listOf("","",""),listOf("","",""),listOf("","","")))
-        s.put("turn", "X")
-        s.put("winner", JSONObject.NULL)
-        s.put("log", listOf<String>())
-    } else if (cell.isNotEmpty() && s.isNull("winner")) {
-        val board = s.getJSONArray("board")
-        val turn = s.getString("turn")
-        val r = cell[1] - '1'
-        val c = cell[0] - 'A'
-        if (r in 0..2 && c in 0..2 && board.getJSONArray(r).getString(c).isEmpty()) {
-            board.getJSONArray(r).put(c, turn)
-            // check win
-            val lns = listOf(listOf(0,0,0,1,0,2),listOf(1,0,1,1,1,2),listOf(2,0,2,1,2,2),listOf(0,0,1,0,2,0),listOf(0,1,1,1,2,1),listOf(0,2,1,2,2,2),listOf(0,0,1,1,2,2),listOf(0,2,1,1,2,0))
-            var win = false
-            for (l in lns) {
-                if (board.getJSONArray(l[0]).getString(l[1]).isNotEmpty() && board.getJSONArray(l[0]).getString(l[1]) == board.getJSONArray(l[2]).getString(l[3]) && board.getJSONArray(l[2]).getString(l[3]) == board.getJSONArray(l[4]).getString(l[5])) win = true
-            }
-            if (win) s.put("winner", turn)
-            else {
-                var full = true
-                for (i in 0..2) for (j in 0..2) if (board.getJSONArray(i).getString(j).isEmpty()) full = false
-                if (full) s.put("winner", "draw")
-                else s.put("turn", if (turn == "X") "O" else "X")
-            }
-        }
+        file.writeText("{\n  \"board\": [[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"]],\n  \"turn\": \"X\",\n  \"winner\": null,\n  \"log\": []\n}")
+        return
     }
-    file.writeText(s.toString(2))
+
+    if (cellEnv == null || cellEnv.length < 2) return
+    val cell = cellEnv.toUpperCase()
+
+    val winner = getJsonValue(content, "winner")
+    if (winner != "null") return
+
+    val turn = getJsonValue(content, "turn")
+    val board = Array(3) { Array(3) { "" } }
+    val p = Pattern.compile("\\[\"(.*?)\",\"(.*?)\",\"(.*?)\"\\]")
+    val m = p.matcher(content)
+    var rowIndex = 0
+    while (rowIndex < 3 && m.find()) {
+        board[rowIndex][0] = m.group(1)
+        board[rowIndex][1] = m.group(2)
+        board[rowIndex][2] = m.group(3)
+        rowIndex++
+    }
+
+    val r = cell[1] - '1'
+    val c = cell[0] - 'A'
+
+    if (r in 0..2 && c in 0..2 && board[r][c].isEmpty()) {
+        board[r][c] = turn
+        val win = checkWinner(board)
+        val nextTurn = if (turn == "X") "O" else "X"
+        val draw = isDraw(board)
+
+        val winStr = if (win != null) "\"$win\"" else if (draw) "\"draw\"" else "null"
+        val bStr = board.joinToString(",\n") { row ->
+            "    [\"${row[0]}\",\"${row[1]}\",\"${row[2]}\"]"
+        }
+
+        val out = """{
+  "board": [
+$bStr
+  ],
+  "turn": "$nextTurn",
+  "winner": $winStr,
+  "log": []
+}"""
+        file.writeText(out)
+    }
+}
+
+fun getJsonValue(json: String, key: String): String {
+    val p = Pattern.compile("\"$key\":\\s*\"?(.*?)\"?(?:,|\\n|\\})")
+    val m = p.matcher(json)
+    return if (m.find()) m.group(1).trim() else "null"
+}
+
+fun checkWinner(b: Array<Array<String>>): String? {
+    val lns = arrayOf(
+        intArrayOf(0,0,0,1,0,2), intArrayOf(1,0,1,1,1,2), intArrayOf(2,0,2,1,2,2),
+        intArrayOf(0,0,1,0,2,0), intArrayOf(0,1,1,1,2,1), intArrayOf(0,2,1,2,2,2),
+        intArrayOf(0,0,1,1,2,2), intArrayOf(0,2,1,1,2,0)
+    )
+    for (l in lns) {
+        if (b[l[0]][l[1]].isNotEmpty() && b[l[0]][l[1]] == b[l[2]][l[3]] && b[l[2]][l[3]] == b[l[4]][l[5]]) return b[l[0]][l[1]]
+    }
+    return null
+}
+
+fun isDraw(b: Array<Array<String>>): Boolean {
+    for (i in 0..2) for (j in 0..2) if (b[i][j].isEmpty()) return false
+    return true
 }

@@ -18,7 +18,7 @@ object Game {
       val winner = "\"winner\":\\s*\"(.*?)\"".r.findFirstMatchIn(json).map(_.group(1)).getOrElse("null")
       
       if (winner == "null") {
-        val board = Array.ofDim[String](3, 3)
+        val board = Array.fill(3, 3)("")
         val rowRegex = "\\[\"(.*?)\",\"(.*?)\",\"(.*?)\"\\]".r
         rowRegex.findAllIn(json).matchData.zipWithIndex.foreach { case (m, i) =>
           if (i < 3) {
