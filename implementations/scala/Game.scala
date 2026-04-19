@@ -19,7 +19,7 @@ object Game {
       
       if (winner == "null") {
         val board = Array.fill(3, 3)("")
-        val rowRegex = "\\[\"(.*?)\",\"(.*?)\",\"(.*?)\"\\]".r
+        val rowRegex = "\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]".r
         rowRegex.findAllIn(json).matchData.zipWithIndex.foreach { case (m, i) =>
           if (i < 3) {
             board(i)(0) = m.group(1); board(i)(1) = m.group(2); board(i)(2) = m.group(3)

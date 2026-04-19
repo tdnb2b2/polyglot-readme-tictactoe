@@ -22,7 +22,7 @@ fun main(args: Array<String>) {
 
     val turn = getJsonValue(content, "turn")
     val board = Array(3) { Array(3) { "" } }
-    val p = Pattern.compile("\\[\"(.*?)\",\"(.*?)\",\"(.*?)\"\\]")
+    val p = Pattern.compile("\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]")
     val m = p.matcher(content)
     var rowIndex = 0
     while (rowIndex < 3 && m.find()) {

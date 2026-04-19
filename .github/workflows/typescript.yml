@@ -23,6 +23,11 @@ jobs:
         with:
           node-version: '20'
 
+      - name: Install TypeScript dependencies
+        run: |
+          cd implementations/typescript
+          npm install
+
       - name: Play Game
         run: python3 dispatcher.py run
         env:

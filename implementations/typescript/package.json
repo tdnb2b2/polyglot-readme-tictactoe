@@ -1,0 +1,13 @@
+{
+  "name": "polyglot-readme-tictactoe-typescript",
+  "version": "1.0.0",
+  "description": "TypeScript implementation for Polyglot Tic-Tac-Toe",
+  "main": "game.ts",
+  "dependencies": {
+    "typescript": "^5.0.0",
+    "ts-node": "^10.9.0"
+  },
+  "devDependencies": {
+    "@types/node": "^18.0.0"
+  }
+}
