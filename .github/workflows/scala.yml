@@ -6,7 +6,7 @@ on:
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: startsWith(github.event.issue.title, 'Scala:')
+    if: contains(github.event.issue.title, 'Scala')
     permissions:
       contents: write
       issues: write
