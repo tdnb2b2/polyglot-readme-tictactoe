@@ -444,12 +444,116 @@ fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
 <!-- BOARD_KOTLIN_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) | **1** |
+| **1** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Kotlin+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board) | **3** |
 |   | A | B | C |   |
 
-Turn: ❌ X is next
+🎮 **Next Move: O (Kotlin)**
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put A1`
+- **Output (Information given)**: 
+```text
+Success
+```
+
+### 💻 Implementation Code (Kotlin)
+```kotlin
+import java.io.File
+import java.util.regex.Pattern
+
+fun main(args: Array<String>) {
+    val path = "current_state.json"
+    val file = File(path)
+    if (!file.exists()) return
+    val content = file.readText()
+    val cellEnv = System.getenv("CELL")
+    val action = System.getenv("ACTION") ?: "put"
+
+    if (action == "reset") {
+        file.writeText("{
+  \"board\": [[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"]],
+  \"turn\": \"X\",
+  \"winner\": null,
+  \"log\": []
+}")
+        return
+    }
+
+    if (cellEnv == null || cellEnv.length < 2) return
+    val cell = cellEnv.toUpperCase()
+
+    val winner = getJsonValue(content, "winner")
+    if (winner != "null") return
+
+    val turn = getJsonValue(content, "turn")
+    val board = Array(3) { Array(3) { "" } }
+    val p = Pattern.compile("\[\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*\]")
+    val m = p.matcher(content)
+    var rowIndex = 0
+    while (rowIndex < 3 && m.find()) {
+        board[rowIndex][0] = m.group(1)
+        board[rowIndex][1] = m.group(2)
+        board[rowIndex][2] = m.group(3)
+        rowIndex++
+    }
+
+    val r = cell[1] - '1'
+    val c = cell[0] - 'A'
+
+    if (r in 0..2 && c in 0..2 && board[r][c].isEmpty()) {
+        board[r][c] = turn
+        val win = checkWinner(board)
+        val nextTurn = if (turn == "X") "O" else "X"
+        val draw = isDraw(board)
+
+        val winStr = if (win != null) "\"$win\"" else if (draw) "\"draw\"" else "null"
+        val bStr = board.joinToString(",
+") { row ->
+            "    [\"${row[0]}\",\"${row[1]}\",\"${row[2]}\"]"
+        }
+
+        val out = """{
+  "board": [
+$bStr
+  ],
+  "turn": "$nextTurn",
+  "winner": $winStr,
+  "log": []
+}"""
+        file.writeText(out)
+    }
+}
+
+fun getJsonValue(json: String, key: String): String {
+    val p = Pattern.compile("\"$key\":\s*\"?(.*?)\"?(?:,|\n|\})")
+    val m = p.matcher(json)
+    return if (m.find()) m.group(1).trim() else "null"
+}
+
+fun checkWinner(b: Array<Array<String>>): String? {
+    val lns = arrayOf(
+        intArrayOf(0,0,0,1,0,2), intArrayOf(1,0,1,1,1,2), intArrayOf(2,0,2,1,2,2),
+        intArrayOf(0,0,1,0,2,0), intArrayOf(0,1,1,1,2,1), intArrayOf(0,2,1,2,2,2),
+        intArrayOf(0,0,1,1,2,2), intArrayOf(0,2,1,1,2,0)
+    )
+    for (l in lns) {
+        if (b[l[0]][l[1]].isNotEmpty() && b[l[0]][l[1]] == b[l[2]][l[3]] && b[l[2]][l[3]] == b[l[4]][l[5]]) return b[l[0]][l[1]]
+    }
+    return null
+}
+
+fun isDraw(b: Array<Array<String>>): Boolean {
+    for (i in 0..2) for (j in 0..2) if (b[i][j].isEmpty()) return false
+    return true
+}
+
+```
+</details>
 
 <!-- BOARD_KOTLIN_END -->
 
