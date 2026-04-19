@@ -1,41 +1,38 @@
 name: TypeScript Tic-Tac-Toe
 on:
   issues:
-    types: [opened, edited]
+    types: [opened, edited, reopened]
 
 jobs:
   play:
     runs-on: ubuntu-latest
-    if: github.event.issue.title =~ '^TypeScript:'
+    if: contains(github.event.issue.title, 'TypeScript')
     permissions:
       contents: write
       issues: write
     steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-
-      - name: Install dependencies
-        run: pip install requests
-
-      - name: Setup TypeScript
-        uses: actions/setup-node@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: '20'
-
-      - name: Play Game
-        run: python3 dispatcher.py run
+      - run: pip install requests
+      - run: |
+          cd implementations/typescript
+          npm install
+          npx ts-node game.ts
+        env:
+          CELL: ${{ github.event.issue.title }}
+          ACTION: put
+      - run: python3 dispatcher.py run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           REPO: ${{ github.repository }}
           LANGUAGE_OVERRIDE: typescript
-
-      - name: Commit and Push changes
-        if: success()
-        run: |
+      - run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md game_state.json
-          git commit -m "game(typescript): update state and readme" || echo "No changes"
+          git commit -m "Update TypeScript game state" || echo "No changes"
           git push origin main
