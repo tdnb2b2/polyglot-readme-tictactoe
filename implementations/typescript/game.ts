@@ -1,4 +1,4 @@
-import * as fs from 'fs';
+const fs = require('fs');
 const s = JSON.parse(fs.readFileSync('current_state.json', 'utf8'));
 const cell = (process.env.CELL || "").toUpperCase();
 const action = process.env.ACTION || "put";

@@ -3,6 +3,10 @@
   "version": "1.0.0",
   "description": "TypeScript implementation for Polyglot Tic-Tac-Toe",
   "main": "game.ts",
+  "type": "commonjs",
+  "scripts": {
+    "play": "ts-node game.ts"
+  },
   "dependencies": {
     "typescript": "^5.0.0",
     "ts-node": "^10.9.0"

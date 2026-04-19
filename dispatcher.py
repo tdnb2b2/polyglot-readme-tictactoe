@@ -104,7 +104,7 @@ def main():
     impl_runners = {
         'python':     (['python3', 'game.py'], 'implementations/python'),
         'javascript': (['node',    'game.js'], 'implementations/javascript'),
-        'typescript': (['npx', 'ts-node', 'game.ts'], 'implementations/typescript'),
+        'typescript': (['npm', 'run', 'play'], 'implementations/typescript'),
         'go':         (['go', 'run', 'game.go'], 'implementations/go'),
         'rust':       (['./target/release/game'], 'implementations/rust'),
         'java':       (['java', 'Game'], 'implementations/java'),
