@@ -2,6 +2,7 @@ name: Scala Tic-Tac-Toe
 on:
   issues:
     types: [opened]
+  workflow_dispatch:
 
 jobs:
   play:
@@ -11,22 +12,32 @@ jobs:
       contents: write
       issues: write
     steps:
-      - uses: actions/checkout@v4
-      - uses: coursier/setup-action@v1
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Setup Scala
+        uses: coursier/setup-action@v1
         with:
           jvm: 'temurin:1.17'
           apps: scala
-      - run: pip install requests
-      - run: python3 dispatcher.py run
+
+      - name: Play Game
+        run: python3 dispatcher.py run
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           ISSUE_TITLE: ${{ github.event.issue.title }}
           ISSUE_NUMBER: ${{ github.event.issue.number }}
           REPO: ${{ github.repository }}
           LANGUAGE_OVERRIDE: scala
-      - run: |
+
+      - name: Commit and Push changes
+        if: success()
+        run: |
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md game_state.json
-          git commit -m "Update Scala game state" || echo "No changes"
+          git commit -m "game(scala): update state and readme" || echo "No changes"
           git push origin main

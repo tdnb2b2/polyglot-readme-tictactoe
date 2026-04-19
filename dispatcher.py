@@ -107,14 +107,14 @@ def main():
         'typescript': (['npx', 'ts-node', 'game.ts'], 'implementations/typescript'),
         'go':         (['go', 'run', 'game.go'], 'implementations/go'),
         'rust':       (['./target/release/game'], 'implementations/rust'),
-        'java':       (['bash', '-c', 'javac Game.java && java -cp . Game'], 'implementations/java'),
-        'kotlin':     (['bash', '-c', 'kotlinc Game.kt -include-runtime -d Game.jar 2>/dev/null || true && java -jar Game.jar'], 'implementations/kotlin'),
+        'java':       (['java', 'Game'], 'implementations/java'),
+        'kotlin':     (['java', '-jar', 'Game.jar'], 'implementations/kotlin'),
         'php':        (['php',     'game.php'], 'implementations/php'),
         'ruby':       (['ruby',    'game.rb'], 'implementations/ruby'),
         'csharp':     (['dotnet', 'run', '--no-build'], 'implementations/csharp'),
         'c':          (['./game'], 'implementations/c'),
         'cpp':        (['./game'], 'implementations/cpp'),
-        'scala':      (['scala', '-nc', 'Game.scala'], 'implementations/scala'),
+        'scala':      (['scala',   'Game.scala'], 'implementations/scala'),
         'swift':      (['swift',   'game.swift'], 'implementations/swift'),
     }
 
@@ -174,6 +174,15 @@ def main():
 
         except Exception as e:
             print(f"Error updating README: {e}", file=sys.stderr)
+    else:
+        # On failure, dump stdout and stderr to help debug in CI
+        print(f"Error: Command for {lang} failed with exit code {result.returncode}", file=sys.stderr)
+        if result.stdout:
+            print("--- STDOUT ---", file=sys.stderr)
+            print(result.stdout, file=sys.stderr)
+        if result.stderr:
+            print("--- STDERR ---", file=sys.stderr)
+            print(result.stderr, file=sys.stderr)
 
     if os.path.exists(state_path):
         os.remove(state_path)
