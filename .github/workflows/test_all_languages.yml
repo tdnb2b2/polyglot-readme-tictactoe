@@ -40,9 +40,9 @@ jobs:
         with:
           dotnet-version: '7.0.x'
       - name: Set up Swift
-              uses: swift-actions/setup-swift@v1
-        with:
-          swift-version: '5.8'
+              es: swift-actions/setup-swift@v1
+        th:
+          ift-version: '5.8'
 
       - name: Play Game
         env:
