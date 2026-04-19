@@ -1,5 +1,4 @@
 import java.nio.file.*;
-import java.util.*;
 import java.util.regex.*;
 
 public class Game {
@@ -37,7 +36,6 @@ public class Game {
 
         if (r >= 0 && r < 3 && c >= 0 && c < 3 && board[r][c].isEmpty()) {
             board[r][c] = turn;
-            String logEntry = "{\"player\":\"" + turn + "\",\"cell\":\"" + cell + "\"}";
             
             String win = checkWinner(board);
             String nextTurn = turn.equals("X") ? "O" : "X";
