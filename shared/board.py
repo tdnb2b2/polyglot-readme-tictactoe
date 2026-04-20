@@ -67,21 +67,14 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     """
     status = ""
     if winner:
-        status = f"🏆 **Winner: {winner} ({lang_key.capitalize()})**"
+        status = f"🏆 **Winner: {winner} ({lang_display_name(lang_key)})**"
     elif all(all(row) for row in board):
         status = "🤝 **It's a Draw!**"
     else:
-        status = f"🎮 **Next Move: {turn} ({lang_key.capitalize()})**"
+        status = f"🎮 **Next Move: {turn} ({lang_display_name(lang_key)})**"
 
     # Minimalist status symbols
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
-    LANG_DISPLAY = {
-        'python': 'Python', 'javascript': 'JavaScript', 'typescript': 'TypeScript',
-        'go': 'Go', 'rust': 'Rust', 'java': 'Java', 'kotlin': 'Kotlin',
-        'php': 'PHP', 'ruby': 'Ruby', 'csharp': 'C#', 'c': 'C',
-        'cpp': 'C++', 'scala': 'Scala', 'swift': 'Swift',
-    }
-    lang_display = LANG_DISPLAY.get(lang_key, lang_key)
     
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
     for ri, row_label in enumerate(['1', '2', '3']):
@@ -95,8 +88,8 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
             elif winner:
                 cells.append('___')
             else:
-                title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Put+{cell_name}"
-                link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body=Play+{lang_display}+board'
+                title = f"{lang_display_name(lang_key)}%3A+Tic-Tac-Toe%3A+Put+{cell_name}"
+                link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body=Play+{lang_display_name(lang_key)}+board'
                 # Minimalist link text
                 cells.append(f'[___]({link})')
         cells.append(f'**{row_label}**')
@@ -116,22 +109,29 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     code_content = get_source_code(lang_key)
     code_ext = lang_key if lang_key != 'csharp' else 'cs'
 
-    tech_details = f"""
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+    # Build response with explicit newlines
+    res = board_md + "\n\n" + status + log_md + "\n"
+    res += "\n<details>\n"
+    res += f"<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>\n\n"
+    res += "### 🛰️ Execution Context\n"
+    res += f"- **Input (Information received)**: `{input_info or 'Initial Page Load / Manual Sync'}`\n"
+    res += "- **Output (Information given)**:\n"
+    res += "```text\n"
+    res += f"{output_info or 'Move processed successfully.'}\n"
+    res += "```\n\n"
+    res += f"### 💻 Implementation Code ({lang_display_name(lang_key)})\n"
+    res += f"```{code_ext}\n"
+    res += f"{code_content}\n"
+    res += "```\n"
+    res += "</details>"
+    
+    return res
 
-### 🛰️ Execution Context
-- **Input (Information received)**: `{input_info or "Initial Page Load / Manual Sync"}`
-- **Output (Information given)**: 
-```text
-{output_info or "Move processed successfully."}
-```
-
-### 💻 Implementation Code ({lang_display})
-```{code_ext}
-{code_content}
-```
-</details>
-"""
-
-    return f'{board_md}\n\n{status}{log_md}\n{tech_details}'
+def lang_display_name(lang_key: str) -> str:
+    LANG_DISPLAY = {
+        'python': 'Python', 'javascript': 'JavaScript', 'typescript': 'TypeScript',
+        'go': 'Go', 'rust': 'Rust', 'java': 'Java', 'kotlin': 'Kotlin',
+        'php': 'PHP', 'ruby': 'Ruby', 'csharp': 'C#', 'c': 'C',
+        'cpp': 'C++', 'scala': 'Scala', 'swift': 'Swift',
+    }
+    return LANG_DISPLAY.get(lang_key, lang_key)
