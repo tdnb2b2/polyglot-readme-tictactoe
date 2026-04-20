@@ -8,6 +8,7 @@ void write_state(char b[3][3], char* turn, char* winner, const char* existing_lo
     for(int i=0; i<3; i++) {
         fprintf(f, "    [\"%s\", \"%s\", \"%s\"]%s\n", (b[i][0]?(char[]){b[i][0],0}:""), (b[i][1]?(char[]){b[i][1],0}:""), (b[i][2]?(char[]){b[i][2],0}:""), (i==2?"":","));
     }
+    
     char updated_log[4096] = "";
     if (existing_log && strlen(existing_log) > 0) {
         strcpy(updated_log, existing_log);
@@ -15,6 +16,7 @@ void write_state(char b[3][3], char* turn, char* winner, const char* existing_lo
     } else if (new_move) {
         strcpy(updated_log, new_move);
     }
+    
     fprintf(f, "  ],\n  \"turn\": \"%s\",\n  \"winner\": %s,\n  \"log\": [%s]\n}", turn, (winner && strcmp(winner, "null") != 0 ? winner : "null"), updated_log);
     fclose(f);
 }
@@ -29,47 +31,82 @@ int main() {
     char winnerStr[16] = "null";
     char existing_log[4096] = "";
     if(f) {
-        char line[256];
-        int r=0;
-        int in_log = 0;
-        while(fgets(line, sizeof(line), f)) {
-            if(strstr(line, "[") && !strstr(line, "board") && !strstr(line, "log")) {
-                if(strstr(line, "\"X\"")) b[r][0]='X'; else if(strstr(line, "\"O\"")) b[r][0]='O';
-                char* p = strchr(line, ','); if(p) { if(strstr(p, "\"X\"")) b[r][1]='X'; else if(strstr(p, "\"O\"")) b[r][1]='O'; p=strchr(p+1,','); if(p) { if(strstr(p, "\"X\"")) b[r][2]='X'; else if(strstr(p, "\"O\"")) b[r][2]='O'; } }
-                r++;
-            }
-            if(strstr(line, "\"turn\": \"O\"")) strcpy(turn, "O");
-            if(strstr(line, "\"winner\":")) {
-                if(strstr(line, "\"X\"")) strcpy(winnerStr, "X");
-                else if(strstr(line, "\"O\"")) strcpy(winnerStr, "O");
-                else if(strstr(line, "\"draw\"")) strcpy(winnerStr, "draw");
-            }
-            
-            char* log_ptr = strstr(line, "\"log\": [");
-            if(log_ptr) {
-                in_log = 1;
-                char* start = strchr(log_ptr, '[');
-                if(start) {
-                    char* end = strrchr(start, ']');
-                    if(end) { 
-                        *end = '\0';
-                        strcat(existing_log, start + 1);
-                        in_log = 0;
-                    } else {
-                        strcat(existing_log, start + 1);
+        fseek(f, 0, SEEK_END);
+        long fsize = ftell(f);
+        fseek(f, 0, SEEK_SET);
+        char* json_str = malloc(fsize + 1);
+        fread(json_str, 1, fsize, f);
+        json_str[fsize] = 0;
+        
+        // Parse board manually
+        char* board_ptr = strstr(json_str, "\"board\"");
+        if (board_ptr) {
+            int row = 0, col = 0;
+            char* p = strchr(board_ptr, '[');
+            if (p) {
+                p++; // skip [
+                while (*p && row < 3) {
+                    if (*p == '[') {
+                        col = 0;
+                    } else if (*p == '"') {
+                        p++;
+                        if (*p == 'X' || *p == 'O') {
+                            b[row][col] = *p;
+                            p++; // skip char
+                        }
+                        col++;
+                    } else if (*p == ']') {
+                        row++;
                     }
-                }
-            } else if(in_log) {
-                char* end = strrchr(line, ']');
-                if(end) {
-                    *end = '\0';
-                    strcat(existing_log, line);
-                    in_log = 0;
-                } else {
-                    strcat(existing_log, line);
+                    p++;
                 }
             }
         }
+        
+        char* turn_ptr = strstr(json_str, "\"turn\"");
+        if (turn_ptr) {
+            char* p = strchr(turn_ptr, ':');
+            if (p) {
+                p = strchr(p, '"');
+                if (p) {
+                    p++;
+                    if (*p == 'O') strcpy(turn, "O");
+                }
+            }
+        }
+        
+        char* win_ptr = strstr(json_str, "\"winner\"");
+        if (win_ptr) {
+            char* p = strchr(win_ptr, ':');
+            if (p) {
+                p++;
+                while (*p == ' ' || *p == '\n') p++;
+                if (*p == '"') {
+                    p++;
+                    if (*p == 'X') strcpy(winnerStr, "X");
+                    else if (*p == 'O') strcpy(winnerStr, "O");
+                    else if (strncmp(p, "draw", 4) == 0) strcpy(winnerStr, "draw");
+                }
+            }
+        }
+        
+        char* log_ptr = strstr(json_str, "\"log\"");
+        if (log_ptr) {
+            char* p = strchr(log_ptr, '[');
+            if (p) {
+                p++;
+                char* end_p = strrchr(p, ']');
+                if (end_p) {
+                    int len = end_p - p;
+                    if (len > 0 && len < 4096) {
+                        strncpy(existing_log, p, len);
+                        existing_log[len] = '\0';
+                    }
+                }
+            }
+        }
+        
+        free(json_str);
         fclose(f);
     }
 

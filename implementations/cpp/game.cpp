@@ -31,50 +31,69 @@ int main() {
 
     ifstream f("current_state.json");
     string f_line, full_content;
-    int r=0;
     if (f.is_open()) {
         while(getline(f, f_line)) {
             full_content += f_line + "\n";
-            if(f_line.find("[") != string::npos && f_line.find("board") == string::npos && f_line.find("log") == string::npos) {
-                if(f_line.find("\"X\"") != string::npos) b[r][0] = 'X'; else if(f_line.find("\"O\"") != string::npos) b[r][0] = 'O';
-                size_t pos = f_line.find(",");
-                if(pos != string::npos) {
-                    if(f_line.find("\"X\"", pos) != string::npos) b[r][1] = 'X'; else if(f_line.find("\"O\"", pos) != string::npos) b[r][1] = 'O';
-                    pos = f_line.find(",", pos+1);
-                    if(pos != string::npos) {
-                        if(f_line.find("\"X\"", pos) != string::npos) b[r][2] = 'X'; else if(f_line.find("\"O\"", pos) != string::npos) b[r][2] = 'O';
-                    }
-                }
-                if(r<2) r++;
-            }
-            if(f_line.find("\"turn\": \"O\"") != string::npos) turn = "O";
-            if(f_line.find("\"winner\":") != string::npos) {
-                size_t p1 = f_line.find(":");
-                size_t p2 = f_line.find_first_of("\",\n", p1+1);
-                size_t p3 = f_line.find_last_of("\"", p2);
-                winnerStr = f_line.substr(p1+1);
-                if (winnerStr.find("null") != string::npos) winnerStr = "null";
-                else if (winnerStr.find("X") != string::npos) winnerStr = "X";
-                else if (winnerStr.find("O") != string::npos) winnerStr = "O";
-                else if (winnerStr.find("draw") != string::npos) winnerStr = "draw";
-            }
         }
         f.close();
+        
+        size_t b_pos = full_content.find("\"board\"");
+        if (b_pos != string::npos) {
+            int row = 0, col = 0;
+            for (size_t i = full_content.find("[", b_pos) + 1; i < full_content.length() && row < 3; i++) {
+                char c = full_content[i];
+                if (c == '[') col = 0;
+                else if (c == '"') {
+                    i++;
+                    char val = full_content[i];
+                    if (val == 'X' || val == 'O') {
+                        b[row][col] = val;
+                        i++; // skip char
+                    }
+                    col++;
+                }
+                else if (c == ']') row++;
+            }
+        }
+        
+        size_t t_pos = full_content.find("\"turn\"");
+        if (t_pos != string::npos) {
+            size_t p = full_content.find('"', full_content.find(':', t_pos));
+            if (p != string::npos && full_content[p+1] == 'O') turn = "O";
+        }
+        
+        size_t w_pos = full_content.find("\"winner\"");
+        if (w_pos != string::npos) {
+            size_t p = full_content.find(':', w_pos);
+            if (p != string::npos) {
+                p++;
+                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '\n')) p++;
+                if (full_content[p] == '"') {
+                    p++;
+                    if (full_content[p] == 'X') winnerStr = "X";
+                    else if (full_content[p] == 'O') winnerStr = "O";
+                    else if (full_content.substr(p, 4) == "draw") winnerStr = "draw";
+                }
+            }
+        }
     }
 
     if (winnerStr != "null") return 0;
 
     string existing_log = "";
-    size_t log_start = full_content.find("\"log\": [");
+    size_t log_start = full_content.find("\"log\"");
     if(log_start != string::npos) {
-        log_start += 8;
-        size_t log_end = full_content.find("]", log_start);
-        if(log_end != string::npos) {
-            existing_log = full_content.substr(log_start, log_end - log_start);
-            size_t first = existing_log.find_first_not_of(" \n\r\t");
-            size_t last = existing_log.find_last_not_of(" \n\r\t");
-            if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
-            else existing_log = "";
+        log_start = full_content.find("[", log_start);
+        if(log_start != string::npos) {
+            log_start++;
+            size_t log_end = full_content.rfind("]");
+            if(log_end != string::npos && log_end > log_start) {
+                existing_log = full_content.substr(log_start, log_end - log_start);
+                size_t first = existing_log.find_first_not_of(" \n\r\t");
+                size_t last = existing_log.find_last_not_of(" \n\r\t");
+                if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
+                else existing_log = "";
+            }
         }
     }
 
