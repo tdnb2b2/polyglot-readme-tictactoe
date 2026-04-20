@@ -3,7 +3,7 @@
     "board": [
       [
         "X",
-        "",
+        "O",
         ""
       ],
       [
@@ -17,9 +17,14 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
-    "log": []
+    "log": [
+      {
+        "player": "O",
+        "cell": "B1"
+      }
+    ]
   },
   "cpp": {
     "board": [
