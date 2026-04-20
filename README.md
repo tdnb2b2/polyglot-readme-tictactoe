@@ -19,10 +19,10 @@ Recent moves: X C1 -> O A2 -> X B2 -> O C2 -> X A3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (C)
@@ -116,8 +116,7 @@ int main() {
             char* p = strchr(win_ptr, ':');
             if (p) {
                 p++;
-                while (*p == ' ' || *p == '
-') p++;
+                while (*p == ' ' || *p == '\n') p++;
                 if (*p == '"') {
                     p++;
                     if (*p == 'X') strcpy(winnerStr, "X");
@@ -137,7 +136,7 @@ int main() {
                     int len = end_p - p;
                     if (len > 0 && len < 4096) {
                         strncpy(existing_log, p, len);
-                        existing_log[len] = ' ';
+                        existing_log[len] = '\0';
                     }
                 }
             }
@@ -178,6 +177,7 @@ int main() {
     }
     return 0;
 }
+
 ```
 </details>
 
@@ -200,10 +200,10 @@ Recent moves: O B1 -> X C1 -> O A2 -> X B2 -> O C2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (C++)
@@ -222,8 +222,7 @@ void write_state(char b[3][3], string turn, string winner, string existing_log, 
   \"board\": [
 ";
     for(int i=0; i<3; i++) {
-        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "
-";
+        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "\n";
     }
     string log_content = existing_log;
     if (new_move != "") {
@@ -250,8 +249,7 @@ int main() {
     string f_line, full_content;
     if (f.is_open()) {
         while(getline(f, f_line)) {
-            full_content += f_line + "
-";
+            full_content += f_line + "\n";
         }
         f.close();
         
@@ -285,8 +283,7 @@ int main() {
             size_t p = full_content.find(':', w_pos);
             if (p != string::npos) {
                 p++;
-                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '
-')) p++;
+                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '\n')) p++;
                 if (full_content[p] == '"') {
                     p++;
                     if (full_content[p] == 'X') winnerStr = "X";
@@ -308,10 +305,8 @@ int main() {
             size_t log_end = full_content.rfind("]");
             if(log_end != string::npos && log_end > log_start) {
                 existing_log = full_content.substr(log_start, log_end - log_start);
-                size_t first = existing_log.find_first_not_of(" 
- 	");
-                size_t last = existing_log.find_last_not_of(" 
- 	");
+                size_t first = existing_log.find_first_not_of(" \n\t");
+                size_t last = existing_log.find_last_not_of(" \n\t");
                 if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
                 else existing_log = "";
             }
@@ -340,6 +335,7 @@ int main() {
     }
     return 0;
 }
+
 ```
 </details>
 
@@ -362,10 +358,10 @@ Recent moves: X B2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (C#)
@@ -415,6 +411,7 @@ class Program {
         return false;
     }
 }
+
 ```
 </details>
 
@@ -429,16 +426,16 @@ class Program {
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Go+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Go+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Go+board) | **3** |
 |   | A | B | C |   |
 
-观测：Next Move: X (Go)
+🎮 **Next Move: X (Go)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Go)
@@ -481,6 +478,7 @@ func main() {
     out, _ := json.MarshalIndent(s, "", "  ")
     os.WriteFile("current_state.json", out, 0644)
 }
+
 ```
 </details>
 
@@ -501,10 +499,10 @@ func main() {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Java)
@@ -539,7 +537,7 @@ public class Game {
         String turn = getJsonValue(content, "turn");
         String[][] board = new String[3][3];
         for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) board[i][j] = "";
-        Pattern p = Pattern.compile("\[\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*\]");
+        Pattern p = Pattern.compile("\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]");
         Matcher m = p.matcher(content);
         for (int i = 0; i < 3 && m.find(); i++) {
             board[i][0] = m.group(1);
@@ -566,8 +564,7 @@ public class Game {
             for (int i = 0; i < 3; i++) {
                 sb.append("    [\"").append(board[i][0]).append("\",\"").append(board[i][1]).append("\",\"").append(board[i][2]).append("\"]");
                 if (i < 2) sb.append(",");
-                sb.append("
-");
+                sb.append("\n");
             }
             sb.append("  ],
   \"turn\": \"").append(nextTurn).append("\",
@@ -581,7 +578,7 @@ public class Game {
     }
 
     static String getJsonValue(String json, String key) {
-        Pattern p = Pattern.compile("\"" + key + "\":\s*\"?(.*?)\"?(?:,|\n|\})");
+        Pattern p = Pattern.compile("\"" + key + "\":\\s*\"?(.*?)\"?(?:,|\\n|\\})");
         Matcher m = p.matcher(json);
         if (m.find()) return m.group(1).trim();
         return "null";
@@ -600,6 +597,7 @@ public class Game {
         return true;
     }
 }
+
 ```
 </details>
 
@@ -622,10 +620,10 @@ Recent moves: X B2 -> O A1 -> X B1 -> O C1 -> X A2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (JavaScript)
@@ -651,6 +649,7 @@ if (action === 'reset') {
     }
 }
 fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
+
 ```
 </details>
 
@@ -671,10 +670,10 @@ fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Kotlin)
@@ -708,7 +707,7 @@ fun main(args: Array<String>) {
 
     val turn = getJsonValue(content, "turn")
     val board = Array(3) { Array(3) { "" } }
-    val p = Pattern.compile("\[\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*\]")
+    val p = Pattern.compile("\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]")
     val m = p.matcher(content)
     var rowIndex = 0
     while (rowIndex < 3 && m.find()) {
@@ -728,8 +727,7 @@ fun main(args: Array<String>) {
         val draw = isDraw(board)
 
         val winStr = if (win != null) "\"$win\"" else if (draw) "\"draw\"" else "null"
-        val bStr = board.joinToString(",
-") { row ->
+        val bStr = board.joinToString(",\n") { row ->
             "    [\"${row[0]}\",\"${row[1]}\",\"${row[2]}\"]"
         }
 
@@ -746,7 +744,7 @@ $bStr
 }
 
 fun getJsonValue(json: String, key: String): String {
-    val p = Pattern.compile("\"$key\":\s*\"?(.*?)\"?(?:,|\n|\})")
+    val p = Pattern.compile("\"$key\":\\s*\"?(.*?)\"?(?:,|\\n|\\})")
     val m = p.matcher(json)
     return if (m.find()) m.group(1).trim() else "null"
 }
@@ -767,6 +765,7 @@ fun isDraw(b: Array<Array<String>>): Boolean {
     for (i in 0..2) for (j in 0..2) if (b[i][j].isEmpty()) return false
     return true
 }
+
 ```
 </details>
 
@@ -787,10 +786,10 @@ fun isDraw(b: Array<Array<String>>): Boolean {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (PHP)
@@ -820,6 +819,7 @@ if ($action === 'reset') {
     }
 }
 file_put_contents('current_state.json', json_encode($s, JSON_PRETTY_PRINT));
+
 ```
 </details>
 
@@ -842,10 +842,10 @@ Recent moves: X A1 -> O B2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Python)
@@ -879,6 +879,7 @@ elif cell and not s['winner']:
 
 with open('current_state.json', 'w') as f:
     json.dump(s, f, indent=2)
+
 ```
 </details>
 
@@ -899,10 +900,10 @@ with open('current_state.json', 'w') as f:
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Ruby)
@@ -927,6 +928,7 @@ elsif !cell.empty? && !s['winner']
   end
 end
 File.write('current_state.json', JSON.pretty_generate(s))
+
 ```
 </details>
 
@@ -947,10 +949,10 @@ File.write('current_state.json', JSON.pretty_generate(s))
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Rust)
@@ -995,6 +997,7 @@ fn main() {
     }
     fs::write("current_state.json", serde_json::to_string_pretty(&s).unwrap()).unwrap();
 }
+
 ```
 </details>
 
@@ -1015,10 +1018,10 @@ fn main() {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Scala)
@@ -1044,12 +1047,12 @@ object Game {
       val pw = new PrintWriter(new File(path))
       pw.write(out); pw.close()
     } else if (cell.length >= 2) {
-      val turn = "\"turn\":\s*\"(.*?)\"".r.findFirstMatchIn(json).map(_.group(1)).getOrElse("X")
-      val winner = "\"winner\":\s*\"(.*?)\"".r.findFirstMatchIn(json).map(_.group(1)).getOrElse("null")
+      val turn = "\"turn\":\\s*\"(.*?)\"".r.findFirstMatchIn(json).map(_.group(1)).getOrElse("X")
+      val winner = "\"winner\":\\s*\"(.*?)\"".r.findFirstMatchIn(json).map(_.group(1)).getOrElse("null")
       
       if (winner == "null") {
         val board = Array.fill(3, 3)("")
-        val rowRegex = "\[\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*\]".r
+        val rowRegex = "\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]".r
         rowRegex.findAllIn(json).matchData.zipWithIndex.foreach { case (m, i) =>
           if (i < 3) {
             board(i)(0) = m.group(1); board(i)(1) = m.group(2); board(i)(2) = m.group(3)
@@ -1060,15 +1063,14 @@ object Game {
         val r = cell(1) - '1'
         val c = cell(0) - 'A'
 
-        if (r >= 0 && r < 3 && c >= 0 && c < 3 && board(r)(c).isEmpty) {
-          board(r)(c) = turn
+        if (r >= 0 && r < 3 && c >= 0 && c < 3 && board[r][c].isEmpty) {
+          board[r][c] = turn
           val nextTurn = if (turn == "X") "O" else "X"
           val win = checkWinner(board)
           val draw = board.flatten.forall(_.nonEmpty)
 
-          val winStr = if (win.isDefined) s""""${win.get}"""" else if (draw) "\"draw\"" else "null"
-          val bStr = board.map(row => s"""["${row(0)}","${row(1)}","${row(2)}"]""").mkString("    ", ",
-    ", "")
+          val winStr = if (win.isDefined) s"\"${win.get}\"" else if (draw) "\"draw\"" else "null"
+          val bStr = board.map(row => s"""["${row(0)}","${row(1)}","${row(2)}"]""").mkString("    ", ",\n    ", "")
           
           val out = s"""{
   "board": [
@@ -1093,6 +1095,7 @@ $bStr
     None
   }
 }
+
 ```
 </details>
 
@@ -1115,10 +1118,10 @@ Recent moves: X A1 -> O B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (Swift)
@@ -1171,6 +1174,7 @@ if let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
     let out = try! JSONSerialization.data(withJSONObject: s, options: .prettyPrinted)
     try! out.write(to: URL(fileURLWithPath: path))
 }
+
 ```
 </details>
 
@@ -1193,10 +1197,10 @@ Recent moves: X A1 -> O B1 -> X C1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial Page Load / Manual Sync`
+- **Input (Information received)**: `Manual UI Repair`
 - **Output (Information given)**: 
 ```text
-Move processed successfully.
+Synchronized minimalist UI.
 ```
 
 ### 💻 Implementation Code (TypeScript)
@@ -1222,6 +1226,7 @@ if (action === 'reset') {
     }
 }
 fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
+
 ```
 </details>
 
