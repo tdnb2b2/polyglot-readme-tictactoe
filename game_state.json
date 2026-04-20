@@ -291,11 +291,12 @@
     "log": []
   },
   "swift": {
-    "turn": "O",
+    "winner": null,
+    "turn": "X",
     "board": [
       [
         "X",
-        "",
+        "O",
         ""
       ],
       [
@@ -309,11 +310,14 @@
         ""
       ]
     ],
-    "winner": null,
     "log": [
       {
-        "player": "X",
-        "cell": "A1"
+        "cell": "A1",
+        "player": "X"
+      },
+      {
+        "cell": "B1",
+        "player": "O"
       }
     ]
   },
