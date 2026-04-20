@@ -40,9 +40,10 @@ jobs:
         with:
           dotnet-version: '7.0.x'
       - name: Set up Swift
-                      ift-actions/setup-swift@v1
-                                  swift-version: '5.8'
- name: Play Game
+        uses: swift-actions/setup-swift@v1
+        with:
+          swift-version: '5.8'
+      - name: Play Game
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           REPO: ${{ github.repository }}
