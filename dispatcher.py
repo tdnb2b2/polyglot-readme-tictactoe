@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-\"\"\"dispatcher.py — detects language from issue title and routes to implementation.\"\"\"
+"""dispatcher.py — detects language from issue title and routes to implementation."""
 import os
 import re
 import sys
@@ -25,13 +25,13 @@ LANGUAGE_MAP = {
     "c":          "c",
 }
 
-# Pattern: \"<Language>: Tic-Tac-Toe: Put <Cell>\"
+# Pattern: "<Language>: Tic-Tac-Toe: Put <Cell>"
 TITLE_PAT = re.compile(
-    r'^(?P<lang>[\\w#+]+):\\s*Tic-Tac-Toe:\\s*Put\\s+(?P<cell>[A-Ca-c][1-3])\\s*$',
+    r'^(?P<lang>[\w#+]+):\s*Tic-Tac-Toe:\s*Put\s+(?P<cell>[A-Ca-c][1-3])\s*$',
     re.IGNORECASE
 )
 RESET_PAT = re.compile(
-    r'^(?P<lang>[\\w#+]+):\\s*Tic-Tac-Toe:\\s*Reset\\s*$',
+    r'^(?P<lang>[\w#+]+):\s*Tic-Tac-Toe:\s*Reset\s*$',
     re.IGNORECASE
 )
 
@@ -76,12 +76,12 @@ def main():
         issue_n = os.environ.get('ISSUE_NUMBER')
         if token and repo and issue_n:
             _close_issue(token, repo, issue_n,
-                f'Unknown command: {title}\\n\\n'
-                'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\\n\\n'
+                f'Unknown command: {title}\n\n'
+                'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\n\n'
                 'Supported languages: Python, JavaScript, TypeScript, Go, Rust, '
                 'Java, Kotlin, PHP, Ruby, C#, C++, Scala, Swift, C')
         else:
-            print(f\"Unknown command: {title}\")
+            print(f"Unknown command: {title}")
         sys.exit(0)
 
     # Prepare sandbox state
@@ -122,7 +122,7 @@ def main():
     }
 
     if lang not in impl_runners:
-        print(f\"Error: No runner defined for {lang}\", file=sys.stderr)
+        print(f"Error: No runner defined for {lang}", file=sys.stderr)
         sys.exit(1)
 
     cmd, impl_dir = impl_runners[lang]
@@ -137,7 +137,7 @@ def main():
     env['CELL']     = cell or ''
     env['ACTION']   = action
 
-    print(f\"Running {lang} implementation in {impl_dir}...\")
+    print(f"Running {lang} implementation in {impl_dir}...")
     result = subprocess.run(cmd, env=env, cwd=impl_dir, capture_output=True, text=True)
     
     if result.returncode == 0:
@@ -163,20 +163,31 @@ def main():
 
             # 1. Update all individual language boards to keep them in sync and clean up legacy corruption
             for l_key, l_state in all_states.items():
-                l_md = render_board_md(l_key, l_state, owner=owner, repo=repo)
-                new_content = replace_section(new_content, f\"BOARD_{l_key.upper()}\", l_md)
+                l_md = render_board_md(
+                    board=l_state['board'],
+                    lang_key=l_key,
+                    owner=owner,
+                    repo=repo,
+                    turn=l_state['turn'],
+                    winner=l_state['winner'],
+                    log=l_state['log']
+                )
+                new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
 
-            # 2. Update the language-agnostic \"Current Language Board\" placeholder
+            # 2. Update the language-agnostic "Current Language Board" placeholder
             # This should show the language that was just played.
             new_board_md = render_board_md(
+                board=updated_state['board'],
                 lang_key=lang,
-                state=updated_state,
                 owner=owner,
                 repo=repo,
+                turn=updated_state['turn'],
+                winner=updated_state['winner'],
+                log=updated_state['log'],
                 input_info=title,
-                output_info=\"Success\"
+                output_info="Success"
             )
-            new_content = replace_section(new_content, \"BOARD_LANG\", new_board_md)
+            new_content = replace_section(new_content, "BOARD_LANG", new_board_md)
 
             if new_content != current_content:
                 with open('README.md', 'w', encoding='utf-8') as f:
@@ -186,20 +197,20 @@ def main():
             issue_n    = os.environ.get('ISSUE_NUMBER')
             
             if token and repo_full and issue_n:
-                _close_issue(token, repo_full, issue_n, f\"Move accepted for {lang}. README updated.\")
+                _close_issue(token, repo_full, issue_n, f"Move accepted for {lang}. README updated.")
             else:
-                print(f\"Move accepted for {lang}. README updated locally.\")
+                print(f"Move accepted for {lang}. README updated locally.")
 
         except Exception as e:
-            print(f\"Error updating README: {e}\", file=sys.stderr)
+            print(f"Error updating README: {e}", file=sys.stderr)
     else:
         # On failure, dump stdout and stderr to help debug in CI
-        print(f\"Error: Command for {lang} failed with exit code {result.returncode}\", file=sys.stderr)
+        print(f"Error: Command for {lang} failed with exit code {result.returncode}", file=sys.stderr)
         if result.stdout:
-            print(\"--- STDOUT ---\", file=sys.stderr)
+            print("--- STDOUT ---", file=sys.stderr)
             print(result.stdout, file=sys.stderr)
         if result.stderr:
-            print(\"--- STDERR ---\", file=sys.stderr)
+            print("--- STDERR ---", file=sys.stderr)
             print(result.stderr, file=sys.stderr)
 
     if os.path.exists(state_path):
@@ -225,5 +236,5 @@ def _close_issue(token, repo, issue_number, comment_body):
     urllib.request.urlopen(req2)
 
 
-if __name__ == \"__main__\":
+if __name__ == "__main__":
     main()
