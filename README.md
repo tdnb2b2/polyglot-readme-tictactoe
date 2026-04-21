@@ -794,16 +794,18 @@ fun isDraw(b: Array<Array<String>>): Boolean {
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | ⭕ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | ❌ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+PHP+board) | **3** |
+| **3** | ❌ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (PHP)**
+🏆 **Winner: draw (PHP)**
+
+🔄 [**Play Again / Reset Board**](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+game)
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `PHP: Tic-Tac-Toe: Put B3`
+- **Input (Information received)**: `PHP: Tic-Tac-Toe: Put C3`
 - **Output (Information given)**: 
 ```text
 Success
