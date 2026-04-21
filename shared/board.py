@@ -45,23 +45,24 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
     pattern = re.compile(rf"{re.escape(start_tag)}.*?{re.escape(end_tag)}", re.DOTALL)
     if not pattern.search(content):
         return content
-    return pattern.sub(f"{start_tag}\n{replacement}\n{end_tag}", content)
+    # Use lambda to prevent backslash interpretation (binary corruption fix)
+    return pattern.sub(lambda _: f"{start_tag}\n{replacement}\n{end_tag}", content)
 
 def render_board_md(lang_key: str, state: dict, owner: str = "tdnb2b2",
                     repo: str = "polyglot-readme-tictactoe",
                     input_info: str = "", output_info: str = "") -> str:
-    \"\"\"
-    Renders the Tic-Tac-Toe board as a Markdown table with clickable issue links.
-    \"\"\"
+    """
+    Renders the Tic-Tac-Toe board as a premium HTML table with Shields.io badges.
+    """
     board = state.get('board', [['', '', ''], ['', '', ''], ['', '', '']])
     turn = state.get('turn', 'X')
     winner = state.get('winner')
     log = state.get('log', [])
 
     lang_display = LANG_DISPLAY.get(lang_key, lang_key.upper())
+    safe_lang = lang_display.replace('+', '%2B').replace('#', '%23')
 
-    SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
-
+    # Status Message
     if winner:
         if winner == 'draw':
             status = "🤝 **It's a Draw!**"
@@ -70,26 +71,39 @@ def render_board_md(lang_key: str, state: dict, owner: str = "tdnb2b2",
     else:
         status = f"🎮 **Next Move: {turn} ({lang_display})**"
 
-    rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
-    for ri in range(3):
-        row_label = str(ri + 1)
-        cells = [f'**{row_label}**']
-        for ci in range(3):
-            val = board[ri][ci]
-            cell_name = f"{['A', 'B', 'C'][ci]}{ri + 1}"
-            if val:
-                cells.append(SYMBOLS.get(val, val))
+    # HTML Table Construction
+    html = ['<table align="center">', '  <thead>', '    <tr>', '      <th></th>', '      <th>A</th>', '      <th>B</th>', '      <th>C</th>', '    </tr>', '  </thead>', '  <tbody>']
+    
+    BADGE_BASE = "https://img.shields.io/badge/"
+    STYLE = "?style=for-the-badge"
+    
+    for r in range(3):
+        row_num = r + 1
+        html.append('    <tr>')
+        html.append(f'      <td align="center"><b>{row_num}</b></td>')
+        for c in range(3):
+            cell_val = board[r][c]
+            cell_id = f"{['A','B','C'][c]}{row_num}"
+            
+            content = ""
+            if cell_val == 'X':
+                content = f'<img src="{BADGE_BASE}-X-red{STYLE}" alt="X">'
+            elif cell_val == 'O':
+                content = f'<img src="{BADGE_BASE}-O-blue{STYLE}" alt="O">'
             elif winner:
-                cells.append('___')
+                content = f'<img src="{BADGE_BASE}- -lightgrey{STYLE}" alt=" ">'
             else:
-                title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Put {cell_name}")
-                body = quote_plus(f"Play {lang_display} board")
-                link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body={body}'
-                cells.append(f'[___]({link})')
-        cells.append(f'**{row_label}**')
-        rows.append(f'| {" | ".join(cells)} |')
-    rows.append('|   | A | B | C |   |')
-    board_md = '\n'.join(rows)
+                issue_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Put {cell_id}")
+                url = f'https://github.com/{owner}/{repo}/issues/new?title={issue_title}&body=Play+{safe_lang}+board'
+                content = f'<a href="{url}"><img src="{BADGE_BASE}-{cell_id}-grey{STYLE}" alt="{cell_id}"></a>'
+            
+            html.append(f'      <td align="center">{content}</td>')
+        html.append('    </tr>')
+    
+    html.append('  </tbody>')
+    html.append('</table>')
+    
+    board_html = '\n'.join(html)
 
     log_md = ''
     if log:
@@ -101,7 +115,7 @@ def render_board_md(lang_key: str, state: dict, owner: str = "tdnb2b2",
     code_content = get_source_code(lang_key)
     code_ext = 'cs' if lang_key == 'csharp' else lang_key
 
-    tech_details = f\"\"\"
+    tech_details = f"""
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
@@ -114,6 +128,6 @@ def render_board_md(lang_key: str, state: dict, owner: str = "tdnb2b2",
 {code_content}
 ```
 </details>
-\"\"\"
+"""
 
-    return f'{board_md}\n\n{status}{log_md}\n{tech_details}'
+    return f'{board_html}\n\n{status}{log_md}\n{tech_details}'
