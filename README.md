@@ -908,16 +908,18 @@ with open('current_state.json', 'w') as f:
 |---|---|---|---|---|
 | **1** | ❌ | ❌ | ⭕ | **1** |
 | **2** | ⭕ | ❌ | ⭕ | **2** |
-| **3** | ❌ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) | **3** |
+| **3** | ❌ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Ruby)**
+🏆 **Winner: X (Ruby)**
+
+🔄 [**Play Again / Reset Board**](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+game)
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Put B3`
+- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Put C3`
 - **Output (Information given)**: 
 ```text
 Success
