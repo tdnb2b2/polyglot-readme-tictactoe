@@ -407,13 +407,13 @@
         "O"
       ],
       [
-        "",
+        "X",
         "",
         ""
       ]
     ],
-    "turn": "X",
-    "winner": null,
+    "turn": "O",
+    "winner": "X",
     "log": []
   },
   "swift": {
