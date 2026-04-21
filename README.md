@@ -1201,19 +1201,19 @@ if let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+TypeScript+board) | **2** |
+| **2** | ⭕ | ❌ | ⭕ | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+TypeScript+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (TypeScript)**
+🎮 **Next Move: X (TypeScript)**
 
-Recent moves: X A1 -> O B1 -> X C1 -> O A2 -> X B2
+Recent moves: O B1 -> X C1 -> O A2 -> X B2 -> O C2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `TypeScript: Tic-Tac-Toe: Put B2`
+- **Input (Information received)**: `TypeScript: Tic-Tac-Toe: Put C2`
 - **Output (Information given)**: 
 ```text
 > polyglot-readme-tictactoe-typescript@1.0.0 play
