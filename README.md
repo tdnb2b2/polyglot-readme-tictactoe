@@ -619,22 +619,22 @@ public class Game {
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | ⭕ | **1** |
-| **2** | ❌ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+JavaScript+board) | **2** |
+| **2** | ❌ | ❌ | ⭕ | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+JavaScript+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Javascript)**
+🎮 **Next Move: X (JavaScript)**
 
-Recent moves: X B2 -> O A1 -> X B1 -> O C1 -> X A2
+Recent moves: O A1 -> X B1 -> O C1 -> X A2 -> O C2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Manual UI Repair`
+- **Input (Information received)**: `JavaScript: Tic-Tac-Toe: Put C2`
 - **Output (Information given)**: 
 ```text
-Synchronized minimalist UI.
+Success
 ```
 
 ### 💻 Implementation Code (JavaScript)
