@@ -163,12 +163,30 @@ def main():
 
             # 1. Update all individual language boards to keep them in sync and clean up legacy corruption
             for l_key, l_state in all_states.items():
-                l_md = render_board_md(l_key, l_state, owner=owner, repo=repo)
+                l_md = render_board_md(
+                    board=l_state.get('board', [['']*3]*3),
+                    lang_key=l_key,
+                    owner=owner,
+                    repo=repo,
+                    turn=l_state.get('turn', 'X'),
+                    winner=l_state.get('winner'),
+                    log=l_state.get('log', [])
+                )
                 new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
 
             # 2. Update the language-agnostic "Current Language Board" placeholder
             # This should show the language that was just played.
-            new_board_md = render_board_md(lang, updated_state, owner=owner, repo=repo)
+            new_board_md = render_board_md(
+                board=updated_state.get('board', [['']*3]*3),
+                lang_key=lang,
+                owner=owner,
+                repo=repo,
+                turn=updated_state.get('turn', 'X'),
+                winner=updated_state.get('winner'),
+                log=updated_state.get('log', []),
+                input_info=title,   # ISSUE_TITLE環境変数の値
+                output_info="Success"
+            )
             new_content = replace_section(new_content, "BOARD_LANG", new_board_md)
 
             if new_content != current_content:
