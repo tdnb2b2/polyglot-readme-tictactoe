@@ -1119,23 +1119,23 @@ $bStr
 <!-- BOARD_SWIFT_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Swift+board) | **1** |
+| **1** | ❌ | ⭕ | ❌ | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Swift+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Swift+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Swift)**
+🎮 **Next Move: O (Swift)**
 
-Recent moves: X A1 -> O B1
+Recent moves: X A1 -> O B1 -> X C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Manual UI Repair`
+- **Input (Information received)**: `Swift: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**: 
 ```text
-Synchronized minimalist UI.
+Success
 ```
 
 ### 💻 Implementation Code (Swift)

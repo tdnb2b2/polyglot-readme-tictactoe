@@ -353,13 +353,11 @@
     "log": []
   },
   "swift": {
-    "winner": null,
-    "turn": "X",
     "board": [
       [
         "X",
         "O",
-        ""
+        "X"
       ],
       [
         "",
@@ -372,16 +370,22 @@
         ""
       ]
     ],
+    "turn": "O",
     "log": [
       {
-        "cell": "A1",
-        "player": "X"
+        "player": "X",
+        "cell": "A1"
       },
       {
         "cell": "B1",
         "player": "O"
+      },
+      {
+        "cell": "C1",
+        "player": "X"
       }
-    ]
+    ],
+    "winner": null
   },
   "typescript": {
     "board": [
