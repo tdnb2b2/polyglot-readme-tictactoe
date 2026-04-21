@@ -1,11 +1,19 @@
 import os
 import json
 import re
+from urllib.parse import quote_plus
 
 CELL_TO_IDX = {
     'A1': (0, 0), 'B1': (0, 1), 'C1': (0, 2),
     'A2': (1, 0), 'B2': (1, 1), 'C2': (1, 2),
     'A3': (2, 0), 'B3': (2, 1), 'C3': (2, 2)
+}
+
+LANG_DISPLAY = {
+    'python': 'Python', 'javascript': 'JavaScript', 'typescript': 'TypeScript',
+    'go': 'Go', 'rust': 'Rust', 'java': 'Java', 'kotlin': 'Kotlin',
+    'php': 'PHP', 'ruby': 'Ruby', 'csharp': 'C#', 'c': 'C',
+    'cpp': 'C++', 'scala': 'Scala', 'swift': 'Swift',
 }
 
 def get_source_code(lang_key: str) -> str:
@@ -22,15 +30,14 @@ def get_source_code(lang_key: str) -> str:
     path = os.path.join('implementations', lang_key, filename)
     try:
         if os.path.exists(path):
-            with open(path, 'r') as f:
-                return f.read()
+            with open(path, 'r', encoding='utf-8', errors='replace') as f:
+                content = f.read()
+                content = content.replace('\x00', '')
+                content = content.replace('```', '` ` `')
+                return content
         return f"// Source code for {lang_key} not found at {path}"
     except Exception as e:
         return f"// Error reading source for {lang_key}: {str(e)}"
-
-def update_readme_local(new_content: str):
-    with open('README.md', 'w') as f:
-        f.write(new_content)
 
 def replace_section(content: str, tag: str, replacement: str) -> str:
     start_tag = f"<!-- {tag}_START -->"
@@ -40,38 +47,44 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
         return content
     return pattern.sub(f"{start_tag}\n{replacement}\n{end_tag}", content)
 
-def render_board_md(board: list, lang_key: str, owner: str, repo: str,
-                    turn: str, winner: str, log: list,
+def render_board_md(lang_key: str, state: dict, owner: str = "tdnb2b2",
+                    repo: str = "polyglot-readme-tictactoe",
                     input_info: str = "", output_info: str = "") -> str:
+    \"\"\"
+    Renders the Tic-Tac-Toe board as a Markdown table with clickable issue links.
+    \"\"\"
+    board = state.get('board', [['', '', ''], ['', '', ''], ['', '', '']])
+    turn = state.get('turn', 'X')
+    winner = state.get('winner')
+    log = state.get('log', [])
+
+    lang_display = LANG_DISPLAY.get(lang_key, lang_key.upper())
+
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
-    LANG_DISPLAY = {
-        'python': 'Python', 'javascript': 'JavaScript', 'typescript': 'TypeScript',
-        'go': 'Go', 'rust': 'Rust', 'java': 'Java', 'kotlin': 'Kotlin',
-        'php': 'PHP', 'ruby': 'Ruby', 'csharp': 'C#', 'c': 'C',
-        'cpp': 'C++', 'scala': 'Scala', 'swift': 'Swift',
-    }
-    lang_display = LANG_DISPLAY.get(lang_key, lang_key)
 
     if winner:
-        status = f"🏆 **Winner: {winner} ({lang_key.capitalize()})**"
-    elif all(all(row) for row in board):
-        status = "🤝 **It's a Draw!**"
+        if winner == 'draw':
+            status = "🤝 **It's a Draw!**"
+        else:
+            status = f"🏆 **Winner: {winner} ({lang_display})**"
     else:
-        status = f"🎮 **Next Move: {turn} ({lang_key.capitalize()})**"
+        status = f"🎮 **Next Move: {turn} ({lang_display})**"
 
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
-    for ri, row_label in enumerate(['1', '2', '3']):
+    for ri in range(3):
+        row_label = str(ri + 1)
         cells = [f'**{row_label}**']
         for ci in range(3):
             val = board[ri][ci]
-            cell_name = f"{['A','B','C'][ci]}{ri+1}"
+            cell_name = f"{['A', 'B', 'C'][ci]}{ri + 1}"
             if val:
-                cells.append(SYMBOLS[val])
+                cells.append(SYMBOLS.get(val, val))
             elif winner:
                 cells.append('___')
             else:
-                title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Put+{cell_name}"
-                link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body=Play+{lang_display}+board'
+                title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Put {cell_name}")
+                body = quote_plus(f"Play {lang_display} board")
+                link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body={body}'
                 cells.append(f'[___]({link})')
         cells.append(f'**{row_label}**')
         rows.append(f'| {" | ".join(cells)} |')
@@ -86,23 +99,21 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
         )
 
     code_content = get_source_code(lang_key)
-    code_ext = lang_key if lang_key != 'csharp' else 'cs'
+    code_ext = 'cs' if lang_key == 'csharp' else lang_key
 
-    tech_details = f"""
+    tech_details = f\"\"\"
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
 - **Input (Information received)**: `{input_info or "Initial Page Load / Manual Sync"}`
-- **Output (Information given)**: 
-```text
-{output_info or "Move processed successfully."}
-```
+- **Output (Information given)**: \n```text\n{output_info or "Move processed successfully."}\n```
 
 ### 💻 Implementation Code ({lang_display})
 ```{code_ext}
 {code_content}
 ```
 </details>
-"""
+\"\"\"
+
     return f'{board_md}\n\n{status}{log_md}\n{tech_details}'
