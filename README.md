@@ -901,20 +901,20 @@ with open('current_state.json', 'w') as f:
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ❌ | ❌ | ⭕ | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Ruby+board) | **2** |
+| **2** | ⭕ | ❌ | ⭕ | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Ruby)**
+🎮 **Next Move: X (Ruby)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Manual UI Repair`
+- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Put C2`
 - **Output (Information given)**: 
 ```text
-Synchronized minimalist UI.
+Success
 ```
 
 ### 💻 Implementation Code (Ruby)
