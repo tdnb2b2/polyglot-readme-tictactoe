@@ -47,18 +47,13 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
     return pattern.sub(lambda _: f"{start_tag}\n{replacement}\n{end_tag}", content)
 
 def render_board_md(board: list, lang_key: str, owner: str, repo: str,
-                    turn: str, winner: str, log: list,
+                    turn: str = "", winner: str = "", log: list = None,
                     input_info: str = "", output_info: str = "") -> str:
+    """
+    Renders the Tic-Tac-Toe board as a clean Markdown table with interactive links.
+    Returns only the board table - no status, log, or technical details.
+    """
     lang_display = LANG_DISPLAY.get(lang_key, lang_key.capitalize())
-
-    if winner:
-        if winner == 'draw':
-            status = "🤝 **It's a Draw!**"
-        else:
-            status = f"🏆 **Winner: {winner} ({lang_display})**"
-    else:
-        status = f"🎮 **Next Move: {turn} ({lang_display})**"
-
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
 
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
@@ -81,31 +76,4 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
         rows.append(f'| {" | ".join(cells)} |')
 
     rows.append('|   | A | B | C |   |')
-    board_md = '\n'.join(rows)
-
-    log_md = ''
-    if log:
-        recent = log[-5:]
-        log_md = '\n\nRecent moves: ' + ' → '.join(
-            f'{e["player"]} {e["cell"]}' for e in recent
-        )
-
-    code_content = get_source_code(lang_key)
-    code_ext = 'cs' if lang_key == 'csharp' else lang_key
-
-    tech_details = f"""
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `{input_info or "Initial Page Load / Manual Sync"}`
-- **Output (Information given)**: \n```text\n{output_info or "Move processed successfully."}\n```
-
-### 💻 Implementation Code ({lang_display})
-```{code_ext}
-{code_content}
-```
-</details>
-"""
-
-    return f'{board_md}\n\n{status}{log_md}\n{tech_details}'
+    return '\n'.join(rows)
