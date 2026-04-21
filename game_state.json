@@ -167,11 +167,11 @@
       [
         "X",
         "O",
-        ""
+        "X"
       ]
     ],
     "turn": "X",
-    "winner": null,
+    "winner": "X",
     "log": []
   },
   "java": {
