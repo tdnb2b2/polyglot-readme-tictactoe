@@ -357,18 +357,18 @@ int main() {
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | ⭕ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C#%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C#+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C#%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C#+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C#%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C#+board) | **3** |
+| **3** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C#%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C#+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C#%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C#+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (C#)**
+🎮 **Next Move: O (C#)**
 
-Recent moves: O A1 -> X B1 -> O C1 -> X A2 -> O C2
+Recent moves: X B1 -> O C1 -> X A2 -> O C2 -> X A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `C#: Tic-Tac-Toe: Put C2`
+- **Input (Information received)**: `C#: Tic-Tac-Toe: Put A3`
 - **Output (Information given)**: 
 ```text
 Success
