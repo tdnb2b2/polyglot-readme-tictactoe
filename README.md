@@ -316,9 +316,11 @@ int main() {
             if(log_end != string::npos && log_end > log_start) {
                 existing_log = full_content.substr(log_start, log_end - log_start);
                 size_t first = existing_log.find_first_not_of(" 
-	");
+
+	");
                 size_t last = existing_log.find_last_not_of(" 
-	");
+
+	");
                 if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
                 else existing_log = "";
             }
@@ -497,20 +499,20 @@ func main() {
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Java+board) | **1** |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) | **2** |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Java+board) | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Java+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Java)**
+🎮 **Next Move: X (Java)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Manual UI Repair`
+- **Input (Information received)**: `Java: Tic-Tac-Toe: Put B2`
 - **Output (Information given)**: 
 ```text
-Synchronized minimalist UI.
+Success
 ```
 
 ### 💻 Implementation Code (Java)
@@ -545,7 +547,7 @@ public class Game {
         String turn = getJsonValue(content, "turn");
         String[][] board = new String[3][3];
         for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) board[i][j] = "";
-        Pattern p = Pattern.compile("\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]");
+        Pattern p = Pattern.compile("\[\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*\]");
         Matcher m = p.matcher(content);
         for (int i = 0; i < 3 && m.find(); i++) {
             board[i][0] = m.group(1);
@@ -572,7 +574,8 @@ public class Game {
             for (int i = 0; i < 3; i++) {
                 sb.append("    [\"").append(board[i][0]).append("\",\"").append(board[i][1]).append("\",\"").append(board[i][2]).append("\"]");
                 if (i < 2) sb.append(",");
-                sb.append("\n");
+                sb.append("
+");
             }
             sb.append("  ],
   \"turn\": \"").append(nextTurn).append("\",
@@ -586,7 +589,7 @@ public class Game {
     }
 
     static String getJsonValue(String json, String key) {
-        Pattern p = Pattern.compile("\"" + key + "\":\\s*\"?(.*?)\"?(?:,|\\n|\\})");
+        Pattern p = Pattern.compile("\"" + key + "\":\s*\"?(.*?)\"?(?:,|\n|\})");
         Matcher m = p.matcher(json);
         if (m.find()) return m.group(1).trim();
         return "null";
