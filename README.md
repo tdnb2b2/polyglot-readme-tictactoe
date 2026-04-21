@@ -1120,19 +1120,19 @@ $bStr
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
-| **2** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Swift+board) | **2** |
+| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Swift+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Swift+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Swift)**
+🎮 **Next Move: O (Swift)**
 
-Recent moves: X A1 -> O B1 -> X C1 -> O A2
+Recent moves: X A1 -> O B1 -> X C1 -> O A2 -> X B2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Swift: Tic-Tac-Toe: Put A2`
+- **Input (Information received)**: `Swift: Tic-Tac-Toe: Put B2`
 - **Output (Information given)**: 
 ```text
 Success
