@@ -36,7 +36,7 @@ def get_source_code(lang_key: str) -> str:
     path = os.path.join('implementations', lang_key, filename)
     try:
         if os.path.exists(path):
-            with open(path, 'r') as f:
+            with open(path, 'r', encoding='utf-8') as f:
                 return f.read()
         return f"// Source code for {lang_key} not found at {path}"
     except Exception as e:
@@ -44,7 +44,7 @@ def get_source_code(lang_key: str) -> str:
 
 def update_readme_local(new_content: str):
     """Writes updated content to README.md in current directory."""
-    with open('README.md', 'w') as f:
+    with open('README.md', 'w', encoding='utf-8') as f:
         f.write(new_content)
 
 def replace_section(content: str, tag: str, replacement: str) -> str:
@@ -122,22 +122,19 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     code_content = get_source_code(lang_key)
     code_ext = lang_key if lang_key != 'csharp' else 'cs'
 
-    tech_details = f"""
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+    # Build technical details with explicit string concatenation to avoid formatting issues
+    tech_details = "\n<details>\n"
+    tech_details += "<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>\n\n"
+    tech_details += "### 🛰️ Execution Context\n"
+    tech_details += f"- **Input (Information received)**: `{input_info or 'Initial Page Load / Manual Sync'}`\n"
+    tech_details += "- **Output (Information given)**: \n"
+    tech_details += "```text\n"
+    tech_details += f"{output_info or 'Move processed successfully.'}\n"
+    tech_details += "```\n\n"
+    tech_details += f"### 💻 Implementation Code ({lang_display})\n"
+    tech_details += f"```{code_ext}\n"
+    tech_details += f"{code_content}\n"
+    tech_details += "```\n"
+    tech_details += "</details>\n"
 
-### 🛰️ Execution Context
-- **Input (Information received)**: `{input_info or "Initial Page Load / Manual Sync"}`
-- **Output (Information given)**: 
-```text
-{output_info or "Move processed successfully."}
-```
-
-### 💻 Implementation Code ({lang_display})
-```{code_ext}
-{code_content}
-```
-</details>
-"""
-
-    return f'{board_md}\n\n{status}{log_md}\n{tech_details}'
+    return f"{board_md}\n\n{status}{log_md}\n{tech_details}"
