@@ -680,16 +680,18 @@ fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
 | **2** | ⭕ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board) | **3** |
+| **3** | ❌ | ___ | ___ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Kotlin)**
+🏆 **Winner: X (Kotlin)**
+
+🔄 [**Play Again / Reset Board**](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+game)
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put C2`
+- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put A3`
 - **Output (Information given)**: 
 ```text
 Success
