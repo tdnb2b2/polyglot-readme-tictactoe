@@ -174,21 +174,6 @@ def main():
                 )
                 new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
 
-            # 2. Update the language-agnostic "Current Language Board" placeholder
-            # This should show the language that was just played.
-            new_board_md = render_board_md(
-                board=updated_state['board'],
-                lang_key=lang,
-                owner=owner,
-                repo=repo,
-                turn=updated_state['turn'],
-                winner=updated_state['winner'],
-                log=updated_state['log'],
-                input_info=title,
-                output_info="Success"
-            )
-            new_content = replace_section(new_content, "BOARD_LANG", new_board_md)
-
             if new_content != current_content:
                 with open('README.md', 'w', encoding='utf-8') as f:
                     f.write(new_content)
@@ -228,13 +213,16 @@ def _close_issue(token, repo, issue_number, comment_body):
     }
     base = f'https://api.github.com/repos/{repo}/issues/{issue_number}'
     data = json.dumps({'body': comment_body}).encode()
-    req = urllib.request.Request(f'{base}/comments', data=data, headers=headers)
-    urllib.request.urlopen(req)
-    data2 = json.dumps({'state': 'closed'}).encode()
-    req2 = urllib.request.Request(base, data=data2, headers=headers,
-                                   method='PATCH')
-    urllib.request.urlopen(req2)
+
+    req = urllib.request.Request(base + '/comments', data=data, headers=headers)
+    with urllib.request.urlopen(req) as resp:
+        pass
+
+    data = json.dumps({'state': 'closed'}).encode()
+    req = urllib.request.Request(base, data=data, headers=headers, method='PATCH')
+    with urllib.request.urlopen(req) as resp:
+        pass
 
 
-if __name__ == "__main__":
+if __name__ == '__main__':
     main()
