@@ -33,12 +33,16 @@
 <!-- BOARD_LANG_START -->
 | | A | B | C |
 |---|---|---|---|
-| 1 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | 
+| 1 | [❌](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | 
 | 2 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | 
 | 3 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) | 
 
 
-🎮 **Next Move: X (Python)**
+🎮 **Next Move: O (Python)**
+
+### 📝 Move History
+1. X at A1
+
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -46,26 +50,31 @@
 ### 🛰️ Execution Context
 ```json
 {
-  \"board\": [
+  "board": [
     [
-      \"\",
-      \"\",
-      \"\"
+      "X",
+      "",
+      ""
     ],
     [
-      \"\",
-      \"\",
-      \"\"
+      "",
+      "",
+      ""
     ],
     [
-      \"\",
-      \"\",
-      \"\"
+      "",
+      "",
+      ""
     ]
   ],
-  \"turn\": \"X\",
-  \"winner\": null,
-  \"log\": []
+  "turn": "O",
+  "winner": null,
+  "log": [
+    {
+      "player": "X",
+      "cell": "A1"
+    }
+  ]
 }
 ```
 
@@ -90,12 +99,12 @@ if action == 'reset':
     # Only allow reset if game is finished
     is_full = all(all(x != '' for x in row) for row in s['board'])
     if s.get('winner') or is_full:
-        s = {\"board\": [[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"]], \"turn\": \"X\", \"winner\": None, \"log\": []}
+        s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
 elif cell and not s['winner']:
     r, c = int(cell[1]) - 1, ord(cell[0]) - ord('A')
     if 0 <= r < 3 and 0 <= c < 3 and s['board'][r][c] == '':
         s['board'][r][c] = s['turn']
-        s['log'].append({\"player\": s['turn'], \"cell\": cell})
+        s['log'].append({"player": s['turn'], "cell": cell})
         win = check_winner(s['board'])
         if win: s['winner'] = win
         elif all(all(x != '' for x in row) for row in s['board']): s['winner'] = 'draw'

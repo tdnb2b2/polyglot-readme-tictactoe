@@ -178,7 +178,7 @@
   "python": {
     "board": [
       [
-        "",
+        "X",
         "",
         ""
       ],
@@ -193,9 +193,14 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
-    "log": []
+    "log": [
+      {
+        "player": "X",
+        "cell": "A1"
+      }
+    ]
   },
   "ruby": {
     "board": [
