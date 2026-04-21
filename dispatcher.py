@@ -156,13 +156,19 @@ def main():
             repo_full = os.environ.get('REPO', 'tdnb2b2/polyglot-readme-tictactoe')
             owner, repo = repo_full.split('/') if '/' in repo_full else ('tdnb2b2', 'polyglot-readme-tictactoe')
 
-            new_board_md = render_board_md(lang, updated_state, owner=owner, repo=repo)
-
             with open('README.md', 'r', encoding='utf-8') as f:
                 current_content = f.read()
 
-            new_content = replace_section(current_content, f"BOARD_{lang.upper()}", new_board_md)
-            # Also update the language-agnostic placeholder if needed
+            new_content = current_content
+
+            # 1. Update all individual language boards to keep them in sync and clean up legacy corruption
+            for l_key, l_state in all_states.items():
+                l_md = render_board_md(l_key, l_state, owner=owner, repo=repo)
+                new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
+
+            # 2. Update the language-agnostic "Current Language Board" placeholder
+            # This should show the language that was just played.
+            new_board_md = render_board_md(lang, updated_state, owner=owner, repo=repo)
             new_content = replace_section(new_content, "BOARD_LANG", new_board_md)
 
             if new_content != current_content:
