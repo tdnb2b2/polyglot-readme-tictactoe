@@ -908,16 +908,16 @@ with open('current_state.json', 'w') as f:
 |---|---|---|---|---|
 | **1** | ❌ | ❌ | ⭕ | **1** |
 | **2** | ⭕ | ❌ | ⭕ | **2** |
-| **3** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) | **3** |
+| **3** | ❌ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Ruby)**
+🎮 **Next Move: X (Ruby)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Put A3`
+- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Put B3`
 - **Output (Information given)**: 
 ```text
 Success
