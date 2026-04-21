@@ -951,16 +951,18 @@ File.write('current_state.json', JSON.pretty_generate(s))
 |---|---|---|---|---|
 | **1** | ❌ | ❌ | ⭕ | **1** |
 | **2** | ❌ | ⭕ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Rust+board) | **3** |
+| **3** | ❌ | ___ | ___ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Rust)**
+🏆 **Winner: X (Rust)**
+
+🔄 [**Play Again / Reset Board**](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+game)
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put C2`
+- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put A3`
 - **Output (Information given)**: 
 ```text
 Finished `release` profile [optimized] target(s) in 0.01s
