@@ -1039,17 +1039,17 @@ fn main() {
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Scala+board) | **2** |
+| **2** | ⭕ | ❌ | ⭕ | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Scala+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Scala+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Scala+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Scala)**
+🎮 **Next Move: X (Scala)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Scala: Tic-Tac-Toe: Put B2`
+- **Input (Information received)**: `Scala: Tic-Tac-Toe: Put C2`
 - **Output (Information given)**: 
 ```text
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.pom
@@ -1058,80 +1058,80 @@ Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scal
 Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-parent/1.5.27/logback-parent-1.5.27.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-parent/1.5.27/logback-parent-1.5.27.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-parent/1.5.27/logback-parent-1.5.27.pom.sha1
@@ -1140,352 +1140,352 @@ Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logba
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-parent/1.5.27/logback-parent-1.5.27.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-parent/1.5.27/logback-parent-1.5.27.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-parent/1.5.27/logback-parent-1.5.27.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/sonatype/oss/oss-parent/7/oss-parent-7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/sonatype/oss/oss-parent/7/oss-parent-7.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/ow2/1.5.1/ow2-1.5.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/sonatype/oss/oss-parent/7/oss-parent-7.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/ow2/1.5.1/ow2-1.5.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j/2.23.0/log4j-2.23.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave-parent/5.18.1/brave-parent-5.18.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-parent/2.17.2/zipkin-reporter-parent-2.17.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-parent/2.0.17/slf4j-parent-2.0.17.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-bom/2.0.17/slf4j-bom-2.0.17.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-bom/2.23.0/log4j-bom-2.23.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/slf4j/slf4j-bom/2.0.17/slf4j-bom-2.0.17.pom
@@ -1500,8 +1500,8 @@ Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-bom/2.0.17/slf4j-bom-2.0.17.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-bom/2.23.0/log4j-bom-2.23.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-bom/2.23.0/log4j-bom-2.23.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-bom/2.23.0/log4j-bom-2.23.0.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-bom/2.0.17/slf4j-bom-2.0.17.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-bom/2.23.0/log4j-bom-2.23.0.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/logging-parent/10.6.0/logging-parent-10.6.0.pom.sha1
@@ -1516,76 +1516,76 @@ Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/a
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/apache/31/apache-31.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/apache/31/apache-31.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/apache/31/apache-31.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/mockito/mockito-bom/4.11.0/mockito-bom-4.11.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/jetty/jetty-bom/9.4.54.v20240208/jetty-bom-9.4.54.v20240208.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/fabric8/kubernetes-client-bom/5.12.4/kubernetes-client-bom-5.12.4.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/springframework/spring-framework-bom/5.3.32/spring-framework-bom-5.3.32.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/netty/netty-bom/4.1.107.Final/netty-bom-4.1.107.Final.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakarta.jakartaee-bom/9.1.0/jakarta.jakartaee-bom-9.1.0.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/codehaus/groovy/groovy-bom/3.0.20/groovy-bom-3.0.20.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.10.2/junit-bom-5.10.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml/jackson/jackson-bom/2.16.1/jackson-bom-2.16.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/jackson/jackson-parent/2.16/jackson-parent-2.16.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom
@@ -1600,267 +1600,267 @@ Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/jakarta/platform/jakartaee-api-parent/9.1.0/jakartaee-api-parent-9.1.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/oss-parent/56/oss-parent-56.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/oss-parent/56/oss-parent-56.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/oss-parent/56/oss-parent-56.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/fasterxml/oss-parent/56/oss-parent-56.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml/oss-parent/56/oss-parent-56.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/fasterxml/oss-parent/56/oss-parent-56.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/eclipse/ee4j/project/1.0.7/project-1.0.7.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/81/commons-parent-81.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/81/commons-parent-81.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/81/commons-parent-81.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/81/commons-parent-81.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/81/commons-parent-81.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-parent/81/commons-parent-81.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-parent/81/commons-parent-81.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-parent/81/commons-parent-81.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin-parent/2.27.0/zipkin-parent-2.27.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson-parent/2.13.1/gson-parent-2.13.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-parent/81/commons-parent-81.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/73/commons-parent-73.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/apache/commons/commons-parent/73/commons-parent-73.pom
@@ -1892,204 +1892,204 @@ Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/ju
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.11.0/junit-bom-5.11.0.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.11.0/junit-bom-5.11.0.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/junit/junit-bom/5.11.0/junit-bom-5.11.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/net/openhft/java-parent-pom/1.1.28/java-parent-pom-1.1.28.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/google/errorprone/error_prone_parent/2.38.0/error_prone_parent-2.38.0.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/net/openhft/java-parent-pom/1.1.28/java-parent-pom-1.1.28.pom
@@ -2112,134 +2112,134 @@ Downloading https://central.sonatype.com/repository/maven-snapshots/net/openhft/
 Failed to download https://central.sonatype.com/repository/maven-snapshots/net/openhft/root-parent-pom/1.2.12/root-parent-pom-1.2.12.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/root-parent-pom/1.2.12/root-parent-pom-1.2.12.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/root-parent-pom/1.2.12/root-parent-pom-1.2.12.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
+Downloading https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-parent/3.27.1/jline-parent-3.27.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-parent/3.27.1/jline-parent-3.27.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/jline/jline-parent/3.27.1/jline-parent-3.27.1.pom.sha1
@@ -2252,30 +2252,30 @@ Downloading https://central.sonatype.com/repository/maven-snapshots/org/fusesour
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom
-Downloading https://central.sonatype.com/repository/maven-snapshots/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom
+Downloading https://central.sonatype.com/repository/maven-snapshots/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.pom
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom.sha1
-Failed to download https://central.sonatype.com/repository/maven-snapshots/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.pom
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom
+Failed to download https://central.sonatype.com/repository/maven-snapshots/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.pom
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.pom.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.pom.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.pom.sha1
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/fusesource/fusesource-pom/1.12/fusesource-pom-1.12.pom
 Failed to download https://central.sonatype.com/repository/maven-snapshots/org/fusesource/fusesource-pom/1.12/fusesource-pom-1.12.pom
 Downloading https://central.sonatype.com/repository/maven-snapshots/org/fusesource/fusesource-pom/1.12/fusesource-pom-1.12.pom.sha1
@@ -2292,498 +2292,498 @@ Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.pom
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.pom.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.pom.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-interface/1.11.7/util-interface-1.11.7.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-core_2.12/0.9.3/gigahorse-core_2.12-0.9.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal-jni/3.27.1/jline-terminal-jni-3.27.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-tree/9.9.1/asm-tree-9.9.1.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-java_2.12/3.2.0/monix-java_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/config/1.4.2/config-1.4.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/errorprone/error_prone_annotations/2.38.0/error_prone_annotations-2.38.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/fansi_2.12/0.5.1/fansi_2.12-0.5.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/zipkin2/zipkin/2.27.0/zipkin-2.27.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc_2.12/1.12.0/zinc_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-compile-core_2.12/1.12.0/zinc-compile-core_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-core_2.12/1.12.0/librarymanagement-core_2.12-1.12.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/commons/commons-lang3/3.17.0/commons-lang3-3.17.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-tail_2.12/3.2.0/monix-tail_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-effect_2.12/2.1.3/cats-effect_2.12-2.1.3.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-shared_2.12/2.0.19/bloop-shared_2.12-2.0.19.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-backend_2.12/2.0.19/bloop-backend_2.12-2.0.19.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-interface/1.12.0/compiler-interface-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-cache_2.12/1.11.7/util-cache_2.12-1.11.7.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/jpountz/lz4/lz4/1.3.0/lz4-1.3.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-execution_2.12/3.2.0/monix-execution_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/nailgun-server/1.0.7/nailgun-server-1.0.7.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/scribe_2.12/3.5.5/scribe_2.12-3.5.5.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-apache-httpclient5/0.9.3/shaded-apache-httpclient5-0.9.3.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/directory-watcher/0.8.0+6-f651bd93/directory-watcher-0.8.0+6-f651bd93.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix_2.12/3.2.0/monix_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/swoval/file-tree-views/2.1.12/file-tree-views-2.1.12.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/zeroturnaround/zt-zip/1.17/zt-zip-1.17.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-sender-urlconnection/2.17.2/zipkin-sender-urlconnection-2.17.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-annotations_2.12/2.0.6/case-app-annotations_2.12-2.0.6.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-core_2.12/0.10.1/sjson-new-core_2.12-0.10.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bsp4s_2.12/2.1.1/bsp4s_2.12-2.1.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-core/2.23.0/log4j-core-2.23.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-relation_2.12/1.11.5/util-relation_2.12-1.11.5.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lmax/disruptor/3.4.2/disruptor-3.4.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app-util_2.12/2.0.6/case-app-util_2.12-2.0.6.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/unroll-annotation_2.12/0.1.12/unroll-annotation_2.12-0.1.12.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-macros_2.12/2.13.3.2/jsoniter-scala-macros_2.12-2.13.3.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-native/3.27.1/jline-native-3.27.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/google/code/gson/gson/2.13.1/gson-2.13.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jctools/jctools-core/2.1.2/jctools-core-2.1.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-position_2.12/1.11.7/util-position_2.12-1.11.7.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/interface/1.0.28/interface-1.0.28.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalaz/scalaz-core_2.12/7.3.8/scalaz-core_2.12-7.3.8.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/sourcecode_2.12/0.4.4/sourcecode_2.12-0.4.4.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/sbinary_2.12/0.5.1/sbinary_2.12-0.5.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-core_2.12/1.12.0/zinc-core_2.12-1.12.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-core_2.12/2.1.1/cats-core_2.12-2.1.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist_2.12/1.12.0/zinc-persist_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-logging_2.12/1.11.7/util-logging_2.12-1.11.7.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-murmurhash_2.12/0.10.1/sjson-new-murmurhash_2.12-0.10.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter/2.17.2/zipkin-reporter-2.17.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-persist-core-assembly/1.12.0/zinc-persist-core-assembly-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/openhft/zero-allocation-hashing/0.16/zero-allocation-hashing-0.16.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classpath_2.12/1.12.0/zinc-classpath_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-interface/1.0/test-interface-1.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/collections_2.12/1.11.7/collections_2.12-1.11.7.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/parsers_2.12/4.13.8/parsers_2.12-4.13.8.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-apiinfo_2.12/1.12.0/zinc-apiinfo_2.12-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/brave/brave/5.18.1/brave-5.18.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/jline/jline/2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18/jline-2.14.7-sbt-9a88bc413e2b34a4580c001c654d1a7f4f65bf18.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-frontend_2.12/2.0.19/bloop-frontend_2.12-2.0.19.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/implicitbox_2.12/0.2.0/implicitbox_2.12-0.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/jniutils/windows-jni-utils/0.3.3/windows-jni-utils-0.3.3.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/trees_2.12/4.13.8/trees_2.12-4.13.8.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/fusesource/jansi/jansi/2.4.1/jansi-2.4.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm/9.9.1/asm-9.9.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/core-macros_2.12/1.11.7/core-macros_2.12-1.11.7.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-core/1.5.27/logback-core-1.5.27.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/io_2.12/4.13.8/io_2.12-4.13.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-macros_2.12/2.1.1/cats-macros_2.12-2.1.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/cats-kernel_2.12/2.1.1/cats-kernel_2.12-2.1.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/typelevel/macro-compat_2.12/1.1.1/macro-compat_2.12-1.1.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/github/alexarchambault/bleep/jsonrpc4s_2.12/0.1.1/jsonrpc4s_2.12-0.1.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/com-microsoft-java-debug-core/0.34.0+39/com-microsoft-java-debug-core-0.34.0+39.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/zinc-classfile_2.12/1.12.0/zinc-classfile_2.12-1.12.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/moduload_2.12/1.1.5/moduload_2.12-1.1.5.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna/5.18.1/jna-5.18.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/googlecode/java-diff-utils/diffutils/1.3.0/diffutils-1.3.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-collection-compat_2.12/2.13.0/scala-collection-compat_2.12-2.13.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/io_2.12/1.10.5/io_2.12-1.10.5.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/chuusai/shapeless_2.12/2.3.3/shapeless_2.12-2.3.3.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/scala-debug-adapter_2.12/4.2.8/scala-debug-adapter_2.12-4.2.8.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-util/9.9.1/asm-util-9.9.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-reactive_2.12/3.2.0/monix-reactive_2.12-3.2.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-scalajson_2.12/1.0.0-M4/shaded-scalajson_2.12-1.0.0-M4.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/reactivex/rxjava2/rxjava/2.2.21/rxjava-2.2.21.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/ivy/ivy/2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41/ivy-2.3.0-sbt-77cc781d727b367d3761f097d89f5a4762771d41.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-reflect/2.12.21/scala-reflect-2.12.21.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/librarymanagement-ivy_2.12/1.12.0/librarymanagement-ivy_2.12-1.12.0.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/zipkin/reporter2/zipkin-reporter-brave/2.17.2/zipkin-reporter-brave-2.17.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/qos/logback/logback-classic/1.5.27/logback-classic-1.5.27.jar.sha1
 Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar.sha1
-Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-xml_2.12/2.3.0/scala-xml_2.12-2.3.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-eval_2.12/3.2.0/monix-eval_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories-jni/0.1.2/directories-jni-0.1.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/typesafe/ssl-config-core_2.12/0.6.1/ssl-config-core_2.12-0.6.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/libdaemon_2.12/0.0.12/libdaemon_2.12-0.0.12.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/test-agent/1.12.1/test-agent-1.12.1.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/jline/jline-terminal/3.27.1/jline-terminal-3.27.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scalameta/common_2.12/4.13.8/common_2.12-4.13.8.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/util-control_2.12/1.11.5/util-control_2.12-1.11.5.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/apache/logging/log4j/log4j-api/2.23.0/log4j-api-2.23.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/lihaoyi/pprint_2.12/0.9.6/pprint_2.12-0.9.6.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/mwiede/jsch/2.27.5/jsch-2.27.5.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/launcher-interface/1.5.2/launcher-interface-1.5.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/shaded-jawn-parser_2.12/1.3.2/shaded-jawn-parser_2.12-1.3.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-sbt/compiler-bridge_2.12/1.12.0/compiler-bridge_2.12-1.12.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/get-coursier/util/directories/0.1.2/directories-0.1.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/reactivestreams/reactive-streams/1.0.4/reactive-streams-1.0.4.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/io/monix/monix-catnap_2.12/3.2.0/monix-catnap_2.12-3.2.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/outr/perfolation_2.12/1.2.8/perfolation_2.12-1.2.8.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/ch/epfl/scala/bloop-config_2.12/2.3.3/bloop-config_2.12-2.3.3.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/alexarchambault/case-app_2.12/2.0.6/case-app_2.12-2.0.6.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/net/java/dev/jna/jna-platform/4.4.0/jna-platform-4.4.0.jar.sha1
 Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/slf4j/slf4j-api/2.0.17/slf4j-api-2.0.17.jar.sha1
-Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-library/2.12.21/scala-library-2.12.21.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/ow2/asm/asm-analysis/9.9.1/asm-analysis-9.9.1.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/modules/scala-parser-combinators_2.12/1.1.2/scala-parser-combinators_2.12-1.1.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar.sha1
+Downloading https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/org/scala-lang/scala-compiler/2.12.21/scala-compiler-2.12.21.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/github/plokhotnyuk/jsoniter-scala/jsoniter-scala-core_2.12/2.13.5.2/jsoniter-scala-core_2.12-2.13.5.2.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/commons-io/commons-io/2.19.0/commons-io-2.19.0.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/gigahorse-apache-http_2.12/0.9.3/gigahorse-apache-http_2.12-0.9.3.jar.sha1
+Downloaded https://repo.scala-lang.org/artifactory/maven-nightlies/com/eed3si9n/sjson-new-scalajson_2.12/0.10.1/sjson-new-scalajson_2.12-0.10.1.jar.sha1
 Starting compilation server
 [90mCompiling project (Scala 3.8.3, JVM (17))[0m
 [[33mwarn[0m] ./Game.scala:60:103
