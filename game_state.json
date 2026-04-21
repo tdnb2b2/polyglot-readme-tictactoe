@@ -90,23 +90,23 @@
   "java": {
     "board": [
       [
-        "X",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "O",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
+        "",
         "",
         ""
       ]
     ],
-    "turn": "O",
-    "winner": "X",
+    "turn": "X",
+    "winner": null,
     "log": []
   },
   "javascript": {
@@ -134,23 +134,23 @@
   "kotlin": {
     "board": [
       [
-        "X",
-        "O",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
-        "O",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
+        "",
         "",
         ""
       ]
     ],
-    "turn": "O",
-    "winner": "X",
+    "turn": "X",
+    "winner": null,
     "log": []
   },
   "php": {
@@ -222,50 +222,48 @@
   "rust": {
     "board": [
       [
-        "X",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "O",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
+        "",
         "",
         ""
       ]
     ],
     "turn": "X",
-    "winner": "X",
+    "winner": null,
     "log": []
   },
   "scala": {
     "board": [
       [
-        "X",
-        "O",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
-        "O",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
+        "",
         "",
         ""
       ]
     ],
-    "turn": "O",
-    "winner": "X",
+    "turn": "X",
+    "winner": null,
     "log": []
   },
   "swift": {
-    "turn": "X",
-    "log": [],
     "board": [
       [
         "",
@@ -282,7 +280,10 @@
         "",
         ""
       ]
-    ]
+    ],
+    "turn": "X",
+    "winner": null,
+    "log": []
   },
   "typescript": {
     "board": [
