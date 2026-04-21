@@ -26,108 +26,94 @@ def get_source_code(lang_key: str) -> str:
     }
     filename = lang_file_map.get(lang_key)
     if not filename:
-        return f"// Source code mapping for {lang_key} not defined."
+        return f\"// Source code mapping for {lang_key} not defined.\"
     path = os.path.join('implementations', lang_key, filename)
     try:
         if os.path.exists(path):
             with open(path, 'r', encoding='utf-8', errors='replace') as f:
                 content = f.read()
-                content = content.replace('\x00', '')
+                content = content.replace('\\x00', '')
                 content = content.replace('```', '` ` `')
                 return content
-        return f"// Source code for {lang_key} not found at {path}"
+        return f\"// Source code for {lang_key} not found at {path}\"
     except Exception as e:
-        return f"// Error reading source for {lang_key}: {str(e)}"
+        return f\"// Error reading source for {lang_key}: {str(e)}\"
 
 def replace_section(content: str, tag: str, replacement: str) -> str:
-    start_tag = f"<!-- {tag}_START -->"
-    end_tag = f"<!-- {tag}_END -->"
-    pattern = re.compile(rf"{re.escape(start_tag)}.*?{re.escape(end_tag)}", re.DOTALL)
+    start_tag = f\"<!-- {tag}_START -->\"
+    end_tag = f\"<!-- {tag}_END -->\"
+    pattern = re.compile(rf\"{re.escape(start_tag)}.*?{re.escape(end_tag)}\", re.DOTALL)
     if not pattern.search(content):
         return content
     # Use lambda to prevent backslash interpretation (binary corruption fix)
-    return pattern.sub(lambda _: f"{start_tag}\n{replacement}\n{end_tag}", content)
+    return pattern.sub(lambda _: f\"{start_tag}\\n{replacement}\\n{end_tag}\", content)
 
-def render_board_md(lang_key: str, state: dict, owner: str = "tdnb2b2",
-                    repo: str = "polyglot-readme-tictactoe",
-                    input_info: str = "", output_info: str = "") -> str:
-    """
-    Renders the Tic-Tac-Toe board as a premium HTML table with Shields.io badges.
-    """
+def render_board_md(lang_key: str, state: dict, owner: str = \"tdnb2b2\",
+                    repo: str = \"polyglot-readme-tictactoe\",
+                    input_info: str = \"\", output_info: str = \"\") -> str:
+    \"\"\"
+    Renders the Tic-Tac-Toe board as a simple Markdown table.
+    \"\"\"
     board = state.get('board', [['', '', ''], ['', '', ''], ['', '', '']])
     turn = state.get('turn', 'X')
     winner = state.get('winner')
     log = state.get('log', [])
 
-    lang_display = LANG_DISPLAY.get(lang_key, lang_key.upper())
-    safe_lang = lang_display.replace('+', '%2B').replace('#', '%23')
+    SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
+    lang_display = LANG_DISPLAY.get(lang_key, lang_display := lang_key.upper())
 
-    # Status Message
     if winner:
         if winner == 'draw':
-            status = "🤝 **It's a Draw!**"
+            status = \"🤝 **It's a Draw!**\"
         else:
-            status = f"🏆 **Winner: {winner} ({lang_display})**"
+            status = f\"🏆 **Winner: {winner} ({lang_display})**\"
     else:
-        status = f"🎮 **Next Move: {turn} ({lang_display})**"
+        status = f\"🎮 **Next Move: {turn} ({lang_display})**\"
 
-    # HTML Table Construction
-    html = ['<table align="center">', '  <thead>', '    <tr>', '      <th></th>', '      <th>A</th>', '      <th>B</th>', '      <th>C</th>', '    </tr>', '  </thead>', '  <tbody>']
-    
-    BADGE_BASE = "https://img.shields.io/badge/"
-    STYLE = "?style=for-the-badge"
-    
-    for r in range(3):
-        row_num = r + 1
-        html.append('    <tr>')
-        html.append(f'      <td align="center"><b>{row_num}</b></td>')
-        for c in range(3):
-            cell_val = board[r][c]
-            cell_id = f"{['A','B','C'][c]}{row_num}"
-            
-            content = ""
-            if cell_val == 'X':
-                content = f'<img src="{BADGE_BASE}-X-red{STYLE}" alt="X">'
-            elif cell_val == 'O':
-                content = f'<img src="{BADGE_BASE}-O-blue{STYLE}" alt="O">'
+    rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
+    for ri, row_label in enumerate(['1', '2', '3']):
+        cells = [f'**{row_label}**']
+        for ci in range(3):
+            val = board[ri][ci]
+            cell_name = f\"{['A','B','C'][ci]}{ri+1}\"
+            if val:
+                cells.append(SYMBOLS[val])
             elif winner:
-                content = f'<img src="{BADGE_BASE}- -lightgrey{STYLE}" alt=" ">'
+                cells.append('___')
             else:
-                issue_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Put {cell_id}")
-                url = f'https://github.com/{owner}/{repo}/issues/new?title={issue_title}&body=Play+{safe_lang}+board'
-                content = f'<a href="{url}"><img src="{BADGE_BASE}-{cell_id}-grey{STYLE}" alt="{cell_id}"></a>'
-            
-            html.append(f'      <td align="center">{content}</td>')
-        html.append('    </tr>')
-    
-    html.append('  </tbody>')
-    html.append('</table>')
-    
-    board_html = '\n'.join(html)
+                title = quote_plus(f\"{lang_display}: Tic-Tac-Toe: Put {cell_name}\")
+                link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body=Play+{lang_display}+board'
+                cells.append(f'[___]({link})')
+        cells.append(f'**{row_label}**')
+        rows.append(f'| {\" | \".join(cells)} |')
+    rows.append('|   | A | B | C |   |')
+    board_md = '\\n'.join(rows)
 
     log_md = ''
     if log:
         recent = log[-5:]
-        log_md = '\n\nRecent moves: ' + ' → '.join(
-            f'{e["player"]} {e["cell"]}' for e in recent
+        log_md = '\\n\\nRecent moves: ' + ' → '.join(
+            f'{e[\"player\"]} {e[\"cell\"]}' for e in recent
         )
 
     code_content = get_source_code(lang_key)
-    code_ext = 'cs' if lang_key == 'csharp' else lang_key
+    code_ext = lang_key if lang_key != 'csharp' else 'cs'
 
-    tech_details = f"""
+    tech_details = f\"\"\"
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `{input_info or "Initial Page Load / Manual Sync"}`
-- **Output (Information given)**: \n```text\n{output_info or "Move processed successfully."}\n```
+- **Input (Information received)**: `{input_info or \"Initial Page Load / Manual Sync\"}`
+- **Output (Information given)**: 
+```text
+{output_info or \"Move processed successfully.\"}
+```
 
 ### 💻 Implementation Code ({lang_display})
 ```{code_ext}
 {code_content}
 ```
 </details>
-"""
-
-    return f'{board_html}\n\n{status}{log_md}\n{tech_details}'
+\"\"\"
+    return f'{board_md}\\n\\n{status}{log_md}\\n{tech_details}'
