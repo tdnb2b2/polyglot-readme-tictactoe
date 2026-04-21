@@ -840,20 +840,20 @@ file_put_contents('current_state.json', json_encode($s, JSON_PRETTY_PRINT));
 <!-- BOARD_PYTHON_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | **1** |
+| **1** | ❌ | ❌ | ⭕ | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Python)**
+🎮 **Next Move: X (Python)**
 
-Recent moves: X A1 -> O B2 -> X B1
+Recent moves: X A1 -> O B2 -> X B1 -> O C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Python: Tic-Tac-Toe: Put B1`
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**: 
 ```text
 Success
