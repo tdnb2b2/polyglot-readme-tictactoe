@@ -34,14 +34,15 @@
 | | A | B | C |
 |---|---|---|---|
 | 1 | [❌](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | 
-| 2 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | 
+| 2 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | [⭕](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | 
 | 3 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) | 
 
 
-🎮 **Next Move: O (Python)**
+🎮 **Next Move: X (Python)**
 
 ### 📝 Move History
 1. X at A1
+2. O at B2
 
 
 <details>
@@ -58,7 +59,7 @@
     ],
     [
       "",
-      "",
+      "O",
       ""
     ],
     [
@@ -67,12 +68,16 @@
       ""
     ]
   ],
-  "turn": "O",
+  "turn": "X",
   "winner": null,
   "log": [
     {
       "player": "X",
       "cell": "A1"
+    },
+    {
+      "player": "O",
+      "cell": "B2"
     }
   ]
 }
@@ -138,26 +143,26 @@ with open('current_state.json', 'w') as f:
 ### 🛰️ Execution Context
 ```json
 {
-  \"board\": [
+  "board": [
     [
-      \"\",
-      \"\",
-      \"\"
+      "",
+      "",
+      ""
     ],
     [
-      \"\",
-      \"\",
-      \"\"
+      "",
+      "",
+      ""
     ],
     [
-      \"\",
-      \"\",
-      \"\"
+      "",
+      "",
+      ""
     ]
   ],
-  \"turn\": \"X\",
-  \"winner\": null,
-  \"log\": []
+  "turn": "X",
+  "winner": null,
+  "log": []
 }
 ```
 
@@ -167,27 +172,149 @@ with open('current_state.json', 'w') as f:
 #include <stdlib.h>
 #include <string.h>
 
-typedef struct { char player[2]; char cell[3]; } Move;
-typedef struct { char board[3][3][2]; char turn[2]; char winner[10]; Move log[10]; int log_count; } State;
-
-void main() {
-    FILE *f = fopen(\"current_state.json\", \"r\");
-    // Simplified JSON parsing for demo
-    State s = {0}; // Assume initialized from file
-    char *cell = getenv(\"CELL\");
-    char *action = getenv(\"ACTION\");
+void write_state(char b[3][3], char* turn, char* winner, const char* existing_log, const char* new_move) {
+    FILE *f = fopen("current_state.json", "w");
+    fprintf(f, "{\n  \"board\": [\n");
+    for(int i=0; i<3; i++) {
+        fprintf(f, "    [\"%s\", \"%s\", \"%s\"]%s\n", (b[i][0]?(char[]){b[i][0],0}:""), (b[i][1]?(char[]){b[i][1],0}:""), (b[i][2]?(char[]){b[i][2],0}:""), (i==2?"":","));
+    }
     
-    if (action && strcmp(action, \"reset\") == 0) {
-        // Reset logic
-    } else if (cell && s.winner[0] == '\\\\0') {
-        int r = cell[1] - '1';
-        int c = cell[0] - 'A';
-        if (r >= 0 && r < 3 && c >= 0 && c < 3 && s.board[r][c][0] == '\\\\0') {
-            strcpy(s.board[r][c], s.turn);
-            // Update state...
+    char updated_log[4096] = "";
+    if (existing_log && strlen(existing_log) > 0) {
+        strcpy(updated_log, existing_log);
+        if (new_move) { strcat(updated_log, ", "); strcat(updated_log, new_move); }
+    } else if (new_move) {
+        strcpy(updated_log, new_move);
+    }
+    
+    fprintf(f, "  ],\n  \"turn\": \"%s\",\n  \"winner\": %s,\n  \"log\": [%s]\n}", turn, (winner && strcmp(winner, "null") != 0 ? winner : "null"), updated_log);
+    fclose(f);
+}
+
+int main() {
+    char b[3][3] = {0};
+    char turn[2] = "X";
+    char* action = getenv("ACTION");
+    char* cell = getenv("CELL");
+
+    FILE *f = fopen("current_state.json", "r");
+    char winnerStr[16] = "null";
+    char existing_log[4096] = "";
+    if(f) {
+        fseek(f, 0, SEEK_END);
+        long fsize = ftell(f);
+        fseek(f, 0, SEEK_SET);
+        char* json_str = malloc(fsize + 1);
+        fread(json_str, 1, fsize, f);
+        json_str[fsize] = 0;
+        
+        // Parse board manually
+        char* board_ptr = strstr(json_str, "\"board\"");
+        if (board_ptr) {
+            int row = 0, col = 0;
+            char* p = strchr(board_ptr, '[');
+            if (p) {
+                p++; // skip [
+                while (*p && row < 3) {
+                    if (*p == '[') {
+                        col = 0;
+                    } else if (*p == '"') {
+                        p++;
+                        if (*p == 'X' || *p == 'O') {
+                            b[row][col] = *p;
+                            p++; // skip char
+                        }
+                        col++;
+                    } else if (*p == ']') {
+                        row++;
+                    }
+                    p++;
+                }
+            }
+        }
+        
+        char* turn_ptr = strstr(json_str, "\"turn\"");
+        if (turn_ptr) {
+            char* p = strchr(turn_ptr, ':');
+            if (p) {
+                p = strchr(p, '"');
+                if (p) {
+                    p++;
+                    if (*p == 'O') strcpy(turn, "O");
+                }
+            }
+        }
+        
+        char* win_ptr = strstr(json_str, "\"winner\"");
+        if (win_ptr) {
+            char* p = strchr(win_ptr, ':');
+            if (p) {
+                p++;
+                while (*p == ' ' || *p == '\n') p++;
+                if (*p == '"') {
+                    p++;
+                    if (*p == 'X') strcpy(winnerStr, "X");
+                    else if (*p == 'O') strcpy(winnerStr, "O");
+                    else if (strncmp(p, "draw", 4) == 0) strcpy(winnerStr, "draw");
+                }
+            }
+        }
+        
+        char* log_ptr = strstr(json_str, "\"log\"");
+        if (log_ptr) {
+            char* p = strchr(log_ptr, '[');
+            if (p) {
+                p++;
+                char* end_p = strrchr(p, ']');
+                if (end_p) {
+                    int len = end_p - p;
+                    if (len > 0 && len < 4096) {
+                        strncpy(existing_log, p, len);
+                        existing_log[len] = '\0';
+                    }
+                }
+            }
+        }
+        
+        free(json_str);
+        fclose(f);
+    }
+
+    if(action && strcmp(action, "reset")==0) {
+        int full=1; for(int i=0; i<3; i++) for(int j=0; j<3; j++) if(b[i][j]==0) full=0;
+        if(strcmp(winnerStr, "null") != 0 || full) {
+            write_state((char[3][3]){{0,0,0},{0,0,0},{0,0,0}}, "X", "null", "", NULL);
+        }
+        return 0;
+    }
+    if(strcmp(winnerStr, "null") != 0) return 0;
+
+    if(cell && strlen(cell)>=2) {
+        int r = cell[1]-'1', c = cell[0]-'A';
+        if(r>=0 && r<3 && c>=0 && c<3 && b[r][c]==0) {
+            b[r][c] = turn[0];
+            int win = 0;
+            int lns[8][6] = {{0,0,0,1,0,2},{1,0,1,1,1,2},{2,0,2,1,2,2}, {0,0,1,0,2,0},{0,1,1,1,2,1},{0,2,1,2,2,2}, {0,0,1,1,2,2},{0,2,1,1,2,0}};
+            for(int i=0; i<8; i++) {
+                if(b[lns[i][0]][lns[i][1]] && b[lns[i][0]][lns[i][1]]==b[lns[i][2]][lns[i][3]] && b[lns[i][2]][lns[i][3]]==b[lns[i][4]][lns[i][5]]) { win=1; break; }
+            }
+            char new_move[64];
+            sprintf(new_move, "{\"player\": \"%c\", \"cell\": \"%s\"}", turn[0], cell);
+            char winner_buf[16] = "null";
+            if(win) {
+                sprintf(winner_buf, "\"%c\"", turn[0]);
+                write_state(b, turn, winner_buf, existing_log, new_move);
+            } else {
+                int full=1; for(int i=0; i<3; i++) for(int j=0; j<3; j++) if(b[i][j]==0) full=0;
+                if(full) {
+                    write_state(b, turn, "\"draw\"", existing_log, new_move);
+                } else {
+                    write_state(b, (turn[0]=='X'?"O":"X"), "null", existing_log, new_move);
+                }
+            }
         }
     }
-    // Save state...
+    return 0;
 }
 
 ```
@@ -196,7 +323,174 @@ void main() {
 
 ### C++
 <!-- BOARD_CPP_START -->
-(Omitted for brevity in this prompt, but included in actual push)
+| | A | B | C |
+|---|---|---|---|
+| 1 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) | 
+| 2 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%2B%2B+board) | 
+| 3 | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C%2B%2B+board) | 
+
+
+🎮 **Next Move: X (C++)**
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+```json
+{
+  "board": [
+    [
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      ""
+    ],
+    [
+      "",
+      "",
+      ""
+    ]
+  ],
+  "turn": "X",
+  "winner": null,
+  "log": []
+}
+```
+
+### 💻 Implementation Code (C++)
+``` cpp
+#include <iostream>
+#include <fstream>
+#include <vector>
+#include <string>
+#include <algorithm>
+
+using namespace std;
+
+void write_state(char b[3][3], string turn, string winner, string existing_log, string new_move) {
+    ofstream f("current_state.json");
+    f << "{\n  \"board\": [\n";
+    for(int i=0; i<3; i++) {
+        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "\n";
+    }
+    string log_content = existing_log;
+    if (new_move != "") {
+        if (log_content.find("{") != string::npos) log_content += ", ";
+        log_content += new_move;
+    }
+    f << "  ],\n  \"turn\": \"" << turn << "\",\n  \"winner\": " << (winner==""?"null":"\""+winner+"\"") << ",\n  \"log\": [" << log_content << "]\n}";
+}
+
+int main() {
+    char b[3][3] = {0};
+    string turn = "X";
+    string winnerStr = "null";
+    char* action_env = getenv("ACTION");
+    char* cell_env = getenv("CELL");
+    string action = action_env ? action_env : "put";
+    string cell = cell_env ? cell_env : "";
+
+    ifstream f("current_state.json");
+    string f_line, full_content;
+    if (f.is_open()) {
+        while(getline(f, f_line)) {
+            full_content += f_line + "\n";
+        }
+        f.close();
+        
+        size_t b_pos = full_content.find("\"board\"");
+        if (b_pos != string::npos) {
+            int row = 0, col = 0;
+            for (size_t i = full_content.find("[", b_pos) + 1; i < full_content.length() && row < 3; i++) {
+                char c = full_content[i];
+                if (c == '[') col = 0;
+                else if (c == '"') {
+                    i++;
+                    char val = full_content[i];
+                    if (val == 'X' || val == 'O') {
+                        b[row][col] = val;
+                        i++; // skip char
+                    }
+                    col++;
+                }
+                else if (c == ']') row++;
+            }
+        }
+        
+        size_t t_pos = full_content.find("\"turn\"");
+        if (t_pos != string::npos) {
+            size_t p = full_content.find('"', full_content.find(':', t_pos));
+            if (p != string::npos && full_content[p+1] == 'O') turn = "O";
+        }
+        
+        size_t w_pos = full_content.find("\"winner\"");
+        if (w_pos != string::npos) {
+            size_t p = full_content.find(':', w_pos);
+            if (p != string::npos) {
+                p++;
+                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '\n')) p++;
+                if (full_content[p] == '"') {
+                    p++;
+                    if (full_content[p] == 'X') winnerStr = "X";
+                    else if (full_content[p] == 'O') winnerStr = "O";
+                    else if (full_content.substr(p, 4) == "draw") winnerStr = "draw";
+                }
+            }
+        }
+    }
+
+    if (action == "reset") {
+        bool full = true; for(int i=0; i<3; i++) for(int j=0; j<3; j++) if(b[i][j]==0) full=false;
+        if (winnerStr != "null" || full) {
+            char empty_b[3][3] = {0};
+            write_state(empty_b, "X", "", "", "");
+        }
+        return 0;
+    }
+    if (winnerStr != "null") return 0;
+
+    string existing_log = "";
+    size_t log_start = full_content.find("\"log\"");
+    if(log_start != string::npos) {
+        log_start = full_content.find("[", log_start);
+        if(log_start != string::npos) {
+            log_start++;
+            size_t log_end = full_content.rfind("]");
+            if(log_end != string::npos && log_end > log_start) {
+                existing_log = full_content.substr(log_start, log_end - log_start);
+                size_t first = existing_log.find_first_not_of(" \n\r\t");
+                size_t last = existing_log.find_last_not_of(" \n\r\t");
+                if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
+                else existing_log = "";
+            }
+        }
+    }
+
+    if(cell != "") {
+        int row = cell[1]-'1', col = cell[0]-'A';
+        if(row>=0 && row<3 && col>=0 && col<3 && b[row][col]==0) {
+            b[row][col] = turn[0];
+            int lns[8][6] = {{0,0,0,1,0,2},{1,0,1,1,1,2},{2,0,2,1,2,2}, {0,0,1,0,2,0},{0,1,1,1,2,1},{0,2,1,2,2,2}, {0,0,1,1,2,2},{0,2,1,1,2,0}};
+            bool win = false;
+            for(int i=0; i<8; i++) if(b[lns[i][0]][lns[i][1]] && b[lns[i][0]][lns[i][1]]==b[lns[i][2]][lns[i][3]] && b[lns[i][2]][lns[i][3]]==b[lns[i][4]][lns[i][5]]) win=true;
+            string new_move = "{\"player\": \"" + turn + "\", \"cell\": \"" + cell + "\"}";
+            if(win) write_state(b, turn, turn, existing_log, new_move);
+            else {
+                bool full = true; for(int i=0; i<3; i++) for(int j=0; j<3; j++) if(b[i][j]==0) full=false;
+                if(full) write_state(b, turn, "draw", existing_log, new_move);
+                else write_state(b, (turn=="X"?"O":"X"), "", existing_log, new_move);
+            }
+        }
+    }
+    return 0;
+}
+
+```
+</details>
 <!-- BOARD_CPP_END -->
 
 (Other boards...)
