@@ -46,7 +46,7 @@ Recent moves: X A1 → O B2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Python: Tic-Tac-Toe: Put A1`
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put B2`
 - **Output (Information given)**: 
 ```text
 Success
@@ -125,12 +125,9 @@ Move processed successfully.
 
 void write_state(char b[3][3], char* turn, char* winner, const char* existing_log, const char* new_move) {
     FILE *f = fopen("current_state.json", "w");
-    fprintf(f, "{
-  \"board\": [
-");
+    fprintf(f, "{\n  \"board\": [\n");
     for(int i=0; i<3; i++) {
-        fprintf(f, "    [\"%s\", \"%s\", \"%s\"]%s
-", (b[i][0]?(char[]){b[i][0],0}:""), (b[i][1]?(char[]){b[i][1],0}:""), (b[i][2]?(char[]){b[i][2],0}:""), (i==2?"":","));
+        fprintf(f, "    [\"%s\", \"%s\", \"%s\"]%s\n", (b[i][0]?(char[]){b[i][0],0}:""), (b[i][1]?(char[]){b[i][1],0}:""), (b[i][2]?(char[]){b[i][2],0}:""), (i==2?"":","));
     }
     
     char updated_log[4096] = "";
@@ -141,11 +138,7 @@ void write_state(char b[3][3], char* turn, char* winner, const char* existing_lo
         strcpy(updated_log, new_move);
     }
     
-    fprintf(f, "  ],
-  \"turn\": \"%s\",
-  \"winner\": %s,
-  \"log\": [%s]
-}", turn, (winner && strcmp(winner, "null") != 0 ? winner : "null"), updated_log);
+    fprintf(f, "  ],\n  \"turn\": \"%s\",\n  \"winner\": %s,\n  \"log\": [%s]\n}", turn, (winner && strcmp(winner, "null") != 0 ? winner : "null"), updated_log);
     fclose(f);
 }
 
@@ -208,8 +201,7 @@ int main() {
             char* p = strchr(win_ptr, ':');
             if (p) {
                 p++;
-                while (*p == ' ' || *p == '
-') p++;
+                while (*p == ' ' || *p == '\n') p++;
                 if (*p == '"') {
                     p++;
                     if (*p == 'X') strcpy(winnerStr, "X");
@@ -229,7 +221,7 @@ int main() {
                     int len = end_p - p;
                     if (len > 0 && len < 4096) {
                         strncpy(existing_log, p, len);
-                        existing_log[len] = ' ';
+                        existing_log[len] = '\0';
                     }
                 }
             }
@@ -290,7 +282,7 @@ int main() {
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C+++board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C+++board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C+++board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Cpp)**
+🎮 **Next Move: X (C++)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -314,23 +306,16 @@ using namespace std;
 
 void write_state(char b[3][3], string turn, string winner, string existing_log, string new_move) {
     ofstream f("current_state.json");
-    f << "{
-  \"board\": [
-";
+    f << "{\n  \"board\": [\n";
     for(int i=0; i<3; i++) {
-        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "
-";
+        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "\n";
     }
     string log_content = existing_log;
     if (new_move != "") {
         if (log_content.find("{") != string::npos) log_content += ", ";
         log_content += new_move;
     }
-    f << "  ],
-  \"turn\": \"" << turn << "\",
-  \"winner\": " << (winner==""?"null":"\""+winner+"\"") << ",
-  \"log\": [" << log_content << "]
-}";
+    f << "  ],\n  \"turn\": \"" << turn << "\",\n  \"winner\": " << (winner==""?"null":"\""+winner+"\"") << ",\n  \"log\": [" << log_content << "]\n}";
 }
 
 int main() {
@@ -346,8 +331,7 @@ int main() {
     string f_line, full_content;
     if (f.is_open()) {
         while(getline(f, f_line)) {
-            full_content += f_line + "
-";
+            full_content += f_line + "\n";
         }
         f.close();
         
@@ -381,8 +365,7 @@ int main() {
             size_t p = full_content.find(':', w_pos);
             if (p != string::npos) {
                 p++;
-                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '
-')) p++;
+                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '\n')) p++;
                 if (full_content[p] == '"') {
                     p++;
                     if (full_content[p] == 'X') winnerStr = "X";
@@ -412,10 +395,8 @@ int main() {
             size_t log_end = full_content.rfind("]");
             if(log_end != string::npos && log_end > log_start) {
                 existing_log = full_content.substr(log_start, log_end - log_start);
-                size_t first = existing_log.find_first_not_of(" 
-	");
-                size_t last = existing_log.find_last_not_of(" 
-	");
+                size_t first = existing_log.find_first_not_of(" \n\r\t");
+                size_t last = existing_log.find_last_not_of(" \n\r\t");
                 if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
                 else existing_log = "";
             }
