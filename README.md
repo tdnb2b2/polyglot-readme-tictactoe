@@ -678,21 +678,21 @@ fs.writeFileSync('current_state.json', JSON.stringify(s, null, 2));
 <!-- BOARD_KOTLIN_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) | **1** |
+| **1** | ❌ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Kotlin+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: O (Kotlin)**
+🎮 **Next Move: X (Kotlin)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Manual UI Repair`
+- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**: 
 ```text
-Synchronized minimalist UI.
+Success
 ```
 
 ### 💻 Implementation Code (Kotlin)
@@ -726,7 +726,7 @@ fun main(args: Array<String>) {
 
     val turn = getJsonValue(content, "turn")
     val board = Array(3) { Array(3) { "" } }
-    val p = Pattern.compile("\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]")
+    val p = Pattern.compile("\[\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*,\s*\"(.*?)\"\s*\]")
     val m = p.matcher(content)
     var rowIndex = 0
     while (rowIndex < 3 && m.find()) {
@@ -746,7 +746,8 @@ fun main(args: Array<String>) {
         val draw = isDraw(board)
 
         val winStr = if (win != null) "\"$win\"" else if (draw) "\"draw\"" else "null"
-        val bStr = board.joinToString(",\n") { row ->
+        val bStr = board.joinToString(",
+") { row ->
             "    [\"${row[0]}\",\"${row[1]}\",\"${row[2]}\"]"
         }
 
@@ -763,7 +764,7 @@ $bStr
 }
 
 fun getJsonValue(json: String, key: String): String {
-    val p = Pattern.compile("\"$key\":\\s*\"?(.*?)\"?(?:,|\\n|\\})")
+    val p = Pattern.compile("\"$key\":\s*\"?(.*?)\"?(?:,|\n|\})")
     val m = p.matcher(json)
     return if (m.find()) m.group(1).trim() else "null"
 }
