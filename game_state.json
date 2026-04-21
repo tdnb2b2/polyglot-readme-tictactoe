@@ -353,6 +353,25 @@
     "log": []
   },
   "swift": {
+    "turn": "X",
+    "log": [
+      {
+        "cell": "A1",
+        "player": "X"
+      },
+      {
+        "cell": "B1",
+        "player": "O"
+      },
+      {
+        "player": "X",
+        "cell": "C1"
+      },
+      {
+        "cell": "A2",
+        "player": "O"
+      }
+    ],
     "board": [
       [
         "X",
@@ -360,7 +379,7 @@
         "X"
       ],
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -369,21 +388,6 @@
         "",
         ""
       ]
-    ],
-    "turn": "O",
-    "log": [
-      {
-        "player": "X",
-        "cell": "A1"
-      },
-      {
-        "cell": "B1",
-        "player": "O"
-      },
-      {
-        "cell": "C1",
-        "player": "X"
-      }
     ],
     "winner": null
   },
