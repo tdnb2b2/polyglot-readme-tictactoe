@@ -68,7 +68,7 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     Renders the Tic-Tac-Toe board as a Markdown table with interactive links.
     Includes technical details (source code and execution context).
     """
-    lang_display = LANG_DISPLAY.get(lang_key, lang_display := lang_key.capitalize())
+    lang_display = LANG_DISPLAY.get(lang_key, lang_key.capitalize())
     
     if winner:
         if winner == 'draw':
