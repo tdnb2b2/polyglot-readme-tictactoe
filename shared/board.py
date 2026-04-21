@@ -16,6 +16,7 @@ LANG_DISPLAY = {
 }
 
 def get_source_code(lang_key: str) -> str:
+    """Get the source code for a specific language implementation."""
     lang_file_map = {
         'python': 'game.py', 'javascript': 'game.js', 'typescript': 'game.ts',
         'go': 'game.go', 'rust': 'src/main.rs', 'java': 'Game.java',
@@ -39,6 +40,7 @@ def get_source_code(lang_key: str) -> str:
         return f"// Error reading source for {lang_key}: {str(e)}"
 
 def replace_section(content: str, tag: str, replacement: str) -> str:
+    """Replace content between HTML comment markers."""
     start_tag = f"<!-- {tag}_START -->"
     end_tag = f"<!-- {tag}_END -->"
     pattern = re.compile(rf"{re.escape(start_tag)}.*?{re.escape(end_tag)}", re.DOTALL)
@@ -50,12 +52,13 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
                     turn: str = "", winner: str = "", log: list = None,
                     input_info: str = "", output_info: str = "") -> str:
     """
-    Renders the Tic-Tac-Toe board as a clean Markdown table with interactive links.
-    Returns only the board table - no status, log, or technical details.
+    Renders the Tic-Tac-Toe board as a Markdown table with interactive links.
+    Includes Next Move status and Technical Details.
     """
     lang_display = LANG_DISPLAY.get(lang_key, lang_key.capitalize())
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
 
+    # Board table
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
     for ri in range(3):
         row_label = str(ri + 1)
@@ -76,4 +79,53 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
         rows.append(f'| {" | ".join(cells)} |')
 
     rows.append('|   | A | B | C |   |')
-    return '\n'.join(rows)
+    board_md = '\n'.join(rows)
+
+    # Next Move status
+    if winner:
+        if winner == 'draw':
+            status = '🤝 Game Draw'
+        else:
+            status = f'🏆 Winner: {SYMBOLS.get(winner, winner)} ({lang_display})'
+    else:
+        status = f"🎮 **Next Move: {SYMBOLS.get(turn, turn)} ({lang_display})**"
+
+    # Recent moves
+    log_md = ""
+    if log and len(log) > 0:
+        recent = log[-5:]
+        moves = [f"{SYMBOLS.get(m['player'], m['player'])} {m['cell']}" for m in recent]
+        log_md = f"\n\nRecent moves: {' → '.join(moves)}"
+
+    # Technical Details
+    code_content = get_source_code(lang_key)
+    code_ext = {'python': 'python', 'javascript': 'javascript', 'typescript': 'typescript',
+                'go': 'go', 'rust': 'rust', 'java': 'java', 'kotlin': 'kotlin',
+                'php': 'php', 'ruby': 'ruby', 'csharp': 'csharp', 'c': 'c',
+                'cpp': 'cpp', 'scala': 'scala', 'swift': 'swift'}.get(lang_key, '')
+
+    tech_details = f"""
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `{input_info}`
+- **Output (Information given)**:
+```text
+{output_info if output_info else "Success"}
+```
+
+### 💻 Implementation Code ({lang_display})
+```{code_ext}
+{code_content}
+```
+</details>
+"""
+
+    return board_md + "\n\n" + status + log_md + tech_details
+
+def update_readme_local(new_content: str):
+    """Update README.md with new content."""
+    with open('README.md', 'w', encoding='utf-8') as f:
+        f.write(new_content)
