@@ -189,21 +189,23 @@ int main() {
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
 | **2** | ⭕ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C+++board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C+++board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C+++board) | **3** |
+| **3** | ❌ | ___ | ___ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: X (Cpp)**
+🏆 **Winner: X (C++)**
 
-Recent moves: O B1 -> X C1 -> O A2 -> X B2 -> O C2
+🔄 [**Play Again / Reset Board**](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C++%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+game)
+
+Recent moves: X C1 -> O A2 -> X B2 -> O C2 -> X A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Manual UI Repair`
+- **Input (Information received)**: `C++: Tic-Tac-Toe: Put A3`
 - **Output (Information given)**: 
 ```text
-Synchronized minimalist UI.
+Success
 ```
 
 ### 💻 Implementation Code (C++)
@@ -222,7 +224,8 @@ void write_state(char b[3][3], string turn, string winner, string existing_log, 
   \"board\": [
 ";
     for(int i=0; i<3; i++) {
-        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "\n";
+        f << "    [\"" << (b[i][0]?string(1,b[i][0]):"") << "\", \"" << (b[i][1]?string(1,b[i][1]):"") << "\", \"" << (b[i][2]?string(1,b[i][2]):"") << "\"]" << (i==2?"":",") << "
+";
     }
     string log_content = existing_log;
     if (new_move != "") {
@@ -249,7 +252,8 @@ int main() {
     string f_line, full_content;
     if (f.is_open()) {
         while(getline(f, f_line)) {
-            full_content += f_line + "\n";
+            full_content += f_line + "
+";
         }
         f.close();
         
@@ -283,7 +287,8 @@ int main() {
             size_t p = full_content.find(':', w_pos);
             if (p != string::npos) {
                 p++;
-                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '\n')) p++;
+                while(p < full_content.length() && (full_content[p] == ' ' || full_content[p] == '
+')) p++;
                 if (full_content[p] == '"') {
                     p++;
                     if (full_content[p] == 'X') winnerStr = "X";
@@ -294,6 +299,11 @@ int main() {
         }
     }
 
+    if (action == "reset") {
+        char empty_b[3][3] = {0};
+        write_state(empty_b, "X", "", "", "");
+        return 0;
+    }
     if (winnerStr != "null") return 0;
 
     string existing_log = "";
@@ -305,19 +315,17 @@ int main() {
             size_t log_end = full_content.rfind("]");
             if(log_end != string::npos && log_end > log_start) {
                 existing_log = full_content.substr(log_start, log_end - log_start);
-                size_t first = existing_log.find_first_not_of(" \n\t");
-                size_t last = existing_log.find_last_not_of(" \n\t");
+                size_t first = existing_log.find_first_not_of(" 
+	");
+                size_t last = existing_log.find_last_not_of(" 
+	");
                 if (first != string::npos && last != string::npos) existing_log = existing_log.substr(first, last - first + 1);
                 else existing_log = "";
             }
         }
     }
 
-    if(action == "reset") {
-        char empty_b[3][3] = {0};
-        write_state(empty_b, "X", "", "", "");
-    }
-    else if(cell != "") {
+    if(cell != "") {
         int row = cell[1]-'1', col = cell[0]-'A';
         if(row>=0 && row<3 && col>=0 && col<3 && b[row][col]==0) {
             b[row][col] = turn[0];
