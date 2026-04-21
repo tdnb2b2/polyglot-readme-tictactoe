@@ -1,5 +1,3 @@
-#!/usr/bin/env python3
-"""dispatcher.py — detects language from issue title and routes to implementation."""
 import os
 import re
 import sys
@@ -7,31 +5,31 @@ import json
 import subprocess
 
 LANGUAGE_MAP = {
-    "python":     "python",
-    "javascript": "javascript",
-    "typescript": "typescript",
-    "go":         "go",
-    "rust":       "rust",
-    "java":       "java",
-    "kotlin":     "kotlin",
-    "php":        "php",
-    "ruby":       "ruby",
-    "c#":         "csharp",
-    "csharp":     "csharp",
-    "c++":        "cpp",
-    "cpp":        "cpp",
-    "scala":      "scala",
-    "swift":      "swift",
-    "c":          "c",
+    \"python\":     \"python\",
+    \"javascript\": \"javascript\",
+    \"typescript\": \"typescript\",
+    \"go\":         \"go\",
+    \"rust\":       \"rust\",
+    \"java\":       \"java\",
+    \"kotlin\":     \"kotlin\",
+    \"php\":        \"php\",
+    \"ruby\":       \"ruby\",
+    \"c#\":         \"csharp\",
+    \"csharp\":     \"csharp\",
+    \"c++\":        \"cpp\",
+    \"cpp\":        \"cpp\",
+    \"scala\":      \"scala\",
+    \"swift\":      \"swift\",
+    \"c\":          \"c\",
 }
 
-# Pattern: "<Language>: Tic-Tac-Toe: Put <Cell>"
+# Pattern: \"<Language>: Tic-Tac-Toe: Put <Cell>\"
 TITLE_PAT = re.compile(
-    r'^(?P<lang>[\w#+]+):\s*Tic-Tac-Toe:\s*Put\s+(?P<cell>[A-Ca-c][1-3])\s*$',
+    r'^(?P<lang>[\\w#+]+):\\s*Tic-Tac-Toe:\\s*Put\\s+(?P<cell>[A-Ca-c][1-3])\\s*$',
     re.IGNORECASE
 )
 RESET_PAT = re.compile(
-    r'^(?P<lang>[\w#+]+):\s*Tic-Tac-Toe:\s*Reset\s*$',
+    r'^(?P<lang>[\\w#+]+):\\s*Tic-Tac-Toe:\\s*Reset\\s*$',
     re.IGNORECASE
 )
 
@@ -76,16 +74,16 @@ def main():
         issue_n = os.environ.get('ISSUE_NUMBER')
         if token and repo and issue_n:
             _close_issue(token, repo, issue_n,
-                f'Unknown command: {title}\n\n'
-                'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\n\n'
+                f'Unknown command: {title}\\n\\n'
+                'Expected format: <Language>: Tic-Tac-Toe: Put <A-C><1-3>\\n\\n'
                 'Supported languages: Python, JavaScript, TypeScript, Go, Rust, '
                 'Java, Kotlin, PHP, Ruby, C#, C++, Scala, Swift, C')
         else:
-            print(f"Unknown command: {title}")
+            print(f\"Unknown command: {title}\")
         sys.exit(0)
 
     # Prepare sandbox state
-    with open('game_state.json', 'r') as f:
+    with open('game_state.json', 'r', encoding='utf-8') as f:
         all_states = json.load(f)
     
     current_state = all_states.get(lang, {
@@ -95,7 +93,7 @@ def main():
         'log': []
     })
     
-    with open('current_state.json', 'w') as f:
+    with open('current_state.json', 'w', encoding='utf-8') as f:
         json.dump(current_state, f)
 
     env = dict(os.environ)
@@ -111,7 +109,7 @@ def main():
         'go':         (['go', 'run', 'game.go'], 'implementations/go'),
         'rust':       (['cargo', 'run', '--release'], 'implementations/rust'),
         'java':       (['java', 'Game'], 'implementations/java'),
-        'kotlin':     (['java', '-jar', 'Game.jar'], 'implementations/kotlin'),
+        'kotlin':     (['java', '-jar', 'Game.kt.jar'], 'implementations/kotlin'),
         'php':        (['php',     'game.php'], 'implementations/php'),
         'ruby':       (['ruby',    'game.rb'], 'implementations/ruby'),
         'csharp':     (['dotnet', 'run', '--no-build'], 'implementations/csharp'),
@@ -122,14 +120,14 @@ def main():
     }
 
     if lang not in impl_runners:
-        print(f"Error: No runner defined for {lang}", file=sys.stderr)
+        print(f\"Error: No runner defined for {lang}\", file=sys.stderr)
         sys.exit(1)
 
     cmd, impl_dir = impl_runners[lang]
     state_path = os.path.join(impl_dir, 'current_state.json')
 
     # Prepare sandbox state in the implementation directory
-    with open(state_path, 'w') as f:
+    with open(state_path, 'w', encoding='utf-8') as f:
         json.dump(current_state, f)
 
     env = dict(os.environ)
@@ -137,64 +135,56 @@ def main():
     env['CELL']     = cell or ''
     env['ACTION']   = action
 
-    print(f"Running {lang} implementation in {impl_dir}...")
+    print(f\"Running {lang} implementation in {impl_dir}...\")
     result = subprocess.run(cmd, env=env, cwd=impl_dir, capture_output=True, text=True)
     
     if result.returncode == 0:
         # Read back sandbox state from implementation directory
-        with open(state_path, 'r') as f:
+        with open(state_path, 'r', encoding='utf-8') as f:
             updated_state = json.load(f)
         
         all_states[lang] = updated_state
-        with open('game_state.json', 'w') as f:
+        with open('game_state.json', 'w', encoding='utf-8') as f:
             json.dump(all_states, f, indent=2)
 
         # Update README.md
         try:
-            from shared.board import update_readme_local, replace_section, render_board_md
-            token      = os.environ.get('GITHUB_TOKEN')
-            repo_name  = os.environ.get('REPO')
-            issue_n    = os.environ.get('ISSUE_NUMBER')
+            from shared.board import replace_section, render_board_md
+            
+            repo_full = os.environ.get('REPO', 'tdnb2b2/polyglot-readme-tictactoe')
+            owner, repo = repo_full.split('/') if '/' in repo_full else ('tdnb2b2', 'polyglot-readme-tictactoe')
 
-            # Capture output for Technical Details
-            output_info = (result.stdout + "\n" + result.stderr).strip() or "Success"
+            new_board_md = render_board_md(lang, updated_state, owner=owner, repo=repo)
 
-            if repo_name:
-                new_board_md = render_board_md(
-                    updated_state['board'], lang, repo_name.split('/')[0], repo_name.split('/')[1],
-                    updated_state['turn'], updated_state['winner'], updated_state['log'],
-                    input_info=title, output_info=output_info
-                )
-            else:
-                new_board_md = render_board_md(
-                    updated_state['board'], lang, "owner", "repo",
-                    updated_state['turn'], updated_state['winner'], updated_state['log'],
-                    input_info=title, output_info=output_info
-                )
-
-            with open('README.md', 'r') as f:
+            with open('README.md', 'r', encoding='utf-8') as f:
                 current_content = f.read()
 
-            new_content = replace_section(current_content, f"BOARD_{lang.upper()}", new_board_md)
+            new_content = replace_section(current_content, f\"BOARD_{lang.upper()}\", new_board_md)
+            # Also update the language-agnostic placeholder if needed
+            new_content = replace_section(new_content, \"BOARD_LANG\", new_board_md)
 
             if new_content != current_content:
-                update_readme_local(new_content)
+                with open('README.md', 'w', encoding='utf-8') as f:
+                    f.write(new_content)
             
-            if token and repo_name and issue_n:
-                _close_issue(token, repo_name, issue_n, f"Move accepted for {lang}. README updated locally.")
+            token      = os.environ.get('GITHUB_TOKEN')
+            issue_n    = os.environ.get('ISSUE_NUMBER')
+            
+            if token and repo_full and issue_n:
+                _close_issue(token, repo_full, issue_n, f\"Move accepted for {lang}. README updated.\")
             else:
-                print(f"Move accepted for {lang}. README updated locally (skipped GitHub comment).")
+                print(f\"Move accepted for {lang}. README updated locally.\")
 
         except Exception as e:
-            print(f"Error updating README: {e}", file=sys.stderr)
+            print(f\"Error updating README: {e}\", file=sys.stderr)
     else:
         # On failure, dump stdout and stderr to help debug in CI
-        print(f"Error: Command for {lang} failed with exit code {result.returncode}", file=sys.stderr)
+        print(f\"Error: Command for {lang} failed with exit code {result.returncode}\", file=sys.stderr)
         if result.stdout:
-            print("--- STDOUT ---", file=sys.stderr)
+            print(\"--- STDOUT ---\", file=sys.stderr)
             print(result.stdout, file=sys.stderr)
         if result.stderr:
-            print("--- STDERR ---", file=sys.stderr)
+            print(\"--- STDERR ---\", file=sys.stderr)
             print(result.stderr, file=sys.stderr)
 
     if os.path.exists(state_path):
@@ -220,5 +210,5 @@ def _close_issue(token, repo, issue_number, comment_body):
     urllib.request.urlopen(req2)
 
 
-if __name__ == "__main__":
+if __name__ == \"__main__\":
     main()
