@@ -78,6 +78,11 @@ int main() {
         }
     }
 
+    if (action == "reset") {
+        char empty_b[3][3] = {0};
+        write_state(empty_b, "X", "", "", "");
+        return 0;
+    }
     if (winnerStr != "null") return 0;
 
     string existing_log = "";
@@ -97,11 +102,7 @@ int main() {
         }
     }
 
-    if(action == "reset") {
-        char empty_b[3][3] = {0};
-        write_state(empty_b, "X", "", "", "");
-    }
-    else if(cell != "") {
+    if(cell != "") {
         int row = cell[1]-'1', col = cell[0]-'A';
         if(row>=0 && row<3 && col>=0 && col<3 && b[row][col]==0) {
             b[row][col] = turn[0];

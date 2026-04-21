@@ -110,11 +110,13 @@ int main() {
         fclose(f);
     }
 
-    if(strcmp(winnerStr, "null") != 0) return 0;
-
     if(action && strcmp(action, "reset")==0) {
         write_state((char[3][3]){{0,0,0},{0,0,0},{0,0,0}}, "X", "null", "", NULL);
-    } else if(cell && strlen(cell)>=2) {
+        return 0;
+    }
+    if(strcmp(winnerStr, "null") != 0) return 0;
+
+    if(cell && strlen(cell)>=2) {
         int r = cell[1]-'1', c = cell[0]-'A';
         if(r>=0 && r<3 && c>=0 && c<3 && b[r][c]==0) {
             b[r][c] = turn[0];

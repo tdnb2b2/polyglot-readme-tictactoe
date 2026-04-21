@@ -65,14 +65,6 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     Renders the Tic-Tac-Toe board as a Markdown table with interactive links.
     Includes technical details (source code and execution context).
     """
-    status = ""
-    if winner:
-        status = f"🏆 **Winner: {winner} ({lang_key.capitalize()})**"
-    elif all(all(row) for row in board):
-        status = "🤝 **It's a Draw!**"
-    else:
-        status = f"🎮 **Next Move: {turn} ({lang_key.capitalize()})**"
-
     # Minimalist status symbols
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
     LANG_DISPLAY = {
@@ -82,6 +74,18 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
         'cpp': 'C++', 'scala': 'Scala', 'swift': 'Swift',
     }
     lang_display = LANG_DISPLAY.get(lang_key, lang_key)
+
+    status = ""
+    reset_title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Reset"
+    reset_link = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Start+a+new+game"
+    reset_md = f"\n\n🔄 [**Play Again / Reset Board**]({reset_link})"
+
+    if winner:
+        status = f"🏆 **Winner: {winner} ({lang_display})**" + reset_md
+    elif all(all(row) for row in board):
+        status = "🤝 **It's a Draw!**" + reset_md
+    else:
+        status = f"🎮 **Next Move: {turn} ({lang_display})**"
     
     rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
     for ri, row_label in enumerate(['1', '2', '3']):
