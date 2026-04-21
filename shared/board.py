@@ -45,22 +45,18 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
     pattern = re.compile(rf\"{re.escape(start_tag)}.*?{re.escape(end_tag)}\", re.DOTALL)
     if not pattern.search(content):
         return content
-    # Use lambda to prevent backslash interpretation (binary corruption fix)
     return pattern.sub(lambda _: f\"{start_tag}\\n{replacement}\\n{end_tag}\", content)
 
 def render_board_md(lang_key: str, state: dict, owner: str = \"tdnb2b2\",
                     repo: str = \"polyglot-readme-tictactoe\",
                     input_info: str = \"\", output_info: str = \"\") -> str:
-    \"\"\"
-    Renders the Tic-Tac-Toe board as a simple Markdown table.
-    \"\"\"
     board = state.get('board', [['', '', ''], ['', '', ''], ['', '', '']])
     turn = state.get('turn', 'X')
     winner = state.get('winner')
     log = state.get('log', [])
 
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
-    lang_display = LANG_DISPLAY.get(lang_key, lang_display := lang_key.upper())
+    lang_display = LANG_DISPLAY.get(lang_key, lang_key.upper())
 
     if winner:
         if winner == 'draw':
