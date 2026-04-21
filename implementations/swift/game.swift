@@ -1,48 +1,50 @@
 import Foundation
 
-let cell = ProcessInfo.processInfo.environment["CELL"] ?? ""
-let action = ProcessInfo.processInfo.environment["ACTION"] ?? ""
-let path = "current_state.json"
+struct Move: Codable { let player: String; let cell: String }
+struct State: Codable { var board: [[String]]; var turn: String; var winner: String?; var log: [Move] }
 
-if let data = try? Data(contentsOf: URL(fileURLWithPath: path)),
-   var s = try? JSONSerialization.jsonObject(with: data, options: .mutableContainers) as? [String: Any] {
-    
+func main() {
+    let fileURL = URL(fileURLWithPath: "current_state.json")
+    let data = try! Data(contentsOf: fileURL)
+    var state = try! JSONDecoder().decode(State.self, from: data)
+
+    let env = ProcessInfo.processInfo.environment
+    let cell = env["CELL"]?.uppercased() ?? ""
+    let action = env["ACTION"] ?? "put"
+
     if action == "reset" {
-        s["board"] = [["","",""],["","",""],["","",""]]
-        s["turn"] = "X"
-        s["winner"] = NSNull()
-        s["log"] = []
-    } else if !cell.isEmpty && (s["winner"] as? NSNull) != nil {
-        var board = s["board"] as! [[String]]
-        let turn = s["turn"] as! String
-        let r = Int(cell.dropFirst().first!.asciiValue! - Character("1").asciiValue!)
+        let isFull = state.board.flatMap { $0 }.allSatisfy { !$0.isEmpty }
+        if state.winner != nil || isFull {
+            state.board = [["","",""],["","",""],["","",""]]
+            state.turn = "X"
+            state.winner = nil
+            state.log = []
+        }
+    } else if !cell.isEmpty && state.winner == nil {
+        let r = Int(String(cell.suffix(1)))! - 1
         let c = Int(cell.first!.asciiValue! - Character("A").asciiValue!)
-        
-        if r >= 0 && r < 3 && c >= 0 && c < 3 && board[r][c].isEmpty {
-            board[r][c] = turn
-            s["board"] = board
-            var log = s["log"] as? [[String: String]] ?? []
-            log.append(["player": turn, "cell": cell])
-            s["log"] = log
-            
-            let lines = [[(0,0),(0,1),(0,2)],[(1,0),(1,1),(1,2)],[(2,0),(2,1),(2,2)], [(0,0),(1,0),(2,0)],[(0,1),(1,1),(2,1)],[(0,2),(1,2),(2,2)], [(0,0),(1,1),(2,2)],[(0,2),(1,1),(2,0)]]
-            var won = false
-            for l in lines {
-                if !board[l[0].0][l[0].1].isEmpty && board[l[0].0][l[0].1] == board[l[1].0][l[1].1] && board[l[1].0][l[1].1] == board[l[2].0][l[2].1] {
-                    won = true; break
-                }
-            }
-            
-            if won {
-                s["winner"] = turn
-            } else if board.allSatisfy({ $0.allSatisfy({ !$0.isEmpty }) }) {
-                s["winner"] = "draw"
+        if r >= 0 && r < 3 && c >= 0 && c < 3 && state.board[r][c].isEmpty {
+            state.board[r][c] = state.turn
+            state.log.append(Move(player: state.turn, cell: cell))
+            if let win = checkWinner(state.board) {
+                state.winner = win
+            } else if state.board.flatMap({ $0 }).allSatisfy({ !$0.isEmpty }) {
+                state.winner = "draw"
             } else {
-                s["turn"] = (turn == "X" ? "O" : "X")
+                state.turn = (state.turn == "X") ? "O" : "X"
             }
         }
     }
-    
-    let out = try! JSONSerialization.data(withJSONObject: s, options: .prettyPrinted)
-    try! out.write(to: URL(fileURLWithPath: path))
+    let encoder = JSONEncoder(); encoder.outputFormatting = .prettyPrinted
+    try! encoder.encode(state).write(to: fileURL)
 }
+
+func checkWinner(_ b: [[String]]) -> String? {
+    let lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+    let flat = b.flatMap { $0 }
+    for l in lines {
+        if !flat[l[0]].isEmpty && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]] { return flat[l[0]] }
+    }
+    return nil
+}
+main()

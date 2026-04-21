@@ -1,79 +1,56 @@
+import java.io.*;
 import java.nio.file.*;
-import java.util.regex.*;
+import java.util.*;
+import com.google.gson.*;
 
 public class Game {
+    static class Move { String player; String cell; }
+    static class State { String[][] board; String turn; String winner; List<Move> log; }
+
     public static void main(String[] args) throws Exception {
-        String path = "current_state.json";
-        String content = Files.readString(Path.of(path));
+        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
+        String json = new String(Files.readAllBytes(Paths.get("current_state.json")));
+        State state = gson.fromJson(json, State.class);
+
         String cell = System.getenv("CELL");
+        if (cell != null) cell = cell.toUpperCase();
         String action = System.getenv("ACTION");
-        
+        if (action == null) action = "put";
+
         if ("reset".equals(action)) {
-            Files.writeString(Path.of(path), "{\n  \"board\": [[\"\",\"\",\"\"],[\"\",\"\",\"\"],[\"\",\"\",\"\"]],\n  \"turn\": \"X\",\n  \"winner\": null,\n  \"log\": []\n}");
-            return;
-        }
-
-        if (cell == null || cell.length() < 2) return;
-        cell = cell.toUpperCase();
-
-        // Extract values from JSON (Minimalist approach)
-        String winner = getJsonValue(content, "winner");
-        if (!"null".equals(winner)) return;
-
-        String turn = getJsonValue(content, "turn");
-        String[][] board = new String[3][3];
-        for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) board[i][j] = "";
-        Pattern p = Pattern.compile("\\[\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*,\\s*\"(.*?)\"\\s*\\]");
-        Matcher m = p.matcher(content);
-        for (int i = 0; i < 3 && m.find(); i++) {
-            board[i][0] = m.group(1);
-            board[i][1] = m.group(2);
-            board[i][2] = m.group(3);
-        }
-
-        // Correct Mapping: r is row (1-3), c is col (A-C)
-        int r = cell.charAt(1) - '1';
-        int c = cell.charAt(0) - 'A';
-
-        if (r >= 0 && r < 3 && c >= 0 && c < 3 && board[r][c].isEmpty()) {
-            board[r][c] = turn;
-            
-            String win = checkWinner(board);
-            String nextTurn = turn.equals("X") ? "O" : "X";
-            boolean draw = isDraw(board);
-
-            // Reconstruct JSON
-            StringBuilder sb = new StringBuilder();
-            sb.append("{\n  \"board\": [\n");
-            for (int i = 0; i < 3; i++) {
-                sb.append("    [\"").append(board[i][0]).append("\",\"").append(board[i][1]).append("\",\"").append(board[i][2]).append("\"]");
-                if (i < 2) sb.append(",");
-                sb.append("\n");
+            boolean isFull = true; for(String[] r : state.board) for(String c : r) if(c == null || c.isEmpty()) isFull = false;
+            if (state.winner != null || isFull) {
+                state.board = new String[][]{{"","",""}, {"","",""}, {"","",""}};
+                state.turn = "X";
+                state.winner = null;
+                state.log = new ArrayList<>();
             }
-            sb.append("  ],\n  \"turn\": \"").append(nextTurn).append("\",\n");
-            sb.append("  \"winner\": ").append(win != null ? "\"" + win + "\"" : (draw ? "\"draw\"" : "null")).append(",\n");
-            sb.append("  \"log\": []\n}"); // Simplified log for Java
-            Files.writeString(Path.of(path), sb.toString());
+        } else if (cell != null && !cell.isEmpty() && state.winner == null) {
+            int r = cell.charAt(1) - '1';
+            int c = cell.charAt(0) - 'A';
+            if (r >= 0 && r < 3 && c >= 0 && c < 3 && (state.board[r][c] == null || state.board[r][c].isEmpty())) {
+                state.board[r][c] = state.turn;
+                Move m = new Move(); m.player = state.turn; m.cell = cell;
+                state.log.add(m);
+                String win = checkWinner(state.board);
+                if (win != null) state.winner = win;
+                else {
+                    boolean full = true; for(String[] row : state.board) for(String x : row) if(x == null || x.isEmpty()) full = false;
+                    if (full) state.winner = "draw";
+                    else state.turn = state.turn.equals("X") ? "O" : "X";
+                }
+            }
         }
-    }
-
-    static String getJsonValue(String json, String key) {
-        Pattern p = Pattern.compile("\"" + key + "\":\\s*\"?(.*?)\"?(?:,|\\n|\\})");
-        Matcher m = p.matcher(json);
-        if (m.find()) return m.group(1).trim();
-        return "null";
+        Files.write(Paths.get("current_state.json"), gson.toJson(state).getBytes());
     }
 
     static String checkWinner(String[][] b) {
-        int[][] lns = {{0,0,0,1,0,2},{1,0,1,1,1,2},{2,0,2,1,2,2}, {0,0,1,0,2,0},{0,1,1,1,2,1},{0,2,1,2,2,2}, {0,0,1,1,2,2},{0,2,1,1,2,0}};
-        for (int[] l : lns) {
-            if (!b[l[0]][l[1]].isEmpty() && b[l[0]][l[1]].equals(b[l[2]][l[3]]) && b[l[2]][l[3]].equals(b[l[4]][l[5]])) return b[l[0]][l[1]];
+        int[][] lines = {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+        String[] flat = new String[9];
+        for(int i=0; i<3; i++) for(int j=0; j<3; j++) flat[i*3+j] = b[i][j];
+        for(int[] l : lines) {
+            if (flat[l[0]] != null && !flat[l[0]].isEmpty() && flat[l[0]].equals(flat[l[1]]) && flat[l[0]].equals(flat[l[2]])) return flat[l[0]];
         }
         return null;
-    }
-
-    static boolean isDraw(String[][] b) {
-        for (int i = 0; i < 3; i++) for (int j = 0; j < 3; j++) if (b[i][j].isEmpty()) return false;
-        return true;
     }
 }

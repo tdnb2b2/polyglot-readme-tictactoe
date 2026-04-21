@@ -14,7 +14,10 @@ def check_winner(b):
     return None
 
 if action == 'reset':
-    s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
+    # Only allow reset if game is finished
+    is_full = all(all(x != '' for x in row) for row in s['board'])
+    if s.get('winner') or is_full:
+        s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
 elif cell and not s['winner']:
     r, c = int(cell[1]) - 1, ord(cell[0]) - ord('A')
     if 0 <= r < 3 and 0 <= c < 3 and s['board'][r][c] == '':

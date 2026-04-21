@@ -79,8 +79,11 @@ int main() {
     }
 
     if (action == "reset") {
-        char empty_b[3][3] = {0};
-        write_state(empty_b, "X", "", "", "");
+        bool full = true; for(int i=0; i<3; i++) for(int j=0; j<3; j++) if(b[i][j]==0) full=false;
+        if (winnerStr != "null" || full) {
+            char empty_b[3][3] = {0};
+            write_state(empty_b, "X", "", "", "");
+        }
         return 0;
     }
     if (winnerStr != "null") return 0;

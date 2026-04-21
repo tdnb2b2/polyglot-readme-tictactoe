@@ -80,10 +80,12 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     reset_link = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body=Start+a+new+game"
     reset_md = f"\n\n🔄 [**Play Again / Reset Board**]({reset_link})"
 
-    if winner:
-        status = f"🏆 **Winner: {winner} ({lang_display})**" + reset_md
-    elif all(all(row) for row in board):
+    is_board_full = all(all(row) for row in board)
+
+    if winner == "draw" or (not winner and is_board_full):
         status = "🤝 **It's a Draw!**" + reset_md
+    elif winner:
+        status = f"🏆 **Winner: {winner} ({lang_display})**" + reset_md
     else:
         status = f"🎮 **Next Move: {turn} ({lang_display})**"
     

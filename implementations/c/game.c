@@ -111,7 +111,10 @@ int main() {
     }
 
     if(action && strcmp(action, "reset")==0) {
-        write_state((char[3][3]){{0,0,0},{0,0,0},{0,0,0}}, "X", "null", "", NULL);
+        int full=1; for(int i=0; i<3; i++) for(int j=0; j<3; j++) if(b[i][j]==0) full=0;
+        if(strcmp(winnerStr, "null") != 0 || full) {
+            write_state((char[3][3]){{0,0,0},{0,0,0},{0,0,0}}, "X", "null", "", NULL);
+        }
         return 0;
     }
     if(strcmp(winnerStr, "null") != 0) return 0;
