@@ -500,12 +500,11 @@
         ""
       ],
       [
-        "",
+        "O",
         "",
         "X"
       ]
     ],
-    "turn": "O",
     "log": [
       {
         "player": "X",
@@ -518,8 +517,13 @@
       {
         "player": "X",
         "cell": "C3"
+      },
+      {
+        "player": "O",
+        "cell": "A3"
       }
-    ]
+    ],
+    "turn": "X"
   },
   "typescript": {
     "board": [
