@@ -503,7 +503,7 @@
     ]
   },
   "swift": {
-    "turn": "X",
+    "winner": "draw",
     "log": [
       {
         "player": "X",
@@ -536,6 +536,10 @@
       {
         "player": "O",
         "cell": "C2"
+      },
+      {
+        "player": "X",
+        "cell": "A2"
       }
     ],
     "board": [
@@ -545,7 +549,7 @@
         "X"
       ],
       [
-        "",
+        "X",
         "X",
         "O"
       ],
@@ -554,7 +558,8 @@
         "O",
         "X"
       ]
-    ]
+    ],
+    "turn": "X"
   },
   "typescript": {
     "board": [
