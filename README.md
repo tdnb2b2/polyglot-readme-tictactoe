@@ -1064,14 +1064,12 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
 <!-- BOARD_PYTHON_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | ❌ | ⭕ | **1** |
-| **2** | ❌ | ⭕ | ___ | **2** |
-| **3** | ❌ | ___ | ⭕ | **3** |
+| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | **1** |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | **2** |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) | **3** |
 |   | A | B | C |   |
 
-🏆 Winner: ❌ (Python)
-
-Recent moves: ❌ A2 → ⭕ C3 → ❌ B1 → ⭕ C1 → ❌ A3
+🎮 **Next Move: ❌ (Python)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
