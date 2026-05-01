@@ -516,8 +516,13 @@
       {
         "player": "X",
         "cell": "C1"
+      },
+      {
+        "player": "O",
+        "cell": "C2"
       }
     ],
+    "turn": "X",
     "board": [
       [
         "O",
@@ -527,15 +532,14 @@
       [
         "",
         "X",
-        ""
+        "O"
       ],
       [
         "O",
         "O",
         "X"
       ]
-    ],
-    "turn": "O"
+    ]
   },
   "typescript": {
     "board": [
