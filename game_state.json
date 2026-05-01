@@ -153,7 +153,7 @@
   "java": {
     "board": [
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -168,12 +168,16 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
         "player": "X",
         "cell": "B2"
+      },
+      {
+        "player": "O",
+        "cell": "A1"
       }
     ]
   },
