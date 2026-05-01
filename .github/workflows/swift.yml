@@ -1,11 +1,13 @@
 name: Swift Tic-Tac-Toe
 on:
+  workflow_dispatch:
   issues:
     types: [opened]
 
 jobs:
   play:
-    runs-on: macos-latest
+    runs-on:
+  workflow_dispatch: macos-latest
     if: "${{ contains(github.event.issue.title, 'Swift: Tic-Tac-Toe:') }}"
     permissions:
       contents: write

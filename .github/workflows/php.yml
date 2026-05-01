@@ -1,11 +1,13 @@
 name: Php Tic-Tac-Toe
 on:
+  workflow_dispatch:
   issues:
     types: [opened]
 
 jobs:
   play:
-    runs-on: ubuntu-latest
+    runs-on:
+  workflow_dispatch: ubuntu-latest
     if: "${{ contains(github.event.issue.title, 'Php: Tic-Tac-Toe:') }}"
     permissions:
       contents: write
@@ -20,7 +22,8 @@ jobs:
       - name: Setup Php
         uses: shivammathur/setup-php@v2
         with:
-          php-version: '8.2'
+          php-version:
+  workflow_dispatch: '8.2'
 
       - name: Play Game
         run: python3 dispatcher.py run

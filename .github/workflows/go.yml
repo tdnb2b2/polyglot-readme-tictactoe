@@ -1,11 +1,13 @@
 name: Go Tic-Tac-Toe
 on:
+  workflow_dispatch:
   issues:
     types: [opened]
 
 jobs:
   play:
-    runs-on: ubuntu-latest
+    runs-on:
+  workflow_dispatch: ubuntu-latest
     if: "${{ contains(github.event.issue.title, 'Go: Tic-Tac-Toe:') }}"
     permissions:
       contents: write
@@ -20,7 +22,8 @@ jobs:
       - name: Setup Go
         uses: actions/setup-go@v5
         with:
-          go-version: '1.21'
+          go-version:
+  workflow_dispatch: '1.21'
 
       - name: Play Game
         run: python3 dispatcher.py run

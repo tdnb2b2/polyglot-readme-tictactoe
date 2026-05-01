@@ -8,7 +8,7 @@ fun main() {
     val json = file.readText()
     val state = parseState(json)
 
-    val cell = System.getenv("CELL")?.uppercase() ?: ""
+    val cell = System.getenv("CELL")?.toUpperCase() ?: ""
     val action = System.getenv("ACTION") ?: "put"
 
     if (action == "reset") {

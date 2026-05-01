@@ -1,11 +1,13 @@
 name: Rust Tic-Tac-Toe
 on:
+  workflow_dispatch:
   issues:
     types: [opened]
 
 jobs:
   play:
-    runs-on: ubuntu-latest
+    runs-on:
+  workflow_dispatch: ubuntu-latest
     if: "${{ contains(github.event.issue.title, 'Rust: Tic-Tac-Toe:') }}"
     permissions:
       contents: write
