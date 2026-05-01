@@ -202,7 +202,7 @@
         "X"
       ],
       [
-        "",
+        "X",
         "X",
         "O"
       ],
@@ -213,7 +213,7 @@
       ]
     ],
     "turn": "X",
-    "winner": null,
+    "winner": "draw",
     "log": [
       {
         "player": "X",
@@ -246,6 +246,10 @@
       {
         "player": "O",
         "cell": "C2"
+      },
+      {
+        "player": "X",
+        "cell": "A2"
       }
     ]
   },
