@@ -1,16 +1,23 @@
 import java.io.*;
 import java.nio.file.*;
 import java.util.*;
-import com.google.gson.*;
 
 public class Game {
-    static class Move { String player; String cell; }
-    static class State { String[][] board; String turn; String winner; List<Move> log; }
+    static class Move { 
+        String player; 
+        String cell; 
+        Move(String p, String c) { this.player = p; this.cell = c; }
+    }
+    static class State { 
+        String[][] board = new String[3][3]; 
+        String turn = "X"; 
+        String winner = null; 
+        List<Move> log = new ArrayList<>(); 
+    }
 
     public static void main(String[] args) throws Exception {
-        Gson gson = new GsonBuilder().setPrettyPrinting().serializeNulls().create();
         String json = new String(Files.readAllBytes(Paths.get("current_state.json")));
-        State state = gson.fromJson(json, State.class);
+        State state = parseState(json);
 
         String cell = System.getenv("CELL");
         if (cell != null) cell = cell.toUpperCase();
@@ -30,8 +37,7 @@ public class Game {
             int c = cell.charAt(0) - 'A';
             if (r >= 0 && r < 3 && c >= 0 && c < 3 && (state.board[r][c] == null || state.board[r][c].isEmpty())) {
                 state.board[r][c] = state.turn;
-                Move m = new Move(); m.player = state.turn; m.cell = cell;
-                state.log.add(m);
+                state.log.add(new Move(state.turn, cell));
                 String win = checkWinner(state.board);
                 if (win != null) state.winner = win;
                 else {
@@ -41,7 +47,94 @@ public class Game {
                 }
             }
         }
-        Files.write(Paths.get("current_state.json"), gson.toJson(state).getBytes());
+        Files.write(Paths.get("current_state.json"), stateToJson(state).getBytes());
+    }
+
+    static State parseState(String json) {
+        State s = new State();
+        // Simple manual parsing
+        if (json.contains("\"board\"")) {
+            int boardIdx = json.indexOf("\"board\"");
+            int startIdx = json.indexOf("[", boardIdx);
+            int row = 0;
+            int pos = startIdx + 1;
+            while (row < 3) {
+                int rowStart = json.indexOf("[", pos);
+                if (rowStart == -1) break;
+                int rowEnd = json.indexOf("]", rowStart);
+                String rowStr = json.substring(rowStart + 1, rowEnd);
+                String[] cells = rowStr.split(",");
+                for (int col = 0; col < 3 && col < cells.length; col++) {
+                    String val = cells[col].trim().replace("\"", "");
+                    s.board[row][col] = val;
+                }
+                row++;
+                pos = rowEnd + 1;
+            }
+        }
+        if (json.contains("\"turn\"")) {
+            int idx = json.indexOf("\"turn\"");
+            int valStart = json.indexOf("\"", json.indexOf(":", idx));
+            int valEnd = json.indexOf("\"", valStart + 1);
+            s.turn = json.substring(valStart + 1, valEnd);
+        }
+        if (json.contains("\"winner\"")) {
+            int idx = json.indexOf("\"winner\"");
+            int colonIdx = json.indexOf(":", idx);
+            int nextQuote = json.indexOf("\"", colonIdx);
+            int nextComma = json.indexOf(",", colonIdx);
+            int nextBrace = json.indexOf("}", colonIdx);
+            int end = (nextComma != -1) ? nextComma : nextBrace;
+            String val = json.substring(colonIdx + 1, end).trim();
+            if (val.startsWith("\"")) {
+                s.winner = val.substring(1, val.lastIndexOf("\""));
+            } else if (val.equals("null")) {
+                s.winner = null;
+            } else {
+                s.winner = val;
+            }
+        }
+        if (json.contains("\"log\"")) {
+            int idx = json.indexOf("\"log\"");
+            int start = json.indexOf("[", idx);
+            int end = json.lastIndexOf("]");
+            String logContent = json.substring(start + 1, end).trim();
+            if (!logContent.isEmpty()) {
+                String[] entries = logContent.split("\\}");
+                for (String entry : entries) {
+                    if (entry.contains("{")) {
+                        int pIdx = entry.indexOf("\"player\"");
+                        int pValStart = entry.indexOf("\"", entry.indexOf(":", pIdx));
+                        int pValEnd = entry.indexOf("\"", pValStart + 1);
+                        String p = entry.substring(pValStart + 1, pValEnd);
+                        
+                        int cIdx = entry.indexOf("\"cell\"");
+                        int cValStart = entry.indexOf("\"", entry.indexOf(":", cIdx));
+                        int cValEnd = entry.indexOf("\"", cValStart + 1);
+                        String c = entry.substring(cValStart + 1, cValEnd);
+                        s.log.add(new Move(p, c));
+                    }
+                }
+            }
+        }
+        return s;
+    }
+
+    static String stateToJson(State s) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n  \"board\": [\n");
+        for (int i = 0; i < 3; i++) {
+            sb.append("    [\"").append(s.board[i][0]).append("\", \"").append(s.board[i][1]).append("\", \"").append(s.board[i][2]).append("\"]").append(i == 2 ? "" : ",").append("\n");
+        }
+        sb.append("  ],\n  \"turn\": \"").append(s.turn).append("\",\n");
+        sb.append("  \"winner\": ").append(s.winner == null ? "null" : "\"" + s.winner + "\"").append(",\n");
+        sb.append("  \"log\": [\n");
+        for (int i = 0; i < s.log.size(); i++) {
+            Move m = s.log.get(i);
+            sb.append("    {\"player\": \"").append(m.player).append("\", \"cell\": \"").append(m.cell).append("\"}").append(i == s.log.size() - 1 ? "" : ",").append("\n");
+        }
+        sb.append("  ]\n}");
+        return sb.toString();
     }
 
     static String checkWinner(String[][] b) {
@@ -54,3 +147,4 @@ public class Game {
         return null;
     }
 }
+
