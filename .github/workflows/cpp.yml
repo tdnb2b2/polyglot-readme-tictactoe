@@ -1,15 +1,12 @@
 name: C++ Tic-Tac-Toe
 on:
   workflow_dispatch:
-  workflow_dispatch:
   issues:
     types: [opened]
 
 jobs:
   play:
-    runs-on:
-  workflow_dispatch:
-  workflow_dispatch: ubuntu-latest
+    runs-on: ubuntu-latest
     if: "${{ contains(github.event.issue.title, 'C++: Tic-Tac-Toe:') }}"
     permissions:
       contents: write
@@ -41,5 +38,8 @@ jobs:
           git config --global user.name 'github-actions[bot]'
           git config --global user.email 'github-actions[bot]@users.noreply.github.com'
           git add README.md game_state.json
-          git commit -m 'game: update state and readme' || echo 'No changes'
-          for i in 1 2 3 4 5 6; do git pull --rebase origin main || true; git push origin main && break || sleep $((RANDOM % 10 + 5)); done
+          git commit -m "game: update state and readme" || echo "No changes"
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase origin main || true
+            git push origin main && break || sleep $((RANDOM % 10 + 5))
+          done

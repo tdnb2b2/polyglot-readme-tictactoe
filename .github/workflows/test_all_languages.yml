@@ -2,58 +2,47 @@ name: Test All Languages
 
 on:
   workflow_dispatch:
-  workflow_dispatch:
   repository_dispatch:
     types: [test-play]
 
 jobs:
   test-play:
-    runs-on:
-  workflow_dispatch: ubuntu-latest
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
       - name: Set up Python
         uses: actions/setup-python@v4
         with:
-          python-version:
-  workflow_dispatch: '3.10'
+          python-version: '3.10'
       - name: Set up Java
         uses: actions/setup-java@v3
         with:
-          java-version:
-  workflow_dispatch: '17'
-          distribution:
-  workflow_dispatch: 'temurin'
+          java-version: '17'
+          distribution: 'temurin'
       - name: Set up Node.js
         uses: actions/setup-node@v3
         with:
-          node-version:
-  workflow_dispatch: '18'
+          node-version: '18'
       - name: Set up Go
         uses: actions/setup-go@v4
         with:
-          go-version:
-  workflow_dispatch: '1.21'
+          go-version: '1.21'
       - name: Set up PHP
         uses: shivammathur/setup-php@v2
         with:
-          php-version:
-  workflow_dispatch: '8.2'
+          php-version: '8.2'
       - name: Set up Ruby
         uses: ruby/setup-ruby@v1
         with:
-          ruby-version:
-  workflow_dispatch: '3.1'
+          ruby-version: '3.1'
       - name: Set up .NET
         uses: actions/setup-dotnet@v3
         with:
-          dotnet-version:
-  workflow_dispatch: '7.0.x'
+          dotnet-version: '7.0.x'
       - name: Set up Swift
         uses: swift-actions/setup-swift@v1
         with:
-          swift-version:
-  workflow_dispatch: '5.8'
+          swift-version: '5.8'
       - name: Play Game
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
