@@ -366,7 +366,8 @@
         ""
       ]
     ],
-    "turn": "O"
+    "turn": "O",
+    "winner": null
   },
   "typescript": {
     "board": [

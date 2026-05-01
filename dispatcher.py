@@ -168,9 +168,9 @@ def main():
                     lang_key=l_key,
                     owner=owner,
                     repo=repo,
-                    turn=l_state['turn'],
-                    winner=l_state['winner'],
-                    log=l_state['log']
+                    turn=l_state.get('turn', 'X'),
+                    winner=l_state.get('winner', None),
+                    log=l_state.get('log', [])
                 )
                 new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
 
