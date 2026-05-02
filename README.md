@@ -1197,12 +1197,12 @@ File.write('current_state.json', JSON.pretty_generate(state))
 |---|---|---|---|---|
 | **1** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Rust+board) | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Rust+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Rust+board) | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board) | ❌ | **3** |
+| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board) | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (Rust)**
+🎮 **Next Move: ❌ (Rust)**
 
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3
+Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
