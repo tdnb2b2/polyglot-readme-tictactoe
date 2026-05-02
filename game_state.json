@@ -556,11 +556,12 @@
         ""
       ],
       [
-        "",
+        "X",
         "",
         ""
       ]
     ],
+    "turn": "O",
     "log": [
       {
         "cell": "B2",
@@ -569,9 +570,12 @@
       {
         "cell": "A1",
         "player": "O"
+      },
+      {
+        "cell": "A3",
+        "player": "X"
       }
-    ],
-    "turn": "X"
+    ]
   },
   "typescript": {
     "board": [
