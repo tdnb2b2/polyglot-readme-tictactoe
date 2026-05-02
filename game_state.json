@@ -494,6 +494,40 @@
     ]
   },
   "swift": {
+    "log": [
+      {
+        "player": "X",
+        "cell": "B2"
+      },
+      {
+        "player": "O",
+        "cell": "C3"
+      },
+      {
+        "player": "X",
+        "cell": "A1"
+      },
+      {
+        "player": "O",
+        "cell": "C1"
+      },
+      {
+        "player": "X",
+        "cell": "C2"
+      },
+      {
+        "player": "O",
+        "cell": "A2"
+      },
+      {
+        "player": "X",
+        "cell": "B3"
+      },
+      {
+        "player": "O",
+        "cell": "A3"
+      }
+    ],
     "turn": "X",
     "board": [
       [
@@ -511,40 +545,6 @@
         "X",
         "O"
       ]
-    ],
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "C3"
-      },
-      {
-        "player": "X",
-        "cell": "A1"
-      },
-      {
-        "cell": "C1",
-        "player": "O"
-      },
-      {
-        "cell": "C2",
-        "player": "X"
-      },
-      {
-        "cell": "A2",
-        "player": "O"
-      },
-      {
-        "cell": "B3",
-        "player": "X"
-      },
-      {
-        "cell": "A3",
-        "player": "O"
-      }
     ]
   },
   "typescript": {
