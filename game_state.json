@@ -455,55 +455,25 @@
     ]
   },
   "swift": {
-    "winner": "X",
-    "log": [
-      {
-        "cell": "B2",
-        "player": "X"
-      },
-      {
-        "cell": "A1",
-        "player": "O"
-      },
-      {
-        "cell": "C3",
-        "player": "X"
-      },
-      {
-        "cell": "A3",
-        "player": "O"
-      },
-      {
-        "cell": "B1",
-        "player": "X"
-      },
-      {
-        "cell": "C1",
-        "player": "O"
-      },
-      {
-        "cell": "B3",
-        "player": "X"
-      }
-    ],
-    "turn": "X",
     "board": [
       [
-        "O",
-        "X",
-        "O"
-      ],
-      [
         "",
-        "X",
+        "",
         ""
       ],
       [
-        "O",
-        "X",
-        "X"
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
       ]
-    ]
+    ],
+    "log": [],
+    "turn": "X"
   },
   "typescript": {
     "board": [
