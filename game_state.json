@@ -362,61 +362,24 @@
   "python": {
     "board": [
       [
-        "X",
-        "O",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "O",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "O",
-        "X",
-        "X"
+        "",
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "draw",
-    "log": [
-      {
-        "player": "X",
-        "cell": "A1"
-      },
-      {
-        "player": "O",
-        "cell": "B2"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "B1"
-      },
-      {
-        "player": "X",
-        "cell": "C1"
-      },
-      {
-        "player": "O",
-        "cell": "C2"
-      },
-      {
-        "player": "X",
-        "cell": "A2"
-      },
-      {
-        "player": "O",
-        "cell": "A3"
-      },
-      {
-        "player": "X",
-        "cell": "B3"
-      }
-    ]
+    "winner": null,
+    "log": []
   },
   "ruby": {
     "board": [
