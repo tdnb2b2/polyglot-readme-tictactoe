@@ -1458,14 +1458,14 @@ object Game {
 <!-- BOARD_SWIFT_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Swift+board) | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Swift+board) | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Swift+board) | ❌ | **3** |
+| **1** | ⭕ | ❌ | ___ | **1** |
+| **2** | ⭕ | ❌ | ___ | **2** |
+| **3** | ⭕ | ___ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (Swift)**
+🏆 Winner: ⭕ (Swift)
 
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A2 → ❌ B1
+Recent moves: ⭕ A1 → ❌ C3 → ⭕ A2 → ❌ B1 → ⭕ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
