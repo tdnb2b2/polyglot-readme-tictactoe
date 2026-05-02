@@ -432,13 +432,13 @@ class Program {
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Go+board) | ❌ | ⭕ | **2** |
+| **2** | ❌ | ❌ | ⭕ | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Go+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Go+board) | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Go)**
+🎮 **Next Move: ⭕ (Go)**
 
-Recent moves: ⭕ C3 → ❌ A1 → ⭕ B1 → ❌ C1 → ⭕ C2
+Recent moves: ❌ A1 → ⭕ B1 → ❌ C1 → ⭕ C2 → ❌ A2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
