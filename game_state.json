@@ -542,36 +542,36 @@
     "turn": "X",
     "log": [
       {
-        "cell": "B2",
-        "player": "X"
+        "player": "X",
+        "cell": "B2"
       },
       {
-        "cell": "C3",
-        "player": "O"
+        "player": "O",
+        "cell": "C3"
       },
       {
-        "cell": "B1",
-        "player": "X"
+        "player": "X",
+        "cell": "B1"
       },
       {
-        "cell": "A1",
-        "player": "O"
+        "player": "O",
+        "cell": "A1"
       },
       {
-        "cell": "C1",
-        "player": "X"
+        "player": "X",
+        "cell": "C1"
       },
       {
-        "cell": "B3",
-        "player": "O"
+        "player": "O",
+        "cell": "B3"
       },
       {
-        "cell": "A2",
-        "player": "X"
+        "player": "X",
+        "cell": "A2"
       },
       {
-        "cell": "C2",
-        "player": "O"
+        "player": "O",
+        "cell": "C2"
       }
     ],
     "board": [
