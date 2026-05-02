@@ -117,7 +117,7 @@
       [
         "O",
         "O",
-        ""
+        "O"
       ],
       [
         "",
@@ -131,7 +131,7 @@
       ]
     ],
     "turn": "O",
-    "winner": null,
+    "winner": "O",
     "log": [
       {
         "player": "X",
@@ -152,6 +152,10 @@
       {
         "player": "X",
         "cell": "A3"
+      },
+      {
+        "player": "O",
+        "cell": "C1"
       }
     ]
   },
