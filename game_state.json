@@ -514,39 +514,38 @@
     ]
   },
   "swift": {
-    "turn": "X",
     "log": [
       {
-        "player": "X",
-        "cell": "B2"
+        "cell": "B2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "C3"
+        "cell": "C3",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "B1"
+        "cell": "B1",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "A1"
+        "cell": "A1",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "C1"
+        "cell": "C1",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "B3"
+        "cell": "B3",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "A2"
+        "cell": "A2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "C2"
+        "cell": "C2",
+        "player": "O"
       }
     ],
     "board": [
@@ -565,7 +564,8 @@
         "O",
         "O"
       ]
-    ]
+    ],
+    "turn": "X"
   },
   "typescript": {
     "board": [
