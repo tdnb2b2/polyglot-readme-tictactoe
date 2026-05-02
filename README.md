@@ -433,12 +433,12 @@ class Program {
 |---|---|---|---|---|
 | **1** | ❌ | ⭕ | ❌ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Go+board) | ⭕ | ⭕ | **3** |
+| **3** | ❌ | ⭕ | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Go)**
+🏆 Winner: ❌ (Go)
 
-Recent moves: ⭕ B1 → ❌ C1 → ⭕ C2 → ❌ A2 → ⭕ B3
+Recent moves: ❌ C1 → ⭕ C2 → ❌ A2 → ⭕ B3 → ❌ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
