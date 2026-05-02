@@ -568,13 +568,13 @@ func main() {
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Java+board) | ❌ | ❌ | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) | **2** |
+| **2** | ⭕ | ❌ | ⭕ | **2** |
 | **3** | ⭕ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (Java)**
+🎮 **Next Move: ❌ (Java)**
 
-Recent moves: ❌ C3 → ⭕ A3 → ❌ B1 → ⭕ B3 → ❌ C1
+Recent moves: ⭕ A3 → ❌ B1 → ⭕ B3 → ❌ C1 → ⭕ C2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
