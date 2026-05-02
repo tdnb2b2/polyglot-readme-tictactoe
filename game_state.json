@@ -464,7 +464,7 @@
   "swift": {
     "board": [
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -479,11 +479,15 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "log": [
       {
-        "player": "X",
-        "cell": "B2"
+        "cell": "B2",
+        "player": "X"
+      },
+      {
+        "cell": "A1",
+        "player": "O"
       }
     ]
   },
