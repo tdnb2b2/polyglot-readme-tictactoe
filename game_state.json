@@ -411,6 +411,21 @@
     "log": []
   },
   "swift": {
+    "log": [
+      {
+        "player": "X",
+        "cell": "B2"
+      },
+      {
+        "player": "O",
+        "cell": "A1"
+      },
+      {
+        "player": "X",
+        "cell": "C3"
+      }
+    ],
+    "turn": "O",
     "board": [
       [
         "O",
@@ -425,20 +440,9 @@
       [
         "",
         "",
-        ""
+        "X"
       ]
-    ],
-    "log": [
-      {
-        "cell": "B2",
-        "player": "X"
-      },
-      {
-        "cell": "A1",
-        "player": "O"
-      }
-    ],
-    "turn": "X"
+    ]
   },
   "typescript": {
     "board": [
