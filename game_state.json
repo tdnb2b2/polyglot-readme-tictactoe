@@ -275,61 +275,24 @@
   "php": {
     "board": [
       [
-        "O",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "O",
-        "X"
+        "",
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "draw",
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "C1"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "A2"
-      },
-      {
-        "player": "O",
-        "cell": "C2"
-      },
-      {
-        "player": "X",
-        "cell": "A3"
-      }
-    ]
+    "winner": null,
+    "log": []
   },
   "python": {
     "board": [
