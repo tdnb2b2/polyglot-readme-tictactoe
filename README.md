@@ -567,14 +567,14 @@ func main() {
 <!-- BOARD_JAVA_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Java+board) | ❌ | ❌ | **1** |
+| **1** | ❌ | ❌ | ❌ | **1** |
 | **2** | ⭕ | ❌ | ⭕ | **2** |
 | **3** | ⭕ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Java)**
+🏆 Winner: ❌ (Java)
 
-Recent moves: ⭕ A3 → ❌ B1 → ⭕ B3 → ❌ C1 → ⭕ C2
+Recent moves: ❌ B1 → ⭕ B3 → ❌ C1 → ⭕ C2 → ❌ A1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
