@@ -404,7 +404,7 @@
   "swift": {
     "board": [
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -423,9 +423,13 @@
       {
         "cell": "B2",
         "player": "X"
+      },
+      {
+        "cell": "A1",
+        "player": "O"
       }
     ],
-    "turn": "O"
+    "turn": "X"
   },
   "typescript": {
     "board": [
