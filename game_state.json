@@ -444,49 +444,23 @@
   "swift": {
     "board": [
       [
-        "O",
-        "X",
-        ""
-      ],
-      [
-        "O",
-        "X",
-        ""
-      ],
-      [
-        "O",
         "",
-        "X"
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
       ]
     ],
-    "turn": "O",
-    "winner": "O",
-    "log": [
-      {
-        "cell": "B2",
-        "player": "X"
-      },
-      {
-        "cell": "A1",
-        "player": "O"
-      },
-      {
-        "cell": "C3",
-        "player": "X"
-      },
-      {
-        "cell": "A2",
-        "player": "O"
-      },
-      {
-        "cell": "B1",
-        "player": "X"
-      },
-      {
-        "cell": "A3",
-        "player": "O"
-      }
-    ]
+    "turn": "X",
+    "log": []
   },
   "typescript": {
     "board": [
