@@ -189,14 +189,14 @@ int main() {
 <!-- BOARD_CPP_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) | **1** |
+| **1** | ❌ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+C%2B%2B+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%2B%2B+board) | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C%2B%2B+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C%2B%2B+board) | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (C++)**
+🎮 **Next Move: ❌ (C++)**
 
-Recent moves: ❌ B2 → ⭕ C3 → ❌ A1
+Recent moves: ❌ B2 → ⭕ C3 → ❌ A1 → ⭕ B1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
