@@ -204,7 +204,7 @@
       ],
       [
         "",
-        "",
+        "X",
         ""
       ],
       [
@@ -213,9 +213,14 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
-    "log": []
+    "log": [
+      {
+        "player": "X",
+        "cell": "B2"
+      }
+    ]
   },
   "javascript": {
     "board": [
