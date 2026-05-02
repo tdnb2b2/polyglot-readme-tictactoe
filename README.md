@@ -747,13 +747,13 @@ public class Game {
 |   | A | B | C |   |
 |---|---|---|---|---|
 | **1** | ⭕ | ⭕ | ❌ | **1** |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+JavaScript+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+JavaScript+board) | **2** |
+| **2** | ⭕ | ❌ | ___ | **2** |
 | **3** | ⭕ | ❌ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (JavaScript)**
+🏆 Winner: ⭕ (JavaScript)
 
-Recent moves: ❌ C3 → ⭕ A3 → ❌ B3 → ⭕ B1 → ❌ C1
+Recent moves: ⭕ A3 → ❌ B3 → ⭕ B1 → ❌ C1 → ⭕ A2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
