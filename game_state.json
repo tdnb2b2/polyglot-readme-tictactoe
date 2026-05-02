@@ -531,11 +531,12 @@
     "log": []
   },
   "swift": {
+    "turn": "X",
     "board": [
       [
         "X",
         "",
-        ""
+        "O"
       ],
       [
         "",
@@ -550,19 +551,22 @@
     ],
     "log": [
       {
-        "player": "X",
-        "cell": "B2"
+        "cell": "B2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "C3"
+        "cell": "C3",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "A1"
+        "cell": "A1",
+        "player": "X"
+      },
+      {
+        "cell": "C1",
+        "player": "O"
       }
-    ],
-    "turn": "O"
+    ]
   },
   "typescript": {
     "board": [
