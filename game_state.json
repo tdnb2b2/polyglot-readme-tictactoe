@@ -34,7 +34,7 @@
     "board": [
       [
         "O",
-        "",
+        "X",
         "O"
       ],
       [
@@ -48,7 +48,7 @@
         "X"
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -66,6 +66,10 @@
       {
         "player": "O",
         "cell": "C1"
+      },
+      {
+        "player": "X",
+        "cell": "B1"
       }
     ]
   },
