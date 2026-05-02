@@ -347,12 +347,12 @@ int main() {
 |---|---|---|---|---|
 | **1** | ❌ | ❌ | ⭕ | **1** |
 | **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%23+board) | **2** |
-| **3** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C%23+board) | ⭕ | **3** |
+| **3** | ❌ | ⭕ | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (C#)**
+🎮 **Next Move: ❌ (C#)**
 
-Recent moves: ❌ A3 → ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1
+Recent moves: ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1 → ⭕ B3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
