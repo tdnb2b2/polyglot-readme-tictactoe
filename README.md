@@ -189,14 +189,14 @@ int main() {
 <!-- BOARD_CPP_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ⭕ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) | **1** |
+| **1** | ⭕ | ⭕ | ❌ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
 | **3** | ❌ | ❌ | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (C++)**
+🏆 Winner: ❌ (C++)
 
-Recent moves: ⭕ B1 → ❌ A3 → ⭕ C3 → ❌ A2 → ⭕ C2
+Recent moves: ❌ A3 → ⭕ C3 → ❌ A2 → ⭕ C2 → ❌ C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
