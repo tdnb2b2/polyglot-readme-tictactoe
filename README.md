@@ -12,12 +12,12 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
 |---|---|---|---|---|
 | **1** | ⭕ | ⭕ | ❌ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+C+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C+board) | ❌ | **3** |
+| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C+board) | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (C)**
+🎮 **Next Move: ❌ (C)**
 
-Recent moves: ❌ C3 → ⭕ B1 → ❌ C1 → ⭕ C2 → ❌ A2
+Recent moves: ⭕ B1 → ❌ C1 → ⭕ C2 → ❌ A2 → ⭕ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
