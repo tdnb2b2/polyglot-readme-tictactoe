@@ -504,24 +504,6 @@
     ]
   },
   "swift": {
-    "turn": "X",
-    "board": [
-      [
-        "O",
-        "O",
-        "X"
-      ],
-      [
-        "X",
-        "X",
-        "O"
-      ],
-      [
-        "O",
-        "",
-        "X"
-      ]
-    ],
     "log": [
       {
         "player": "X",
@@ -554,8 +536,31 @@
       {
         "player": "O",
         "cell": "A3"
+      },
+      {
+        "player": "X",
+        "cell": "B3"
       }
-    ]
+    ],
+    "turn": "X",
+    "board": [
+      [
+        "O",
+        "O",
+        "X"
+      ],
+      [
+        "X",
+        "X",
+        "O"
+      ],
+      [
+        "O",
+        "X",
+        "X"
+      ]
+    ],
+    "winner": "draw"
   },
   "typescript": {
     "board": [
