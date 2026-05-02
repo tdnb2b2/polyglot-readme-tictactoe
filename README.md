@@ -750,12 +750,12 @@ public class Game {
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | ❌ | **1** |
 | **2** | ⭕ | ❌ | ❌ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+JavaScript+board) | ⭕ | ⭕ | **3** |
+| **3** | ❌ | ⭕ | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (JavaScript)**
+🏆 Winner: ❌ (JavaScript)
 
-Recent moves: ⭕ A1 → ❌ C1 → ⭕ B3 → ❌ C2 → ⭕ A2
+Recent moves: ❌ C1 → ⭕ B3 → ❌ C2 → ⭕ A2 → ❌ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
