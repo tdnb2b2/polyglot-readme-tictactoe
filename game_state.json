@@ -45,53 +45,24 @@
   "cpp": {
     "board": [
       [
-        "O",
-        "X",
+        "",
+        "",
         ""
       ],
       [
-        "X",
-        "X",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
         "",
-        "O",
-        "O"
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "X",
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "C3"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "C2"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "A2"
-      }
-    ]
+    "winner": null,
+    "log": []
   },
   "csharp": {
     "board": [
