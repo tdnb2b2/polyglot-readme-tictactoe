@@ -2,53 +2,24 @@
   "c": {
     "board": [
       [
-        "X",
-        "X",
-        "X"
-      ],
-      [
         "",
-        "O",
+        "",
         ""
       ],
       [
-        "O",
-        "O",
-        "X"
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "X",
-    "log": [
-      {
-        "player": "X",
-        "cell": "A1"
-      },
-      {
-        "player": "O",
-        "cell": "B2"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "A3"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "C1"
-      }
-    ]
+    "winner": null,
+    "log": []
   },
   "cpp": {
     "board": [
