@@ -399,57 +399,24 @@
   "rust": {
     "board": [
       [
-        "O",
-        "X",
-        "O"
-      ],
-      [
-        "X",
-        "O",
+        "",
+        "",
         ""
       ],
       [
-        "O",
-        "X",
-        "X"
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
       ]
     ],
-    "turn": "O",
-    "winner": "O",
-    "log": [
-      {
-        "player": "X",
-        "cell": "A2"
-      },
-      {
-        "player": "O",
-        "cell": "B2"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "A3"
-      },
-      {
-        "player": "X",
-        "cell": "B3"
-      },
-      {
-        "player": "O",
-        "cell": "C1"
-      }
-    ]
+    "turn": "X",
+    "winner": null,
+    "log": []
   },
   "scala": {
     "board": [
