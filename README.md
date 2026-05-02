@@ -816,12 +816,12 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Kotlin+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Kotlin+board) | **2** |
-| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board) | ❌ | **3** |
+| **3** | ⭕ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (Kotlin)**
+🎮 **Next Move: ❌ (Kotlin)**
 
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
+Recent moves: ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1 → ⭕ B3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
