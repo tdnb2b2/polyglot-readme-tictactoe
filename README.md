@@ -1197,14 +1197,14 @@ File.write('current_state.json', JSON.pretty_generate(state))
 <!-- BOARD_RUST_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Rust+board) | **1** |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Rust+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Rust+board) | **2** |
-| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board) | ❌ | **3** |
+| **1** | ⭕ | ❌ | ___ | **1** |
+| **2** | ⭕ | ❌ | ___ | **2** |
+| **3** | ⭕ | ___ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (Rust)**
+🏆 Winner: ⭕ (Rust)
 
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
+Recent moves: ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1 → ⭕ A2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
