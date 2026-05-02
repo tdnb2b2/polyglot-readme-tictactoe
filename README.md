@@ -996,12 +996,12 @@ fun checkWinner(b: List<List<String>>): String? {
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | ⭕ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+PHP+board) | ⭕ | ❌ | **3** |
+| **3** | ❌ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (PHP)**
+🤝 Game Draw
 
-Recent moves: ⭕ C1 → ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2
+Recent moves: ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2 → ❌ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
