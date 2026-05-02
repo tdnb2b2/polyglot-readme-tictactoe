@@ -447,7 +447,7 @@
       [
         "X",
         "",
-        ""
+        "O"
       ],
       [
         "",
@@ -460,21 +460,25 @@
         "O"
       ]
     ],
-    "turn": "O",
     "log": [
       {
-        "cell": "B2",
-        "player": "X"
+        "player": "X",
+        "cell": "B2"
       },
       {
-        "cell": "C3",
-        "player": "O"
+        "player": "O",
+        "cell": "C3"
       },
       {
-        "cell": "A1",
-        "player": "X"
+        "player": "X",
+        "cell": "A1"
+      },
+      {
+        "player": "O",
+        "cell": "C1"
       }
-    ]
+    ],
+    "turn": "X"
   },
   "typescript": {
     "board": [
