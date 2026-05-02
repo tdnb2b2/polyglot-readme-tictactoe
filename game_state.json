@@ -72,7 +72,7 @@
   "csharp": {
     "board": [
       [
-        "",
+        "X",
         "",
         "O"
       ],
@@ -87,7 +87,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -105,6 +105,10 @@
       {
         "player": "O",
         "cell": "A2"
+      },
+      {
+        "player": "X",
+        "cell": "A1"
       }
     ]
   },
