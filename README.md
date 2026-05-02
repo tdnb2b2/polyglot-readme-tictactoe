@@ -187,14 +187,14 @@ int main() {
 <!-- BOARD_CPP_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ⭕ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%2B%2B+board) | **2** |
-| **3** | ❌ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C%2B%2B+board) | **3** |
+| **1** | ⭕ | ⭕ | ❌ | **1** |
+| **2** | ⭕ | ❌ | ___ | **2** |
+| **3** | ❌ | ❌ | ___ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (C++)**
+🏆 Winner: ❌ (C++)
 
-Recent moves: ⭕ A1 → ❌ B3 → ⭕ B1 → ❌ A3 → ⭕ A2
+Recent moves: ❌ B3 → ⭕ B1 → ❌ A3 → ⭕ A2 → ❌ C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
