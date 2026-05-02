@@ -527,6 +527,7 @@
     ]
   },
   "swift": {
+    "turn": "X",
     "board": [
       [
         "X",
@@ -539,12 +540,11 @@
         "X"
       ],
       [
-        "",
+        "O",
         "X",
         "O"
       ]
     ],
-    "turn": "O",
     "log": [
       {
         "player": "X",
@@ -559,20 +559,24 @@
         "cell": "A1"
       },
       {
-        "player": "O",
-        "cell": "C1"
+        "cell": "C1",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "C2"
+        "cell": "C2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "A2"
+        "cell": "A2",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "B3"
+        "cell": "B3",
+        "player": "X"
+      },
+      {
+        "cell": "A3",
+        "player": "O"
       }
     ]
   },
