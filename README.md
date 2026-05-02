@@ -1129,12 +1129,12 @@ with open('current_state.json', 'w') as f:
 |---|---|---|---|---|
 | **1** | ⭕ | ❌ | ⭕ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Ruby+board) | ⭕ | ❌ | **3** |
+| **3** | ❌ | ⭕ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Ruby)**
+🤝 Game Draw
 
-Recent moves: ⭕ C1 → ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2
+Recent moves: ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2 → ❌ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
