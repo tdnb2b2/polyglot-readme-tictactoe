@@ -502,7 +502,7 @@
   "swift": {
     "board": [
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -517,13 +517,17 @@
         ""
       ]
     ],
+    "turn": "X",
     "log": [
       {
         "player": "X",
         "cell": "B2"
+      },
+      {
+        "player": "O",
+        "cell": "A1"
       }
-    ],
-    "turn": "O"
+    ]
   },
   "typescript": {
     "board": [
