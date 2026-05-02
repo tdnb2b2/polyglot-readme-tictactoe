@@ -1462,14 +1462,14 @@ object Game {
 <!-- BOARD_SWIFT_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Swift+board) | ⭕ | **1** |
+| **1** | ❌ | ❌ | ⭕ | **1** |
 | **2** | ⭕ | ❌ | ❌ | **2** |
 | **3** | ⭕ | ❌ | ⭕ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Swift)**
+🏆 Winner: ❌ (Swift)
 
-Recent moves: ⭕ C1 → ❌ C2 → ⭕ A2 → ❌ B3 → ⭕ A3
+Recent moves: ❌ C2 → ⭕ A2 → ❌ B3 → ⭕ A3 → ❌ B1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
