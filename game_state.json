@@ -522,7 +522,7 @@
     "board": [
       [
         "O",
-        "",
+        "O",
         ""
       ],
       [
@@ -536,21 +536,25 @@
         "X"
       ]
     ],
-    "turn": "O",
     "log": [
       {
-        "player": "X",
-        "cell": "B2"
+        "cell": "B2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "A1"
+        "cell": "A1",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "C3"
+        "cell": "C3",
+        "player": "X"
+      },
+      {
+        "cell": "B1",
+        "player": "O"
       }
-    ]
+    ],
+    "turn": "X"
   },
   "typescript": {
     "board": [
