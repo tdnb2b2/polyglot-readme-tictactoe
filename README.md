@@ -1464,12 +1464,12 @@ object Game {
 |---|---|---|---|---|
 | **1** | ⭕ | ⭕ | ❌ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Swift+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Swift+board) | ❌ | **3** |
+| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Swift+board) | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ⭕ (Swift)**
+🎮 **Next Move: ❌ (Swift)**
 
-Recent moves: ❌ C3 → ⭕ B1 → ❌ C1 → ⭕ C2 → ❌ A2
+Recent moves: ⭕ B1 → ❌ C1 → ⭕ C2 → ❌ A2 → ⭕ A3
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
