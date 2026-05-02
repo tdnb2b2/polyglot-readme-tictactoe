@@ -1127,14 +1127,14 @@ with open('current_state.json', 'w') as f:
 <!-- BOARD_RUBY_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Ruby+board) | **1** |
+| **1** | ⭕ | ❌ | ❌ | **1** |
 | **2** | ❌ | ❌ | ⭕ | **2** |
 | **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Ruby+board) | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Ruby)**
+🎮 **Next Move: ⭕ (Ruby)**
 
-Recent moves: ⭕ A1 → ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2
+Recent moves: ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2 → ❌ C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
