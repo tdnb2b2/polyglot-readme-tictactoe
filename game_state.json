@@ -469,60 +469,23 @@
   "typescript": {
     "board": [
       [
-        "O",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "X",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
-        "O",
-        "O",
-        "X"
+        "",
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "X",
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "C1"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "A3"
-      },
-      {
-        "player": "X",
-        "cell": "C2"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "A2"
-      }
-    ]
+    "winner": null,
+    "log": []
   }
 }
