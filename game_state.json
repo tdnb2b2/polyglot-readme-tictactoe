@@ -4,7 +4,7 @@
       [
         "X",
         "X",
-        ""
+        "O"
       ],
       [
         "",
@@ -18,7 +18,7 @@
       ]
     ],
     "turn": "O",
-    "winner": null,
+    "winner": "O",
     "log": [
       {
         "player": "X",
@@ -39,6 +39,10 @@
       {
         "player": "X",
         "cell": "B1"
+      },
+      {
+        "player": "O",
+        "cell": "C1"
       }
     ]
   },
