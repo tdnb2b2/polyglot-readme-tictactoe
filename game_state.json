@@ -208,7 +208,7 @@
   "javascript": {
     "board": [
       [
-        "",
+        "O",
         "X",
         ""
       ],
@@ -223,7 +223,7 @@
         "O"
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -237,6 +237,10 @@
       {
         "player": "X",
         "cell": "B1"
+      },
+      {
+        "player": "O",
+        "cell": "A1"
       }
     ]
   },
