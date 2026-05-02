@@ -565,14 +565,14 @@ func main() {
 <!-- BOARD_JAVA_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Java+board) | ⭕ | ⭕ | **1** |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) | **2** |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Java+board) | ❌ | ❌ | **3** |
+| **1** | ❌ | ⭕ | ⭕ | **1** |
+| **2** | ⭕ | ❌ | ___ | **2** |
+| **3** | ___ | ❌ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Java)**
+🏆 Winner: ❌ (Java)
 
-Recent moves: ⭕ A2 → ❌ C3 → ⭕ B1 → ❌ B3 → ⭕ C1
+Recent moves: ❌ C3 → ⭕ B1 → ❌ B3 → ⭕ C1 → ❌ A1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
