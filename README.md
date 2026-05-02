@@ -1537,14 +1537,14 @@ main()
 <!-- BOARD_TYPESCRIPT_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | ⭕ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+TypeScript+board) | **1** |
-| **2** | ❌ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+TypeScript+board) | **2** |
-| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+TypeScript+board) | ❌ | **3** |
+| **1** | ⭕ | ⭕ | ___ | **1** |
+| **2** | ❌ | ❌ | ❌ | **2** |
+| **3** | ⭕ | ___ | ❌ | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (TypeScript)**
+🏆 Winner: ❌ (TypeScript)
 
-Recent moves: ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ A2 → ⭕ B1
+Recent moves: ❌ C3 → ⭕ A3 → ❌ A2 → ⭕ B1 → ❌ C2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
