@@ -480,10 +480,11 @@
     ]
   },
   "swift": {
+    "turn": "O",
     "board": [
       [
         "X",
-        "",
+        "X",
         "O"
       ],
       [
@@ -499,23 +500,26 @@
     ],
     "log": [
       {
-        "player": "X",
-        "cell": "B2"
+        "cell": "B2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "C3"
+        "cell": "C3",
+        "player": "O"
       },
       {
-        "player": "X",
-        "cell": "A1"
+        "cell": "A1",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "C1"
+        "cell": "C1",
+        "player": "O"
+      },
+      {
+        "cell": "B1",
+        "player": "X"
       }
-    ],
-    "turn": "X"
+    ]
   },
   "typescript": {
     "board": [
