@@ -170,7 +170,9 @@ def main():
                     repo=repo,
                     turn=l_state.get('turn', 'X'),
                     winner=l_state.get('winner', None),
-                    log=l_state.get('log', [])
+                    log=l_state.get('log', []),
+                    input_info=title,
+                    output_info=(result.stdout + "\n" + result.stderr).strip() or "Success"
                 )
                 new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
 
