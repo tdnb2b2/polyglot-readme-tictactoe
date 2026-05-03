@@ -23,7 +23,7 @@ Recent moves: ⭕ C1 → ❌ B1 → ⭕ B3 → ❌ A2 → ⭕ C2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -202,7 +202,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -358,7 +358,7 @@ Recent moves: ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1 → ⭕ B3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -444,7 +444,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -580,7 +580,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -761,7 +761,7 @@ Recent moves: ❌ B2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -829,7 +829,7 @@ Recent moves: ❌ B2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1007,7 +1007,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1064,20 +1064,20 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
 <!-- BOARD_PYTHON_START -->
 |   | A | B | C |   |
 |---|---|---|---|---|
-| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Python+board) | **1** |
+| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Python+board) | ❌ | **1** |
 | **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) | **2** |
 | **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) | **3** |
 |   | A | B | C |   |
 
-🎮 **Next Move: ❌ (Python)**
+🎮 **Next Move: ⭕ (Python)**
 
-Recent moves: ❌ B2 → ⭕ A3
+Recent moves: ❌ B2 → ⭕ A3 → ❌ C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1140,7 +1140,7 @@ Recent moves: ❌ B2 → ⭕ A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1210,7 +1210,7 @@ Recent moves: ❌ B2 → ⭕ A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1292,7 +1292,7 @@ fn check_winner(b: &[Vec<String>]) -> Option<String> {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1473,7 +1473,7 @@ Recent moves: ❌ B2 → ⭕ A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1554,7 +1554,7 @@ Recent moves: ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1 → ⭕ A2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**:
 ```text
 Success
