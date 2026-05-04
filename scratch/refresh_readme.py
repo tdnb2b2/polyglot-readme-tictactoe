@@ -27,7 +27,7 @@ def refresh_all():
         print(f"Rendering board for {lang}...")
         new_board_md = render_board_md(
             state['board'], lang, owner, repo,
-            state['turn'], state['winner'], state['log']
+            state.get('turn', 'X'), state.get('winner'), state.get('log', [])
         )
         
         tag = f"BOARD_{lang.upper()}"

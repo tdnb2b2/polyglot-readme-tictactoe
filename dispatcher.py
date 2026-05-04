@@ -145,6 +145,9 @@ def main():
         with open(state_path, 'r', encoding='utf-8') as f:
             updated_state = json.load(f)
         
+        updated_state['last_input'] = title
+        updated_state['last_output'] = (result.stdout + "\n" + result.stderr).strip() or "Success"
+
         all_states[lang] = updated_state
         with open('game_state.json', 'w', encoding='utf-8') as f:
             json.dump(all_states, f, indent=2)
@@ -164,15 +167,15 @@ def main():
             # 1. Update all individual language boards to keep them in sync and clean up legacy corruption
             for l_key, l_state in all_states.items():
                 l_md = render_board_md(
-                    board=l_state['board'],
+                    board=l_state.get('board', [['','',''],['','',''],['','','']]),
                     lang_key=l_key,
                     owner=owner,
                     repo=repo,
                     turn=l_state.get('turn', 'X'),
                     winner=l_state.get('winner', None),
                     log=l_state.get('log', []),
-                    input_info=title,
-                    output_info=(result.stdout + "\n" + result.stderr).strip() or "Success"
+                    input_info=l_state.get('last_input', 'Initial/Unknown'),
+                    output_info=l_state.get('last_output', 'Success')
                 )
                 new_content = replace_section(new_content, f"BOARD_{l_key.upper()}", l_md)
 
