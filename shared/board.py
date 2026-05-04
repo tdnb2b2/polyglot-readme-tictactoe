@@ -11,7 +11,6 @@ CELL_TO_IDX = {
 
 def get_source_code(lang_key: str) -> str:
     """Retrieves source code for the specific language implementation."""
-    # Mapping to actual entry files found in implementations/
     lang_file_map = {
         'python': 'game.py',
         'javascript': 'game.js',
@@ -92,7 +91,9 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
             else:
                 title = f"{lang_display}%3A+Tic-Tac-Toe%3A+Put+{cell_name}"
                 link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body=Play+{lang_display}+board'
-                cells.append(f'[___]({link})')
+                # Escape pipe character in URL to prevent breaking markdown table
+                safe_link = link.replace('|', '%7C')
+                cells.append(f'[___]({safe_link})')
         cells.append(f'**{row_label}**')
         rows.append(f'| {" | ".join(cells)} |')
 
