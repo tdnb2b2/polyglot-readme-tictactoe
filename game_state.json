@@ -2,57 +2,26 @@
   "c": {
     "board": [
       [
-        "O",
-        "X",
-        "O"
-      ],
-      [
-        "X",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
         "",
-        "O",
-        "X"
+        "",
+        ""
+      ],
+      [
+        "X",
+        "",
+        ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "C1"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "A2"
-      },
-      {
-        "player": "O",
-        "cell": "C2"
-      }
-    ]
+    "log": [],
+    "last_input": "c: Tic-Tac-Toe: Put A3",
+    "last_output": "Success"
   },
   "cpp": {
     "board": [
@@ -156,7 +125,7 @@
     "board": [
       [
         "O",
-        "",
+        "X",
         ""
       ],
       [
@@ -170,7 +139,7 @@
         "X"
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -188,8 +157,14 @@
       {
         "player": "O",
         "cell": "A3"
+      },
+      {
+        "player": "X",
+        "cell": "B1"
       }
-    ]
+    ],
+    "last_input": "go: Tic-Tac-Toe: Put B1",
+    "last_output": "Success"
   },
   "java": {
     "board": [
@@ -233,7 +208,7 @@
   "javascript": {
     "board": [
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -248,14 +223,20 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
         "player": "X",
         "cell": "B2"
+      },
+      {
+        "player": "O",
+        "cell": "A1"
       }
-    ]
+    ],
+    "last_input": "javascript: Tic-Tac-Toe: Put A1",
+    "last_output": "Success"
   },
   "kotlin": {
     "board": [
@@ -331,7 +312,7 @@
     "board": [
       [
         "O",
-        "",
+        "X",
         "X"
       ],
       [
@@ -345,7 +326,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -363,14 +344,20 @@
       {
         "player": "O",
         "cell": "A1"
+      },
+      {
+        "player": "X",
+        "cell": "B1"
       }
-    ]
+    ],
+    "last_input": "python: Tic-Tac-Toe: Put B1",
+    "last_output": "Success"
   },
   "ruby": {
     "board": [
       [
         "O",
-        "",
+        "X",
         ""
       ],
       [
@@ -384,7 +371,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -394,14 +381,20 @@
       {
         "player": "O",
         "cell": "A1"
+      },
+      {
+        "player": "X",
+        "cell": "B1"
       }
-    ]
+    ],
+    "last_input": "ruby: Tic-Tac-Toe: Put B1",
+    "last_output": "Success"
   },
   "rust": {
     "board": [
       [
         "O",
-        "",
+        "X",
         ""
       ],
       [
@@ -415,7 +408,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -425,8 +418,14 @@
       {
         "player": "O",
         "cell": "A1"
+      },
+      {
+        "player": "X",
+        "cell": "B1"
       }
-    ]
+    ],
+    "last_input": "rust: Tic-Tac-Toe: Put B1",
+    "last_output": "Finished `release` profile [optimized] target(s) in 0.08s\n     Running `target/release/game`"
   },
   "scala": {
     "board": [
@@ -451,21 +450,25 @@
     "log": []
   },
   "swift": {
-    "turn": "X",
+    "turn": "O",
     "log": [
       {
-        "player": "X",
-        "cell": "B2"
+        "cell": "B2",
+        "player": "X"
       },
       {
-        "player": "O",
-        "cell": "A1"
+        "cell": "A1",
+        "player": "O"
+      },
+      {
+        "cell": "B1",
+        "player": "X"
       }
     ],
     "board": [
       [
         "O",
-        "",
+        "X",
         ""
       ],
       [
@@ -478,55 +481,32 @@
         "",
         ""
       ]
-    ]
+    ],
+    "last_input": "swift: Tic-Tac-Toe: Put B1",
+    "last_output": "Success"
   },
   "typescript": {
     "board": [
       [
-        "O",
-        "X",
-        ""
-      ],
-      [
-        "O",
-        "X",
-        ""
-      ],
-      [
-        "O",
         "",
-        "X"
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
+      ],
+      [
+        "",
+        "",
+        ""
       ]
     ],
-    "turn": "O",
-    "winner": "O",
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      },
-      {
-        "player": "O",
-        "cell": "A3"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "A2"
-      }
-    ],
-    "last_input": "TypeScript: Tic-Tac-Toe: Put C2",
+    "turn": "X",
+    "winner": null,
+    "log": [],
+    "last_input": "typescript: Tic-Tac-Toe: Reset",
     "last_output": "> polyglot-readme-tictactoe-typescript@1.0.0 play\n> ts-node game.ts"
   }
 }

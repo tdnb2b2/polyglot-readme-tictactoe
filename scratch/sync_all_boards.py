@@ -43,18 +43,18 @@ def main():
         
         # Render current board
         board_md = render_board_md(
-            state['board'],
+            state.get('board', [['','',''],['','',''],['','','']]),
             lang_key,
             "tdnb2b2",
             "polyglot-readme-tictactoe",
-            state['turn'],
-            state['winner'],
-            state['log']
+            state.get('turn', 'X'),
+            state.get('winner'),
+            state.get('log', [])
         )
         
         # Replace in README
-        marker_start = f'<!-- {lang_key.upper()}_START -->'
-        marker_end = f'<!-- {lang_key.upper()}_END -->'
+        marker_start = f'<!-- BOARD_{lang_key.upper()}_START -->'
+        marker_end = f'<!-- BOARD_{lang_key.upper()}_END -->'
         
         pattern = re.compile(f'{re.escape(marker_start)}.*?{re.escape(marker_end)}', re.DOTALL)
         replacement = f'{marker_start}\n{board_md}\n{marker_end}'
