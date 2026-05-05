@@ -6,8 +6,8 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
 
 ## 🛠️ Individual Boards
 
-
 ### Python
+
 <!-- BOARD_PYTHON_START -->
 
 
@@ -76,6 +76,7 @@ with open('current_state.json', 'w') as f:
 <!-- BOARD_PYTHON_END -->
 
 ### Javascript
+
 <!-- BOARD_JAVASCRIPT_START -->
 
 
@@ -149,6 +150,7 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 <!-- BOARD_JAVASCRIPT_END -->
 
 ### Typescript
+
 <!-- BOARD_TYPESCRIPT_START -->
 
 
@@ -233,6 +235,7 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 <!-- BOARD_TYPESCRIPT_END -->
 
 ### Go
+
 <!-- BOARD_GO_START -->
 
 
@@ -374,6 +377,7 @@ func main() {
 <!-- BOARD_GO_END -->
 
 ### Rust
+
 <!-- BOARD_RUST_START -->
 
 
@@ -463,6 +467,7 @@ fn check_winner(b: &[Vec<String>]) -> Option<String> {
 <!-- BOARD_RUST_END -->
 
 ### Java
+
 <!-- BOARD_JAVA_START -->
 
 
@@ -649,6 +654,7 @@ public class Game {
 <!-- BOARD_JAVA_END -->
 
 ### Kotlin
+
 <!-- BOARD_KOTLIN_START -->
 
 
@@ -832,6 +838,7 @@ fun checkWinner(b: List<List<String>>): String? {
 <!-- BOARD_KOTLIN_END -->
 
 ### Php
+
 <!-- BOARD_PHP_START -->
 
 
@@ -907,6 +914,7 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
 <!-- BOARD_PHP_END -->
 
 ### Ruby
+
 <!-- BOARD_RUBY_START -->
 
 
@@ -982,6 +990,7 @@ File.write('current_state.json', JSON.pretty_generate(state))
 <!-- BOARD_RUBY_END -->
 
 ### Csharp
+
 <!-- BOARD_CSHARP_START -->
 
 
@@ -1073,6 +1082,7 @@ class Program {
 <!-- BOARD_CSHARP_END -->
 
 ### C
+
 <!-- BOARD_C_START -->
 
 
@@ -1255,6 +1265,7 @@ int main() {
 <!-- BOARD_C_END -->
 
 ### Cpp
+
 <!-- BOARD_CPP_START -->
 
 
@@ -1416,6 +1427,7 @@ int main() {
 <!-- BOARD_CPP_END -->
 
 ### Scala
+
 <!-- BOARD_SCALA_START -->
 
 
@@ -1600,6 +1612,7 @@ object Game {
 <!-- BOARD_SCALA_END -->
 
 ### Swift
+
 <!-- BOARD_SWIFT_START -->
 
 
@@ -1684,3 +1697,4 @@ main()
 </details>
 
 <!-- BOARD_SWIFT_END -->
+
