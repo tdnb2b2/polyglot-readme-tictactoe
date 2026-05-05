@@ -56,8 +56,8 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
     if not pattern.search(content):
         return content
         
-    # Add extra newlines for GitHub rendering robustness
-    return pattern.sub(f"{start_tag}\n\n{replacement}\n\n{end_tag}", content)
+    # FORCE multiple blank lines for GitHub rendering separation
+    return pattern.sub(f"{start_tag}\n\n\n{replacement}\n\n\n{end_tag}", content)
 
 def _normalize_log_entry(entry):
     if isinstance(entry, dict):
@@ -142,8 +142,8 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
         rows.append(f'| {" | ".join(cells)} |')
 
     rows.append('|   | A | B | C |   |')
-    # Use double newline to force a new block in GitHub Markdown
-    board_md = '\n\n' + '\n'.join(rows)
+    # Triple newline to ensure a new Markdown block even if previous text is messy
+    board_md = '\n\n\n' + '\n'.join(rows) + '\n\n\n'
 
     # Status
     if winner:
@@ -203,5 +203,4 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
 </details>
 """
 
-    return board_md + "\n\n" + status + log_md + new_game_link + "\n\n" + tech_details
-
+    return board_md + status + log_md + new_game_link + "\n\n\n" + tech_details
