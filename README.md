@@ -6,1128 +6,9 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
 
 ## 🛠️ Individual Boards
 
-### Python
-
-<!-- BOARD_PYTHON_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | ❌ | ❌ |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) |
-| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) |
-
-🎮 **Next Move: ⭕ (Python)**
-
-Recent moves: ❌ B2 → ⭕ A3 → ❌ C1 → ⭕ A1 → ❌ B1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `python: Tic-Tac-Toe: Put B1`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (Python)
-```python
-import json, os
-
-with open('current_state.json', 'r') as f:
-    s = json.load(f)
-
-cell = os.environ.get('CELL', '').upper()
-action = os.environ.get('ACTION', 'put')
-
-def check_winner(b):
-    lines = [[(0,0),(0,1),(0,2)],[(1,0),(1,1),(1,2)],[(2,0),(2,1),(2,2)], [(0,0),(1,0),(2,0)],[(0,1),(1,1),(2,1)],[(0,2),(1,2),(2,2)], [(0,0),(1,1),(2,2)],[(0,2),(1,1),(2,0)]]
-    for l in lines:
-        v = [b[r][c] for r, c in l]
-        if v[0] != '' and all(x == v[0] for x in v): return v[0]
-    return None
-
-if action == 'reset':
-    # Only allow reset if game is finished
-    is_full = all(all(x != '' for x in row) for row in s['board'])
-    if s.get('winner') or is_full:
-        s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
-elif cell and not s['winner']:
-    r, c = int(cell[1]) - 1, ord(cell[0]) - ord('A')
-    if 0 <= r < 3 and 0 <= c < 3 and s['board'][r][c] == '':
-        s['board'][r][c] = s['turn']
-        s['log'].append({"player": s['turn'], "cell": cell})
-        win = check_winner(s['board'])
-        if win: s['winner'] = win
-        elif all(all(x != '' for x in row) for row in s['board']): s['winner'] = 'draw'
-        else: s['turn'] = 'O' if s['turn'] == 'X' else 'X'
-
-with open('current_state.json', 'w') as f:
-    json.dump(s, f, indent=2)
-
-```
-
-</details>
-
-
-
-<!-- BOARD_PYTHON_END -->
-
-### Javascript
-
-<!-- BOARD_JAVASCRIPT_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+JavaScript+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+JavaScript+board) |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+JavaScript+board) |
-
-🎮 **Next Move: ❌ (JavaScript)**
-
-Recent moves: ❌ B2 → ⭕ A1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `javascript: Tic-Tac-Toe: Put A1`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (JavaScript)
-```javascript
-const fs = require('fs');
-const state = JSON.parse(fs.readFileSync('current_state.json', 'utf8'));
-
-const cell = process.env.CELL ? process.env.CELL.toUpperCase() : '';
-const action = process.env.ACTION || 'put';
-
-function checkWinner(b) {
-  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-  const flat = b.flat();
-  for (let l of lines) {
-    if (flat[l[0]] && flat[l[0]] === flat[l[1]] && flat[l[0]] === flat[l[2]]) return flat[l[0]];
-  }
-  return null;
-}
-
-if (action === 'reset') {
-  const isFull = state.board.every(row => row.every(c => c !== ''));
-  if (state.winner || isFull) {
-    state.board = [['','',''],['','',''],['','','']];
-    state.turn = 'X';
-    state.winner = null;
-    state.log = [];
-  }
-} else if (cell && !state.winner) {
-  const r = parseInt(cell[1]) - 1;
-  const c = cell.charCodeAt(0) - 65;
-  if (r >= 0 && r < 3 && c >= 0 && c < 3 && state.board[r][c] === '') {
-    state.board[r][c] = state.turn;
-    state.log.push({ player: state.turn, cell });
-    const win = checkWinner(state.board);
-    if (win) state.winner = win;
-    else if (state.board.flat().every(x => x !== '')) state.winner = 'draw';
-    else state.turn = state.turn === 'X' ? 'O' : 'X';
-  }
-}
-
-fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
-
-```
-
-</details>
-
-
-
-<!-- BOARD_JAVASCRIPT_END -->
-
-### Typescript
-
-<!-- BOARD_TYPESCRIPT_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+TypeScript+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+TypeScript+board) |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+TypeScript+board) |
-
-🎮 **Next Move: ❌ (TypeScript)**
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `typescript: Tic-Tac-Toe: Reset`
-- **Output (Information given)**:
-```text
-> polyglot-readme-tictactoe-typescript@1.0.0 play
-> ts-node game.ts
-```
-
-### 💻 Implementation Code (TypeScript)
-```typescript
-import * as fs from 'fs';
-
-interface Move {
-  player: string;
-  cell: string;
-}
-
-interface State {
-  board: string[][];
-  turn: string;
-  winner: string | null;
-  log: Move[];
-}
-
-const state: State = JSON.parse(fs.readFileSync('current_state.json', 'utf8'));
-
-const cell = process.env.CELL ? process.env.CELL.toUpperCase() : '';
-const action = process.env.ACTION || 'put';
-
-function checkWinner(b: string[][]): string | null {
-  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-  const flat = b.flat();
-  for (let l of lines) {
-    if (flat[l[0]] && flat[l[0]] === flat[l[1]] && flat[l[0]] === flat[l[2]]) return flat[l[0]];
-  }
-  return null;
-}
-
-if (action === 'reset') {
-  const isFull = state.board.every(row => row.every(c => c !== ''));
-  if (state.winner || isFull) {
-    state.board = [['','',''],['','',''],['','','']];
-    state.turn = 'X';
-    state.winner = null;
-    state.log = [];
-  }
-} else if (cell && !state.winner) {
-  const r = parseInt(cell[1]) - 1;
-  const c = cell.charCodeAt(0) - 65;
-  if (r >= 0 && r < 3 && c >= 0 && c < 3 && state.board[r][c] === '') {
-    state.board[r][c] = state.turn;
-    state.log.push({ player: state.turn, cell });
-    const win = checkWinner(state.board);
-    if (win) state.winner = win;
-    else if (state.board.flat().every(x => x !== '')) state.winner = 'draw';
-    else state.turn = state.turn === 'X' ? 'O' : 'X';
-  }
-}
-
-fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
-
-```
-
-</details>
-
-
-
-<!-- BOARD_TYPESCRIPT_END -->
-
-### Go
-
-<!-- BOARD_GO_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Go+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Go+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Go+board) |
-| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Go+board) | ❌ |
-
-🎮 **Next Move: ⭕ (Go)**
-
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `go: Tic-Tac-Toe: Put B1`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (Go)
-```go
-package main
-
-import (
-	"encoding/json"
-	"os"
-	"strings"
-)
-
-type Move struct {
-	Player string `json:"player"`
-	Cell   string `json:"cell"`
-}
-
-type State struct {
-	Board  [][]string `json:"board"`
-	Turn   string     `json:"turn"`
-	Winner *string    `json:"winner"`
-	Log    []Move     `json:"log"`
-}
-
-func writeState(state State) {
-	f, _ := os.Create("current_state.json")
-	defer f.Close()
-	enc := json.NewEncoder(f)
-	enc.SetIndent("", "  ")
-	enc.Encode(state)
-}
-
-func checkWinner(b [][]string) *string {
-	lines := [][]int{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}}
-	flat := []string{}
-	for _, row := range b {
-		flat = append(flat, row...)
-	}
-	for _, l := range lines {
-		if flat[l[0]] != "" && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]] {
-			res := flat[l[0]]
-			return &res
-		}
-	}
-	return nil
-}
-
-func main() {
-	f, _ := os.ReadFile("current_state.json")
-	var state State
-	json.Unmarshal(f, &state)
-
-	cell := strings.ToUpper(os.Getenv("CELL"))
-	action := os.Getenv("ACTION")
-	if action == "" {
-		action = "put"
-	}
-
-	if action == "reset" {
-		isFull := true
-		for _, row := range state.Board {
-			for _, c := range row {
-				if c == "" {
-					isFull = false
-				}
-			}
-		}
-		if state.Winner != nil || isFull {
-			state = State{
-				Board:  [][]string{{"", "", ""}, {"", "", ""}, {"", "", ""}},
-				Turn:   "X",
-				Winner: nil,
-				Log:    []Move{},
-			}
-		}
-	} else if cell != "" && state.Winner == nil {
-		r := int(cell[1]-'1')
-		c := int(cell[0]-'A')
-		if r >= 0 && r < 3 && c >= 0 && c < 3 && state.Board[r][c] == "" {
-			state.Board[r][c] = state.Turn
-			state.Log = append(state.Log, Move{Player: state.Turn, Cell: cell})
-			win := checkWinner(state.Board)
-			if win != nil {
-				state.Winner = win
-			} else {
-				full := true
-				for _, row := range state.Board {
-					for _, x := range row {
-						if x == "" {
-							full = false
-						}
-					}
-				}
-				if full {
-					d := "draw"
-					state.Winner = &d
-				} else {
-					if state.Turn == "X" {
-						state.Turn = "O"
-					} else {
-						state.Turn = "X"
-					}
-				}
-			}
-		}
-	}
-
-	writeState(state)
-}
-
-```
-
-</details>
-
-
-
-<!-- BOARD_GO_END -->
-
-### Rust
-
-<!-- BOARD_RUST_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Rust+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Rust+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Rust+board) |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Rust+board) |
-
-🎮 **Next Move: ⭕ (Rust)**
-
-Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `rust: Tic-Tac-Toe: Put B1`
-- **Output (Information given)**:
-```text
-Finished `release` profile [optimized] target(s) in 0.08s
-     Running `target/release/game`
-```
-
-### 💻 Implementation Code (Rust)
-```rust
-use serde::{Deserialize, Serialize};
-use std::env;
-use std::fs;
-
-#[derive(Serialize, Deserialize, Clone)]
-struct Move { player: String, cell: String }
-
-#[derive(Serialize, Deserialize)]
-struct State { board: Vec<Vec<String>>, turn: String, winner: Option<String>, log: Vec<Move> }
-
-fn main() {
-    let data = fs::read_to_string("current_state.json").unwrap();
-    let mut state: State = serde_json::from_str(&data).unwrap();
-
-    let cell = env::var("CELL").unwrap_or_default().to_uppercase();
-    let action = env::var("ACTION").unwrap_or_else(|_| "put".to_string());
-
-    if action == "reset" {
-        let is_full = state.board.iter().all(|row| row.iter().all(|c| !c.is_empty()));
-        if state.winner.is_some() || is_full {
-            state.board = vec![vec!["".to_string(); 3]; 3];
-            state.turn = "X".to_string();
-            state.winner = None;
-            state.log = vec![];
-        }
-    } else if !cell.is_empty() && state.winner.is_none() {
-        let r = (cell.chars().nth(1).unwrap() as u8 - b'1') as usize;
-        let c = (cell.chars().nth(0).unwrap() as u8 - b'A') as usize;
-        if r < 3 && c < 3 && state.board[r][c].is_empty() {
-            state.board[r][c] = state.turn.clone();
-            state.log.push(Move { player: state.turn.clone(), cell: cell.clone() });
-            if let Some(win) = check_winner(&state.board) {
-                state.winner = Some(win);
-            } else if state.board.iter().all(|row| row.iter().all(|x| !x.is_empty())) {
-                state.winner = Some("draw".to_string());
-            } else {
-                state.turn = if state.turn == "X" { "O".to_string() } else { "X".to_string() };
-            }
-        }
-    }
-    fs::write("current_state.json", serde_json::to_string_pretty(&state).unwrap()).unwrap();
-}
-
-fn check_winner(b: &[Vec<String>]) -> Option<String> {
-    let lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-    let flat: Vec<_> = b.iter().flatten().collect();
-    for l in lines {
-        if !flat[l[0]].is_empty() && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]] {
-            return Some(flat[l[0]].clone());
-        }
-    }
-    None
-}
-
-```
-
-</details>
-
-
-
-<!-- BOARD_RUST_END -->
-
-### Java
-
-<!-- BOARD_JAVA_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Java+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Java+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Java+board) | ❌ |
-
-🎮 **Next Move: ❌ (Java)**
-
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ B1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `Initial/Unknown`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (Java)
-```java
-import java.io.*;
-import java.nio.file.*;
-import java.util.*;
-
-public class Game {
-    static class Move { 
-        String player; 
-        String cell; 
-        Move(String p, String c) { this.player = p; this.cell = c; }
-    }
-    static class State { 
-        String[][] board = new String[3][3]; 
-        String turn = "X"; 
-        String winner = null; 
-        List<Move> log = new ArrayList<>(); 
-    }
-
-    public static void main(String[] args) throws Exception {
-        String json = new String(Files.readAllBytes(Paths.get("current_state.json")));
-        State state = parseState(json);
-
-        String cell = System.getenv("CELL");
-        if (cell != null) cell = cell.toUpperCase();
-        String action = System.getenv("ACTION");
-        if (action == null) action = "put";
-
-        if ("reset".equals(action)) {
-            boolean isFull = true; for(String[] r : state.board) for(String c : r) if(c == null || c.isEmpty()) isFull = false;
-            if (state.winner != null || isFull) {
-                state.board = new String[][]{{"","",""}, {"","",""}, {"","",""}};
-                state.turn = "X";
-                state.winner = null;
-                state.log = new ArrayList<>();
-            }
-        } else if (cell != null && !cell.isEmpty() && state.winner == null) {
-            int r = cell.charAt(1) - '1';
-            int c = cell.charAt(0) - 'A';
-            if (r >= 0 && r < 3 && c >= 0 && c < 3 && (state.board[r][c] == null || state.board[r][c].isEmpty())) {
-                state.board[r][c] = state.turn;
-                state.log.add(new Move(state.turn, cell));
-                String win = checkWinner(state.board);
-                if (win != null) state.winner = win;
-                else {
-                    boolean full = true; for(String[] row : state.board) for(String x : row) if(x == null || x.isEmpty()) full = false;
-                    if (full) state.winner = "draw";
-                    else state.turn = state.turn.equals("X") ? "O" : "X";
-                }
-            }
-        }
-        Files.write(Paths.get("current_state.json"), stateToJson(state).getBytes());
-    }
-
-    static State parseState(String json) {
-        State s = new State();
-        // Simple manual parsing
-        if (json.contains("\"board\"")) {
-            int boardIdx = json.indexOf("\"board\"");
-            int startIdx = json.indexOf("[", boardIdx);
-            int row = 0;
-            int pos = startIdx + 1;
-            while (row < 3) {
-                int rowStart = json.indexOf("[", pos);
-                if (rowStart == -1) break;
-                int rowEnd = json.indexOf("]", rowStart);
-                String rowStr = json.substring(rowStart + 1, rowEnd);
-                String[] cells = rowStr.split(",");
-                for (int col = 0; col < 3 && col < cells.length; col++) {
-                    String val = cells[col].trim().replace("\"", "");
-                    s.board[row][col] = val;
-                }
-                row++;
-                pos = rowEnd + 1;
-            }
-        }
-        if (json.contains("\"turn\"")) {
-            int idx = json.indexOf("\"turn\"");
-            int valStart = json.indexOf("\"", json.indexOf(":", idx));
-            int valEnd = json.indexOf("\"", valStart + 1);
-            s.turn = json.substring(valStart + 1, valEnd);
-        }
-        if (json.contains("\"winner\"")) {
-            int idx = json.indexOf("\"winner\"");
-            int colonIdx = json.indexOf(":", idx);
-            int nextQuote = json.indexOf("\"", colonIdx);
-            int nextComma = json.indexOf(",", colonIdx);
-            int nextBrace = json.indexOf("}", colonIdx);
-            int end = (nextComma != -1) ? nextComma : nextBrace;
-            String val = json.substring(colonIdx + 1, end).trim();
-            if (val.startsWith("\"")) {
-                s.winner = val.substring(1, val.lastIndexOf("\""));
-            } else if (val.equals("null")) {
-                s.winner = null;
-            } else {
-                s.winner = val;
-            }
-        }
-        if (json.contains("\"log\"")) {
-            int idx = json.indexOf("\"log\"");
-            int start = json.indexOf("[", idx);
-            int end = json.lastIndexOf("]");
-            String logContent = json.substring(start + 1, end).trim();
-            if (!logContent.isEmpty()) {
-                String[] entries = logContent.split("\\}");
-                for (String entry : entries) {
-                    if (entry.contains("{")) {
-                        int pIdx = entry.indexOf("\"player\"");
-                        int pValStart = entry.indexOf("\"", entry.indexOf(":", pIdx));
-                        int pValEnd = entry.indexOf("\"", pValStart + 1);
-                        String p = entry.substring(pValStart + 1, pValEnd);
-                        
-                        int cIdx = entry.indexOf("\"cell\"");
-                        int cValStart = entry.indexOf("\"", entry.indexOf(":", cIdx));
-                        int cValEnd = entry.indexOf("\"", cValStart + 1);
-                        String c = entry.substring(cValStart + 1, cValEnd);
-                        s.log.add(new Move(p, c));
-                    }
-                }
-            }
-        }
-        return s;
-    }
-
-    static String stateToJson(State s) {
-        StringBuilder sb = new StringBuilder();
-        sb.append("{\n  \"board\": [\n");
-        for (int i = 0; i < 3; i++) {
-            sb.append("    [\"").append(s.board[i][0]).append("\", \"").append(s.board[i][1]).append("\", \"").append(s.board[i][2]).append("\"]").append(i == 2 ? "" : ",").append("\n");
-        }
-        sb.append("  ],\n  \"turn\": \"").append(s.turn).append("\",\n");
-        sb.append("  \"winner\": ").append(s.winner == null ? "null" : "\"" + s.winner + "\"").append(",\n");
-        sb.append("  \"log\": [\n");
-        for (int i = 0; i < s.log.size(); i++) {
-            Move m = s.log.get(i);
-            sb.append("    {\"player\": \"").append(m.player).append("\", \"cell\": \"").append(m.cell).append("\"}").append(i == s.log.size() - 1 ? "" : ",").append("\n");
-        }
-        sb.append("  ]\n}");
-        return sb.toString();
-    }
-
-    static String checkWinner(String[][] b) {
-        int[][] lines = {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
-        String[] flat = new String[9];
-        for(int i=0; i<3; i++) for(int j=0; j<3; j++) flat[i*3+j] = b[i][j];
-        for(int[] l : lines) {
-            if (flat[l[0]] != null && !flat[l[0]].isEmpty() && flat[l[0]].equals(flat[l[1]]) && flat[l[0]].equals(flat[l[2]])) return flat[l[0]];
-        }
-        return null;
-    }
-}
-
-
-```
-
-</details>
-
-
-
-<!-- BOARD_JAVA_END -->
-
-### Kotlin
-
-<!-- BOARD_KOTLIN_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Kotlin+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Kotlin+board) |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board) |
-
-🎮 **Next Move: ⭕ (Kotlin)**
-
-Recent moves: ❌ B2
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `Initial/Unknown`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (Kotlin)
-```kotlin
-import java.io.File
-
-data class Move(val player: String, val cell: String)
-data class State(var board: List<MutableList<String>>, var turn: String, var winner: String?, var log: List<Move>)
-
-fun main() {
-    val file = File("current_state.json")
-    val json = file.readText()
-    val state = parseState(json)
-
-    val cell = System.getenv("CELL")?.toUpperCase() ?: ""
-    val action = System.getenv("ACTION") ?: "put"
-
-    if (action == "reset") {
-        val isFull = state.board.all { row -> row.all { it.isNotEmpty() } }
-        if (state.winner != null || isFull) {
-            state.board = listOf(mutableListOf("","",""), mutableListOf("","",""), mutableListOf("","",""))
-            state.turn = "X"
-            state.winner = null
-            state.log = emptyList()
-        }
-    } else if (cell.isNotEmpty() && state.winner == null) {
-        val r = cell[1] - '1'
-        val c = cell[0] - 'A'
-        if (r in 0..2 && c in 0..2 && state.board[r][c].isEmpty()) {
-            state.board[r][c] = state.turn
-            state.log = state.log + Move(state.turn, cell)
-            
-            val win = checkWinner(state.board)
-            if (win != null) state.winner = win
-            else {
-                if (state.board.all { row -> row.all { it.isNotEmpty() } }) state.winner = "draw"
-                else state.turn = if (state.turn == "X") "O" else "X"
-            }
-        }
-    }
-    file.writeText(stateToJson(state))
-}
-
-fun parseState(json: String): State {
-    val board = mutableListOf(mutableListOf("","",""), mutableListOf("","",""), mutableListOf("","",""))
-    var turn = "X"
-    var winner: String? = null
-    val log = mutableListOf<Move>()
-
-    if (json.contains("\"board\"")) {
-        val boardIdx = json.indexOf("\"board\"")
-        val startIdx = json.indexOf("[", boardIdx)
-        var row = 0
-        var pos = startIdx + 1
-        while (row < 3) {
-            val rowStart = json.indexOf("[", pos)
-            if (rowStart == -1) break
-            val rowEnd = json.indexOf("]", rowStart)
-            val rowStr = json.substring(rowStart + 1, rowEnd)
-            val cells = rowStr.split(",")
-            for (col in 0 until 3) {
-                if (col < cells.size) {
-                    board[row][col] = cells[col].trim().replace("\"", "")
-                }
-            }
-            row++
-            pos = rowEnd + 1
-        }
-    }
-    
-    if (json.contains("\"turn\"")) {
-        val idx = json.indexOf("\"turn\"")
-        val valStart = json.indexOf("\"", json.indexOf(":", idx))
-        val valEnd = json.indexOf("\"", valStart + 1)
-        turn = json.substring(valStart + 1, valEnd)
-    }
-    
-    if (json.contains("\"winner\"")) {
-        val idx = json.indexOf("\"winner\"")
-        val colonIdx = json.indexOf(":", idx)
-        val nextQuote = json.indexOf("\"", colonIdx)
-        val nextComma = json.indexOf(",", colonIdx)
-        val nextBrace = json.indexOf("}", colonIdx)
-        val end = if (nextComma != -1) nextComma else nextBrace
-        val value = json.substring(colonIdx + 1, end).trim()
-        if (value.startsWith("\"")) {
-            winner = value.substring(1, value.lastIndexOf("\""))
-        } else if (value == "null") {
-            winner = null
-        } else {
-            winner = value
-        }
-    }
-    
-    if (json.contains("\"log\"")) {
-        val idx = json.indexOf("\"log\"")
-        val start = json.indexOf("[", idx)
-        val end = json.lastIndexOf("]")
-        val logContent = json.substring(start + 1, end).trim()
-        if (logContent.isNotEmpty()) {
-            val entries = logContent.split("}")
-            for (entry in entries) {
-                if (entry.contains("{")) {
-                    val pIdx = entry.indexOf("\"player\"")
-                    val pValStart = entry.indexOf("\"", entry.indexOf(":", pIdx))
-                    val pValEnd = entry.indexOf("\"", pValStart + 1)
-                    val p = entry.substring(pValStart + 1, pValEnd)
-                    
-                    val cIdx = entry.indexOf("\"cell\"")
-                    val cValStart = entry.indexOf("\"", entry.indexOf(":", cIdx))
-                    val cValEnd = entry.indexOf("\"", cValStart + 1)
-                    val c = entry.substring(cValStart + 1, cValEnd)
-                    log.add(Move(p, c))
-                }
-            }
-        }
-    }
-
-    return State(board, turn, winner, log)
-}
-
-fun stateToJson(s: State): String {
-    val sb = StringBuilder()
-    sb.append("{\n  \"board\": [\n")
-    for (i in 0 until 3) {
-        sb.append("    [\"${s.board[i][0]}\", \"${s.board[i][1]}\", \"${s.board[i][2]}\"]")
-        if (i < 2) sb.append(",")
-        sb.append("\n")
-    }
-    sb.append("  ],\n  \"turn\": \"${s.turn}\",\n")
-    sb.append("  \"winner\": ").append(if (s.winner == null) "null" else "\"${s.winner}\"").append(",\n")
-    sb.append("  \"log\": [\n")
-    for (i in s.log.indices) {
-        val m = s.log[i]
-        sb.append("    {\"player\": \"${m.player}\", \"cell\": \"${m.cell}\"}")
-        if (i < s.log.size - 1) sb.append(",")
-        sb.append("\n")
-    }
-    sb.append("  ]\n}")
-    return sb.toString()
-}
-
-fun checkWinner(b: List<List<String>>): String? {
-    val lines = listOf(listOf(0,1,2),listOf(3,4,5),listOf(6,7,8),listOf(0,3,6),listOf(1,4,7),listOf(2,5,8),listOf(0,4,8),listOf(2,4,6))
-    val flat = b.flatten()
-    for (l in lines) {
-        if (flat[l[0]].isNotEmpty() && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]]) return flat[l[0]]
-    }
-    return null
-}
-
-
-```
-
-</details>
-
-
-
-<!-- BOARD_KOTLIN_END -->
-
-### Php
-
-<!-- BOARD_PHP_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+PHP+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+PHP+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+PHP+board) |
-| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+PHP+board) | ❌ |
-
-🎮 **Next Move: ⭕ (PHP)**
-
-Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `Initial/Unknown`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (PHP)
-```php
-<?php
-$state = json_decode(file_get_contents('current_state.json'), true);
-
-$cell = getenv('CELL') ? strtoupper(getenv('CELL')) : '';
-$action = getenv('ACTION') ?: 'put';
-
-function check_winner($b) {
-    $lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
-    $flat = array_merge(...$b);
-    foreach ($lines as $l) {
-        if ($flat[$l[0]] && $flat[$l[0]] === $flat[$l[1]] && $flat[$l[0]] === $flat[$l[2]]) return $flat[$l[0]];
-    }
-    return null;
-}
-
-if ($action === 'reset') {
-    $is_full = true;
-    foreach ($state['board'] as $row) foreach ($row as $c) if ($c === '') $is_full = false;
-    if ($state['winner'] !== null || $is_full) {
-        $state = ["board" => [["","",""],["","",""],["","",""]], "turn" => "X", "winner" => null, "log" => []];
-    }
-} else if ($cell && $state['winner'] === null) {
-    $r = (int)$cell[1] - 1;
-    $c = ord($cell[0]) - ord('A');
-    if ($r >= 0 && $r < 3 && $c >= 0 && $c < 3 && $state['board'][$r][$c] === '') {
-        $state['board'][$r][$c] = $state['turn'];
-        $state['log'][] = ["player" => $state['turn'], "cell" => $cell];
-        $win = check_winner($state['board']);
-        if ($win) $state['winner'] = $win;
-        else {
-            $full = true;
-            foreach ($state['board'] as $row) foreach ($row as $x) if ($x === '') $full = false;
-            if ($full) $state['winner'] = 'draw';
-            else $state['turn'] = $state['turn'] === 'X' ? 'O' : 'X';
-        }
-    }
-}
-
-file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
-
-```
-
-</details>
-
-
-
-<!-- BOARD_PHP_END -->
-
-### Ruby
-
-<!-- BOARD_RUBY_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Ruby+board) |
-| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Ruby+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Ruby+board) |
-| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) |
-
-🎮 **Next Move: ⭕ (Ruby)**
-
-Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `ruby: Tic-Tac-Toe: Put B1`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (Ruby)
-```ruby
-require 'json'
-
-state = JSON.parse(File.read('current_state.json'))
-
-cell = (ENV['CELL'] || '').upcase
-action = ENV['ACTION'] || 'put'
-
-def check_winner(b)
-  lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
-  flat = b.flatten
-  lines.each do |l|
-    return flat[l[0]] if flat[l[0]] != '' && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]]
-  end
-  nil
-end
-
-if action == 'reset'
-  is_full = state['board'].flatten.all? { |c| c != '' }
-  if state['winner'] || is_full
-    state = {"board" => [["","",""],["","",""],["","",""]], "turn" => "X", "winner" => nil, "log" => []}
-  end
-elsif cell != '' && !state['winner']
-  r = cell[1].to_i - 1
-  c = cell[0].ord - 'A'.ord
-  if r >= 0 && r < 3 && c >= 0 && c < 3 && state['board'][r][c] == ''
-    state['board'][r][c] = state['turn']
-    state['log'] << {"player" => state['turn'], "cell" => cell}
-    win = check_winner(state['board'])
-    if win
-      state['winner'] = win
-    elsif state['board'].flatten.all? { |x| x != '' }
-      state['winner'] = 'draw'
-    else
-      state['turn'] = state['turn'] == 'X' ? 'O' : 'X'
-    end
-  end
-end
-
-File.write('current_state.json', JSON.pretty_generate(state))
-
-```
-
-</details>
-
-
-
-<!-- BOARD_RUBY_END -->
-
-### Csharp
-
-<!-- BOARD_CSHARP_START -->
-
-
-
-
-| | A | B | C |
-|---|---|---|---|
-| **1** | ❌ | ❌ | ⭕ |
-| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%23+board) |
-| **3** | ❌ | ⭕ | ⭕ |
-
-🎮 **Next Move: ❌ (C#)**
-
-Recent moves: ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1 → ⭕ B3
-
-
-
-
-<details>
-<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
-
-### 🛰️ Execution Context
-- **Input (Information received)**: `Initial/Unknown`
-- **Output (Information given)**:
-```text
-Success
-```
-
-### 💻 Implementation Code (C#)
-```csharp
-using System;
-using System.Collections.Generic;
-using System.IO;
-using System.Text.Json;
-using System.Linq;
-
-public class Move { public string player { get; set; } public string cell { get; set; } }
-public class State { 
-    public string[][] board { get; set; } 
-    public string turn { get; set; } 
-    public string winner { get; set; } 
-    public List<Move> log { get; set; } 
-}
-
-class Program {
-    static void Main() {
-        string json = File.ReadAllText("current_state.json");
-        var options = new JsonSerializerOptions { WriteIndented = true };
-        var state = JsonSerializer.Deserialize<State>(json);
-
-        string cell = Environment.GetEnvironmentVariable("CELL")?.ToUpper();
-        string action = Environment.GetEnvironmentVariable("ACTION") ?? "put";
-
-        if (action == "reset") {
-            bool isFull = state.board.All(row => row.All(c => !string.IsNullOrEmpty(c)));
-            if (state.winner != null || isFull) {
-                state.board = new string[][] { new string[]{"","",""}, new string[]{"","",""}, new string[]{"","",""} };
-                state.turn = "X";
-                state.winner = null;
-                state.log = new List<Move>();
-            }
-        } else if (!string.IsNullOrEmpty(cell) && state.winner == null) {
-            int r = cell[1] - '1';
-            int c = cell[0] - 'A';
-            if (r >= 0 && r < 3 && c >= 0 && c < 3 && string.IsNullOrEmpty(state.board[r][c])) {
-                state.board[r][c] = state.turn;
-                state.log.Add(new Move { player = state.turn, cell = cell });
-                string win = CheckWinner(state.board);
-                if (win != null) state.winner = win;
-                else if (state.board.All(row => row.All(x => !string.IsNullOrEmpty(x)))) state.winner = "draw";
-                else state.turn = state.turn == "X" ? "O" : "X";
-            }
-        }
-        File.WriteAllText("current_state.json", JsonSerializer.Serialize(state, options));
-    }
-
-    static string CheckWinner(string[][] b) {
-        int[][] lines = { new[] {0,1,2}, new[] {3,4,5}, new[] {6,7,8}, new[] {0,3,6}, new[] {1,4,7}, new[] {2,5,8}, new[] {0,4,8}, new[] {2,4,6} };
-        var flat = b.SelectMany(x => x).ToArray();
-        foreach (var l in lines) {
-            if (!string.IsNullOrEmpty(flat[l[0]]) && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]]) return flat[l[0]];
-        }
-        return null;
-    }
-}
-
-```
-
-</details>
-
-
-
-<!-- BOARD_CSHARP_END -->
-
 ### C
 
 <!-- BOARD_C_START -->
-
-
 
 
 | | A | B | C |
@@ -1137,6 +18,8 @@ class Program {
 | **3** | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C+board) |
 
 🎮 **Next Move: ⭕ (C)**
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C+game)**
 
 
 
@@ -1306,15 +189,11 @@ int main() {
 
 </details>
 
-
-
 <!-- BOARD_C_END -->
 
-### Cpp
+### C++
 
 <!-- BOARD_CPP_START -->
-
-
 
 
 | | A | B | C |
@@ -1327,6 +206,8 @@ int main() {
 
 Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C%2B%2B+game)**
+
 
 
 
@@ -1334,7 +215,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial/Unknown`
+- **Input (Information received)**: ``
 - **Output (Information given)**:
 ```text
 Success
@@ -1472,15 +353,1020 @@ int main() {
 
 </details>
 
-
-
 <!-- BOARD_CPP_END -->
+
+### C#
+
+<!-- BOARD_CSHARP_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ❌ | ❌ | ⭕ |
+| **2** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%23+board) |
+| **3** | ❌ | ⭕ | ⭕ |
+
+🎮 **Next Move: ❌ (C#)**
+
+Recent moves: ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1 → ⭕ B3
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C%23+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: ``
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (C#)
+```csharp
+using System;
+using System.Collections.Generic;
+using System.IO;
+using System.Text.Json;
+using System.Linq;
+
+public class Move { public string player { get; set; } public string cell { get; set; } }
+public class State { 
+    public string[][] board { get; set; } 
+    public string turn { get; set; } 
+    public string winner { get; set; } 
+    public List<Move> log { get; set; } 
+}
+
+class Program {
+    static void Main() {
+        string json = File.ReadAllText("current_state.json");
+        var options = new JsonSerializerOptions { WriteIndented = true };
+        var state = JsonSerializer.Deserialize<State>(json);
+
+        string cell = Environment.GetEnvironmentVariable("CELL")?.ToUpper();
+        string action = Environment.GetEnvironmentVariable("ACTION") ?? "put";
+
+        if (action == "reset") {
+            bool isFull = state.board.All(row => row.All(c => !string.IsNullOrEmpty(c)));
+            if (state.winner != null || isFull) {
+                state.board = new string[][] { new string[]{"","",""}, new string[]{"","",""}, new string[]{"","",""} };
+                state.turn = "X";
+                state.winner = null;
+                state.log = new List<Move>();
+            }
+        } else if (!string.IsNullOrEmpty(cell) && state.winner == null) {
+            int r = cell[1] - '1';
+            int c = cell[0] - 'A';
+            if (r >= 0 && r < 3 && c >= 0 && c < 3 && string.IsNullOrEmpty(state.board[r][c])) {
+                state.board[r][c] = state.turn;
+                state.log.Add(new Move { player = state.turn, cell = cell });
+                string win = CheckWinner(state.board);
+                if (win != null) state.winner = win;
+                else if (state.board.All(row => row.All(x => !string.IsNullOrEmpty(x)))) state.winner = "draw";
+                else state.turn = state.turn == "X" ? "O" : "X";
+            }
+        }
+        File.WriteAllText("current_state.json", JsonSerializer.Serialize(state, options));
+    }
+
+    static string CheckWinner(string[][] b) {
+        int[][] lines = { new[] {0,1,2}, new[] {3,4,5}, new[] {6,7,8}, new[] {0,3,6}, new[] {1,4,7}, new[] {2,5,8}, new[] {0,4,8}, new[] {2,4,6} };
+        var flat = b.SelectMany(x => x).ToArray();
+        foreach (var l in lines) {
+            if (!string.IsNullOrEmpty(flat[l[0]]) && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]]) return flat[l[0]];
+        }
+        return null;
+    }
+}
+
+```
+
+</details>
+
+<!-- BOARD_CSHARP_END -->
+
+### Go
+
+<!-- BOARD_GO_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Go+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Go+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Go+board) |
+| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Go+board) | ❌ |
+
+🎮 **Next Move: ⭕ (Go)**
+
+Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Go+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `go: Tic-Tac-Toe: Put B1`
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (Go)
+```go
+package main
+
+import (
+	"encoding/json"
+	"os"
+	"strings"
+)
+
+type Move struct {
+	Player string `json:"player"`
+	Cell   string `json:"cell"`
+}
+
+type State struct {
+	Board  [][]string `json:"board"`
+	Turn   string     `json:"turn"`
+	Winner *string    `json:"winner"`
+	Log    []Move     `json:"log"`
+}
+
+func writeState(state State) {
+	f, _ := os.Create("current_state.json")
+	defer f.Close()
+	enc := json.NewEncoder(f)
+	enc.SetIndent("", "  ")
+	enc.Encode(state)
+}
+
+func checkWinner(b [][]string) *string {
+	lines := [][]int{{0, 1, 2}, {3, 4, 5}, {6, 7, 8}, {0, 3, 6}, {1, 4, 7}, {2, 5, 8}, {0, 4, 8}, {2, 4, 6}}
+	flat := []string{}
+	for _, row := range b {
+		flat = append(flat, row...)
+	}
+	for _, l := range lines {
+		if flat[l[0]] != "" && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]] {
+			res := flat[l[0]]
+			return &res
+		}
+	}
+	return nil
+}
+
+func main() {
+	f, _ := os.ReadFile("current_state.json")
+	var state State
+	json.Unmarshal(f, &state)
+
+	cell := strings.ToUpper(os.Getenv("CELL"))
+	action := os.Getenv("ACTION")
+	if action == "" {
+		action = "put"
+	}
+
+	if action == "reset" {
+		isFull := true
+		for _, row := range state.Board {
+			for _, c := range row {
+				if c == "" {
+					isFull = false
+				}
+			}
+		}
+		if state.Winner != nil || isFull {
+			state = State{
+				Board:  [][]string{{"", "", ""}, {"", "", ""}, {"", "", ""}},
+				Turn:   "X",
+				Winner: nil,
+				Log:    []Move{},
+			}
+		}
+	} else if cell != "" && state.Winner == nil {
+		r := int(cell[1]-'1')
+		c := int(cell[0]-'A')
+		if r >= 0 && r < 3 && c >= 0 && c < 3 && state.Board[r][c] == "" {
+			state.Board[r][c] = state.Turn
+			state.Log = append(state.Log, Move{Player: state.Turn, Cell: cell})
+			win := checkWinner(state.Board)
+			if win != nil {
+				state.Winner = win
+			} else {
+				full := true
+				for _, row := range state.Board {
+					for _, x := range row {
+						if x == "" {
+							full = false
+						}
+					}
+				}
+				if full {
+					d := "draw"
+					state.Winner = &d
+				} else {
+					if state.Turn == "X" {
+						state.Turn = "O"
+					} else {
+						state.Turn = "X"
+					}
+				}
+			}
+		}
+	}
+
+	writeState(state)
+}
+
+```
+
+</details>
+
+<!-- BOARD_GO_END -->
+
+### Java
+
+<!-- BOARD_JAVA_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Java+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Java+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board) |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Java+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Java+board) | ❌ |
+
+🎮 **Next Move: ❌ (Java)**
+
+Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Java+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: ``
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (Java)
+```java
+import java.io.*;
+import java.nio.file.*;
+import java.util.*;
+
+public class Game {
+    static class Move { 
+        String player; 
+        String cell; 
+        Move(String p, String c) { this.player = p; this.cell = c; }
+    }
+    static class State { 
+        String[][] board = new String[3][3]; 
+        String turn = "X"; 
+        String winner = null; 
+        List<Move> log = new ArrayList<>(); 
+    }
+
+    public static void main(String[] args) throws Exception {
+        String json = new String(Files.readAllBytes(Paths.get("current_state.json")));
+        State state = parseState(json);
+
+        String cell = System.getenv("CELL");
+        if (cell != null) cell = cell.toUpperCase();
+        String action = System.getenv("ACTION");
+        if (action == null) action = "put";
+
+        if ("reset".equals(action)) {
+            boolean isFull = true; for(String[] r : state.board) for(String c : r) if(c == null || c.isEmpty()) isFull = false;
+            if (state.winner != null || isFull) {
+                state.board = new String[][]{{"","",""}, {"","",""}, {"","",""}};
+                state.turn = "X";
+                state.winner = null;
+                state.log = new ArrayList<>();
+            }
+        } else if (cell != null && !cell.isEmpty() && state.winner == null) {
+            int r = cell.charAt(1) - '1';
+            int c = cell.charAt(0) - 'A';
+            if (r >= 0 && r < 3 && c >= 0 && c < 3 && (state.board[r][c] == null || state.board[r][c].isEmpty())) {
+                state.board[r][c] = state.turn;
+                state.log.add(new Move(state.turn, cell));
+                String win = checkWinner(state.board);
+                if (win != null) state.winner = win;
+                else {
+                    boolean full = true; for(String[] row : state.board) for(String x : row) if(x == null || x.isEmpty()) full = false;
+                    if (full) state.winner = "draw";
+                    else state.turn = state.turn.equals("X") ? "O" : "X";
+                }
+            }
+        }
+        Files.write(Paths.get("current_state.json"), stateToJson(state).getBytes());
+    }
+
+    static State parseState(String json) {
+        State s = new State();
+        // Simple manual parsing
+        if (json.contains("\"board\"")) {
+            int boardIdx = json.indexOf("\"board\"");
+            int startIdx = json.indexOf("[", boardIdx);
+            int row = 0;
+            int pos = startIdx + 1;
+            while (row < 3) {
+                int rowStart = json.indexOf("[", pos);
+                if (rowStart == -1) break;
+                int rowEnd = json.indexOf("]", rowStart);
+                String rowStr = json.substring(rowStart + 1, rowEnd);
+                String[] cells = rowStr.split(",");
+                for (int col = 0; col < 3 && col < cells.length; col++) {
+                    String val = cells[col].trim().replace("\"", "");
+                    s.board[row][col] = val;
+                }
+                row++;
+                pos = rowEnd + 1;
+            }
+        }
+        if (json.contains("\"turn\"")) {
+            int idx = json.indexOf("\"turn\"");
+            int valStart = json.indexOf("\"", json.indexOf(":", idx));
+            int valEnd = json.indexOf("\"", valStart + 1);
+            s.turn = json.substring(valStart + 1, valEnd);
+        }
+        if (json.contains("\"winner\"")) {
+            int idx = json.indexOf("\"winner\"");
+            int colonIdx = json.indexOf(":", idx);
+            int nextQuote = json.indexOf("\"", colonIdx);
+            int nextComma = json.indexOf(",", colonIdx);
+            int nextBrace = json.indexOf("}", colonIdx);
+            int end = (nextComma != -1) ? nextComma : nextBrace;
+            String val = json.substring(colonIdx + 1, end).trim();
+            if (val.startsWith("\"")) {
+                s.winner = val.substring(1, val.lastIndexOf("\""));
+            } else if (val.equals("null")) {
+                s.winner = null;
+            } else {
+                s.winner = val;
+            }
+        }
+        if (json.contains("\"log\"")) {
+            int idx = json.indexOf("\"log\"");
+            int start = json.indexOf("[", idx);
+            int end = json.lastIndexOf("]");
+            String logContent = json.substring(start + 1, end).trim();
+            if (!logContent.isEmpty()) {
+                String[] entries = logContent.split("\\}");
+                for (String entry : entries) {
+                    if (entry.contains("{")) {
+                        int pIdx = entry.indexOf("\"player\"");
+                        int pValStart = entry.indexOf("\"", entry.indexOf(":", pIdx));
+                        int pValEnd = entry.indexOf("\"", pValStart + 1);
+                        String p = entry.substring(pValStart + 1, pValEnd);
+                        
+                        int cIdx = entry.indexOf("\"cell\"");
+                        int cValStart = entry.indexOf("\"", entry.indexOf(":", cIdx));
+                        int cValEnd = entry.indexOf("\"", cValStart + 1);
+                        String c = entry.substring(cValStart + 1, cValEnd);
+                        s.log.add(new Move(p, c));
+                    }
+                }
+            }
+        }
+        return s;
+    }
+
+    static String stateToJson(State s) {
+        StringBuilder sb = new StringBuilder();
+        sb.append("{\n  \"board\": [\n");
+        for (int i = 0; i < 3; i++) {
+            sb.append("    [\"").append(s.board[i][0]).append("\", \"").append(s.board[i][1]).append("\", \"").append(s.board[i][2]).append("\"]").append(i == 2 ? "" : ",").append("\n");
+        }
+        sb.append("  ],\n  \"turn\": \"").append(s.turn).append("\",\n");
+        sb.append("  \"winner\": ").append(s.winner == null ? "null" : "\"" + s.winner + "\"").append(",\n");
+        sb.append("  \"log\": [\n");
+        for (int i = 0; i < s.log.size(); i++) {
+            Move m = s.log.get(i);
+            sb.append("    {\"player\": \"").append(m.player).append("\", \"cell\": \"").append(m.cell).append("\"}").append(i == s.log.size() - 1 ? "" : ",").append("\n");
+        }
+        sb.append("  ]\n}");
+        return sb.toString();
+    }
+
+    static String checkWinner(String[][] b) {
+        int[][] lines = {{0,1,2},{3,4,5},{6,7,8},{0,3,6},{1,4,7},{2,5,8},{0,4,8},{2,4,6}};
+        String[] flat = new String[9];
+        for(int i=0; i<3; i++) for(int j=0; j<3; j++) flat[i*3+j] = b[i][j];
+        for(int[] l : lines) {
+            if (flat[l[0]] != null && !flat[l[0]].isEmpty() && flat[l[0]].equals(flat[l[1]]) && flat[l[0]].equals(flat[l[2]])) return flat[l[0]];
+        }
+        return null;
+    }
+}
+
+
+```
+
+</details>
+
+<!-- BOARD_JAVA_END -->
+
+### JavaScript
+
+<!-- BOARD_JAVASCRIPT_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+JavaScript+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+JavaScript+board) |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+JavaScript+board) |
+
+🎮 **Next Move: ❌ (JavaScript)**
+
+Recent moves: ❌ B2 → ⭕ A1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+JavaScript+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `javascript: Tic-Tac-Toe: Put A1`
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (JavaScript)
+```javascript
+const fs = require('fs');
+const state = JSON.parse(fs.readFileSync('current_state.json', 'utf8'));
+
+const cell = process.env.CELL ? process.env.CELL.toUpperCase() : '';
+const action = process.env.ACTION || 'put';
+
+function checkWinner(b) {
+  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  const flat = b.flat();
+  for (let l of lines) {
+    if (flat[l[0]] && flat[l[0]] === flat[l[1]] && flat[l[0]] === flat[l[2]]) return flat[l[0]];
+  }
+  return null;
+}
+
+if (action === 'reset') {
+  const isFull = state.board.every(row => row.every(c => c !== ''));
+  if (state.winner || isFull) {
+    state.board = [['','',''],['','',''],['','','']];
+    state.turn = 'X';
+    state.winner = null;
+    state.log = [];
+  }
+} else if (cell && !state.winner) {
+  const r = parseInt(cell[1]) - 1;
+  const c = cell.charCodeAt(0) - 65;
+  if (r >= 0 && r < 3 && c >= 0 && c < 3 && state.board[r][c] === '') {
+    state.board[r][c] = state.turn;
+    state.log.push({ player: state.turn, cell });
+    const win = checkWinner(state.board);
+    if (win) state.winner = win;
+    else if (state.board.flat().every(x => x !== '')) state.winner = 'draw';
+    else state.turn = state.turn === 'X' ? 'O' : 'X';
+  }
+}
+
+fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
+
+```
+
+</details>
+
+<!-- BOARD_JAVASCRIPT_END -->
+
+### Kotlin
+
+<!-- BOARD_KOTLIN_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Kotlin+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Kotlin+board) |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board) |
+
+🎮 **Next Move: ⭕ (Kotlin)**
+
+Recent moves: ❌ B2
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Kotlin+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: ``
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (Kotlin)
+```kotlin
+import java.io.File
+
+data class Move(val player: String, val cell: String)
+data class State(var board: List<MutableList<String>>, var turn: String, var winner: String?, var log: List<Move>)
+
+fun main() {
+    val file = File("current_state.json")
+    val json = file.readText()
+    val state = parseState(json)
+
+    val cell = System.getenv("CELL")?.toUpperCase() ?: ""
+    val action = System.getenv("ACTION") ?: "put"
+
+    if (action == "reset") {
+        val isFull = state.board.all { row -> row.all { it.isNotEmpty() } }
+        if (state.winner != null || isFull) {
+            state.board = listOf(mutableListOf("","",""), mutableListOf("","",""), mutableListOf("","",""))
+            state.turn = "X"
+            state.winner = null
+            state.log = emptyList()
+        }
+    } else if (cell.isNotEmpty() && state.winner == null) {
+        val r = cell[1] - '1'
+        val c = cell[0] - 'A'
+        if (r in 0..2 && c in 0..2 && state.board[r][c].isEmpty()) {
+            state.board[r][c] = state.turn
+            state.log = state.log + Move(state.turn, cell)
+            
+            val win = checkWinner(state.board)
+            if (win != null) state.winner = win
+            else {
+                if (state.board.all { row -> row.all { it.isNotEmpty() } }) state.winner = "draw"
+                else state.turn = if (state.turn == "X") "O" else "X"
+            }
+        }
+    }
+    file.writeText(stateToJson(state))
+}
+
+fun parseState(json: String): State {
+    val board = mutableListOf(mutableListOf("","",""), mutableListOf("","",""), mutableListOf("","",""))
+    var turn = "X"
+    var winner: String? = null
+    val log = mutableListOf<Move>()
+
+    if (json.contains("\"board\"")) {
+        val boardIdx = json.indexOf("\"board\"")
+        val startIdx = json.indexOf("[", boardIdx)
+        var row = 0
+        var pos = startIdx + 1
+        while (row < 3) {
+            val rowStart = json.indexOf("[", pos)
+            if (rowStart == -1) break
+            val rowEnd = json.indexOf("]", rowStart)
+            val rowStr = json.substring(rowStart + 1, rowEnd)
+            val cells = rowStr.split(",")
+            for (col in 0 until 3) {
+                if (col < cells.size) {
+                    board[row][col] = cells[col].trim().replace("\"", "")
+                }
+            }
+            row++
+            pos = rowEnd + 1
+        }
+    }
+    
+    if (json.contains("\"turn\"")) {
+        val idx = json.indexOf("\"turn\"")
+        val valStart = json.indexOf("\"", json.indexOf(":", idx))
+        val valEnd = json.indexOf("\"", valStart + 1)
+        turn = json.substring(valStart + 1, valEnd)
+    }
+    
+    if (json.contains("\"winner\"")) {
+        val idx = json.indexOf("\"winner\"")
+        val colonIdx = json.indexOf(":", idx)
+        val nextQuote = json.indexOf("\"", colonIdx)
+        val nextComma = json.indexOf(",", colonIdx)
+        val nextBrace = json.indexOf("}", colonIdx)
+        val end = if (nextComma != -1) nextComma else nextBrace
+        val value = json.substring(colonIdx + 1, end).trim()
+        if (value.startsWith("\"")) {
+            winner = value.substring(1, value.lastIndexOf("\""))
+        } else if (value == "null") {
+            winner = null
+        } else {
+            winner = value
+        }
+    }
+    
+    if (json.contains("\"log\"")) {
+        val idx = json.indexOf("\"log\"")
+        val start = json.indexOf("[", idx)
+        val end = json.lastIndexOf("]")
+        val logContent = json.substring(start + 1, end).trim()
+        if (logContent.isNotEmpty()) {
+            val entries = logContent.split("}")
+            for (entry in entries) {
+                if (entry.contains("{")) {
+                    val pIdx = entry.indexOf("\"player\"")
+                    val pValStart = entry.indexOf("\"", entry.indexOf(":", pIdx))
+                    val pValEnd = entry.indexOf("\"", pValStart + 1)
+                    val p = entry.substring(pValStart + 1, pValEnd)
+                    
+                    val cIdx = entry.indexOf("\"cell\"")
+                    val cValStart = entry.indexOf("\"", entry.indexOf(":", cIdx))
+                    val cValEnd = entry.indexOf("\"", cValStart + 1)
+                    val c = entry.substring(cValStart + 1, cValEnd)
+                    log.add(Move(p, c))
+                }
+            }
+        }
+    }
+
+    return State(board, turn, winner, log)
+}
+
+fun stateToJson(s: State): String {
+    val sb = StringBuilder()
+    sb.append("{\n  \"board\": [\n")
+    for (i in 0 until 3) {
+        sb.append("    [\"${s.board[i][0]}\", \"${s.board[i][1]}\", \"${s.board[i][2]}\"]")
+        if (i < 2) sb.append(",")
+        sb.append("\n")
+    }
+    sb.append("  ],\n  \"turn\": \"${s.turn}\",\n")
+    sb.append("  \"winner\": ").append(if (s.winner == null) "null" else "\"${s.winner}\"").append(",\n")
+    sb.append("  \"log\": [\n")
+    for (i in s.log.indices) {
+        val m = s.log[i]
+        sb.append("    {\"player\": \"${m.player}\", \"cell\": \"${m.cell}\"}")
+        if (i < s.log.size - 1) sb.append(",")
+        sb.append("\n")
+    }
+    sb.append("  ]\n}")
+    return sb.toString()
+}
+
+fun checkWinner(b: List<List<String>>): String? {
+    val lines = listOf(listOf(0,1,2),listOf(3,4,5),listOf(6,7,8),listOf(0,3,6),listOf(1,4,7),listOf(2,5,8),listOf(0,4,8),listOf(2,4,6))
+    val flat = b.flatten()
+    for (l in lines) {
+        if (flat[l[0]].isNotEmpty() && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]]) return flat[l[0]]
+    }
+    return null
+}
+
+
+```
+
+</details>
+
+<!-- BOARD_KOTLIN_END -->
+
+### PHP
+
+<!-- BOARD_PHP_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+PHP+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+PHP+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+PHP+board) |
+| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+PHP+board) | ❌ |
+
+🎮 **Next Move: ⭕ (PHP)**
+
+Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+PHP+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: ``
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (PHP)
+```php
+<?php
+$state = json_decode(file_get_contents('current_state.json'), true);
+
+$cell = getenv('CELL') ? strtoupper(getenv('CELL')) : '';
+$action = getenv('ACTION') ?: 'put';
+
+function check_winner($b) {
+    $lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    $flat = array_merge(...$b);
+    foreach ($lines as $l) {
+        if ($flat[$l[0]] && $flat[$l[0]] === $flat[$l[1]] && $flat[$l[0]] === $flat[$l[2]]) return $flat[$l[0]];
+    }
+    return null;
+}
+
+if ($action === 'reset') {
+    $is_full = true;
+    foreach ($state['board'] as $row) foreach ($row as $c) if ($c === '') $is_full = false;
+    if ($state['winner'] !== null || $is_full) {
+        $state = ["board" => [["","",""],["","",""],["","",""]], "turn" => "X", "winner" => null, "log" => []];
+    }
+} else if ($cell && $state['winner'] === null) {
+    $r = (int)$cell[1] - 1;
+    $c = ord($cell[0]) - ord('A');
+    if ($r >= 0 && $r < 3 && $c >= 0 && $c < 3 && $state['board'][$r][$c] === '') {
+        $state['board'][$r][$c] = $state['turn'];
+        $state['log'][] = ["player" => $state['turn'], "cell" => $cell];
+        $win = check_winner($state['board']);
+        if ($win) $state['winner'] = $win;
+        else {
+            $full = true;
+            foreach ($state['board'] as $row) foreach ($row as $x) if ($x === '') $full = false;
+            if ($full) $state['winner'] = 'draw';
+            else $state['turn'] = $state['turn'] === 'X' ? 'O' : 'X';
+        }
+    }
+}
+
+file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
+
+```
+
+</details>
+
+<!-- BOARD_PHP_END -->
+
+### Python
+
+<!-- BOARD_PYTHON_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | ❌ | ❌ |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Python+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board) |
+| **3** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Python+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Python+board) |
+
+🎮 **Next Move: ⭕ (Python)**
+
+Recent moves: ❌ B2 → ⭕ A3 → ❌ C1 → ⭕ A1 → ❌ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Python+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `python: Tic-Tac-Toe: Put B1`
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (Python)
+```python
+import json, os
+
+with open('current_state.json', 'r') as f:
+    s = json.load(f)
+
+cell = os.environ.get('CELL', '').upper()
+action = os.environ.get('ACTION', 'put')
+
+def check_winner(b):
+    lines = [[(0,0),(0,1),(0,2)],[(1,0),(1,1),(1,2)],[(2,0),(2,1),(2,2)], [(0,0),(1,0),(2,0)],[(0,1),(1,1),(2,1)],[(0,2),(1,2),(2,2)], [(0,0),(1,1),(2,2)],[(0,2),(1,1),(2,0)]]
+    for l in lines:
+        v = [b[r][c] for r, c in l]
+        if v[0] != '' and all(x == v[0] for x in v): return v[0]
+    return None
+
+if action == 'reset':
+    # Only allow reset if game is finished
+    is_full = all(all(x != '' for x in row) for row in s['board'])
+    if s.get('winner') or is_full:
+        s = {"board": [["","",""],["","",""],["","",""]], "turn": "X", "winner": None, "log": []}
+elif cell and not s['winner']:
+    r, c = int(cell[1]) - 1, ord(cell[0]) - ord('A')
+    if 0 <= r < 3 and 0 <= c < 3 and s['board'][r][c] == '':
+        s['board'][r][c] = s['turn']
+        s['log'].append({"player": s['turn'], "cell": cell})
+        win = check_winner(s['board'])
+        if win: s['winner'] = win
+        elif all(all(x != '' for x in row) for row in s['board']): s['winner'] = 'draw'
+        else: s['turn'] = 'O' if s['turn'] == 'X' else 'X'
+
+with open('current_state.json', 'w') as f:
+    json.dump(s, f, indent=2)
+
+```
+
+</details>
+
+<!-- BOARD_PYTHON_END -->
+
+### Ruby
+
+<!-- BOARD_RUBY_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Ruby+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Ruby+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Ruby+board) |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Ruby+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Ruby+board) |
+
+🎮 **Next Move: ⭕ (Ruby)**
+
+Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Ruby+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `ruby: Tic-Tac-Toe: Put B1`
+- **Output (Information given)**:
+```text
+Success
+```
+
+### 💻 Implementation Code (Ruby)
+```ruby
+require 'json'
+
+state = JSON.parse(File.read('current_state.json'))
+
+cell = (ENV['CELL'] || '').upcase
+action = ENV['ACTION'] || 'put'
+
+def check_winner(b)
+  lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]]
+  flat = b.flatten
+  lines.each do |l|
+    return flat[l[0]] if flat[l[0]] != '' && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]]
+  end
+  nil
+end
+
+if action == 'reset'
+  is_full = state['board'].flatten.all? { |c| c != '' }
+  if state['winner'] || is_full
+    state = {"board" => [["","",""],["","",""],["","",""]], "turn" => "X", "winner" => nil, "log" => []}
+  end
+elsif cell != '' && !state['winner']
+  r = cell[1].to_i - 1
+  c = cell[0].ord - 'A'.ord
+  if r >= 0 && r < 3 && c >= 0 && c < 3 && state['board'][r][c] == ''
+    state['board'][r][c] = state['turn']
+    state['log'] << {"player" => state['turn'], "cell" => cell}
+    win = check_winner(state['board'])
+    if win
+      state['winner'] = win
+    elsif state['board'].flatten.all? { |x| x != '' }
+      state['winner'] = 'draw'
+    else
+      state['turn'] = state['turn'] == 'X' ? 'O' : 'X'
+    end
+  end
+end
+
+File.write('current_state.json', JSON.pretty_generate(state))
+
+```
+
+</details>
+
+<!-- BOARD_RUBY_END -->
+
+### Rust
+
+<!-- BOARD_RUST_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Rust+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Rust+board) | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Rust+board) |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Rust+board) |
+
+🎮 **Next Move: ⭕ (Rust)**
+
+Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Rust+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `rust: Tic-Tac-Toe: Put B1`
+- **Output (Information given)**:
+```text
+Finished `release` profile [optimized] target(s) in 0.08s
+     Running `target/release/game`
+```
+
+### 💻 Implementation Code (Rust)
+```rust
+use serde::{Deserialize, Serialize};
+use std::env;
+use std::fs;
+
+#[derive(Serialize, Deserialize, Clone)]
+struct Move { player: String, cell: String }
+
+#[derive(Serialize, Deserialize)]
+struct State { board: Vec<Vec<String>>, turn: String, winner: Option<String>, log: Vec<Move> }
+
+fn main() {
+    let data = fs::read_to_string("current_state.json").unwrap();
+    let mut state: State = serde_json::from_str(&data).unwrap();
+
+    let cell = env::var("CELL").unwrap_or_default().to_uppercase();
+    let action = env::var("ACTION").unwrap_or_else(|_| "put".to_string());
+
+    if action == "reset" {
+        let is_full = state.board.iter().all(|row| row.iter().all(|c| !c.is_empty()));
+        if state.winner.is_some() || is_full {
+            state.board = vec![vec!["".to_string(); 3]; 3];
+            state.turn = "X".to_string();
+            state.winner = None;
+            state.log = vec![];
+        }
+    } else if !cell.is_empty() && state.winner.is_none() {
+        let r = (cell.chars().nth(1).unwrap() as u8 - b'1') as usize;
+        let c = (cell.chars().nth(0).unwrap() as u8 - b'A') as usize;
+        if r < 3 && c < 3 && state.board[r][c].is_empty() {
+            state.board[r][c] = state.turn.clone();
+            state.log.push(Move { player: state.turn.clone(), cell: cell.clone() });
+            if let Some(win) = check_winner(&state.board) {
+                state.winner = Some(win);
+            } else if state.board.iter().all(|row| row.iter().all(|x| !x.is_empty())) {
+                state.winner = Some("draw".to_string());
+            } else {
+                state.turn = if state.turn == "X" { "O".to_string() } else { "X".to_string() };
+            }
+        }
+    }
+    fs::write("current_state.json", serde_json::to_string_pretty(&state).unwrap()).unwrap();
+}
+
+fn check_winner(b: &[Vec<String>]) -> Option<String> {
+    let lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+    let flat: Vec<_> = b.iter().flatten().collect();
+    for l in lines {
+        if !flat[l[0]].is_empty() && flat[l[0]] == flat[l[1]] && flat[l[0]] == flat[l[2]] {
+            return Some(flat[l[0]].clone());
+        }
+    }
+    None
+}
+
+```
+
+</details>
+
+<!-- BOARD_RUST_END -->
 
 ### Scala
 
 <!-- BOARD_SCALA_START -->
-
-
 
 
 | | A | B | C |
@@ -1491,6 +1377,8 @@ int main() {
 
 🎮 **Next Move: ❌ (Scala)**
 
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Scala+game)**
+
 
 
 
@@ -1498,7 +1386,7 @@ int main() {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Initial/Unknown`
+- **Input (Information received)**: ``
 - **Output (Information given)**:
 ```text
 Success
@@ -1661,15 +1549,11 @@ object Game {
 
 </details>
 
-
-
 <!-- BOARD_SCALA_END -->
 
 ### Swift
 
 <!-- BOARD_SWIFT_START -->
-
-
 
 
 | | A | B | C |
@@ -1681,6 +1565,8 @@ object Game {
 🎮 **Next Move: ⭕ (Swift)**
 
 Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Swift+game)**
 
 
 
@@ -1752,7 +1638,93 @@ main()
 
 </details>
 
-
-
 <!-- BOARD_SWIFT_END -->
+
+### TypeScript
+
+<!-- BOARD_TYPESCRIPT_START -->
+
+
+| | A | B | C |
+|---|---|---|---|
+| **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+TypeScript+board) |
+| **2** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+TypeScript+board) |
+| **3** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+TypeScript+board) |
+
+🎮 **Next Move: ❌ (TypeScript)**
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+TypeScript+game)**
+
+
+
+
+<details>
+<summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
+
+### 🛰️ Execution Context
+- **Input (Information received)**: `typescript: Tic-Tac-Toe: Reset`
+- **Output (Information given)**:
+```text
+> polyglot-readme-tictactoe-typescript@1.0.0 play
+> ts-node game.ts
+```
+
+### 💻 Implementation Code (TypeScript)
+```typescript
+import * as fs from 'fs';
+
+interface Move {
+  player: string;
+  cell: string;
+}
+
+interface State {
+  board: string[][];
+  turn: string;
+  winner: string | null;
+  log: Move[];
+}
+
+const state: State = JSON.parse(fs.readFileSync('current_state.json', 'utf8'));
+
+const cell = process.env.CELL ? process.env.CELL.toUpperCase() : '';
+const action = process.env.ACTION || 'put';
+
+function checkWinner(b: string[][]): string | null {
+  const lines = [[0,1,2],[3,4,5],[6,7,8],[0,3,6],[1,4,7],[2,5,8],[0,4,8],[2,4,6]];
+  const flat = b.flat();
+  for (let l of lines) {
+    if (flat[l[0]] && flat[l[0]] === flat[l[1]] && flat[l[0]] === flat[l[2]]) return flat[l[0]];
+  }
+  return null;
+}
+
+if (action === 'reset') {
+  const isFull = state.board.every(row => row.every(c => c !== ''));
+  if (state.winner || isFull) {
+    state.board = [['','',''],['','',''],['','','']];
+    state.turn = 'X';
+    state.winner = null;
+    state.log = [];
+  }
+} else if (cell && !state.winner) {
+  const r = parseInt(cell[1]) - 1;
+  const c = cell.charCodeAt(0) - 65;
+  if (r >= 0 && r < 3 && c >= 0 && c < 3 && state.board[r][c] === '') {
+    state.board[r][c] = state.turn;
+    state.log.push({ player: state.turn, cell });
+    const win = checkWinner(state.board);
+    if (win) state.winner = win;
+    else if (state.board.flat().every(x => x !== '')) state.winner = 'draw';
+    else state.turn = state.turn === 'X' ? 'O' : 'X';
+  }
+}
+
+fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
+
+```
+
+</details>
+
+<!-- BOARD_TYPESCRIPT_END -->
 

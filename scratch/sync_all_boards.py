@@ -12,20 +12,20 @@ README_PATH = os.path.join(ROOT, 'README.md')
 STATE_PATH = os.path.join(ROOT, 'game_state.json')
 
 LANGS = {
-    "python": "Python",
-    "javascript": "JavaScript",
-    "typescript": "TypeScript",
-    "go": "Go",
-    "rust": "Rust",
-    "java": "Java",
-    "kotlin": "Kotlin",
-    "php": "PHP",
-    "ruby": "Ruby",
-    "csharp": "C#",
     "c": "C",
     "cpp": "C++",
+    "csharp": "C#",
+    "go": "Go",
+    "java": "Java",
+    "javascript": "JavaScript",
+    "kotlin": "Kotlin",
+    "php": "PHP",
+    "python": "Python",
+    "ruby": "Ruby",
+    "rust": "Rust",
     "scala": "Scala",
-    "swift": "Swift"
+    "swift": "Swift",
+    "typescript": "TypeScript"
 }
 
 def main():
@@ -49,7 +49,9 @@ def main():
             "polyglot-readme-tictactoe",
             state.get('turn', 'X'),
             state.get('winner'),
-            state.get('log', [])
+            state.get('log', []),
+            input_info=state.get('last_input', ''),
+            output_info=state.get('last_output', '')
         )
         
         # Replace in README

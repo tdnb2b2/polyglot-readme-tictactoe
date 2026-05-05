@@ -166,13 +166,11 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
                 moves.append(f"{p} {c}".strip())
         log_md = f"\n\nRecent moves: {' → '.join(moves)}"
 
-    # New Game link (only when game is finished)
-    new_game_link = ""
-    if winner:
-        reset_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Reset")
-        reset_body = quote_plus(f"Start a new {lang_display} game")
-        reset_url = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body={reset_body}"
-        new_game_link = f"\n\n🔵 **[Start New Game]({reset_url})**"
+    # New Game link (Always show to allow resetting anytime)
+    reset_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Reset")
+    reset_body = quote_plus(f"Start a new {lang_display} game")
+    reset_url = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body={reset_body}"
+    new_game_link = f"\n\n🔵 **[Start New Game]({reset_url})**"
 
     # Technical Details
     code_content = get_source_code(lang_key)
