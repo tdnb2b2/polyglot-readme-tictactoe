@@ -56,8 +56,10 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
     if not pattern.search(content):
         return content
         
-    # FORCE multiple blank lines for GitHub rendering separation
-    return pattern.sub(f"{start_tag}\n\n\n{replacement}\n\n\n{end_tag}", content)
+    # Use a lambda for the replacement to prevent re.sub from interpreting backslashes (like \0)
+    # This ensures the replacement is treated as a literal string.
+    res_func = lambda m: f"{start_tag}\n\n\n{replacement}\n\n\n{end_tag}"
+    return pattern.sub(res_func, content)
 
 def _normalize_log_entry(entry):
     if isinstance(entry, dict):
@@ -117,8 +119,8 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
     }
     lang_display = LANG_DISPLAY.get(lang_key, lang_key)
 
-    # Board table
-    rows = ['|   | A | B | C |   |', '|---|---|---|---|---|']
+    # Simplified Board table for maximum GitHub compatibility
+    rows = ['| | A | B | C |', '|---|---|---|---|']
     for ri, row_label in enumerate(['1', '2', '3']):
         cells = [f'**{row_label}**']
         for ci in range(3):
@@ -130,20 +132,16 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
             elif winner:
                 cells.append('___')
             else:
-                # Properly URL-encode lang_display to handle + in C++ and C#
                 safe_lang = quote_plus(lang_display)
                 title = f"{safe_lang}%3A+Tic-Tac-Toe%3A+Put+{cell_name}"
                 body = f"Play+{safe_lang}+board"
                 link = f'https://github.com/{owner}/{repo}/issues/new?title={title}&body={body}'
-                # Escape pipe character in URL to prevent breaking markdown table
                 safe_link = link.replace('|', '%7C')
                 cells.append(f'[___]({safe_link})')
-        cells.append(f'**{row_label}**')
         rows.append(f'| {" | ".join(cells)} |')
 
-    rows.append('|   | A | B | C |   |')
-    # Triple newline to ensure a new Markdown block even if previous text is messy
-    board_md = '\n\n\n' + '\n'.join(rows) + '\n\n\n'
+    # Ensure there's a blank line before the table for GitHub rendering
+    board_md = '\n\n' + '\n'.join(rows) + '\n\n'
 
     # Status
     if winner:

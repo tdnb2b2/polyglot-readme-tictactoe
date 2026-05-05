@@ -60,7 +60,8 @@ def main():
         replacement = f'{marker_start}\n{board_md}\n{marker_end}'
         
         if pattern.search(readme):
-            readme = pattern.sub(replacement, readme)
+            # Use a lambda to prevent re.sub from interpreting backslashes as backreferences
+            readme = pattern.sub(lambda m: replacement, readme)
             print(f"Updated {lang_display} board in README.")
         else:
             print(f"Marker not found for {lang_display}.")
