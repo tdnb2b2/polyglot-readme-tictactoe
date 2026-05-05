@@ -58,8 +58,23 @@ def replace_section(content: str, tag: str, replacement: str) -> str:
         
     return pattern.sub(f"{start_tag}\n{replacement}\n{end_tag}", content)
 
-def render_board_md(board: list, lang_key: str, owner: str, repo: str,
-                    turn: str, winner: str, log: list,
+def _normalize_log_entry(entry):
+    if isinstance(entry, dict):
+        if "player" in entry and "cell" in entry:
+            return {"player": entry["player"], "cell": entry["cell"]}
+        return None
+    if isinstance(entry, str):
+        s = entry.strip()
+        if s.lower() == "draw":
+            return {"player": None, "cell": None}
+        if "->" in s:
+            parts = [part.strip() for part in s.split("->", 1)]
+            if len(parts) == 2:
+                return {"player": parts[0], "cell": parts[1]}
+    return None
+
+def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2", repo: str = "polyglot-readme-tictactoe",
+                    turn: str = "X", winner: str = None, log: list = None,
                     input_info: str = "", output_info: str = "") -> str:
     """
     Renders the Tic-Tac-Toe board as a clean Markdown table with interactive links.
@@ -67,8 +82,32 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     """
     from urllib.parse import quote_plus
     
+    # Compatibility: if called as render_board_md(board, logs)
+    if log is None and (isinstance(lang_key, list) or lang_key is None):
+        log = lang_key if isinstance(lang_key, list) else []
+        lang_key = "python"
+
+    if log is None:
+        log = []
+
+    # Normalize logs
+    normalized = []
+    for e in log:
+        n = _normalize_log_entry(e)
+        if n is not None:
+            normalized.append(n)
+    if not normalized and log:
+        # Fallback if normalization fails but log exists
+        # Handle string logs for SYMBOLS.get if they aren't dicts
+        normalized = []
+        for e in log:
+            if isinstance(e, dict):
+                normalized.append(e)
+            else:
+                normalized.append({"player": str(e), "cell": ""})
+
     # Minimalist status symbols
-    SYMBOLS = {'X': '❌', 'O': '⭕', '': '___'}
+    SYMBOLS = {'X': '❌', 'O': '⭕', '': '___', None: '___'}
     LANG_DISPLAY = {
         'python': 'Python', 'javascript': 'JavaScript', 'typescript': 'TypeScript',
         'go': 'Go', 'rust': 'Rust', 'java': 'Java', 'kotlin': 'Kotlin',
@@ -82,11 +121,11 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
     for ri, row_label in enumerate(['1', '2', '3']):
         cells = [f'**{row_label}**']
         for ci in range(3):
-            val = board[ri][ci]
+            val = board[ri][ci] if ri < len(board) and ci < len(board[ri]) else None
             cell_name = f"{['A','B','C'][ci]}{ri+1}"
 
             if val:
-                cells.append(SYMBOLS[val])
+                cells.append(SYMBOLS.get(val, val))
             elif winner:
                 cells.append('___')
             else:
@@ -115,9 +154,16 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
 
     # Recent moves
     log_md = ""
-    if log and len(log) > 0:
-        recent = log[-5:]
-        moves = [f"{SYMBOLS.get(m['player'], m['player'])} {m['cell']}" for m in recent]
+    if normalized:
+        recent = normalized[-5:]
+        moves = []
+        for m in recent:
+            p = SYMBOLS.get(m.get('player'), m.get('player'))
+            c = m.get('cell', '')
+            if p == '___' and not c:
+                moves.append("Draw")
+            else:
+                moves.append(f"{p} {c}".strip())
         log_md = f"\n\nRecent moves: {' → '.join(moves)}"
 
     # New Game link (only when game is finished)
@@ -155,3 +201,4 @@ def render_board_md(board: list, lang_key: str, owner: str, repo: str,
 """
 
     return board_md + "\n\n" + status + log_md + new_game_link + tech_details
+
