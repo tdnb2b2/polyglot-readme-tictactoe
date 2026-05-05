@@ -141,14 +141,15 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
         rows.append(f'| {" | ".join(cells)} |')
 
     rows.append('|   | A | B | C |   |')
-    board_md = '\n'.join(rows)
+    # Ensure there's a blank line before the table for GitHub rendering
+    board_md = '\n' + '\n'.join(rows)
 
     # Status
     if winner:
         if winner == 'draw':
-            status = '🤝 Game Draw'
+            status = '🤝 **Game Draw**'
         else:
-            status = f'🏆 Winner: {SYMBOLS.get(winner, winner)} ({lang_display})'
+            status = f'🏆 **Winner: {SYMBOLS.get(winner, winner)} ({lang_display})**'
     else:
         status = f"🎮 **Next Move: {SYMBOLS.get(turn, turn)} ({lang_display})**"
 
@@ -197,8 +198,9 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
 ```{code_ext}
 {code_content}
 ```
+
 </details>
 """
 
-    return board_md + "\n\n" + status + log_md + new_game_link + tech_details
+    return board_md + "\n\n" + status + log_md + new_game_link + "\n" + tech_details
 
