@@ -11,6 +11,8 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
 <!-- BOARD_PYTHON_START -->
 
 
+
+
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | ❌ |
@@ -28,7 +30,7 @@ Recent moves: ❌ B2 → ⭕ A3 → ❌ C1 → ⭕ A1 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `python: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**:
 ```text
 Success
@@ -73,11 +75,15 @@ with open('current_state.json', 'w') as f:
 
 </details>
 
+
+
 <!-- BOARD_PYTHON_END -->
 
 ### Javascript
 
 <!-- BOARD_JAVASCRIPT_START -->
+
+
 
 
 | | A | B | C |
@@ -97,7 +103,7 @@ Recent moves: ❌ B2 → ⭕ A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `javascript: Tic-Tac-Toe: Put A1`
 - **Output (Information given)**:
 ```text
 Success
@@ -147,11 +153,15 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 
 </details>
 
+
+
 <!-- BOARD_JAVASCRIPT_END -->
 
 ### Typescript
 
 <!-- BOARD_TYPESCRIPT_START -->
+
+
 
 
 | | A | B | C |
@@ -169,10 +179,11 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `typescript: Tic-Tac-Toe: Reset`
 - **Output (Information given)**:
 ```text
-Success
+> polyglot-readme-tictactoe-typescript@1.0.0 play
+> ts-node game.ts
 ```
 
 ### 💻 Implementation Code (TypeScript)
@@ -232,11 +243,15 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 
 </details>
 
+
+
 <!-- BOARD_TYPESCRIPT_END -->
 
 ### Go
 
 <!-- BOARD_GO_START -->
+
+
 
 
 | | A | B | C |
@@ -256,7 +271,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `go: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**:
 ```text
 Success
@@ -374,11 +389,15 @@ func main() {
 
 </details>
 
+
+
 <!-- BOARD_GO_END -->
 
 ### Rust
 
 <!-- BOARD_RUST_START -->
+
+
 
 
 | | A | B | C |
@@ -398,10 +417,11 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `rust: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**:
 ```text
-Success
+Finished `release` profile [optimized] target(s) in 0.08s
+     Running `target/release/game`
 ```
 
 ### 💻 Implementation Code (Rust)
@@ -464,11 +484,15 @@ fn check_winner(b: &[Vec<String>]) -> Option<String> {
 
 </details>
 
+
+
 <!-- BOARD_RUST_END -->
 
 ### Java
 
 <!-- BOARD_JAVA_START -->
+
+
 
 
 | | A | B | C |
@@ -488,7 +512,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Initial/Unknown`
 - **Output (Information given)**:
 ```text
 Success
@@ -651,11 +675,15 @@ public class Game {
 
 </details>
 
+
+
 <!-- BOARD_JAVA_END -->
 
 ### Kotlin
 
 <!-- BOARD_KOTLIN_START -->
+
+
 
 
 | | A | B | C |
@@ -675,7 +703,7 @@ Recent moves: ❌ B2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Initial/Unknown`
 - **Output (Information given)**:
 ```text
 Success
@@ -835,11 +863,15 @@ fun checkWinner(b: List<List<String>>): String? {
 
 </details>
 
+
+
 <!-- BOARD_KOTLIN_END -->
 
 ### Php
 
 <!-- BOARD_PHP_START -->
+
+
 
 
 | | A | B | C |
@@ -859,7 +891,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Initial/Unknown`
 - **Output (Information given)**:
 ```text
 Success
@@ -911,11 +943,15 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
 
 </details>
 
+
+
 <!-- BOARD_PHP_END -->
 
 ### Ruby
 
 <!-- BOARD_RUBY_START -->
+
+
 
 
 | | A | B | C |
@@ -935,7 +971,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `ruby: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**:
 ```text
 Success
@@ -987,11 +1023,15 @@ File.write('current_state.json', JSON.pretty_generate(state))
 
 </details>
 
+
+
 <!-- BOARD_RUBY_END -->
 
 ### Csharp
 
 <!-- BOARD_CSHARP_START -->
+
+
 
 
 | | A | B | C |
@@ -1011,7 +1051,7 @@ Recent moves: ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1 → ⭕ B3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Initial/Unknown`
 - **Output (Information given)**:
 ```text
 Success
@@ -1079,11 +1119,15 @@ class Program {
 
 </details>
 
+
+
 <!-- BOARD_CSHARP_END -->
 
 ### C
 
 <!-- BOARD_C_START -->
+
+
 
 
 | | A | B | C |
@@ -1101,7 +1145,7 @@ class Program {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `C: Tic-Tac-Toe: Reset`
 - **Output (Information given)**:
 ```text
 Success
@@ -1262,11 +1306,15 @@ int main() {
 
 </details>
 
+
+
 <!-- BOARD_C_END -->
 
 ### Cpp
 
 <!-- BOARD_CPP_START -->
+
+
 
 
 | | A | B | C |
@@ -1286,7 +1334,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Initial/Unknown`
 - **Output (Information given)**:
 ```text
 Success
@@ -1424,11 +1472,15 @@ int main() {
 
 </details>
 
+
+
 <!-- BOARD_CPP_END -->
 
 ### Scala
 
 <!-- BOARD_SCALA_START -->
+
+
 
 
 | | A | B | C |
@@ -1446,7 +1498,7 @@ int main() {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `Initial/Unknown`
 - **Output (Information given)**:
 ```text
 Success
@@ -1609,11 +1661,15 @@ object Game {
 
 </details>
 
+
+
 <!-- BOARD_SCALA_END -->
 
 ### Swift
 
 <!-- BOARD_SWIFT_START -->
+
+
 
 
 | | A | B | C |
@@ -1633,7 +1689,7 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `swift: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**:
 ```text
 Success
@@ -1695,6 +1751,8 @@ main()
 ```
 
 </details>
+
+
 
 <!-- BOARD_SWIFT_END -->
 

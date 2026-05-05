@@ -20,7 +20,7 @@
     "turn": "O",
     "winner": null,
     "log": [],
-    "last_input": "c: Tic-Tac-Toe: Put A3",
+    "last_input": "C: Tic-Tac-Toe: Reset",
     "last_output": "Success"
   },
   "cpp": {
