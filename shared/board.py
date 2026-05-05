@@ -1,6 +1,7 @@
 import os
 import json
 import re
+from urllib.parse import quote_plus
 
 # Simple 3x3 Tic-Tac-Toe board state mapping
 CELL_TO_IDX = {
@@ -42,25 +43,6 @@ def get_source_code(lang_key: str) -> str:
     except Exception as e:
         return f"// Error reading source for {lang_key}: {str(e)}"
 
-def update_readme_local(new_content: str):
-    """Writes updated content to README.md in current directory."""
-    with open('README.md', 'w') as f:
-        f.write(new_content)
-
-def replace_section(content: str, tag: str, replacement: str) -> str:
-    """Replaces a section marked by <!-- BOARD_TAG_START --> and <!-- BOARD_TAG_END -->."""
-    start_tag = f"<!-- {tag}_START -->"
-    end_tag = f"<!-- {tag}_END -->"
-    
-    pattern = re.compile(rf"{re.escape(start_tag)}.*?{re.escape(end_tag)}", re.DOTALL)
-    if not pattern.search(content):
-        return content
-        
-    # Use a lambda for the replacement to prevent re.sub from interpreting backslashes (like \0)
-    # This ensures the replacement is treated as a literal string.
-    res_func = lambda m: f"{start_tag}\n\n\n{replacement}\n\n\n{end_tag}"
-    return pattern.sub(res_func, content)
-
 def _normalize_log_entry(entry):
     if isinstance(entry, dict):
         if "player" in entry and "cell" in entry:
@@ -81,15 +63,8 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
                     input_info: str = "", output_info: str = "") -> str:
     """
     Renders the Tic-Tac-Toe board as a clean Markdown table with interactive links.
-    Includes Next Move status, Recent moves, Technical Details, and New Game link when finished.
+    Includes Next Move status, Recent moves, Technical Details, and New Game link.
     """
-    from urllib.parse import quote_plus
-    
-    # Compatibility: if called as render_board_md(board, logs)
-    if log is None and (isinstance(lang_key, list) or lang_key is None):
-        log = lang_key if isinstance(lang_key, list) else []
-        lang_key = "python"
-
     if log is None:
         log = []
 
@@ -99,16 +74,7 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
         n = _normalize_log_entry(e)
         if n is not None:
             normalized.append(n)
-    if not normalized and log:
-        # Fallback if normalization fails but log exists
-        # Handle string logs for SYMBOLS.get if they aren't dicts
-        normalized = []
-        for e in log:
-            if isinstance(e, dict):
-                normalized.append(e)
-            else:
-                normalized.append({"player": str(e), "cell": ""})
-
+    
     # Minimalist status symbols
     SYMBOLS = {'X': '❌', 'O': '⭕', '': '___', None: '___'}
     LANG_DISPLAY = {
@@ -119,7 +85,7 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
     }
     lang_display = LANG_DISPLAY.get(lang_key, lang_key)
 
-    # Simplified Board table for maximum GitHub compatibility
+    # Board table
     rows = ['| | A | B | C |', '|---|---|---|---|']
     for ri, row_label in enumerate(['1', '2', '3']):
         cells = [f'**{row_label}**']
@@ -140,63 +106,51 @@ def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2
                 cells.append(f'[___]({safe_link})')
         rows.append(f'| {" | ".join(cells)} |')
 
-    # Ensure there's a blank line before the table for GitHub rendering
-    board_md = '\n\n' + '\n'.join(rows) + '\n\n'
+    board_md = '\n' + '\n'.join(rows) + '\n'
 
-    # Status
+    # Status line
     if winner:
-        if winner == 'draw':
-            status = '🤝 **Game Draw**'
+        if winner.lower() == 'draw':
+            status = f"\n🤝 **Result: Draw!**\n"
         else:
-            status = f'🏆 **Winner: {SYMBOLS.get(winner, winner)} ({lang_display})**'
+            status = f"\n🏆 **Winner: {SYMBOLS.get(winner, winner)} ({lang_display})**\n"
     else:
-        status = f"🎮 **Next Move: {SYMBOLS.get(turn, turn)} ({lang_display})**"
+        status = f"\n🎮 **Next Move: {SYMBOLS.get(turn, turn)} ({lang_display})**\n"
 
-    # Recent moves
+    # Log line (last 5 moves)
     log_md = ""
     if normalized:
         recent = normalized[-5:]
-        moves = []
-        for m in recent:
-            p = SYMBOLS.get(m.get('player'), m.get('player'))
-            c = m.get('cell', '')
-            if p == '___' and not c:
-                moves.append("Draw")
-            else:
-                moves.append(f"{p} {c}".strip())
-        log_md = f"\n\nRecent moves: {' → '.join(moves)}"
+        moves_str = " → ".join([f"{SYMBOLS.get(m['player'], m['player'])} {m['cell']}" for m in recent])
+        log_md = f"\nRecent moves: {moves_str}\n"
 
-    # New Game link (Always show to allow resetting anytime)
-    reset_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Reset")
-    reset_body = quote_plus(f"Start a new {lang_display} game")
-    reset_url = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body={reset_body}"
-    new_game_link = f"\n\n🔵 **[Start New Game]({reset_url})**"
+    # New Game link (always visible as requested)
+    safe_lang = quote_plus(lang_display)
+    new_game_link = f'\n🔵 **[Start New Game](https://github.com/{owner}/{repo}/issues/new?title={safe_lang}%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+{safe_lang}+game)**\n'
 
     # Technical Details
-    code_content = get_source_code(lang_key)
-    code_ext = {'python': 'python', 'javascript': 'javascript', 'typescript': 'typescript',
-                'go': 'go', 'rust': 'rust', 'java': 'java', 'kotlin': 'kotlin',
-                'php': 'php', 'ruby': 'ruby', 'csharp': 'csharp', 'c': 'c',
-                'cpp': 'cpp', 'scala': 'scala', 'swift': 'swift'}.get(lang_key, '')
-
+    source_code = get_source_code(lang_key)
+    # Highlight language key for syntax highlighting if possible
+    syntax_lang = lang_key
+    if lang_key == 'csharp': syntax_lang = 'csharp'
+    if lang_key == 'cpp': syntax_lang = 'cpp'
+    
     tech_details = f"""
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `{input_info}`
+- **Input (Information received)**: `{input_info or "None"}`
 - **Output (Information given)**:
 ```text
-{output_info if output_info else "Success"}
+{output_info or "None"}
 ```
 
 ### 💻 Implementation Code ({lang_display})
-```{code_ext}
-{code_content}
+```{syntax_lang}
+{source_code}
 ```
 
 </details>
 """
-
-    return board_md + status + log_md + new_game_link + "\n\n\n" + tech_details
+    return board_md + status + log_md + new_game_link + tech_details

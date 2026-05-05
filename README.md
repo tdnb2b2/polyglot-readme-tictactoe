@@ -10,7 +10,6 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
 
 <!-- BOARD_C_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+C+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+C+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C+board) |
@@ -20,9 +19,6 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
 🎮 **Next Move: ⭕ (C)**
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -195,7 +191,6 @@ int main() {
 
 <!-- BOARD_CPP_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%2B%2B+board) |
@@ -208,17 +203,14 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C%2B%2B+game)**
 
-
-
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `None`
 - **Output (Information given)**:
 ```text
-Success
+None
 ```
 
 ### 💻 Implementation Code (C++)
@@ -359,7 +351,6 @@ int main() {
 
 <!-- BOARD_CSHARP_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ❌ | ❌ | ⭕ |
@@ -372,17 +363,14 @@ Recent moves: ⭕ A2 → ❌ A1 → ⭕ C3 → ❌ B1 → ⭕ B3
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C%23+game)**
 
-
-
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `None`
 - **Output (Information given)**:
 ```text
-Success
+None
 ```
 
 ### 💻 Implementation Code (C#)
@@ -453,7 +441,6 @@ class Program {
 
 <!-- BOARD_GO_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Go+board) |
@@ -465,9 +452,6 @@ class Program {
 Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Go+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -597,7 +581,6 @@ func main() {
 
 <!-- BOARD_JAVA_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Java+board) |
@@ -610,17 +593,14 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Java+game)**
 
-
-
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `None`
 - **Output (Information given)**:
 ```text
-Success
+None
 ```
 
 ### 💻 Implementation Code (Java)
@@ -786,7 +766,6 @@ public class Game {
 
 <!-- BOARD_JAVASCRIPT_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+JavaScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board) |
@@ -798,9 +777,6 @@ public class Game {
 Recent moves: ❌ B2 → ⭕ A1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+JavaScript+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -862,7 +838,6 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
 
 <!-- BOARD_KOTLIN_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Kotlin+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board) |
@@ -875,17 +850,14 @@ Recent moves: ❌ B2
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Kotlin+game)**
 
-
-
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `None`
 - **Output (Information given)**:
 ```text
-Success
+None
 ```
 
 ### 💻 Implementation Code (Kotlin)
@@ -1048,7 +1020,6 @@ fun checkWinner(b: List<List<String>>): String? {
 
 <!-- BOARD_PHP_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+PHP+board) |
@@ -1061,17 +1032,14 @@ Recent moves: ❌ B2 → ⭕ A1 → ❌ C3 → ⭕ A3 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+PHP+game)**
 
-
-
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `None`
 - **Output (Information given)**:
 ```text
-Success
+None
 ```
 
 ### 💻 Implementation Code (PHP)
@@ -1126,7 +1094,6 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
 
 <!-- BOARD_PYTHON_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | ❌ |
@@ -1138,9 +1105,6 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
 Recent moves: ❌ B2 → ⭕ A3 → ❌ C1 → ⭕ A1 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Python+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -1197,7 +1161,6 @@ with open('current_state.json', 'w') as f:
 
 <!-- BOARD_RUBY_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Ruby+board) |
@@ -1209,9 +1172,6 @@ with open('current_state.json', 'w') as f:
 Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Ruby+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -1275,7 +1235,6 @@ File.write('current_state.json', JSON.pretty_generate(state))
 
 <!-- BOARD_RUST_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Rust+board) |
@@ -1287,9 +1246,6 @@ File.write('current_state.json', JSON.pretty_generate(state))
 Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Rust+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -1368,7 +1324,6 @@ fn check_winner(b: &[Vec<String>]) -> Option<String> {
 
 <!-- BOARD_SCALA_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+Scala+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+Scala+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Scala+board) |
@@ -1379,17 +1334,14 @@ fn check_winner(b: &[Vec<String>]) -> Option<String> {
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Scala%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Scala+game)**
 
-
-
-
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: ``
+- **Input (Information received)**: `None`
 - **Output (Information given)**:
 ```text
-Success
+None
 ```
 
 ### 💻 Implementation Code (Scala)
@@ -1555,7 +1507,6 @@ object Game {
 
 <!-- BOARD_SWIFT_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | ⭕ | ❌ | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Swift+board) |
@@ -1567,9 +1518,6 @@ object Game {
 Recent moves: ❌ B2 → ⭕ A1 → ❌ B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Swift%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Swift+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
@@ -1644,7 +1592,6 @@ main()
 
 <!-- BOARD_TYPESCRIPT_START -->
 
-
 | | A | B | C |
 |---|---|---|---|
 | **1** | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+TypeScript+board) | [___](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+TypeScript+board) |
@@ -1654,9 +1601,6 @@ main()
 🎮 **Next Move: ❌ (TypeScript)**
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=TypeScript%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+TypeScript+game)**
-
-
-
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
