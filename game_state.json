@@ -250,7 +250,7 @@
       ],
       [
         "O",
-        "",
+        "X",
         ""
       ],
       [
@@ -259,7 +259,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -277,9 +277,13 @@
       {
         "player": "O",
         "cell": "A2"
+      },
+      {
+        "player": "X",
+        "cell": "B2"
       }
     ],
-    "last_input": "Kotlin: Tic-Tac-Toe: Put A2",
+    "last_input": "Kotlin: Tic-Tac-Toe: Put B2",
     "last_output": "Success"
   },
   "php": {
