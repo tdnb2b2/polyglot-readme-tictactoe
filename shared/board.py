@@ -109,11 +109,13 @@ def render_board_md(board: list, lang_key: str, owner: str = "tdnb2b2",
             f'{e.get("player", "?")} {e.get("cell", "?")}' for e in recent if isinstance(e, dict)
         )
 
-    # New Game link
-    reset_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Reset")
-    reset_body = quote_plus(f"Start a new {lang_display} game")
-    reset_url = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body={reset_body}"
-    new_game_link = f'\n\n🔵 **[Start New Game]({reset_url})**'
+    # New Game link - Only show if game is finished
+    new_game_link = ""
+    if winner:
+        reset_title = quote_plus(f"{lang_display}: Tic-Tac-Toe: Reset")
+        reset_body = quote_plus(f"Start a new {lang_display} game")
+        reset_url = f"https://github.com/{owner}/{repo}/issues/new?title={reset_title}&body={reset_body}"
+        new_game_link = f'\n\n🔵 **[Start New Game]({reset_url})**'
 
     code_content = get_source_code(lang_key)
     code_ext = 'cs' if lang_key == 'csharp' else ('cpp' if lang_key == 'cpp' else lang_key)
