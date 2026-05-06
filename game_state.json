@@ -7,7 +7,7 @@
         ""
       ],
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -17,15 +17,19 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
         "player": "X",
         "cell": "A1"
+      },
+      {
+        "player": "O",
+        "cell": "A2"
       }
     ],
-    "last_input": "C: Tic-Tac-Toe: Put A1",
+    "last_input": "C: Tic-Tac-Toe: Put A2",
     "last_output": "Success"
   },
   "cpp": {
