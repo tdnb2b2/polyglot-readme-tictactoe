@@ -34,15 +34,15 @@ A playable Tic-Tac-Toe game on GitHub README, implemented in multiple programmin
     <tr>
       <td align="center"><b>3</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+C+board"><img src="https://img.shields.io/badge/-B3-grey?style=for-the-badge" alt="B3"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+C+board"><img src="https://img.shields.io/badge/-C3-grey?style=for-the-badge" alt="C3"></a></td>
     </tr>
   </tbody>
 </table>
 
-🎮 **Next Move: O (C)**
+🎮 **Next Move: X (C)**
 
-Recent moves: X B1 → O C1 → X B2 → O C2 → X A3
+Recent moves: O C1 → X B2 → O C2 → X A3 → O B3
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C+game)**
 
@@ -50,7 +50,7 @@ Recent moves: X B1 → O C1 → X B2 → O C2 → X A3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `C: Tic-Tac-Toe: Put A3`
+- **Input (Information received)**: `C: Tic-Tac-Toe: Put B3`
 - **Output (Information given)**: 
 ```text
 Success
