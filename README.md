@@ -1192,28 +1192,26 @@ fun checkWinner(b: List<List<String>>): String? {
   <tbody>
     <tr>
       <td align="center"><b>1</b></td>
-      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
-      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+PHP+board"><img src="https://img.shields.io/badge/-A1-grey?style=for-the-badge" alt="A1"></a></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+PHP+board"><img src="https://img.shields.io/badge/-B1-grey?style=for-the-badge" alt="B1"></a></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+PHP+board"><img src="https://img.shields.io/badge/-C1-grey?style=for-the-badge" alt="C1"></a></td>
     </tr>
     <tr>
       <td align="center"><b>2</b></td>
-      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+PHP+board"><img src="https://img.shields.io/badge/-A2-grey?style=for-the-badge" alt="A2"></a></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+PHP+board"><img src="https://img.shields.io/badge/-B2-grey?style=for-the-badge" alt="B2"></a></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+PHP+board"><img src="https://img.shields.io/badge/-C2-grey?style=for-the-badge" alt="C2"></a></td>
     </tr>
     <tr>
       <td align="center"><b>3</b></td>
-      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
-      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+PHP+board"><img src="https://img.shields.io/badge/-A3-grey?style=for-the-badge" alt="A3"></a></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+PHP+board"><img src="https://img.shields.io/badge/-B3-grey?style=for-the-badge" alt="B3"></a></td>
+      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+PHP+board"><img src="https://img.shields.io/badge/-C3-grey?style=for-the-badge" alt="C3"></a></td>
     </tr>
   </tbody>
 </table>
 
-🏆 **Winner: X (PHP)**
-
-Recent moves: X B1 → O C1 → X A2 → O C2 → X B3
+🎮 **Next Move: X (PHP)**
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=PHP%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+PHP+game)**
 
@@ -1221,7 +1219,7 @@ Recent moves: X B1 → O C1 → X A2 → O C2 → X B3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Php: Tic-Tac-Toe: Put B3`
+- **Input (Information received)**: `Php: Tic-Tac-Toe: Reset`
 - **Output (Information given)**: 
 ```text
 Success
