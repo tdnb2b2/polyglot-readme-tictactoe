@@ -991,22 +991,24 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
     </tr>
     <tr>
       <td align="center"><b>3</b></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Kotlin+board"><img src="https://img.shields.io/badge/-A3-grey?style=for-the-badge" alt="A3"></a></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Kotlin+board"><img src="https://img.shields.io/badge/-B3-grey?style=for-the-badge" alt="B3"></a></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Kotlin+board"><img src="https://img.shields.io/badge/-C3-grey?style=for-the-badge" alt="C3"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
+      <td align="center"><img src="https://img.shields.io/badge/- -lightgrey?style=for-the-badge" alt=" "></td>
+      <td align="center"><img src="https://img.shields.io/badge/- -lightgrey?style=for-the-badge" alt=" "></td>
     </tr>
   </tbody>
 </table>
 
-🎮 **Next Move: X (Kotlin)**
+🏆 **Winner: X (Kotlin)**
 
-Recent moves: O B1 → X C1 → O A2 → X B2 → O C2
+Recent moves: X C1 → O A2 → X B2 → O C2 → X A3
+
+🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Kotlin+game)**
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put C2`
+- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put A3`
 - **Output (Information given)**: 
 ```text
 Success
