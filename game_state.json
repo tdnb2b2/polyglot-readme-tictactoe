@@ -31,7 +31,7 @@
         "X"
       ],
       [
-        "",
+        "O",
         "",
         ""
       ],
@@ -41,7 +41,7 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -55,9 +55,13 @@
       {
         "player": "X",
         "cell": "C1"
+      },
+      {
+        "player": "O",
+        "cell": "A2"
       }
     ],
-    "last_input": "C++: Tic-Tac-Toe: Put C1",
+    "last_input": "C++: Tic-Tac-Toe: Put A2",
     "last_output": "Success"
   },
   "csharp": {
