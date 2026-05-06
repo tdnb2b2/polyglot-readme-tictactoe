@@ -1,0 +1,21 @@
+# Binaries and temporary files
+*.jar
+game
+current_state.json
+__pycache__/
+node_modules/
+bin/
+obj/
+target/
+.swiftpm/
+.build/
+*.class
+*.exe
+*.o
+*.so
+*.dylib
+.DS_Store
+
+# IDEs
+.vscode/
+.idea/
