@@ -382,7 +382,7 @@
   "rust": {
     "board": [
       [
-        "",
+        "X",
         "",
         ""
       ],
@@ -397,10 +397,15 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
-    "log": [],
-    "last_input": "Rust: Tic-Tac-Toe: Reset",
+    "log": [
+      {
+        "player": "X",
+        "cell": "A1"
+      }
+    ],
+    "last_input": "Rust: Tic-Tac-Toe: Put A1",
     "last_output": "Finished `release` profile [optimized] target(s) in 0.01s\n     Running `target/release/game`"
   },
   "scala": {
