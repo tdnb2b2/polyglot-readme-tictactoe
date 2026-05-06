@@ -241,7 +241,7 @@
       [
         "O",
         "X",
-        ""
+        "O"
       ],
       [
         "",
@@ -254,7 +254,7 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -268,9 +268,13 @@
       {
         "player": "X",
         "cell": "B1"
+      },
+      {
+        "player": "O",
+        "cell": "C1"
       }
     ],
-    "last_input": "JavaScript: Tic-Tac-Toe: Put A1",
+    "last_input": "Javascript: Tic-Tac-Toe: Put C1",
     "last_output": "Success"
   },
   "kotlin": {
