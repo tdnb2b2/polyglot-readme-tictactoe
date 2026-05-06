@@ -431,11 +431,11 @@
       [
         "X",
         "O",
-        ""
+        "X"
       ]
     ],
     "turn": "X",
-    "winner": null,
+    "winner": "draw",
     "log": [
       {
         "player": "X",
@@ -468,9 +468,13 @@
       {
         "player": "O",
         "cell": "B3"
+      },
+      {
+        "player": "X",
+        "cell": "C3"
       }
     ],
-    "last_input": "Rust: Tic-Tac-Toe: Put B3",
+    "last_input": "Rust: Tic-Tac-Toe: Put C3",
     "last_output": "Finished `release` profile [optimized] target(s) in 0.01s\n     Running `target/release/game`"
   },
   "scala": {
