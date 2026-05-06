@@ -1490,16 +1490,16 @@ File.write('current_state.json', JSON.pretty_generate(state))
     </tr>
     <tr>
       <td align="center"><b>3</b></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Rust+board"><img src="https://img.shields.io/badge/-A3-grey?style=for-the-badge" alt="A3"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board"><img src="https://img.shields.io/badge/-B3-grey?style=for-the-badge" alt="B3"></a></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Rust+board"><img src="https://img.shields.io/badge/-C3-grey?style=for-the-badge" alt="C3"></a></td>
     </tr>
   </tbody>
 </table>
 
-🎮 **Next Move: X (Rust)**
+🎮 **Next Move: O (Rust)**
 
-Recent moves: O A1 → X B1 → O C1 → X A2 → O C2
+Recent moves: X B1 → O C1 → X A2 → O C2 → X A3
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Rust+game)**
 
@@ -1507,7 +1507,7 @@ Recent moves: O A1 → X B1 → O C1 → X A2 → O C2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put C2`
+- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put A3`
 - **Output (Information given)**: 
 ```text
 Finished `release` profile [optimized] target(s) in 0.01s
