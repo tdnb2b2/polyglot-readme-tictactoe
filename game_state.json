@@ -126,7 +126,7 @@
       [
         "O",
         "X",
-        ""
+        "O"
       ],
       [
         "",
@@ -139,7 +139,7 @@
         "X"
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -161,9 +161,13 @@
       {
         "player": "X",
         "cell": "B1"
+      },
+      {
+        "player": "O",
+        "cell": "C1"
       }
     ],
-    "last_input": "go: Tic-Tac-Toe: Reset",
+    "last_input": "Go: Tic-Tac-Toe: Put C1",
     "last_output": "Success"
   },
   "java": {
