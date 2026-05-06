@@ -341,62 +341,25 @@
   "python": {
     "board": [
       [
-        "O",
-        "X",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "O",
-        "O",
-        "X"
+        "",
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "draw",
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "A3"
-      },
-      {
-        "player": "X",
-        "cell": "C1"
-      },
-      {
-        "player": "O",
-        "cell": "A1"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "A2"
-      },
-      {
-        "player": "O",
-        "cell": "C2"
-      },
-      {
-        "player": "X",
-        "cell": "C3"
-      }
-    ],
-    "last_input": "Python: Tic-Tac-Toe: Put C3",
+    "winner": null,
+    "log": [],
+    "last_input": "Python: Tic-Tac-Toe: Reset",
     "last_output": "Success"
   },
   "ruby": {
