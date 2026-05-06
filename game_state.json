@@ -165,7 +165,7 @@
   "java": {
     "board": [
       [
-        "",
+        "X",
         "",
         ""
       ],
@@ -180,10 +180,15 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
-    "log": [],
-    "last_input": "Java: Tic-Tac-Toe: Reset",
+    "log": [
+      {
+        "player": "X",
+        "cell": "A1"
+      }
+    ],
+    "last_input": "Java: Tic-Tac-Toe: Put A1",
     "last_output": "Success"
   },
   "javascript": {
