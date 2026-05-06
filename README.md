@@ -692,20 +692,20 @@ func main() {
       <td align="center"><b>2</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Java+board"><img src="https://img.shields.io/badge/-C2-grey?style=for-the-badge" alt="C2"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
     </tr>
     <tr>
       <td align="center"><b>3</b></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+A3&body=Play+Java+board"><img src="https://img.shields.io/badge/-A3-grey?style=for-the-badge" alt="A3"></a></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Java+board"><img src="https://img.shields.io/badge/-B3-grey?style=for-the-badge" alt="B3"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/- -lightgrey?style=for-the-badge" alt=" "></td>
+      <td align="center"><img src="https://img.shields.io/badge/- -lightgrey?style=for-the-badge" alt=" "></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
     </tr>
   </tbody>
 </table>
 
-🎮 **Next Move: X (Java)**
+🏆 **Winner: X (Java)**
 
-Recent moves: O A1 → X C3 → O B1 → X C1 → O A2
+Recent moves: X C3 → O B1 → X C1 → O A2 → X C2
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Java%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Java+game)**
 
@@ -713,7 +713,7 @@ Recent moves: O A1 → X C3 → O B1 → X C1 → O A2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Java: Tic-Tac-Toe: Put A2`
+- **Input (Information received)**: `Java: Tic-Tac-Toe: Put C2`
 - **Output (Information given)**: 
 ```text
 Success
