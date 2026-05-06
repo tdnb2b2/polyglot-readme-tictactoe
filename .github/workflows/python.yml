@@ -26,8 +26,6 @@ jobs:
           grep -n "safe_link" shared/board.py || echo "safe_link not found - table may break"
           cat shared/board.py | head -100
 
-      - name: Install dependencies
-        run: pip install requests
 
       - name: Setup Python
         uses: actions/setup-python@v5
