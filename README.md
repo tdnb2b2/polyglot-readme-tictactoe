@@ -1298,7 +1298,7 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
     <tr>
       <td align="center"><b>2</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+B2&body=Play+Python+board"><img src="https://img.shields.io/badge/-B2-grey?style=for-the-badge" alt="B2"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Python+board"><img src="https://img.shields.io/badge/-C2-grey?style=for-the-badge" alt="C2"></a></td>
     </tr>
     <tr>
@@ -1310,9 +1310,9 @@ file_put_contents('current_state.json', json_encode($state, JSON_PRETTY_PRINT));
   </tbody>
 </table>
 
-🎮 **Next Move: X (Python)**
+🎮 **Next Move: O (Python)**
 
-Recent moves: X A1 → O B1 → X C1 → O A2
+Recent moves: X A1 → O B1 → X C1 → O A2 → X B2
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Python%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Python+game)**
 
@@ -1320,7 +1320,7 @@ Recent moves: X A1 → O B1 → X C1 → O A2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Python: Tic-Tac-Toe: Put A2`
+- **Input (Information received)**: `Python: Tic-Tac-Toe: Put B2`
 - **Output (Information given)**: 
 ```text
 Success
