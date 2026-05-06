@@ -1487,15 +1487,15 @@ File.write('current_state.json', JSON.pretty_generate(state))
     <tr>
       <td align="center"><b>3</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+B3&body=Play+Rust+board"><img src="https://img.shields.io/badge/-B3-grey?style=for-the-badge" alt="B3"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C3&body=Play+Rust+board"><img src="https://img.shields.io/badge/-C3-grey?style=for-the-badge" alt="C3"></a></td>
     </tr>
   </tbody>
 </table>
 
-🎮 **Next Move: O (Rust)**
+🎮 **Next Move: X (Rust)**
 
-Recent moves: X B1 → O C1 → X A2 → O C2 → X A3
+Recent moves: O C1 → X A2 → O C2 → X A3 → O B3
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Rust+game)**
 
@@ -1503,7 +1503,7 @@ Recent moves: X B1 → O C1 → X A2 → O C2 → X A3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put A3`
+- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put B3`
 - **Output (Information given)**: 
 ```text
 Finished `release` profile [optimized] target(s) in 0.01s
