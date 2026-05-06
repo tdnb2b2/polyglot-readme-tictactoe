@@ -465,7 +465,7 @@
     "board": [
       [
         "X",
-        "",
+        "O",
         ""
       ],
       [
@@ -479,14 +479,18 @@
         ""
       ]
     ],
-    "turn": "O",
     "log": [
       {
         "cell": "A1",
         "player": "X"
+      },
+      {
+        "cell": "B1",
+        "player": "O"
       }
     ],
-    "last_input": "Swift: Tic-Tac-Toe: Put A1",
+    "turn": "X",
+    "last_input": "Swift: Tic-Tac-Toe: Put B1",
     "last_output": "Success"
   },
   "typescript": {
