@@ -1484,7 +1484,7 @@ File.write('current_state.json', JSON.pretty_generate(state))
     </tr>
     <tr>
       <td align="center"><b>2</b></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Rust+board"><img src="https://img.shields.io/badge/-A2-grey?style=for-the-badge" alt="A2"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Rust+board"><img src="https://img.shields.io/badge/-C2-grey?style=for-the-badge" alt="C2"></a></td>
     </tr>
@@ -1497,9 +1497,9 @@ File.write('current_state.json', JSON.pretty_generate(state))
   </tbody>
 </table>
 
-🎮 **Next Move: X (Rust)**
+🎮 **Next Move: O (Rust)**
 
-Recent moves: X B2 → O A1 → X B1 → O C1
+Recent moves: X B2 → O A1 → X B1 → O C1 → X A2
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Rust%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Rust+game)**
 
@@ -1507,35 +1507,10 @@ Recent moves: X B2 → O A1 → X B1 → O C1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put C1`
+- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put A2`
 - **Output (Information given)**: 
 ```text
-Updating crates.io index
- Downloading crates ...
-  Downloaded quote v1.0.45
-  Downloaded unicode-ident v1.0.24
-  Downloaded proc-macro2 v1.0.106
-  Downloaded syn v2.0.117
-  Downloaded memchr v2.8.0
-  Downloaded zmij v1.0.21
-  Downloaded serde_json v1.0.149
-  Downloaded serde v1.0.228
-  Downloaded serde_derive v1.0.228
-  Downloaded serde_core v1.0.228
-  Downloaded itoa v1.0.18
-   Compiling proc-macro2 v1.0.106
-   Compiling unicode-ident v1.0.24
-   Compiling quote v1.0.45
-   Compiling serde_core v1.0.228
-   Compiling zmij v1.0.21
-   Compiling serde_json v1.0.149
-   Compiling serde v1.0.228
-   Compiling itoa v1.0.18
-   Compiling memchr v2.8.0
-   Compiling syn v2.0.117
-   Compiling serde_derive v1.0.228
-   Compiling game v0.1.0 (/home/runner/work/polyglot-readme-tictactoe/polyglot-readme-tictactoe/implementations/rust)
-    Finished `release` profile [optimized] target(s) in 5.44s
+Finished `release` profile [optimized] target(s) in 0.01s
      Running `target/release/game`
 ```
 

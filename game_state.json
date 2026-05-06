@@ -467,7 +467,7 @@
         "O"
       ],
       [
-        "",
+        "X",
         "X",
         ""
       ],
@@ -477,7 +477,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -495,10 +495,14 @@
       {
         "player": "O",
         "cell": "C1"
+      },
+      {
+        "player": "X",
+        "cell": "A2"
       }
     ],
-    "last_input": "Rust: Tic-Tac-Toe: Put C1",
-    "last_output": "Updating crates.io index\n Downloading crates ...\n  Downloaded quote v1.0.45\n  Downloaded unicode-ident v1.0.24\n  Downloaded proc-macro2 v1.0.106\n  Downloaded syn v2.0.117\n  Downloaded memchr v2.8.0\n  Downloaded zmij v1.0.21\n  Downloaded serde_json v1.0.149\n  Downloaded serde v1.0.228\n  Downloaded serde_derive v1.0.228\n  Downloaded serde_core v1.0.228\n  Downloaded itoa v1.0.18\n   Compiling proc-macro2 v1.0.106\n   Compiling unicode-ident v1.0.24\n   Compiling quote v1.0.45\n   Compiling serde_core v1.0.228\n   Compiling zmij v1.0.21\n   Compiling serde_json v1.0.149\n   Compiling serde v1.0.228\n   Compiling itoa v1.0.18\n   Compiling memchr v2.8.0\n   Compiling syn v2.0.117\n   Compiling serde_derive v1.0.228\n   Compiling game v0.1.0 (/home/runner/work/polyglot-readme-tictactoe/polyglot-readme-tictactoe/implementations/rust)\n    Finished `release` profile [optimized] target(s) in 5.44s\n     Running `target/release/game`"
+    "last_input": "Rust: Tic-Tac-Toe: Put A2",
+    "last_output": "Finished `release` profile [optimized] target(s) in 0.01s\n     Running `target/release/game`"
   },
   "scala": {
     "board": [
