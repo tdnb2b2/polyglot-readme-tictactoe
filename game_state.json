@@ -3,7 +3,7 @@
     "board": [
       [
         "X",
-        "",
+        "X",
         ""
       ],
       [
@@ -17,7 +17,7 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
     "log": [
       {
@@ -27,9 +27,13 @@
       {
         "player": "O",
         "cell": "A2"
+      },
+      {
+        "player": "X",
+        "cell": "B1"
       }
     ],
-    "last_input": "C: Tic-Tac-Toe: Put A2",
+    "last_input": "C: Tic-Tac-Toe: Put B1",
     "last_output": "Success"
   },
   "cpp": {
