@@ -388,7 +388,7 @@
       [
         "X",
         "X",
-        ""
+        "O"
       ],
       [
         "",
@@ -396,7 +396,7 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -418,9 +418,13 @@
       {
         "player": "X",
         "cell": "A2"
+      },
+      {
+        "player": "O",
+        "cell": "C2"
       }
     ],
-    "last_input": "Ruby: Tic-Tac-Toe: Put A2",
+    "last_input": "Ruby: Tic-Tac-Toe: Put C2",
     "last_output": "Success"
   },
   "rust": {
