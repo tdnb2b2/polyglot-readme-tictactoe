@@ -58,6 +58,17 @@ def _normalize_log_entry(entry):
                 return {"player": parts[0], "cell": parts[1]}
     return None
 
+def replace_section(content: str, tag: str, replacement: str) -> str:
+    """Replaces a section marked by <!-- BOARD_TAG_START --> and <!-- BOARD_TAG_END -->."""
+    start_tag = f"<!-- {tag}_START -->"
+    end_tag = f"<!-- {tag}_END -->"
+    
+    pattern = re.compile(rf"{re.escape(start_tag)}.*?{re.escape(end_tag)}", re.DOTALL)
+    if not pattern.search(content):
+        return content
+        
+    return pattern.sub(f"{start_tag}\n{replacement}\n{end_tag}", content)
+
 def render_board_md(board: list, lang_key: str = "python", owner: str = "tdnb2b2", repo: str = "polyglot-readme-tictactoe",
                     turn: str = "X", winner: str = None, log: list = None,
                     input_info: str = "", output_info: str = "") -> str:
