@@ -529,7 +529,7 @@ class Program {
     </tr>
     <tr>
       <td align="center"><b>2</b></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+A2&body=Play+Go+board"><img src="https://img.shields.io/badge/-A2-grey?style=for-the-badge" alt="A2"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+Go+board"><img src="https://img.shields.io/badge/-C2-grey?style=for-the-badge" alt="C2"></a></td>
     </tr>
@@ -542,9 +542,9 @@ class Program {
   </tbody>
 </table>
 
-🎮 **Next Move: X (Go)**
+🎮 **Next Move: O (Go)**
 
-Recent moves: O A1 → X C3 → O A3 → X B1 → O C1
+Recent moves: X C3 → O A3 → X B1 → O C1 → X A2
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Go%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Go+game)**
 
@@ -552,7 +552,7 @@ Recent moves: O A1 → X C3 → O A3 → X B1 → O C1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Go: Tic-Tac-Toe: Put C1`
+- **Input (Information received)**: `Go: Tic-Tac-Toe: Put A2`
 - **Output (Information given)**: 
 ```text
 Success
