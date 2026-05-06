@@ -322,11 +322,11 @@
       ],
       [
         "O",
-        "",
+        "O",
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -348,9 +348,13 @@
       {
         "player": "X",
         "cell": "B1"
+      },
+      {
+        "player": "O",
+        "cell": "B3"
       }
     ],
-    "last_input": "Python: Tic-Tac-Toe: Reset",
+    "last_input": "Python: Tic-Tac-Toe: Put B3",
     "last_output": "Success"
   },
   "ruby": {
