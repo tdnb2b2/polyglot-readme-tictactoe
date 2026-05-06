@@ -989,7 +989,7 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
       <td align="center"><b>1</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Kotlin+board"><img src="https://img.shields.io/badge/-C1-grey?style=for-the-badge" alt="C1"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
     </tr>
     <tr>
       <td align="center"><b>2</b></td>
@@ -1006,9 +1006,9 @@ fs.writeFileSync('current_state.json', JSON.stringify(state, null, 2));
   </tbody>
 </table>
 
-🎮 **Next Move: O (Kotlin)**
+🎮 **Next Move: X (Kotlin)**
 
-Recent moves: X B2 → O A1 → X B1
+Recent moves: X B2 → O A1 → X B1 → O C1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Kotlin%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+Kotlin+game)**
 
@@ -1016,7 +1016,7 @@ Recent moves: X B2 → O A1 → X B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put B1`
+- **Input (Information received)**: `Kotlin: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**: 
 ```text
 Success
