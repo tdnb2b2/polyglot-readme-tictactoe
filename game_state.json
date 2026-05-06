@@ -84,62 +84,25 @@
   "csharp": {
     "board": [
       [
-        "X",
-        "X",
-        "O"
+        "",
+        "",
+        ""
       ],
       [
-        "O",
-        "X",
-        "X"
+        "",
+        "",
+        ""
       ],
       [
-        "X",
-        "O",
-        "O"
+        "",
+        "",
+        ""
       ]
     ],
     "turn": "X",
-    "winner": "draw",
-    "log": [
-      {
-        "player": "X",
-        "cell": "B2"
-      },
-      {
-        "player": "O",
-        "cell": "C1"
-      },
-      {
-        "player": "X",
-        "cell": "A3"
-      },
-      {
-        "player": "O",
-        "cell": "A2"
-      },
-      {
-        "player": "X",
-        "cell": "A1"
-      },
-      {
-        "player": "O",
-        "cell": "C3"
-      },
-      {
-        "player": "X",
-        "cell": "B1"
-      },
-      {
-        "player": "O",
-        "cell": "B3"
-      },
-      {
-        "player": "X",
-        "cell": "C2"
-      }
-    ],
-    "last_input": "C#: Tic-Tac-Toe: Put C2",
+    "winner": null,
+    "log": [],
+    "last_input": "C#: Tic-Tac-Toe: Reset",
     "last_output": "Success"
   },
   "go": {
