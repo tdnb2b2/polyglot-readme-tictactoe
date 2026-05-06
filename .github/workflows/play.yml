@@ -1,0 +1,124 @@
+name: Polyglot Tic-Tac-Toe
+on:
+  issues:
+    types: [opened]
+  workflow_dispatch:
+
+jobs:
+  play:
+    runs-on: ubuntu-latest
+    if: contains(github.event.issue.title, 'Tic-Tac-Toe:')
+    permissions:
+      contents: write
+      issues: write
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Detect Language
+        id: detect
+        run: |
+          LANG=$(python3 dispatcher.py detect)
+          echo "lang=$LANG" >> $GITHUB_OUTPUT
+        env:
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+
+      - name: Setup Node.js
+        if: steps.detect.outputs.lang == 'javascript' || steps.detect.outputs.lang == 'typescript'
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+
+      - name: Setup Go
+        if: steps.detect.outputs.lang == 'go'
+        uses: actions/setup-go@v5
+        with:
+          go-version: '1.21'
+
+      - name: Setup Java/Kotlin
+        if: steps.detect.outputs.lang == 'java' || steps.detect.outputs.lang == 'kotlin'
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: Setup PHP
+        if: steps.detect.outputs.lang == 'php'
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.2'
+
+      - name: Setup Ruby
+        if: steps.detect.outputs.lang == 'ruby'
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: '3.2'
+
+      - name: Setup .NET
+        if: steps.detect.outputs.lang == 'csharp'
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+
+      - name: Setup Swift
+        if: steps.detect.outputs.lang == 'swift'
+        uses: swift-actions/setup-swift@v2
+
+      - name: Setup Scala
+        if: steps.detect.outputs.lang == 'scala'
+        uses: coursier/setup-action@v1
+        with:
+          jvm: 'temurin:1.17'
+          apps: scala
+
+      - name: Build C
+        if: steps.detect.outputs.lang == 'c'
+        run: gcc game.c -o game
+        working-directory: implementations/c
+
+      - name: Build C++
+        if: steps.detect.outputs.lang == 'cpp'
+        run: g++ game.cpp -o game
+        working-directory: implementations/cpp
+
+      - name: Build Java
+        if: steps.detect.outputs.lang == 'java'
+        run: javac Game.java
+        working-directory: implementations/java
+
+      - name: Build Kotlin
+        if: steps.detect.outputs.lang == 'kotlin'
+        run: kotlinc Game.kt -include-runtime -d Game.jar
+        working-directory: implementations/kotlin
+
+      - name: Build C#
+        if: steps.detect.outputs.lang == 'csharp'
+        run: dotnet build
+        working-directory: implementations/csharp
+
+      - name: Build TypeScript
+        if: steps.detect.outputs.lang == 'typescript'
+        run: npm install
+        working-directory: implementations/typescript
+
+      - name: Play Game
+        run: python3 dispatcher.py run
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          ISSUE_TITLE: ${{ github.event.issue.title }}
+          ISSUE_NUMBER: ${{ github.event.issue.number }}
+          REPO: ${{ github.repository }}
+
+      - name: Commit and Push
+        if: success()
+        run: |
+          git config --global user.name 'github-actions[bot]'
+          git config --global user.email 'github-actions[bot]@users.noreply.github.com'
+          git add README.md game_state.json
+          git commit -m "game: update state and readme [${{ steps.detect.outputs.lang }}]" || echo "No changes"
+          for i in 1 2 3 4 5 6; do
+            git pull --rebase origin main || true
+            git push origin main && break || sleep $((RANDOM % 10 + 5))
+          done
