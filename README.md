@@ -894,7 +894,7 @@ public class Game {
   <tbody>
     <tr>
       <td align="center"><b>1</b></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+A1&body=Play+JavaScript+board"><img src="https://img.shields.io/badge/-A1-grey?style=for-the-badge" alt="A1"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+JavaScript+board"><img src="https://img.shields.io/badge/-B1-grey?style=for-the-badge" alt="B1"></a></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+JavaScript+board"><img src="https://img.shields.io/badge/-C1-grey?style=for-the-badge" alt="C1"></a></td>
     </tr>
@@ -913,7 +913,9 @@ public class Game {
   </tbody>
 </table>
 
-🎮 **Next Move: X (JavaScript)**
+🎮 **Next Move: O (JavaScript)**
+
+Recent moves: X A1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=JavaScript%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+JavaScript+game)**
 
@@ -921,7 +923,7 @@ public class Game {
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Javascript: Tic-Tac-Toe: Reset`
+- **Input (Information received)**: `Javascript: Tic-Tac-Toe: Put A1`
 - **Output (Information given)**: 
 ```text
 Success
