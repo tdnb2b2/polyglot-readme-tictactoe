@@ -559,7 +559,7 @@
       [
         "O",
         "X",
-        ""
+        "O"
       ],
       [
         "",
@@ -567,7 +567,7 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
@@ -589,9 +589,13 @@
       {
         "player": "X",
         "cell": "B2"
+      },
+      {
+        "player": "O",
+        "cell": "C2"
       }
     ],
-    "last_input": "Typescript: Tic-Tac-Toe: Put B2",
+    "last_input": "Typescript: Tic-Tac-Toe: Put C2",
     "last_output": "> polyglot-readme-tictactoe-typescript@1.0.0 play\n> ts-node game.ts"
   }
 }
