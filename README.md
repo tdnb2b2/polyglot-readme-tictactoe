@@ -411,7 +411,7 @@ int main() {
     <tr>
       <td align="center"><b>1</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+B1&body=Play+C%23+board"><img src="https://img.shields.io/badge/-B1-grey?style=for-the-badge" alt="B1"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
       <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+C%23+board"><img src="https://img.shields.io/badge/-C1-grey?style=for-the-badge" alt="C1"></a></td>
     </tr>
     <tr>
@@ -429,9 +429,9 @@ int main() {
   </tbody>
 </table>
 
-🎮 **Next Move: O (C#)**
+🎮 **Next Move: X (C#)**
 
-Recent moves: X A1
+Recent moves: X A1 → O B1
 
 🔵 **[Start New Game](https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%23%3A+Tic-Tac-Toe%3A+Reset&body=Start+a+new+C%23+game)**
 
@@ -439,7 +439,7 @@ Recent moves: X A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `C#: Tic-Tac-Toe: Put A1`
+- **Input (Information received)**: `C#: Tic-Tac-Toe: Put B1`
 - **Output (Information given)**: 
 ```text
 Success
