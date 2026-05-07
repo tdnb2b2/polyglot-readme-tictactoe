@@ -3739,7 +3739,7 @@ Recent moves: X A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Typescript: Tic-Tac-Toe: Put A1`
+- **Input (Information received)**: `Typescript: Tic-Tac-Toe: Reset`
 - **Output (Information given)**: 
 ```text
 > polyglot-readme-tictactoe-typescript@1.0.0 play

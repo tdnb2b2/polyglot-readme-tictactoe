@@ -478,7 +478,7 @@
         "cell": "A1"
       }
     ],
-    "last_input": "Typescript: Tic-Tac-Toe: Put A1",
+    "last_input": "Typescript: Tic-Tac-Toe: Reset",
     "last_output": "> polyglot-readme-tictactoe-typescript@1.0.0 play\n> ts-node game.ts"
   }
 }
