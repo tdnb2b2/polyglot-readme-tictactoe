@@ -233,7 +233,7 @@ int main() {
       <td align="center"><b>2</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=C%2B%2B%3A+Tic-Tac-Toe%3A+Put+C2&body=Play+C%2B%2B+board"><img src="https://img.shields.io/badge/-C2-grey?style=for-the-badge" alt="C2"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
     </tr>
     <tr>
       <td align="center"><b>3</b></td>
@@ -244,15 +244,15 @@ int main() {
   </tbody>
 </table>
 
-🎮 **Next Move: O (C++)**
+🎮 **Next Move: X (C++)**
 
-Recent moves: X A1 → O B1 → X C1 → O A2 → X B2
+Recent moves: O B1 → X C1 → O A2 → X B2 → O C2
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `C++: Tic-Tac-Toe: Put B2`
+- **Input (Information received)**: `C++: Tic-Tac-Toe: Put C2`
 - **Output (Information given)**: 
 ```text
 Success
