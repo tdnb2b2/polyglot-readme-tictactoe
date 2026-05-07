@@ -182,7 +182,7 @@
     "board": [
       [
         "X",
-        "",
+        "O",
         ""
       ],
       [
@@ -196,15 +196,19 @@
         ""
       ]
     ],
-    "turn": "O",
+    "turn": "X",
     "winner": null,
     "log": [
       {
         "player": "X",
         "cell": "A1"
+      },
+      {
+        "player": "O",
+        "cell": "B1"
       }
     ],
-    "last_input": "Javascript: Tic-Tac-Toe: Reset",
+    "last_input": "Javascript: Tic-Tac-Toe: Put B1",
     "last_output": "Success"
   },
   "kotlin": {
