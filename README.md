@@ -250,7 +250,7 @@ Recent moves: X A1 → O B1 → X C1 → O A2
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `C++: Tic-Tac-Toe: Put A2`
+- **Input (Information received)**: `C++: Tic-Tac-Toe: Reset`
 - **Output (Information given)**: 
 ```text
 Success
