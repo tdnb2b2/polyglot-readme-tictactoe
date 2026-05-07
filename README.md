@@ -907,7 +907,7 @@ Recent moves: X A1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Javascript: Tic-Tac-Toe: Put A1`
+- **Input (Information received)**: `Javascript: Tic-Tac-Toe: Reset`
 - **Output (Information given)**: 
 ```text
 Success
