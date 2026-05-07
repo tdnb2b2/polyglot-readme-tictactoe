@@ -1479,7 +1479,7 @@ Recent moves: X A1 → O B1
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Rust: Tic-Tac-Toe: Put B1`
+- **Input (Information received)**: `Rust: Tic-Tac-Toe: Reset`
 - **Output (Information given)**: 
 ```text
 Finished `release` profile [optimized] target(s) in 0.01s

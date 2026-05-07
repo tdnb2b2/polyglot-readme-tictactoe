@@ -388,7 +388,7 @@
         "cell": "B1"
       }
     ],
-    "last_input": "Rust: Tic-Tac-Toe: Put B1",
+    "last_input": "Rust: Tic-Tac-Toe: Reset",
     "last_output": "Finished `release` profile [optimized] target(s) in 0.01s\n     Running `target/release/game`"
   },
   "scala": {
