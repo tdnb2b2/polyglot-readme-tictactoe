@@ -355,7 +355,7 @@
         "cell": "B1"
       }
     ],
-    "last_input": "Ruby: Tic-Tac-Toe: Put B1",
+    "last_input": "Ruby: Tic-Tac-Toe: Reset",
     "last_output": "Success"
   },
   "rust": {
