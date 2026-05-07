@@ -707,7 +707,7 @@ Recent moves: X C1 → O A2 → X B2 → O C2 → X A3
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Java: Tic-Tac-Toe: Put A3`
+- **Input (Information received)**: `Java: Tic-Tac-Toe: Put B3`
 - **Output (Information given)**: 
 ```text
 Success
