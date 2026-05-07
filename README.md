@@ -1365,7 +1365,7 @@ with open('current_state.json', 'w') as f:
       <td align="center"><b>1</b></td>
       <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
       <td align="center"><img src="https://img.shields.io/badge/-O-blue?style=for-the-badge" alt="O"></td>
-      <td align="center"><a href="https://github.com/tdnb2b2/polyglot-readme-tictactoe/issues/new?title=Ruby%3A+Tic-Tac-Toe%3A+Put+C1&body=Play+Ruby+board"><img src="https://img.shields.io/badge/-C1-grey?style=for-the-badge" alt="C1"></a></td>
+      <td align="center"><img src="https://img.shields.io/badge/-X-red?style=for-the-badge" alt="X"></td>
     </tr>
     <tr>
       <td align="center"><b>2</b></td>
@@ -1382,15 +1382,15 @@ with open('current_state.json', 'w') as f:
   </tbody>
 </table>
 
-🎮 **Next Move: X (Ruby)**
+🎮 **Next Move: O (Ruby)**
 
-Recent moves: X A1 → O B1
+Recent moves: X A1 → O B1 → X C1
 
 <details>
 <summary>🛠️ <b>Technical Details (Code & IO)</b></summary>
 
 ### 🛰️ Execution Context
-- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Reset`
+- **Input (Information received)**: `Ruby: Tic-Tac-Toe: Put C1`
 - **Output (Information given)**: 
 ```text
 Success
