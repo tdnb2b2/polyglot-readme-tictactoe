@@ -222,7 +222,7 @@
   "kotlin": {
     "board": [
       [
-        "",
+        "X",
         "",
         ""
       ],
@@ -237,10 +237,15 @@
         ""
       ]
     ],
-    "turn": "X",
+    "turn": "O",
     "winner": null,
-    "log": [],
-    "last_input": "Kotlin: Tic-Tac-Toe: Reset",
+    "log": [
+      {
+        "player": "X",
+        "cell": "A1"
+      }
+    ],
+    "last_input": "Kotlin: Tic-Tac-Toe: Put A1",
     "last_output": "Success"
   },
   "php": {
